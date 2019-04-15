@@ -323,13 +323,20 @@ img {
 
 .project-thumbnail {
   height: 250px;
+  height: 10rem;
   grid-column: span 6;
-  border: 2px dashed #1d1f21;
+  /* border: 2px dashed $black; */
 }
 
 #pro-thumb-1 {
   background-color: #1d1f21;
   background-image: url("project-test.png");
+  background-size: cover;
+}
+
+#pro-thumb-2 {
+  background-color: #1d1f21;
+  background-image: url("dg-putting-snap.png");
   background-size: cover;
 }
 
@@ -354,15 +361,44 @@ img {
 #archive-container-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 40px;
-  grid-row-gap: 40px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   position: relative;
 }
 
 .archive-thumbnail {
   height: 250px;
+  height: 7.5rem;
   grid-column: span 3;
   border: 1px solid #1d1f21;
+}
+
+#arc-thumb-1 {
+  background-color: #1d1f21;
+  background-image: url("dg-game-snap.png");
+  background-size: cover;
+  background-position: center top;
+}
+
+#arc-thumb-2 {
+  background-color: #1d1f21;
+  background-image: url("project-test.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#arc-thumb-3 {
+  background-color: #1d1f21;
+  background-image: url("dg-putting-snap.png");
+  background-size: cover;
+  background-position: center top;
+}
+
+#arc-thumb-4 {
+  background-color: #1d1f21;
+  background-image: url("calc-snap.png");
+  background-size: cover;
+  background-position: center;
 }
 
 #contact-container {
@@ -474,11 +510,20 @@ img {
   }
 
   #project-container-grid {
+    grid-template-columns: repeat(1, 1fr);
     grid-column-gap: 0;
   }
 
   .project-thumbnail {
-    grid-column: span 12;
+    grid-column: span 1;
+  }
+
+  #archive-container-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .archive-thumbnail {
+    grid-column: span 2;
   }
 }
 

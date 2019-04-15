@@ -224,7 +224,7 @@ function typeByLetter() {
 
 $(document).ready(function() {
   setTimeout(function() {
-    /* typeByLetter(); */
+    typeByLetter();
   }, 500);
 
 
