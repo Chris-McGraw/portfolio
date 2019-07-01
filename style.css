@@ -1,5 +1,5 @@
 :root {
-  font-size: 28px;
+  font-size: 18px;
 }
 
 * {
@@ -21,18 +21,12 @@
 #footer-container, #contact-container, #archive-container, #project-container, #about-container, #port-profession, #port-blank-2, #port-name, #port-blank-1, #port-comment {
   text-align: left;
   font-family: Menlo, Consolas, DejaVu Sans Mono, sans-serif;
-  /* font-size: 28px; */
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 200;
 }
 
 #footer-container, #contact-container, #archive-container, #project-container, #about-container, #landing-container {
-  /* margin-left: 40px;
-  margin-right: 40px;
-
-  padding-top: 80px;
-  padding-bottom: 80px; */
-  padding: 80px 40px;
+  padding: 5rem 2.5rem;
 }
 
 body {
@@ -54,7 +48,7 @@ a {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 3.5rem;
+  height: 3.4rem;
   text-align: right;
   background-color: #e9ece7;
   -webkit-user-select: none;
@@ -66,7 +60,7 @@ a {
   position: relative;
   top: 0;
   width: 100%;
-  height: 3.5rem;
+  height: 3.4rem;
   background-color: yellow;
 }
 
@@ -84,7 +78,7 @@ a {
   top: 0;
   left: 0;
   color: #1d1f21;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   cursor: pointer;
 }
 
@@ -112,7 +106,7 @@ a {
   width: auto;
   height: auto;
   font-family: Menlo, Consolas, DejaVu Sans Mono, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #1d1f21;
   cursor: pointer;
 }
@@ -128,9 +122,8 @@ a {
   transform: translateY(-50%);
   right: 20px;
   width: auto;
-  /* font-family: sans-serif; */
   font-family: Menlo, Consolas, DejaVu Sans Mono, sans-serif;
-  font-size: 0.75rem;
+  font-size: 1rem;
   color: #1d1f21;
 }
 
@@ -151,28 +144,22 @@ a {
   height: auto;
   text-align: right;
   background-color: #3b3b3b;
-  /* background-image: url("computer.png");
-  background-repeat: no-repeat;
-  background-position: right top; */
 }
 
 #landing-container:after {
   content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scale(1.15);
   background-image: url("computer.png");
-  /* background-repeat: no-repeat;
-  background-position: right top;
-  background-position: 50% -100px; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100px 0;
-  transform: scale(1.15);
   opacity: 0.15;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
 }
 
 img {
@@ -198,7 +185,32 @@ img {
   transform: translateY(50%); */
   position: relative;
   height: auto;
-  background-color: #1d1f21;
+  border-radius: 8px;
+}
+
+#code-editor-topbar {
+  width: 100%;
+  height: 1.2rem;
+  background-color: #f6f6f6;
+  border-radius: 8px 8px 0px 0px;
+  box-shadow: inset 0 -5px 20px rgba(0, 0, 0, 0.3);
+}
+
+#code-editor-button-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 0.5rem;
+}
+
+.code-editor-topbar-button {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-right: 0.5rem;
+  border-radius: 100%;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
 #pointer-blink {
@@ -222,8 +234,7 @@ img {
 #port-comment {
   position: relative;
   color: #969896;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 10px 20px;
   background-color: #1d1f21;
 }
 
@@ -257,6 +268,7 @@ img {
   padding-left: 20px;
   padding-right: 20px;
   background-color: #1d1f21;
+  border-radius: 0px 0px 8px 8px;
 }
 
 .pseudo-var {
@@ -281,12 +293,12 @@ img {
   width: auto;
   height: auto;
   margin-bottom: 40px;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   border-bottom: 5px solid #1d1f21;
 }
 
 #about-text {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 #project-container {
@@ -488,15 +500,15 @@ img {
 }
 
 /* -------------------------- MEDIA QUERY <= 1200 -------------------------- */
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   :root {
     font-size: 24px;
   }
-}
+} */
 /* -------------------------- MEDIA QUERY <= 1050 -------------------------- */
 @media screen and (max-width: 1050px) {
   :root {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 /* -------------------------- MEDIA QUERY <= 935 -------------------------- */
