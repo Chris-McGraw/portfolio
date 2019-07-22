@@ -241,11 +241,9 @@ img {
 
   position: relative;
 
-  height: 19rem;
+  height: auto;
 
   border-radius: 8px;
-
-  background-color: $black;
 }
 
 #code-editor-topbar {
@@ -278,8 +276,6 @@ img {
 }
 
 #pointer-blink {
-  display: none;
-
   position: relative;
   top: -4px;
   left: -10px;
@@ -287,33 +283,6 @@ img {
   font-weight: 200;
   color: $white;
 }
-
-
-
-
-
-#gutter-number-container {
-  z-index: 100;
-  position: absolute;
-
-  padding-bottom: 10px;
-
-  //border: 1px dashed white;
-}
-
-.fuckboi-life {
-  //padding: 10px 20px;
-
-  padding-top: 10px;
-  padding-left: 20px;
-
-  @extend %code-editor-font-style;
-  font-weight: 200;
-  color: yellow;
-}
-
-
-
 
 .gutter-number {
   font-weight: 200;
@@ -340,8 +309,6 @@ img {
   padding: 10px 20px;
 
   background-color: $black;
-
-  //border: 1px dashed white;
 }
 
 #port-blank-1 {
@@ -366,19 +333,10 @@ img {
   @extend %code-editor-font-style;
   color: $white;
 
-  padding-left: 44px;
+  padding-left: 20px;
   padding-right: 20px;
 
-  //margin-top: -40px;
-  //margin-bottom: -40px;
-
-  /* margin-top: -8px;
-
-  line-height: 40px; */
-
   background-color: $black;
-
-  //border: 1px dashed yellow;
 }
 
 #port-blank-2 {
@@ -494,8 +452,8 @@ img {
 
 #project-container-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 40px;
   grid-row-gap: 40px;
 
   position: relative;
@@ -505,22 +463,22 @@ img {
 
 .project-thumbnail {
   height: 250px;
-  height: 19rem;
+  height: 10rem;
 
-  grid-column: span 1;
+  grid-column: span 6;
 
   /* border: 2px dashed $black; */
 }
 
 #pro-thumb-1 {
   background-color: $black;
-  //background-image: url("vert-snap.png");
+  background-image: url("project-test.png");
   background-size: cover;
 }
 
 #pro-thumb-2 {
   background-color: $black;
-  //background-image: url("project-test.png");
+  background-image: url("dg-putting-snap.png");
   background-size: cover;
 }
 
@@ -556,7 +514,7 @@ img {
 
 #archive-container-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 
@@ -567,35 +525,35 @@ img {
   height: 250px;
   height: 7.5rem;
 
-  grid-column: span 1;
+  grid-column: span 3;
 
   border: 1px solid $black;
 }
 
 #arc-thumb-1 {
   background-color: $black;
-  //background-image: url("dg-game-snap.png");
+  background-image: url("dg-game-snap.png");
   background-size: cover;
   background-position: center top;
 }
 
 #arc-thumb-2 {
   background-color: $black;
-  //background-image: url("project-test.png");
+  background-image: url("project-test.png");
   background-size: cover;
   background-position: center;
 }
 
 #arc-thumb-3 {
   background-color: $black;
-  //background-image: url("dg-putting-snap.png");
+  background-image: url("dg-putting-snap.png");
   background-size: cover;
   background-position: center top;
 }
 
 #arc-thumb-4 {
   background-color: $black;
-  //background-image: url("calc-snap.png");
+  background-image: url("calc-snap.png");
   background-size: cover;
   background-position: center;
 }
@@ -753,8 +711,13 @@ img {
     grid-column: span 12;
   }
 
+  #project-container-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 0;
+  }
+
   .project-thumbnail {
-    grid-column: span 2;
+    grid-column: span 1;
   }
 
   #archive-container-grid {
@@ -763,16 +726,5 @@ img {
 
   .archive-thumbnail {
     grid-column: span 2;
-  }
-}
-
-/* -------------------------- MEDIA QUERY <= 600 -------------------------- */
-@media screen and (max-width: 600px) {
-  .project-thumbnail {
-    height: 24rem;
-  }
-
-  #pro-thumb-2 {
-    // background-image: url("test-thing.png");
   }
 }
