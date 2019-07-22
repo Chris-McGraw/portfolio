@@ -18,7 +18,7 @@
   min-height: 35px;
 }
 
-#footer-container, #contact-container, #archive-container, #project-container, #about-container, #port-profession, #port-blank-2, #port-name, #port-blank-1, #port-comment {
+#footer-container, #contact-container, #archive-container, #project-container, #about-container, #port-profession, #port-blank-2, #port-name, #port-blank-1, #port-comment, .fuckboi-life {
   text-align: left;
   font-family: Menlo, Consolas, DejaVu Sans Mono, sans-serif;
   font-size: 1.25rem;
@@ -184,8 +184,9 @@ img {
   top: 50%;
   transform: translateY(50%); */
   position: relative;
-  height: auto;
+  height: 19rem;
   border-radius: 8px;
+  background-color: #1d1f21;
 }
 
 #code-editor-topbar {
@@ -214,11 +215,25 @@ img {
 }
 
 #pointer-blink {
+  display: none;
   position: relative;
   top: -4px;
   left: -10px;
   font-weight: 200;
   color: #e0e0e0;
+}
+
+#gutter-number-container {
+  z-index: 100;
+  position: absolute;
+  padding-bottom: 10px;
+}
+
+.fuckboi-life {
+  padding-top: 10px;
+  padding-left: 20px;
+  font-weight: 200;
+  color: yellow;
 }
 
 .gutter-number {
@@ -249,8 +264,11 @@ img {
 #port-name {
   position: relative;
   color: #e0e0e0;
-  padding-left: 20px;
+  padding-left: 44px;
   padding-right: 20px;
+  /* margin-top: -8px;
+
+  line-height: 40px; */
   background-color: #1d1f21;
 }
 
@@ -326,8 +344,8 @@ img {
 
 #project-container-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
   grid-row-gap: 40px;
   position: relative;
   /* border: 1px dashed red; */
@@ -335,20 +353,18 @@ img {
 
 .project-thumbnail {
   height: 250px;
-  height: 10rem;
-  grid-column: span 6;
+  height: 19rem;
+  grid-column: span 1;
   /* border: 2px dashed $black; */
 }
 
 #pro-thumb-1 {
   background-color: #1d1f21;
-  background-image: url("project-test.png");
   background-size: cover;
 }
 
 #pro-thumb-2 {
   background-color: #1d1f21;
-  background-image: url("dg-putting-snap.png");
   background-size: cover;
 }
 
@@ -372,7 +388,7 @@ img {
 
 #archive-container-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   position: relative;
@@ -381,34 +397,30 @@ img {
 .archive-thumbnail {
   height: 250px;
   height: 7.5rem;
-  grid-column: span 3;
+  grid-column: span 1;
   border: 1px solid #1d1f21;
 }
 
 #arc-thumb-1 {
   background-color: #1d1f21;
-  background-image: url("dg-game-snap.png");
   background-size: cover;
   background-position: center top;
 }
 
 #arc-thumb-2 {
   background-color: #1d1f21;
-  background-image: url("project-test.png");
   background-size: cover;
   background-position: center;
 }
 
 #arc-thumb-3 {
   background-color: #1d1f21;
-  background-image: url("dg-putting-snap.png");
   background-size: cover;
   background-position: center top;
 }
 
 #arc-thumb-4 {
   background-color: #1d1f21;
-  background-image: url("calc-snap.png");
   background-size: cover;
   background-position: center;
 }
@@ -521,13 +533,8 @@ img {
     grid-column: span 12;
   }
 
-  #project-container-grid {
-    grid-template-columns: repeat(1, 1fr);
-    grid-column-gap: 0;
-  }
-
   .project-thumbnail {
-    grid-column: span 1;
+    grid-column: span 2;
   }
 
   #archive-container-grid {
@@ -536,6 +543,12 @@ img {
 
   .archive-thumbnail {
     grid-column: span 2;
+  }
+}
+/* -------------------------- MEDIA QUERY <= 600 -------------------------- */
+@media screen and (max-width: 600px) {
+  .project-thumbnail {
+    height: 24rem;
   }
 }
 
