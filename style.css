@@ -13,12 +13,7 @@
   cursor: default;
 }
 
-#port-profession, #port-blank-2, #port-name, #port-blank-1, #port-comment {
-  width: 100%;
-  min-height: 35px;
-}
-
-#footer-container, #contact-container, #archive-container, #project-container, #about-container, #port-profession, #port-blank-2, #port-name, #port-blank-1, #port-comment {
+#footer-container, #contact-container, #archive-container, #project-container, #about-container, #code-editor-container {
   text-align: left;
   font-family: Menlo, Consolas, DejaVu Sans Mono, sans-serif;
   font-size: 1.25rem;
@@ -43,6 +38,7 @@ a {
   text-decoration: none;
 }
 
+/* -------------------------------- NAVBAR -------------------------------- */
 #navbar {
   z-index: 30;
   position: fixed;
@@ -134,6 +130,7 @@ a {
   cursor: pointer;
 }
 
+/* --------------------------- LANDING SECTION --------------------------- */
 #landing-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -184,8 +181,10 @@ img {
   top: 50%;
   transform: translateY(50%); */
   position: relative;
-  height: auto;
+  height: 19rem;
   border-radius: 8px;
+  background-color: #1d1f21;
+  overflow: hidden;
 }
 
 #code-editor-topbar {
@@ -213,6 +212,31 @@ img {
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
+#ide-gutter-container {
+  z-index: 100;
+  position: absolute;
+  left: 20px;
+  padding-top: 10px;
+  color: yellow;
+}
+
+.ide-gutter-no {
+  padding-bottom: 10px;
+}
+
+#ide-main-container {
+  padding-top: 10px;
+  padding-left: 40px;
+  line-height: 34px;
+}
+
+.ide-text {
+  position: relative;
+  top: -5px;
+  padding-right: 20px;
+  color: white;
+}
+
 #pointer-blink {
   position: relative;
   top: -4px;
@@ -221,64 +245,19 @@ img {
   color: #e0e0e0;
 }
 
-.gutter-number {
-  font-weight: 200;
-  color: #4f5256;
-}
-
-.pseudo-blank {
-  margin-right: 17px;
-  font-weight: 200;
-}
-
 #port-comment {
-  position: relative;
   color: #969896;
-  padding: 10px 20px;
-  background-color: #1d1f21;
 }
 
 #port-blank-1 {
-  position: relative;
-  color: #4f5256;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #1d1f21;
-}
-
-#port-name {
-  position: relative;
-  color: #e0e0e0;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #1d1f21;
+  color: #1d1f21;
 }
 
 #port-blank-2 {
-  position: relative;
-  color: #4f5256;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #1d1f21;
+  color: #1d1f21;
 }
 
-#port-profession {
-  position: relative;
-  color: #e0e0e0;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #1d1f21;
-  border-radius: 0px 0px 8px 8px;
-}
-
-.pseudo-var {
-  /* color: #b294bb; */
-}
-
-.pseudo-value {
-  /* color: #b5bd68; */
-}
-
+/* ---------------------------- ABOUT SECTION ---------------------------- */
 #about-container {
   z-index: 10;
   position: relative;
@@ -301,6 +280,7 @@ img {
   font-size: 1rem;
 }
 
+/* --------------------------- PROJECT SECTION --------------------------- */
 #project-container {
   /* display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -342,16 +322,15 @@ img {
 
 #pro-thumb-1 {
   background-color: #1d1f21;
-  background-image: url("project-test.png");
   background-size: cover;
 }
 
 #pro-thumb-2 {
   background-color: #1d1f21;
-  background-image: url("dg-putting-snap.png");
   background-size: cover;
 }
 
+/* --------------------------- ARCHIVE SECTION --------------------------- */
 #archive-container {
   z-index: 20;
   position: relative;
@@ -387,32 +366,29 @@ img {
 
 #arc-thumb-1 {
   background-color: #1d1f21;
-  background-image: url("dg-game-snap.png");
   background-size: cover;
   background-position: center top;
 }
 
 #arc-thumb-2 {
   background-color: #1d1f21;
-  background-image: url("project-test.png");
   background-size: cover;
   background-position: center;
 }
 
 #arc-thumb-3 {
   background-color: #1d1f21;
-  background-image: url("dg-putting-snap.png");
   background-size: cover;
   background-position: center top;
 }
 
 #arc-thumb-4 {
   background-color: #1d1f21;
-  background-image: url("calc-snap.png");
   background-size: cover;
   background-position: center;
 }
 
+/* --------------------------- CONTACT SECTION --------------------------- */
 #contact-container {
   z-index: 10;
   position: relative;
@@ -463,6 +439,7 @@ img {
   visibility: hidden;
 }
 
+/* ---------------------------- FOOTER SECTION ---------------------------- */
 #footer-container {
   z-index: 10;
   position: relative;
@@ -499,13 +476,13 @@ img {
   cursor: pointer;
 }
 
-/* -------------------------- MEDIA QUERY <= 1200 -------------------------- */
+/* ------------------------- MEDIA QUERY <= 1200 ------------------------- */
 /* @media screen and (max-width: 1200px) {
   :root {
     font-size: 24px;
   }
 } */
-/* -------------------------- MEDIA QUERY <= 1050 -------------------------- */
+/* ------------------------- MEDIA QUERY <= 1050 ------------------------- */
 @media screen and (max-width: 1050px) {
   :root {
     font-size: 16px;
