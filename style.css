@@ -198,7 +198,7 @@ a {
   position: absolute;
   left: 20px;
   padding-top: 10px;
-  color: yellow;
+  color: #4f5256;
 }
 
 .ide-gutter-no {
@@ -218,23 +218,23 @@ a {
   color: white;
 }
 
-#pointer-blink {
+#ide-text-cursor {
   position: relative;
-  top: -4px;
+  top: -2px;
   left: -10px;
   font-weight: 200;
   color: #e0e0e0;
 }
 
-#port-comment {
+#ide-ln-comment {
   color: #969896;
 }
 
-#port-blank-1 {
+#ide-ln-blank-1 {
   color: #1d1f21;
 }
 
-#port-blank-2 {
+#ide-ln-blank-2 {
   color: #1d1f21;
 }
 

@@ -2,12 +2,12 @@ var $blankTop = $("#blank-top");
 var $blankTop2 = $("#blank-top-2");
 var $blankTop3 = $("#blank-top-3");
 
-var $pointerBlink = $("#pointer-blink");
-var $portComment = $("#port-comment");
-var $portBlank1 = $("#port-blank-1");
-var $portName = $("#port-name");
-var $portBlank2 = $("#port-blank-2");
-var $portProfession = $("#port-profession");
+var $ideTextCursor = $("#ide-text-cursor");
+var $ideLnComment = $("#ide-ln-comment");
+var $ideLnBlank1 = $("#ide-ln-blank-1");
+var $ideLnName = $("#ide-ln-name");
+var $ideLnBlank2 = $("#ide-ln-blank-2");
+var $ideLnProfession = $("#ide-ln-profession");
 
 var makeArrayThing = "// My Portfolio";
 var makeArrayThing2 = "const";
@@ -43,18 +43,18 @@ function typeByLetter() {
   });
 
   setTimeout(function() {
-    $pointerBlink.hide();
-    $pointerBlink.remove();
+    $ideTextCursor.hide();
+    $ideTextCursor.remove();
 
-    $portBlank1.prepend("<span id='pointer-blink'>|</span>");
+    $ideLnBlank1.prepend("<span id='ide-text-cursor'>|</span>");
   }, 750);
 
   setTimeout(function() {
-    $pointerBlink = $("#pointer-blink");
-    $pointerBlink.hide();
-    $pointerBlink.remove();
+    $ideTextCursor = $("#ide-text-cursor");
+    $ideTextCursor.hide();
+    $ideTextCursor.remove();
 
-    $portName.append("<span id='pointer-blink'>|</span>");
+    $ideLnName.append("<span id='ide-text-cursor'>|</span>");
   }, 800);
 
 
@@ -125,20 +125,20 @@ function typeByLetter() {
   }, 2350);
 
   setTimeout(function() {
-    $pointerBlink = $("#pointer-blink");
+    $ideTextCursor = $("#ide-text-cursor");
 
-    $pointerBlink.hide();
-    $pointerBlink.remove();
+    $ideTextCursor.hide();
+    $ideTextCursor.remove();
 
-    $portBlank2.prepend("<span id='pointer-blink'>|</span>");
+    $ideLnBlank2.prepend("<span id='ide-text-cursor'>|</span>");
   }, 2400);
 
   setTimeout(function() {
-    $pointerBlink = $("#pointer-blink");
-    $pointerBlink.hide();
-    $pointerBlink.remove();
+    $ideTextCursor = $("#ide-text-cursor");
+    $ideTextCursor.hide();
+    $ideTextCursor.remove();
 
-    $portProfession.append("<span id='pointer-blink'>|</span>");
+    $ideLnProfession.append("<span id='ide-text-cursor'>|</span>");
   }, 2450);
 
 

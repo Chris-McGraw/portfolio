@@ -262,8 +262,6 @@ a {
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
-
-
 #ide-gutter-container {
   z-index: 100;
   position: absolute;
@@ -271,7 +269,7 @@ a {
 
   padding-top: 10px;
 
-  color: yellow;
+  color: $mixed-gray;
 }
 
 .ide-gutter-no {
@@ -294,24 +292,24 @@ a {
   color: white;
 }
 
-#pointer-blink {
+#ide-text-cursor {
   position: relative;
-  top: -4px;
+  top: -2px;
   left: -10px;
 
   font-weight: 200;
   color: $white;
 }
 
-#port-comment {
+#ide-ln-comment {
   color: $gray;
 }
 
-#port-blank-1 {
+#ide-ln-blank-1 {
   color: $black;
 }
 
-#port-blank-2 {
+#ide-ln-blank-2 {
   color: $black;
 }
 
