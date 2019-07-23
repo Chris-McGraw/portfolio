@@ -67,6 +67,9 @@ a {
   text-decoration: none;
 }
 
+
+
+/* -------------------------------- NAVBAR -------------------------------- */
 #navbar {
   z-index: 30;
   position: fixed;
@@ -176,6 +179,9 @@ a {
   cursor: pointer;
 }
 
+
+
+/* --------------------------- LANDING SECTION --------------------------- */
 #landing-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -241,9 +247,16 @@ img {
 
   position: relative;
 
-  height: auto;
+  //height: auto;
+  height: 19rem;
+
+  @extend %code-editor-font-style;
 
   border-radius: 8px;
+
+  background-color: $black;
+
+  overflow: hidden;
 }
 
 #code-editor-topbar {
@@ -275,6 +288,38 @@ img {
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
+
+
+#ide-gutter-container {
+  z-index: 100;
+  position: absolute;
+  left: 20px;
+
+  padding-top: 10px;
+
+  color: yellow;
+}
+
+.ide-gutter-no {
+  padding-bottom: 10px;
+}
+
+#ide-main-container {
+  padding-top: 10px;
+  padding-left: 40px;
+
+  line-height: 34px;
+}
+
+.ide-text {
+  position: relative;
+  top: -5px;
+
+  padding-right: 20px;
+
+  color: white;
+}
+
 #pointer-blink {
   position: relative;
   top: -4px;
@@ -284,103 +329,21 @@ img {
   color: $white;
 }
 
-.gutter-number {
-  font-weight: 200;
-  color: $mixed-gray;
-}
-
-.pseudo-blank {
-  margin-right: 17px;
-
-  font-weight: 200;
-}
-
-#blank-top {
-}
-
 #port-comment {
-  position: relative;
-
-  @extend %code-editor-line;
-
-  @extend %code-editor-font-style;
   color: $gray;
-
-  padding: 10px 20px;
-
-  background-color: $black;
 }
 
 #port-blank-1 {
-  position: relative;
-
-  @extend %code-editor-line;
-
-  @extend %code-editor-font-style;
-  color: $mixed-gray;
-
-  padding-left: 20px;
-  padding-right: 20px;
-
-  background-color: $black;
-}
-
-#port-name {
-  position: relative;
-
-  @extend %code-editor-line;
-
-  @extend %code-editor-font-style;
-  color: $white;
-
-  padding-left: 20px;
-  padding-right: 20px;
-
-  background-color: $black;
+  color: $black;
 }
 
 #port-blank-2 {
-  position: relative;
-
-  @extend %code-editor-line;
-
-  @extend %code-editor-font-style;
-  color: $mixed-gray;
-
-  padding-left: 20px;
-  padding-right: 20px;
-
-  background-color: $black;
-}
-
-
-#port-profession {
-  position: relative;
-
-  @extend %code-editor-line;
-
-  @extend %code-editor-font-style;
-  color: $white;
-
-  padding-left: 20px;
-  padding-right: 20px;
-
-  background-color: $black;
-  border-radius: 0px 0px 8px 8px;
-}
-
-.pseudo-var {
-  /* color: #b294bb; */
-}
-
-.pseudo-value {
-  /* color: #b5bd68; */
+  color: $black;
 }
 
 
 
-
-
+/* ---------------------------- ABOUT SECTION ---------------------------- */
 #about-container {
   z-index: 10;
   position: relative;
@@ -415,8 +378,7 @@ img {
 
 
 
-
-
+/* --------------------------- PROJECT SECTION --------------------------- */
 #project-container {
   /* display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -484,8 +446,7 @@ img {
 
 
 
-
-
+/* --------------------------- ARCHIVE SECTION --------------------------- */
 #archive-container {
   z-index: 20;
   position: relative;
@@ -560,9 +521,7 @@ img {
 
 
 
-
-
-
+/* --------------------------- CONTACT SECTION --------------------------- */
 #contact-container {
   z-index: 10;
   position: relative;
@@ -633,8 +592,7 @@ img {
 
 
 
-
-
+/* ---------------------------- FOOTER SECTION ---------------------------- */
 #footer-container {
   z-index: 10;
   position: relative;
@@ -686,7 +644,7 @@ img {
 
 
 
-/* -------------------------- MEDIA QUERY <= 1200 -------------------------- */
+/* ------------------------- MEDIA QUERY <= 1200 ------------------------- */
 /* @media screen and (max-width: 1200px) {
   :root {
     font-size: 24px;
@@ -694,12 +652,15 @@ img {
 } */
 
 
-/* -------------------------- MEDIA QUERY <= 1050 -------------------------- */
+
+/* ------------------------- MEDIA QUERY <= 1050 ------------------------- */
 @media screen and (max-width: 1050px) {
   :root {
     font-size: 16px;
   }
 }
+
+
 
 /* -------------------------- MEDIA QUERY <= 935 -------------------------- */
 @media screen and (max-width: 935px) {

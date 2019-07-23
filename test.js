@@ -1,16 +1,3 @@
-// <span class="pseudo-var">const</span> name = <span class="pseudo-value">"Chris McGraw"</span>;
-
-// <span class="pseudo-var">let</span> profession = <span class="pseudo-value">"Front End Web Developer"</span>;
-
-
-
-// My Portfolio
-
-// const name = "Chris McGraw";
-// let profession = "Front End Web Developer";
-
-
-
 var $blankTop = $("#blank-top");
 var $blankTop2 = $("#blank-top-2");
 var $blankTop3 = $("#blank-top-3");
@@ -21,10 +8,6 @@ var $portBlank1 = $("#port-blank-1");
 var $portName = $("#port-name");
 var $portBlank2 = $("#port-blank-2");
 var $portProfession = $("#port-profession");
-
-
-
-
 
 var makeArrayThing = "// My Portfolio";
 var makeArrayThing2 = "const";
@@ -63,7 +46,7 @@ function typeByLetter() {
     $pointerBlink.hide();
     $pointerBlink.remove();
 
-    $portBlank1.append("<span id='pointer-blink'>|</span>");
+    $portBlank1.prepend("<span id='pointer-blink'>|</span>");
   }, 750);
 
   setTimeout(function() {
@@ -147,7 +130,7 @@ function typeByLetter() {
     $pointerBlink.hide();
     $pointerBlink.remove();
 
-    $portBlank2.append("<span id='pointer-blink'>|</span>");
+    $portBlank2.prepend("<span id='pointer-blink'>|</span>");
   }, 2400);
 
   setTimeout(function() {
