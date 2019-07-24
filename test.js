@@ -9,7 +9,7 @@ var $ideLnBlank2 = $("#ide-ln-blank-2");
 var $ideLnProfession = $("#ide-ln-profession");
 var $typedProfession = $("#typed-profession");
 
-var ideString_Comment = "// My Portfolio";
+var makeArrayThing = "// My Portfolio";
 var makeArrayThing2 = "const";
 var makeArrayThing3 = "name";
 var makeArrayThing4 = '"Chris McGraw"';
@@ -17,16 +17,14 @@ var makeArrayThing5 = "let";
 var makeArrayThing6 = "profession";
 var makeArrayThing7 = '"Front End Web Developer"';
 
-var typingTiming = 0;
-//var typingInterval = 75;
-var typingInterval = 500;
+var typingSpeed = 0;
 
 
 
 
 
 function typeByLetter() {
-  var ideArray_Comment = ideString_Comment.split("");
+  var newArrayThing = makeArrayThing.split("");
   var secondNewArrayThing = makeArrayThing2.split("");
   var thirdNewArrayThing = makeArrayThing3.split("");
   var fourthNewArrayThing = makeArrayThing4.split("");
@@ -34,31 +32,22 @@ function typeByLetter() {
   var sixthNewArrayThing = makeArrayThing6.split("");
   var seventhNewArrayThing = makeArrayThing7.split("");
 
-  console.log(ideArray_Comment);
+  console.log(newArrayThing);
 
-  var typeLoopCount = 0;
-
-  ideArray_Comment.forEach(function(i) {
+  newArrayThing.forEach(function(i) {
     setTimeout(function() {
       $typedComment.append(i);
+    }, typingSpeed);
 
-      typeLoopCount += 1;
-      console.log(typeLoopCount);
-
-      if(typeLoopCount === ideArray_Comment.length) {
-        console.log("array finished");
-      }
-    }, typingTiming);
-
-    typingTiming += typingInterval;
+    typingSpeed += 50;
   });
 
-  /* setTimeout(function() {
+  setTimeout(function() {
     $ideTextCursor.hide();
     $ideTextCursor.remove();
 
     $ideLnBlank1.prepend("<span id='ide-text-cursor'>|</span>");
-  }, typingTiming);
+  }, 750);
 
   setTimeout(function() {
     $ideTextCursor = $("#ide-text-cursor");
@@ -66,11 +55,11 @@ function typeByLetter() {
     $ideTextCursor.remove();
 
     $ideLnName.append("<span id='ide-text-cursor'>|</span>");
-  }, typingTiming + typingInterval); */
+  }, 800);
 
 
 
-  /* var typingSpeed2 = 900;
+  var typingSpeed2 = 900;
 
   secondNewArrayThing.forEach(function(i) {
     setTimeout(function() {
@@ -211,7 +200,7 @@ function typeByLetter() {
 
   setTimeout(function() {
     $typedProfession.append(";");
-  }, 4750); */
+  }, 4750);
 
 }
 
