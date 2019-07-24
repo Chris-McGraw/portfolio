@@ -1,13 +1,13 @@
-var $blankTop = $("#blank-top");
-var $blankTop2 = $("#blank-top-2");
-var $blankTop3 = $("#blank-top-3");
-
 var $ideTextCursor = $("#ide-text-cursor");
+
 var $ideLnComment = $("#ide-ln-comment");
+var $typedComment = $("#typed-comment");
 var $ideLnBlank1 = $("#ide-ln-blank-1");
 var $ideLnName = $("#ide-ln-name");
+var $typedName = $("#typed-name");
 var $ideLnBlank2 = $("#ide-ln-blank-2");
 var $ideLnProfession = $("#ide-ln-profession");
+var $typedProfession = $("#typed-profession");
 
 var makeArrayThing = "// My Portfolio";
 var makeArrayThing2 = "const";
@@ -36,7 +36,7 @@ function typeByLetter() {
 
   newArrayThing.forEach(function(i) {
     setTimeout(function() {
-      $blankTop.append(i);
+      $typedComment.append(i);
     }, typingSpeed);
 
     typingSpeed += 50;
@@ -63,7 +63,7 @@ function typeByLetter() {
 
   secondNewArrayThing.forEach(function(i) {
     setTimeout(function() {
-      $blankTop2.append("<span class='pseudo-var'>" + i + "</span>");
+      $typedName.append("<span class='pseudo-var'>" + i + "</span>");
     }, typingSpeed2);
 
     typingSpeed2 += 50;
@@ -75,7 +75,7 @@ function typeByLetter() {
   }, 1150);
 
   setTimeout(function() {
-    $blankTop2.append(" ");
+    $typedName.append(" ");
   }, 1200);
 
 
@@ -85,22 +85,22 @@ function typeByLetter() {
 
   thirdNewArrayThing.forEach(function(i) {
     setTimeout(function() {
-      $blankTop2.append(i);
+      $typedName.append(i);
     }, typingSpeed3);
 
     typingSpeed3 += 50;
   });
 
   setTimeout(function() {
-    $blankTop2.append(" ");
+    $typedName.append(" ");
   }, 1450);
 
   setTimeout(function() {
-    $blankTop2.append("=");
+    $typedName.append("=");
   }, 1500);
 
   setTimeout(function() {
-    $blankTop2.append(" ");
+    $typedName.append(" ");
   }, 1550);
 
 
@@ -109,7 +109,7 @@ function typeByLetter() {
 
   fourthNewArrayThing.forEach(function(i) {
     setTimeout(function() {
-      $blankTop2.append("<span class='pseudo-value'>" + i + "</span>");
+      $typedName.append("<span class='pseudo-value'>" + i + "</span>");
     }, typingSpeed4);
 
     typingSpeed4 += 50;
@@ -121,7 +121,7 @@ function typeByLetter() {
   }, 2300);
 
   setTimeout(function() {
-    $blankTop2.append(";");
+    $typedName.append(";");
   }, 2350);
 
   setTimeout(function() {
@@ -146,7 +146,7 @@ function typeByLetter() {
 
   fifthNewArrayThing.forEach(function(i) {
     setTimeout(function() {
-      $blankTop3.append("<span class='pseudo-var'>" + i + "</span>");
+      $typedProfession.append("<span class='pseudo-var'>" + i + "</span>");
     }, typingSpeed5);
 
     typingSpeed5 += 50;
@@ -158,36 +158,36 @@ function typeByLetter() {
   }, 2700);
 
   setTimeout(function() {
-    $blankTop3.append(" ");
+    $typedProfession.append(" ");
   }, 2750);
 
   typingSpeed6 = 2800;
 
   sixthNewArrayThing.forEach(function(i) {
     setTimeout(function() {
-      $blankTop3.append(i);
+      $typedProfession.append(i);
     }, typingSpeed6);
 
     typingSpeed6 += 50;
   });
 
   setTimeout(function() {
-    $blankTop3.append(" ");
+    $typedProfession.append(" ");
   }, 3300);
 
   setTimeout(function() {
-    $blankTop3.append("=");
+    $typedProfession.append("=");
   }, 3350);
 
   setTimeout(function() {
-    $blankTop3.append(" ");
+    $typedProfession.append(" ");
   }, 3400);
 
   typingSpeed7 = 3450;
 
   seventhNewArrayThing.forEach(function(i) {
     setTimeout(function() {
-      $blankTop3.append("<span class='pseudo-value'>" + i + "</span>");
+      $typedProfession.append("<span class='pseudo-value'>" + i + "</span>");
     }, typingSpeed7);
 
     typingSpeed7 += 50;
@@ -199,7 +199,7 @@ function typeByLetter() {
   }, 4700);
 
   setTimeout(function() {
-    $blankTop3.append(";");
+    $typedProfession.append(";");
   }, 4750);
 
 }
