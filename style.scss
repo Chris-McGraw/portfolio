@@ -221,7 +221,7 @@ a {
 
   position: relative;
 
-  height: 19rem;
+  height: 13rem;
 
   @extend %code-editor-font-style;
 
@@ -271,6 +271,18 @@ a {
 
 .ide-gutter-no {
   padding-bottom: 0.675rem;
+}
+
+#gutter-no-6 {
+  display: none;
+}
+
+#gutter-no-7 {
+  display: none;
+}
+
+#gutter-no-8 {
+  display: none;
 }
 
 #ide-main-container {
@@ -664,5 +676,44 @@ a {
 
   .archive-thumbnail {
     grid-column: span 2;
+  }
+}
+
+
+
+/* -------------------------- MEDIA QUERY <= 685 -------------------------- */
+@media screen and (max-width: 685px) {
+  #pseudo-ide-container {
+    height: 15rem;
+  }
+
+  #gutter-no-6 {
+    display: block;
+  }
+}
+
+
+
+/* -------------------------- MEDIA QUERY <= 492 -------------------------- */
+@media screen and (max-width: 492px) {
+  #pseudo-ide-container {
+    height: 17rem;
+  }
+
+  #gutter-no-7 {
+    display: block;
+  }
+}
+
+
+
+/* -------------------------- MEDIA QUERY <= 432 -------------------------- */
+@media screen and (max-width: 432px) {
+  #pseudo-ide-container {
+    height: 19rem;
+  }
+
+  #gutter-no-8 {
+    display: block;
   }
 }
