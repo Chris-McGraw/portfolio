@@ -1,3 +1,14 @@
+#footer-container, #contact-container, #archive-container, #project-container, #about-container, #pseudo-ide-container {
+  text-align: left;
+  font-family: Menlo, Consolas, DejaVu Sans Mono, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 200;
+}
+
+#footer-container, #contact-container, #archive-container, #project-container, #about-container, #landing-container {
+  padding: 5rem 2.5rem;
+}
+
 :root {
   font-size: 18px;
 }
@@ -5,57 +16,17 @@
 * {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
   -webkit-touch-callout: none;
-
   min-width: 0;
   margin: 0;
   padding: 0;
-
   box-sizing: border-box;
-
   cursor: default;
 }
 
-
-// Colors
-
-$background-theme: #3b3b3b;
-$black: #1d1f21;
-$white: #e0e0e0;
-$gray: #969896;
-$dark-gray: #373b41;
-$mixed-gray: mix($gray, $dark-gray, 25%);
-
-
-
-// Placeholder Classes
-
-%code-editor-line {
-  width: 100%;
-  min-height: 35px;
-}
-
-%code-editor-font-style {
-  text-align: left;
-  font-family: Menlo, Consolas, DejaVu Sans Mono, sans-serif;
-  font-size: 1.25rem;
-
-  font-weight: 200;
-}
-
-%section-container-padding {
-  padding: 5rem 2.5rem;
-}
-
-
-
-
-
 body {
-  background-color: $background-theme;
-  background-color: $black;
-
+  background-color: #3b3b3b;
+  background-color: #1d1f21;
   overflow-x: hidden;
 }
 
@@ -67,20 +38,15 @@ a {
   text-decoration: none;
 }
 
-
-
 /* -------------------------------- NAVBAR -------------------------------- */
 #navbar {
   z-index: 30;
   position: fixed;
   top: 0;
-
   width: 100%;
   height: 3.4rem;
-
   text-align: right;
-  background-color: rgba(233, 236, 231, 1.0);
-
+  background-color: #e9ece7;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -89,10 +55,8 @@ a {
   z-index: 10;
   position: relative;
   top: 0;
-
   width: 100%;
   height: 3.4rem;
-
   background-color: yellow;
 }
 
@@ -101,7 +65,6 @@ a {
   top: 50%;
   transform: translateY(-50%);
   left: 40px;
-
   width: auto;
   height: auto;
 }
@@ -110,10 +73,8 @@ a {
   position: relative;
   top: 0;
   left: 0;
-
-  color: $black;
+  color: #1d1f21;
   font-size: 1.4rem;
-
   cursor: pointer;
 }
 
@@ -128,27 +89,21 @@ a {
   transform: translateY(-50%);
   left: 0;
   right: 0;
-
   width: auto;
   height: auto;
   margin: auto;
-
   text-align: center;
 }
 
 #nav-logo {
   display: inline-block;
-
   z-index: 10;
   position: relative;
-
   width: auto;
   height: auto;
-
   font-family: Menlo, Consolas, DejaVu Sans Mono, sans-serif;
   font-size: 1.8rem;
-  color: $black;
-
+  color: #1d1f21;
   cursor: pointer;
 }
 
@@ -162,44 +117,32 @@ a {
   top: 50%;
   transform: translateY(-50%);
   right: 20px;
-
   width: auto;
-
   font-family: Menlo, Consolas, DejaVu Sans Mono, sans-serif;
   font-size: 1rem;
-  color: $black;
+  color: #1d1f21;
 }
 
 .nav-link {
   display: inline-block;
-
   width: auto;
   margin-right: 20px;
-
   cursor: pointer;
 }
-
-
 
 /* --------------------------- LANDING SECTION --------------------------- */
 #landing-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
   z-index: 10;
   position: relative;
-
   height: auto;
-  @extend %section-container-padding;
-
   text-align: right;
-
-  background-color: $background-theme;
+  background-color: #3b3b3b;
 }
 
 #landing-container:after {
   content: "";
-
   z-index: -1;
   position: absolute;
   top: 0;
@@ -207,35 +150,26 @@ a {
   left: 0;
   right: 0;
   transform: scale(1.15);
-
-  background-image: url("computer.png");
+  background-image: url("../images/computer.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100px 0;
-
   opacity: 0.15;
 }
 
 #pseudo-ide-container {
   grid-column: span 3;
-
   position: relative;
-
   height: 13rem;
-
-  @extend %code-editor-font-style;
-
-  background-color: $black;
+  background-color: #1d1f21;
   border-radius: 8px;
-
   overflow: hidden;
 }
 
 #ide-option-bar {
   width: 100%;
   height: 1.2rem;
-
-  background-color: rgba(246, 246, 246, 1.0);
+  background-color: #f6f6f6;
   border-radius: 8px 8px 0px 0px;
   box-shadow: inset 0 -5px 20px rgba(0, 0, 0, 0.3);
 }
@@ -243,7 +177,6 @@ a {
 #ide-button-container {
   display: flex;
   align-items: center;
-
   width: 100%;
   height: 100%;
   padding-left: 0.5rem;
@@ -251,11 +184,9 @@ a {
 
 .ide-option-button {
   display: inline-block;
-
   width: 0.8rem;
   height: 0.8rem;
   margin-right: 0.5rem;
-
   border-radius: 100%;
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
 }
@@ -263,10 +194,8 @@ a {
 #ide-gutter-container {
   position: absolute;
   left: 1.25rem;
-
   padding-top: 0.675rem;
-
-  color: $mixed-gray;
+  color: #4f5256;
 }
 
 .ide-gutter-no {
@@ -288,16 +217,13 @@ a {
 #ide-main-container {
   padding-top: 0.675rem;
   padding-left: 2.5rem;
-
   line-height: 2.15rem;
 }
 
 .ide-text {
   position: relative;
   top: -0.35rem;
-
   margin-right: 1.25rem;
-
   color: white;
 }
 
@@ -305,59 +231,44 @@ a {
   position: relative;
   top: -0.05rem;
   left: -0.5rem;
-
   font-weight: 200;
-  color: $white;
+  color: #e0e0e0;
 }
 
 #ide-ln-comment {
-  color: $gray;
+  color: #969896;
 }
 
 #ide-ln-blank-1 {
-  color: $black;
+  color: #1d1f21;
 }
 
 #ide-ln-blank-2 {
-  color: $black;
+  color: #1d1f21;
 }
-
-
 
 /* ---------------------------- ABOUT SECTION ---------------------------- */
 #about-container {
   z-index: 10;
   position: relative;
-
   height: auto;
   width: 100%;
-  @extend %section-container-padding;
-
-  @extend %code-editor-font-style;
   text-align: center;
-
-  background-color: $white;
+  background-color: #e0e0e0;
 }
 
 #about-header {
   display: inline-block;
-
   width: auto;
   height: auto;
   margin-bottom: 40px;
-
-  //font-size: 1.25rem;
   font-size: 1.4rem;
-
-  border-bottom: 5px solid $black;
+  border-bottom: 5px solid #1d1f21;
 }
 
 #about-text {
-  // font-size: 0.75rem;
   font-size: 1rem;
 }
-
-
 
 /* --------------------------- PROJECT SECTION --------------------------- */
 #project-container {
@@ -365,32 +276,22 @@ a {
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 40px;
   grid-row-gap: 40px; */
-
   z-index: 20;
   position: relative;
-
   height: auto;
   /* width: 100%; */
-  @extend %section-container-padding;
-
-  @extend %code-editor-font-style;
   text-align: center;
-
   background-color: #beb8af;
 }
 
 #project-header {
   display: inline-block;
-
   /* grid-column: span 9; */
-
   width: auto;
   height: auto;
   margin-bottom: 40px;
-
   font-size: 1.25rem;
-
-  border-bottom: 5px solid $black;
+  border-bottom: 5px solid #1d1f21;
 }
 
 #project-container-grid {
@@ -398,60 +299,44 @@ a {
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 40px;
   grid-row-gap: 40px;
-
   position: relative;
-
   /* border: 1px dashed red; */
 }
 
 .project-thumbnail {
   height: 250px;
   height: 10rem;
-
   grid-column: span 6;
-
   /* border: 2px dashed $black; */
 }
 
 #pro-thumb-1 {
-  background-color: $black;
-  //background-image: url("project-test.png");
+  background-color: #1d1f21;
   background-size: cover;
 }
 
 #pro-thumb-2 {
-  background-color: $black;
-  //background-image: url("dg-putting-snap.png");
+  background-color: #1d1f21;
   background-size: cover;
 }
-
-
 
 /* --------------------------- ARCHIVE SECTION --------------------------- */
 #archive-container {
   z-index: 20;
   position: relative;
-
   height: auto;
   width: 100%;
-  @extend %section-container-padding;
-
-  @extend %code-editor-font-style;
   text-align: center;
-
-  background-color: $white;
+  background-color: #e0e0e0;
 }
 
 #archive-header {
   display: inline-block;
-
   width: auto;
   height: auto;
   margin-bottom: 40px;
-
   font-size: 1.25rem;
-
-  border-bottom: 5px solid $black;
+  border-bottom: 5px solid #1d1f21;
 }
 
 #archive-container-grid {
@@ -459,84 +344,63 @@ a {
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-
   position: relative;
 }
 
 .archive-thumbnail {
   height: 250px;
   height: 7.5rem;
-
   grid-column: span 3;
-
-  border: 1px solid $black;
+  border: 1px solid #1d1f21;
 }
 
 #arc-thumb-1 {
-  background-color: $black;
-  //background-image: url("dg-game-snap.png");
+  background-color: #1d1f21;
   background-size: cover;
   background-position: center top;
 }
 
 #arc-thumb-2 {
-  background-color: $black;
-  //background-image: url("project-test.png");
+  background-color: #1d1f21;
   background-size: cover;
   background-position: center;
 }
 
 #arc-thumb-3 {
-  background-color: $black;
-  //background-image: url("dg-putting-snap.png");
+  background-color: #1d1f21;
   background-size: cover;
   background-position: center top;
 }
 
 #arc-thumb-4 {
-  background-color: $black;
-  //background-image: url("calc-snap.png");
+  background-color: #1d1f21;
   background-size: cover;
   background-position: center;
 }
-
-
 
 /* --------------------------- CONTACT SECTION --------------------------- */
 #contact-container {
   z-index: 10;
   position: relative;
-
   width: 100%;
   height: auto;
-
-  @extend %section-container-padding;
-
-  @extend %code-editor-font-style;
   text-align: left;
   /* text-align: center; */
-
-  background-color: $background-theme;
-
+  background-color: #3b3b3b;
   /* border: 1px solid yellow; */
 }
 
 #contact-container:after {
   content: "";
-
   z-index: -10;
-
-  background-image: url("coffee.png");
+  background-image: url("../images/coffee.png");
   /* background-repeat: no-repeat;
   background-position: right top;
   background-position: 50% 0px; */
-
   background-size: cover;
   background-repeat: no-repeat;
   background-position: -180px 0;
-
   transform: scale(1.15);
-
   opacity: 0.15;
   top: 0;
   left: 0;
@@ -545,16 +409,12 @@ a {
   position: absolute;
 }
 
-
 #contact-header {
   display: inline-block;
-
   width: auto;
   height: auto;
-
   font-size: 1.25rem;
-
-  border-bottom: 5px solid $black;
+  border-bottom: 5px solid #1d1f21;
 }
 
 #coffee-img {
@@ -565,36 +425,25 @@ a {
 #contact-spacer {
   width: 600px;
   height: 87px;
-
-  background-color: $black;
-
+  background-color: #1d1f21;
   visibility: hidden;
 }
-
-
 
 /* -------------------------------- FOOTER -------------------------------- */
 #footer-container {
   z-index: 10;
   position: relative;
-
   height: auto;
   width: 100%;
-  @extend %section-container-padding;
-
   padding-top: 40px;
   padding-bottom: 40px;
-
-  @extend %code-editor-font-style;
   text-align: center;
-  color: $gray;
-
-  background-color: $black;
+  color: #969896;
+  background-color: #1d1f21;
 }
 
 #copyright-footer {
   font-size: 0.6rem;
-
   margin-bottom: 20px;
 }
 
@@ -602,11 +451,9 @@ a {
   position: relative;
   left: 0;
   right: 0;
-
   width: auto;
   height: auto;
   margin: auto;
-
   /* border: 1px dashed white; */
 }
 
@@ -614,16 +461,10 @@ a {
   /* position: relative;
   top: 0;
   left: 0; */
-
-  color: $gray;
+  color: #969896;
   font-size: 1rem;
-
   cursor: pointer;
 }
-
-
-
-
 
 /* ------------------------- MEDIA QUERY <= 1200 ------------------------- */
 /* @media screen and (max-width: 1200px) {
@@ -631,9 +472,6 @@ a {
     font-size: 24px;
   }
 } */
-
-
-
 /* ------------------------- MEDIA QUERY <= 1050 ------------------------- */
 @media screen and (max-width: 1050px) {
   :root {
@@ -648,9 +486,6 @@ a {
     top: -0.1rem;
   }
 }
-
-
-
 /* -------------------------- MEDIA QUERY <= 935 -------------------------- */
 @media screen and (max-width: 935px) {
   #nav-link-list {
@@ -678,9 +513,6 @@ a {
     grid-column: span 2;
   }
 }
-
-
-
 /* -------------------------- MEDIA QUERY <= 685 -------------------------- */
 @media screen and (max-width: 685px) {
   #pseudo-ide-container {
@@ -691,9 +523,6 @@ a {
     display: block;
   }
 }
-
-
-
 /* -------------------------- MEDIA QUERY <= 492 -------------------------- */
 @media screen and (max-width: 492px) {
   #pseudo-ide-container {
@@ -704,9 +533,6 @@ a {
     display: block;
   }
 }
-
-
-
 /* -------------------------- MEDIA QUERY <= 432 -------------------------- */
 @media screen and (max-width: 432px) {
   #pseudo-ide-container {
@@ -717,3 +543,5 @@ a {
     display: block;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
