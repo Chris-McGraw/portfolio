@@ -9,6 +9,15 @@
   padding: 5rem 2.5rem;
 }
 
+#contact-header, #archive-header, #project-header, #about-header {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin-bottom: 2.5rem;
+  font-size: 1.4rem;
+  border-bottom: 5px solid #1d1f21;
+}
+
 :root {
   font-size: 18px;
 }
@@ -224,7 +233,7 @@ a {
   position: relative;
   top: -0.35rem;
   margin-right: 1.25rem;
-  color: white;
+  color: #e0e0e0;
 }
 
 #ide-text-cursor {
@@ -257,15 +266,6 @@ a {
   background-color: #e0e0e0;
 }
 
-#about-header {
-  display: inline-block;
-  width: auto;
-  height: auto;
-  margin-bottom: 40px;
-  font-size: 1.4rem;
-  border-bottom: 5px solid #1d1f21;
-}
-
 #about-text {
   font-size: 1rem;
 }
@@ -284,16 +284,6 @@ a {
   background-color: #beb8af;
 }
 
-#project-header {
-  display: inline-block;
-  /* grid-column: span 9; */
-  width: auto;
-  height: auto;
-  margin-bottom: 40px;
-  font-size: 1.25rem;
-  border-bottom: 5px solid #1d1f21;
-}
-
 #project-container-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -304,7 +294,6 @@ a {
 }
 
 .project-thumbnail {
-  height: 250px;
   height: 10rem;
   grid-column: span 6;
   /* border: 2px dashed $black; */
@@ -328,15 +317,6 @@ a {
   width: 100%;
   text-align: center;
   background-color: #e0e0e0;
-}
-
-#archive-header {
-  display: inline-block;
-  width: auto;
-  height: auto;
-  margin-bottom: 40px;
-  font-size: 1.25rem;
-  border-bottom: 5px solid #1d1f21;
 }
 
 #archive-container-grid {
@@ -384,8 +364,7 @@ a {
   position: relative;
   width: 100%;
   height: auto;
-  text-align: left;
-  /* text-align: center; */
+  text-align: center;
   background-color: #3b3b3b;
   /* border: 1px solid yellow; */
 }
@@ -410,16 +389,8 @@ a {
 }
 
 #contact-header {
-  display: inline-block;
-  width: auto;
-  height: auto;
-  font-size: 1.25rem;
-  border-bottom: 5px solid #1d1f21;
-}
-
-#coffee-img {
-  /* top: 1400px;
-  left: 40px; */
+  color: #e0e0e0;
+  border-color: #e0e0e0;
 }
 
 #contact-spacer {

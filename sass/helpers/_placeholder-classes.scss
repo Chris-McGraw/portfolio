@@ -16,3 +16,15 @@
 %section-container-padding {
   padding: 5rem 2.5rem;
 }
+
+%section-header {
+  display: inline-block;
+
+  width: auto;
+  height: auto;
+  margin-bottom: 2.5rem;
+
+  font-size: 1.4rem;
+
+  border-bottom: 5px solid $black;
+}
