@@ -1,3 +1,4 @@
+@import "helpers/variables";
 @import "helpers/colors";
 @import "helpers/placeholder-classes";
 
@@ -68,7 +69,7 @@ a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 40px;
+  left: $section-padding-md;
 
   width: auto;
   height: auto;
@@ -79,14 +80,12 @@ a {
   top: 0;
   left: 0;
 
+  padding-right: $section-padding-sm;
+
   color: $black;
   font-size: 1.4rem;
 
   cursor: pointer;
-}
-
-#github-icon {
-  left: 20px;
 }
 
 #nav-logo-container {
@@ -120,16 +119,11 @@ a {
   cursor: pointer;
 }
 
-.bracket-padding {
-  /* position: relative;
-  top: -4px; */
-}
-
 #nav-link-list {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 20px;
+  right: $section-padding-md;
 
   width: auto;
 
@@ -142,7 +136,7 @@ a {
   display: inline-block;
 
   width: auto;
-  margin-right: 20px;
+  margin-left: $section-padding-sm;
 
   cursor: pointer;
 }
@@ -266,7 +260,7 @@ a {
 
   margin-right: 1.25rem;
 
-  color: white;
+  color: $white;
 }
 
 #ide-text-cursor {
@@ -308,16 +302,7 @@ a {
 }
 
 #about-header {
-  display: inline-block;
-
-  width: auto;
-  height: auto;
-  margin-bottom: 40px;
-
-  //font-size: 1.25rem;
-  font-size: 1.4rem;
-
-  border-bottom: 5px solid $black;
+  @extend %section-header;
 }
 
 #about-text {
@@ -348,17 +333,7 @@ a {
 }
 
 #project-header {
-  display: inline-block;
-
-  /* grid-column: span 9; */
-
-  width: auto;
-  height: auto;
-  margin-bottom: 40px;
-
-  font-size: 1.25rem;
-
-  border-bottom: 5px solid $black;
+  @extend %section-header;
 }
 
 #project-container-grid {
@@ -373,7 +348,6 @@ a {
 }
 
 .project-thumbnail {
-  height: 250px;
   height: 10rem;
 
   grid-column: span 6;
@@ -411,15 +385,7 @@ a {
 }
 
 #archive-header {
-  display: inline-block;
-
-  width: auto;
-  height: auto;
-  margin-bottom: 40px;
-
-  font-size: 1.25rem;
-
-  border-bottom: 5px solid $black;
+  @extend %section-header;
 }
 
 #archive-container-grid {
@@ -481,8 +447,7 @@ a {
   @extend %section-container-padding;
 
   @extend %code-editor-font-style;
-  text-align: left;
-  /* text-align: center; */
+  text-align: center;
 
   background-color: $background-theme;
 
@@ -514,19 +479,11 @@ a {
 }
 
 #contact-header {
-  display: inline-block;
+  @extend %section-header;
 
-  width: auto;
-  height: auto;
+  color: $white;
 
-  font-size: 1.25rem;
-
-  border-bottom: 5px solid $black;
-}
-
-#coffee-img {
-  /* top: 1400px;
-  left: 40px; */
+  border-color: $white;
 }
 
 #contact-spacer {
