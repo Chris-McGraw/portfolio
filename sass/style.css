@@ -73,7 +73,7 @@ a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 40px;
+  left: 2.5rem;
   width: auto;
   height: auto;
 }
@@ -82,13 +82,10 @@ a {
   position: relative;
   top: 0;
   left: 0;
+  padding-right: 1.25rem;
   color: #1d1f21;
   font-size: 1.4rem;
   cursor: pointer;
-}
-
-#github-icon {
-  left: 20px;
 }
 
 #nav-logo-container {
@@ -116,16 +113,11 @@ a {
   cursor: pointer;
 }
 
-.bracket-padding {
-  /* position: relative;
-  top: -4px; */
-}
-
 #nav-link-list {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 20px;
+  right: 2.5rem;
   width: auto;
   font-family: Menlo, Consolas, DejaVu Sans Mono, sans-serif;
   font-size: 1rem;
@@ -135,7 +127,7 @@ a {
 .nav-link {
   display: inline-block;
   width: auto;
-  margin-right: 20px;
+  margin-left: 1.25rem;
   cursor: pointer;
 }
 
