@@ -314,16 +314,9 @@ a {
 
 /* --------------------------- PROJECT SECTION --------------------------- */
 #project-container {
-  /* display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 40px;
-  grid-row-gap: 40px; */
-
   z-index: 20;
   position: relative;
 
-  height: auto;
-  /* width: 100%; */
   @extend %section-container-padding;
 
   @extend %code-editor-font-style;
@@ -338,33 +331,34 @@ a {
 
 #project-container-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 40px;
-  grid-row-gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+
+  grid-column-gap: $section-padding-xs;
+  grid-row-gap: $section-padding-xs;
 
   position: relative;
 
-  /* border: 1px dashed red; */
+  //border: 1px dashed red;
 }
 
 .project-thumbnail {
-  height: 10rem;
+  grid-column: span 1;
 
-  grid-column: span 6;
+  height: 20rem;
 
-  /* border: 2px dashed $black; */
+  border: 1px dashed black;
 }
 
 #pro-thumb-1 {
-  background-color: $black;
-  //background-image: url("project-test.png");
-  background-size: cover;
 }
 
 #pro-thumb-2 {
-  background-color: $black;
-  //background-image: url("dg-putting-snap.png");
-  background-size: cover;
+  //background-image: url("../images/phone-laptop-mock-vert.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 1px dashed black;
 }
 
 
@@ -585,13 +579,8 @@ a {
     grid-column: span 4;
   }
 
-  #project-container-grid {
-    grid-template-columns: repeat(1, 1fr);
-    grid-column-gap: 0;
-  }
-
   .project-thumbnail {
-    grid-column: span 1;
+    grid-column: span 2;
   }
 
   #archive-container-grid {

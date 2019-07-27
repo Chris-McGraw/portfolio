@@ -264,41 +264,31 @@ a {
 
 /* --------------------------- PROJECT SECTION --------------------------- */
 #project-container {
-  /* display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 40px;
-  grid-row-gap: 40px; */
   z-index: 20;
   position: relative;
-  height: auto;
-  /* width: 100%; */
   text-align: center;
   background-color: #beb8af;
 }
 
 #project-container-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 40px;
-  grid-row-gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 0.75rem;
+  grid-row-gap: 0.75rem;
   position: relative;
-  /* border: 1px dashed red; */
 }
 
 .project-thumbnail {
-  height: 10rem;
-  grid-column: span 6;
-  /* border: 2px dashed $black; */
-}
-
-#pro-thumb-1 {
-  background-color: #1d1f21;
-  background-size: cover;
+  grid-column: span 1;
+  height: 20rem;
+  border: 1px dashed black;
 }
 
 #pro-thumb-2 {
-  background-color: #1d1f21;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px dashed black;
 }
 
 /* --------------------------- ARCHIVE SECTION --------------------------- */
@@ -459,13 +449,8 @@ a {
     grid-column: span 4;
   }
 
-  #project-container-grid {
-    grid-template-columns: repeat(1, 1fr);
-    grid-column-gap: 0;
-  }
-
   .project-thumbnail {
-    grid-column: span 1;
+    grid-column: span 2;
   }
 
   #archive-container-grid {
