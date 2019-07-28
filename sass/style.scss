@@ -346,18 +346,34 @@ a {
 
   height: 20rem;
 
-  border: 1px dashed black;
+  //border: 1px dashed black;
 }
 
 #pro-thumb-1 {
+  border: 1px dashed black;
 }
 
 #pro-thumb-2 {
-  //background-image: url("../images/phone-laptop-mock-vert.png");
+  //background-image: url("../images/mockup-blank-phone-left.png");
+  background-image: url("../images/mockup-vert.jpg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 
+  //border: 1px dashed black;
+}
+
+#pro-thumb-3 {
+  //background-image: url("../images/mockup-blank-phone-right.png");
+  background-image: url("../images/mockup-recipe-book.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  //border: 1px dashed black;
+}
+
+#pro-thumb-4 {
   border: 1px dashed black;
 }
 

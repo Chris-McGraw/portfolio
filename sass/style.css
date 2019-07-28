@@ -281,13 +281,27 @@ a {
 .project-thumbnail {
   grid-column: span 1;
   height: 20rem;
+}
+
+#pro-thumb-1 {
   border: 1px dashed black;
 }
 
 #pro-thumb-2 {
+  background-image: url("../images/mockup-vert.jpg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+#pro-thumb-3 {
+  background-image: url("../images/mockup-recipe-book.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#pro-thumb-4 {
   border: 1px dashed black;
 }
 
