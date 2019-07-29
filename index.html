@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Oxygen+Mono&display=swap">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="sass/style.css">
   <title>Portfolio WIP</title>
@@ -34,7 +35,7 @@
     </div>
 
     <div id="nav-logo-container">
-      <div id="nav-logo">&lt;CRM/&gt;</div>
+      <div id="nav-logo">&lt; CRM &gt;</div>
     </div>
 
     <ul id="nav-link-list">
@@ -59,23 +60,26 @@
         </ul>
       </div>
 
-      <div id="ide-gutter-container">
-        <p class="ide-gutter-no">1</p>
-        <p class="ide-gutter-no">2</p>
-        <p class="ide-gutter-no">3</p>
-        <p class="ide-gutter-no">4</p>
-        <p class="ide-gutter-no">5</p>
-        <p id="gutter-no-6" class="ide-gutter-no">6</p>
-        <p id="gutter-no-7" class="ide-gutter-no">7</p>
-        <p id="gutter-no-8" class="ide-gutter-no">8</p>
-      </div>
 
-      <div id="ide-main-container">
-        <p id="ide-ln-comment" class="ide-text"><span id="typed-comment"></span><span id="ide-text-cursor">|</span></p>
-        <p id="ide-ln-blank-1" class="ide-text">test</p>
-        <p id="ide-ln-name" class="ide-text"><span id="typed-name"></span></p>
-        <p id="ide-ln-blank-2" class="ide-text">test</p>
-        <p id="ide-ln-profession" class="ide-text"><span id="typed-profession"></span></p>
+      <div id="ide-container-inner">
+        <div id="ide-gutter-container">
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>4</p>
+          <p>5</p>
+          <p id="gutter-no-6">6</p>
+          <p id="gutter-no-7">7</p>
+          <p id="gutter-no-8">8</p>
+        </div>
+
+        <div id="ide-main-container">
+          <p id="ide-ln-comment" class="ide-text"><span id="typed-comment"></span><span id="ide-text-cursor">|</span></p>
+          <p id="ide-ln-blank-1" class="ide-text">test</p>
+          <p id="ide-ln-name" class="ide-text"><span id="typed-name"></span></p>
+          <p id="ide-ln-blank-2" class="ide-text">test</p>
+          <p id="ide-ln-profession" class="ide-text"><span id="typed-profession"></span></p>
+        </div>
       </div>
     </div>
   </section>
@@ -105,10 +109,39 @@
     <h1 id="project-header">Latest Projects</h1>
 
     <div id="project-container-grid">
-      <div id="pro-thumb-1" class="project-thumbnail"></div>
+      <div id="pro-thumb-1" class="project-thumbnail project-text-left">
+        <div class="inner-project-container">
+          <h2 class="project-name">Vert E-commerce Landing Page</h2>
+          <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Ut vitae interdum dolor, at rutrum metus. Etiam vestibulum eros in facilisis imperdiet.
+            Nulla tempor ultricies nisi egestas mollis.
+          </p>
+
+          <div class="pro-btn-container-left">
+            <button class="project-button pro-btn-left">Live Page</button>
+            <button class="project-button pro-btn-left">Source Code</button>
+          </div>
+        </div>
+      </div>
+
       <div id="pro-thumb-2" class="project-thumbnail"></div>
+
       <div id="pro-thumb-3" class="project-thumbnail"></div>
-      <div id="pro-thumb-4" class="project-thumbnail"></div>
+
+      <div id="pro-thumb-4" class="project-thumbnail project-text-right">
+        <div class="inner-project-container">
+          <h2 class="project-name">Recipe Book Progressive Web App</h2>
+          <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Ut vitae interdum dolor, at rutrum metus. Etiam vestibulum eros in facilisis imperdiet.
+            Nulla tempor ultricies nisi egestas mollis.
+          </p>
+
+          <div class="pro-btn-container-right">
+            <button class="project-button pro-btn-right">Live Page</button>
+            <button class="project-button pro-btn-right">Source Code</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
