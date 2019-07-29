@@ -1,8 +1,7 @@
-#footer-container, #contact-container, #archive-container, #project-container, #about-container, #pseudo-ide-container {
+#pseudo-ide-container {
   text-align: left;
-  font-family: Menlo, Consolas, DejaVu Sans Mono, sans-serif;
+  font-family: "Oxygen Mono", Menlo, Consolas, monospace;
   font-size: 1.25rem;
-  font-weight: 200;
 }
 
 #footer-container, #contact-container, #archive-container, #project-container, #about-container, #landing-container {
@@ -14,8 +13,9 @@
   width: auto;
   height: auto;
   margin-bottom: 2.5rem;
-  font-size: 1.4rem;
-  border-bottom: 5px solid #1d1f21;
+  font-size: 1.5rem;
+  font-weight: 300;
+  border-bottom: 2px solid #1d1f21;
 }
 
 :root {
@@ -84,7 +84,7 @@ a {
   left: 0;
   padding-right: 1.25rem;
   color: #1d1f21;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   cursor: pointer;
 }
 
@@ -107,8 +107,8 @@ a {
   position: relative;
   width: auto;
   height: auto;
-  font-family: Menlo, Consolas, DejaVu Sans Mono, sans-serif;
-  font-size: 1.8rem;
+  font-family: "Oxygen Mono", Menlo, Consolas, monospace;
+  font-size: 1.75rem;
   color: #1d1f21;
   cursor: pointer;
 }
@@ -119,8 +119,9 @@ a {
   transform: translateY(-50%);
   right: 2.5rem;
   width: auto;
-  font-family: Menlo, Consolas, DejaVu Sans Mono, sans-serif;
-  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
   color: #1d1f21;
 }
 
@@ -192,15 +193,16 @@ a {
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
 }
 
+#ide-container-inner {
+  position: relative;
+  top: 0.35rem;
+  line-height: 2.15rem;
+}
+
 #ide-gutter-container {
   position: absolute;
   left: 1.25rem;
-  padding-top: 0.675rem;
   color: #4f5256;
-}
-
-.ide-gutter-no {
-  padding-bottom: 0.675rem;
 }
 
 #gutter-no-6 {
@@ -216,14 +218,11 @@ a {
 }
 
 #ide-main-container {
-  padding-top: 0.675rem;
   padding-left: 2.5rem;
-  line-height: 2.15rem;
 }
 
 .ide-text {
   position: relative;
-  top: -0.35rem;
   margin-right: 1.25rem;
   color: #e0e0e0;
 }
@@ -232,7 +231,6 @@ a {
   position: relative;
   top: -0.05rem;
   left: -0.5rem;
-  font-weight: 200;
   color: #e0e0e0;
 }
 
@@ -254,6 +252,8 @@ a {
   position: relative;
   height: auto;
   width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
   text-align: center;
   background-color: #e0e0e0;
 }
@@ -266,6 +266,7 @@ a {
 #project-container {
   z-index: 20;
   position: relative;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
   background-color: #beb8af;
 }
@@ -311,6 +312,7 @@ a {
   position: relative;
   height: auto;
   width: 100%;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
   background-color: #e0e0e0;
 }
@@ -360,6 +362,7 @@ a {
   position: relative;
   width: 100%;
   height: auto;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
   background-color: #3b3b3b;
   /* border: 1px solid yellow; */
@@ -404,6 +407,7 @@ a {
   width: 100%;
   padding-top: 40px;
   padding-bottom: 40px;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
   color: #969896;
   background-color: #1d1f21;
@@ -443,10 +447,6 @@ a {
 @media screen and (max-width: 1050px) {
   :root {
     font-size: 16px;
-  }
-
-  .ide-gutter-no {
-    padding-bottom: 0.625rem;
   }
 
   #ide-text-cursor {
