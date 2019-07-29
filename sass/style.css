@@ -285,7 +285,8 @@ a {
 }
 
 #pro-thumb-1 {
-  border: 1px dashed black;
+  display: flex;
+  align-items: center;
 }
 
 #pro-thumb-2 {
@@ -303,7 +304,67 @@ a {
 }
 
 #pro-thumb-4 {
-  border: 1px dashed black;
+  display: flex;
+  align-items: center;
+}
+
+.inner-project-container {
+  width: auto;
+}
+
+.project-name {
+  font-weight: "Oxygen Mono", Menlo, Consolas, monospace;
+  font-size: 1.25rem;
+}
+
+.project-text-left {
+  text-align: left;
+}
+
+.project-text-right {
+  text-align: right;
+}
+
+.project-description {
+  margin-bottom: 1.25rem;
+  font-weight: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.pro-btn-container-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.pro-btn-container-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.project-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 2.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #1d1f21;
+  background-color: #e0e0e0;
+  border: 1px solid #1d1f21;
+  border-radius: 0.4rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pro-btn-left {
+  margin-right: 0.75rem;
+}
+
+.pro-btn-right {
+  margin-left: 0.75rem;
 }
 
 /* --------------------------- ARCHIVE SECTION --------------------------- */
