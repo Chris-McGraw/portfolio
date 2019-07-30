@@ -6,14 +6,9 @@
 }
 
 %code-editor-font-style {
-  text-align: left;
-
   font-family: $font-stack-ide;
-
-  //font-size: 1.25rem;
   font-size: 1.25rem;
-
-  //font-weight: 200;
+  text-align: left;
 }
 
 %section-container-padding {
@@ -27,7 +22,7 @@
   height: auto;
   margin-bottom: 2.5rem;
 
-  font-size: $font-size-lg;
+  font-size: $font-size-xl;
   font-weight: 300;
 
   border-bottom: 2px solid $black;
