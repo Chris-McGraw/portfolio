@@ -79,13 +79,14 @@ a {
 }
 
 .nav-icon {
-  position: relative;
-  top: 0;
-  left: 0;
-  padding-right: 1.25rem;
   font-size: 1.25rem;
   color: #1d1f21;
   cursor: pointer;
+}
+
+.nav-icon-inner {
+  display: inline-block;
+  margin-right: 1.25rem;
 }
 
 #nav-logo-container {
@@ -496,12 +497,10 @@ a {
   cursor: pointer;
 }
 
-/* ------------------------- MEDIA QUERY <= 1200 ------------------------- */
-/* @media screen and (max-width: 1200px) {
-  :root {
-    font-size: 24px;
-  }
-} */
+.footer-icon-inner {
+  display: inline-block;
+}
+
 /* ------------------------- MEDIA QUERY <= 1050 ------------------------- */
 @media screen and (max-width: 1050px) {
   :root {
