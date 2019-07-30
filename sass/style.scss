@@ -82,8 +82,8 @@ a {
 
   padding-right: $section-padding-sm;
 
-  color: $black;
   font-size: $font-size-lg;
+  color: $black;
 
   cursor: pointer;
 }
@@ -593,10 +593,9 @@ a {
 
   height: auto;
   width: 100%;
-  @extend %section-container-padding;
 
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: $section-padding-sm;
+  padding-bottom: $section-padding-sm;
 
   font-family: $font-stack-main;
   text-align: center;
@@ -606,9 +605,9 @@ a {
 }
 
 #copyright-footer {
-  font-size: $font-size-xs;
+  margin-bottom: $section-padding-xs;
 
-  margin-bottom: 20px;
+  font-size: $font-size-xs;
 }
 
 #footer-icon-container {
@@ -619,17 +618,11 @@ a {
   width: auto;
   height: auto;
   margin: auto;
-
-  /* border: 1px dashed white; */
 }
 
 .footer-icon {
-  /* position: relative;
-  top: 0;
-  left: 0; */
-
-  color: $gray;
   font-size: $font-size-lg;
+  color: $gray;
 
   cursor: pointer;
 }
