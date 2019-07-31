@@ -288,9 +288,11 @@ a {
 #pro-thumb-1 {
   display: flex;
   align-items: center;
+  order: 0;
 }
 
 #pro-thumb-2 {
+  order: 1;
   background-image: url("../images/mockup-vert.jpg");
   background-size: contain;
   background-position: center;
@@ -298,6 +300,7 @@ a {
 }
 
 #pro-thumb-3 {
+  order: 3;
   background-image: url("../images/mockup-recipe-book.jpg");
   background-size: contain;
   background-position: center;
@@ -305,6 +308,7 @@ a {
 }
 
 #pro-thumb-4 {
+  order: 4;
   display: flex;
   align-items: center;
 }
@@ -521,8 +525,51 @@ a {
     grid-column: span 4;
   }
 
+  #project-container-grid {
+    grid-row-gap: 0;
+  }
+
   .project-thumbnail {
     grid-column: span 2;
+  }
+
+  #pro-thumb-1 {
+    align-items: flex-start;
+    order: 1;
+    height: auto;
+    margin-bottom: 5rem;
+  }
+
+  #pro-thumb-2 {
+    order: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  #pro-thumb-3 {
+    order: 3;
+    margin-bottom: 1.25rem;
+  }
+
+  #pro-thumb-4 {
+    align-items: flex-start;
+    order: 4;
+    height: auto;
+  }
+
+  .project-text-left {
+    text-align: center;
+  }
+
+  .project-text-right {
+    text-align: center;
+  }
+
+  .pro-btn-container-left {
+    justify-content: center;
+  }
+
+  .pro-btn-container-right {
+    justify-content: center;
   }
 
   #archive-container-grid {
