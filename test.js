@@ -9,7 +9,7 @@ var $ideLnBlank2 = $("#ide-ln-blank-2");
 var $ideLnProfession = $("#ide-ln-profession");
 var $typedProfession = $("#typed-profession");
 
-var makeArrayThing = "// My Portfolio";
+/* var makeArrayThing = "// My Portfolio";
 var makeArrayThing2 = "const";
 var makeArrayThing3 = "name";
 var makeArrayThing4 = '"Chris McGraw"';
@@ -17,13 +17,140 @@ var makeArrayThing5 = "let";
 var makeArrayThing6 = "profession";
 var makeArrayThing7 = '"Front End Web Developer"';
 
-var typingSpeed = 0;
+var typingSpeed = 0; */
+
+
+let localTypeLoopTime = 0;
+let totalTypeLoopTime = 0;
+
+const typeTiming = 75;
+let typeLoopCount = -1;
+
+let blankLineDelay = false;
+
+
+function ideTypeByLetter(currentLine) {
+  if(blankLineDelay === false) {
+    localTypeLoopTime = 0;
+  }
+  else if(blankLineDelay === true) {
+    localTypeLoopTime = typeTiming;
+    totalTypeLoopTime += typeTiming;
+  }
+
+  currentLine.words.forEach(function(i) {
+    let newWordArray = i.split("");
+
+    newWordArray.forEach(function(v) {
+      localTypeLoopTime += typeTiming;
+      totalTypeLoopTime += typeTiming;
+
+      setTimeout(function() {
+        if(currentLine === ideLineComment) {
+          $typedComment.append(v);
+        }
+
+        else if(currentLine === ideLineNameConst) {
+          $typedName.append("<span class='pseudo-var'>" + v + "</span>");
+        }
+        else if(currentLine === ideLineName) {
+          $typedName.append(v);
+        }
+        else if(currentLine === ideLineNameValue) {
+          $typedName.append("<span class='pseudo-value'>" + v + "</span>");
+        }
+        else if(currentLine === ideLineNameSemi) {
+          $typedName.append(v);
+        }
+
+        else if(currentLine === ideLineProfessionConst) {
+          $typedProfession.append("<span class='pseudo-var'>" + v + "</span>");
+        }
+        else if(currentLine === ideLineProfession) {
+          $typedProfession.append(v);
+        }
+        else if(currentLine === ideLineProfessionValue) {
+          $typedProfession.append("<span class='pseudo-value'>" + v + "</span>");
+        }
+        else if(currentLine === ideLineProfessionSemi) {
+          $typedProfession.append(v);
+        }
+      }, localTypeLoopTime);
+    });
+  });
+
+  setTimeout(function() {
+    console.log(totalTypeLoopTime);
+
+    if(currentLine.class === "pseudoVar") {
+      $pseudoVar = $(".pseudo-var");
+      $pseudoVar.css("color", "#b294bb");
+    }
+    if(currentLine.class === "pseudoValue") {
+      $pseudoVar = $(".pseudo-value");
+      $pseudoVar.css("color", "#b5bd68");
+    }
+
+    if(currentLine === ideLineComment) {
+      ideSkipLine($ideLnBlank1);
+
+      blankLineDelay = true;
+    }
+    else if(currentLine === ideLineNameSemi) {
+      ideSkipLine($ideLnBlank2);
+
+      blankLineDelay = true;
+    }
+    else if(currentLine !== ideLineComment || currentLine !== ideLineNameSemi) {
+      blankLineDelay = false;
+    }
+  }, localTypeLoopTime);
+}
+
+
+function ideSkipLine(currentLineBlank) {
+  $ideTextCursor.hide();
+  $ideTextCursor.remove();
+
+  if(currentLineBlank === $ideLnBlank1) {
+    $ideLnBlank1.prepend("<span id='ide-text-cursor'>|</span>");
+  }
+  else if(currentLineBlank === $ideLnBlank2) {
+    $ideLnBlank2.prepend("<span id='ide-text-cursor'>|</span>");
+  }
+
+  setTimeout(function() {
+    $ideTextCursor = $("#ide-text-cursor");
+    $ideTextCursor.hide();
+    $ideTextCursor.remove();
+
+    if(currentLineBlank === $ideLnBlank1) {
+      $ideLnName.append("<span id='ide-text-cursor'>|</span>");
+    }
+    else if(currentLineBlank === $ideLnBlank2) {
+      $ideLnProfession.append("<span id='ide-text-cursor'>|</span>");
+    }
+
+    $ideTextCursor = $("#ide-text-cursor");
+  }, typeTiming);
+}
+
+
+function ideTypingLoop() {
+  if( typeLoopCount < (ideCombinedArray.length - 1) ) {
+    typeLoopCount++;
+
+    setTimeout(function() {
+      ideTypeByLetter(ideCombinedArray[typeLoopCount]);
+
+      ideTypingLoop();
+    }, localTypeLoopTime);
+  }
+}
 
 
 
-
-
-function typeByLetter() {
+/* function typeByLetter() {
   var newArrayThing = makeArrayThing.split("");
   var secondNewArrayThing = makeArrayThing2.split("");
   var thirdNewArrayThing = makeArrayThing3.split("");
@@ -202,12 +329,14 @@ function typeByLetter() {
     $typedProfession.append(";");
   }, 4750);
 
-}
+} */
 
 
 $(document).ready(function() {
   setTimeout(function() {
     //typeByLetter();
+
+    ideTypingLoop();
   }, 500);
 
 
