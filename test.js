@@ -137,15 +137,37 @@ function ideSkipLine(currentLineBlank) {
 
 
 function ideTypingLoop() {
-  if( typeLoopCount < (ideCombinedArray.length - 1) ) {
+  if(typeLoopCount < ideCombinedArray.length) {
     typeLoopCount++;
 
-    setTimeout(function() {
-      ideTypeByLetter(ideCombinedArray[typeLoopCount]);
+    if(typeLoopCount !== ideCombinedArray.length) {
+      setTimeout(function() {
+        ideTypeByLetter(ideCombinedArray[typeLoopCount]);
 
-      ideTypingLoop();
-    }, localTypeLoopTime);
+        ideTypingLoop();
+      }, localTypeLoopTime);
+    }
+    else {
+      setTimeout(function() {
+        console.log("typing ended");
+
+        //ideCursorBlinkLoop();
+      }, 500);
+    }
   }
+}
+
+
+function ideCursorBlinkLoop() {
+  $ideTextCursor.css("opacity", "0");
+
+  setTimeout(function() {
+    $ideTextCursor.css("opacity", "1");
+  }, 500);
+
+  setTimeout(function() {
+    ideCursorBlinkLoop();
+  }, (500 * 2));
 }
 
 
