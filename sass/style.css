@@ -13,9 +13,29 @@
   width: auto;
   height: auto;
   margin-bottom: 2.5rem;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
   border-bottom: 2px solid #1d1f21;
+}
+
+#submit-button, .project-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 2.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #1d1f21;
+  background-color: #e0e0e0;
+  border: 1px solid #1d1f21;
+  border-radius: 0.4rem;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -253,21 +273,20 @@ a {
   position: relative;
   height: auto;
   width: 100%;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
   text-align: center;
   background-color: #e0e0e0;
 }
 
 #about-text {
+  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
+  font-weight: 300;
 }
 
 /* --------------------------- PROJECT SECTION --------------------------- */
 #project-container {
   z-index: 20;
   position: relative;
-  font-family: "Open Sans", sans-serif;
   text-align: center;
   background-color: #beb8af;
 }
@@ -318,8 +337,9 @@ a {
 }
 
 .project-name {
-  font-weight: "Oxygen Mono", Menlo, Consolas, monospace;
+  font-family: "Oxygen Mono", Menlo, Consolas, monospace;
   font-size: 1.25rem;
+  font-weight: 300;
 }
 
 .project-text-left {
@@ -332,7 +352,7 @@ a {
 
 .project-description {
   margin-bottom: 1.25rem;
-  font-weight: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-weight: 300;
 }
@@ -345,25 +365,6 @@ a {
 .pro-btn-container-right {
   display: flex;
   justify-content: flex-end;
-}
-
-.project-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 8rem;
-  height: 2.5rem;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  color: #1d1f21;
-  background-color: #e0e0e0;
-  border: 1px solid #1d1f21;
-  border-radius: 0.4rem;
-  outline: none;
-  cursor: pointer;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-tap-highlight-color: transparent;
 }
 
 .pro-btn-left {
@@ -380,7 +381,6 @@ a {
   position: relative;
   height: auto;
   width: 100%;
-  font-family: "Open Sans", sans-serif;
   text-align: center;
   background-color: #e0e0e0;
 }
@@ -431,9 +431,9 @@ a {
   width: 100%;
   height: auto;
   font-family: "Open Sans", sans-serif;
+  font-weight: 300;
   text-align: center;
   background-color: #3b3b3b;
-  /* border: 1px solid yellow; */
 }
 
 #contact-container:after {
@@ -460,11 +460,71 @@ a {
   border-color: #e0e0e0;
 }
 
-#contact-spacer {
-  width: 600px;
-  height: 87px;
-  background-color: #1d1f21;
-  visibility: hidden;
+#contact-container-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 1.25rem;
+  position: relative;
+}
+
+#contact-info-container {
+  grid-column: span 2;
+  height: auto;
+}
+
+#contact-message-container {
+  grid-column: span 3;
+  height: auto;
+}
+
+#contact-submit-container {
+  grid-column: span 5;
+  height: auto;
+  margin-top: 2.5rem;
+}
+
+label, input, textarea {
+  display: block;
+}
+
+label {
+  font-size: 1.25rem;
+  text-align: left;
+  color: #e0e0e0;
+}
+
+input {
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  background-color: #e0e0e0;
+  border: none;
+}
+
+#name-input {
+  margin-bottom: 1.25rem;
+}
+
+#email-input {
+  margin-bottom: 1.25rem;
+}
+
+textarea {
+  width: 100%;
+  height: 14.95rem;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  background-color: #e0e0e0;
+  border: none;
+  resize: none;
+}
+
+#submit-button {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 /* -------------------------------- FOOTER -------------------------------- */
@@ -578,6 +638,18 @@ a {
 
   .archive-thumbnail {
     grid-column: span 2;
+  }
+
+  #contact-info-container {
+    grid-column: span 5;
+  }
+
+  #contact-message-container {
+    grid-column: span 5;
+  }
+
+  #subject-input {
+    margin-bottom: 1.25rem;
   }
 }
 /* -------------------------- MEDIA QUERY <= 685 -------------------------- */
