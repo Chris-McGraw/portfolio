@@ -12,7 +12,7 @@
 }
 
 %section-container-padding {
-  padding: 5rem 2.5rem;
+  padding: $section-padding-xl $section-padding-lg;
 }
 
 %section-header {
@@ -20,7 +20,7 @@
 
   width: auto;
   height: auto;
-  margin-bottom: 2.5rem;
+  margin-bottom: $section-padding-lg;
 
   font-family: $font-stack-main;
   font-size: $font-size-xl;

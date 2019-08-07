@@ -69,7 +69,7 @@ a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: $section-padding-md;
+  left: $section-padding-lg;
 
   width: auto;
   height: auto;
@@ -85,7 +85,7 @@ a {
 .nav-icon-inner {
   display: inline-block;
 
-  margin-right: $section-padding-sm;
+  margin-right: $section-padding-md;
 }
 
 #nav-logo-container {
@@ -123,7 +123,7 @@ a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: $section-padding-md;
+  right: $section-padding-lg;
 
   width: auto;
 
@@ -137,7 +137,7 @@ a {
   display: inline-block;
 
   width: auto;
-  margin-left: $section-padding-sm;
+  margin-left: $section-padding-md;
 
   cursor: pointer;
 }
@@ -209,7 +209,7 @@ a {
 
   width: 100%;
   height: 100%;
-  padding-left: 0.5rem;
+  padding-left: $section-padding-xs;
 }
 
 .ide-option-button {
@@ -217,7 +217,7 @@ a {
 
   width: 0.8rem;
   height: 0.8rem;
-  margin-right: 0.5rem;
+  margin-right: $section-padding-xs;
 
   border-radius: 100%;
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
@@ -264,7 +264,7 @@ a {
 #ide-text-cursor {
   position: relative;
   top: -0.05rem;
-  left: -0.5rem;
+  left: -$section-padding-xs;
 
   color: $white;
 }
@@ -329,8 +329,8 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  grid-column-gap: $section-padding-xs;
-  grid-row-gap: $section-padding-xs;
+  grid-column-gap: $section-padding-sm;
+  grid-row-gap: $section-padding-sm;
 
   position: relative;
 
@@ -402,7 +402,7 @@ a {
 }
 
 .project-description {
-  margin-bottom: $section-padding-sm;
+  margin-bottom: $section-padding-md;
 
   font-family: $font-stack-main;
   font-size: $font-size-sm;
@@ -428,11 +428,11 @@ a {
 }
 
 .pro-btn-left {
-  margin-right: $section-padding-xs;
+  margin-right: $section-padding-sm;
 }
 
 .pro-btn-right {
-  margin-left: $section-padding-xs;
+  margin-left: $section-padding-sm;
 }
 
 
@@ -458,8 +458,8 @@ a {
 #archive-container-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: $section-padding-sm;
-  grid-row-gap: $section-padding-sm;
+  grid-column-gap: $section-padding-md;
+  grid-row-gap: $section-padding-md;
 
   position: relative;
 }
@@ -540,8 +540,8 @@ a {
 #contact-form {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: $section-padding-sm;
-  grid-row-gap: $section-padding-xs;
+  grid-column-gap: $section-padding-md;
+  grid-row-gap: $section-padding-sm;
 
   position: relative;
 }
@@ -563,8 +563,8 @@ label {
 input {
   width: 100%;
   height: 2rem;
-  margin-top: 0.5rem;
-  padding: 0.35rem 0.5rem;
+  padding: 0.35rem $section-padding-xs;
+  margin-top: $section-padding-xs;
 
   font-size: $font-size-sm;
   font-weight: 400;
@@ -577,8 +577,8 @@ input {
 textarea {
   width: 100%;
   height: 11.95rem;
-  padding: 0.35rem 0.5rem;
-  margin-top: 0.5rem;
+  padding: 0.35rem $section-padding-xs;
+  margin-top: $section-padding-xs;
 
   font-size: $font-size-sm;
   font-weight: 400;
@@ -597,7 +597,7 @@ textarea {
 }
 
 #name-input {
-  margin-bottom: $section-padding-xs;
+  margin-bottom: $section-padding-sm;
 }
 
 #contact-message-container {
@@ -607,14 +607,14 @@ textarea {
 }
 
 #email-input {
-  margin-bottom: $section-padding-xs;
+  margin-bottom: $section-padding-sm;
 }
 
 #contact-submit-container {
   grid-column: span 5;
 
   height: auto;
-  margin-top: $section-padding-md;
+  margin-top: $section-padding-lg;
 }
 
 #submit-button {
@@ -637,8 +637,8 @@ textarea {
   height: auto;
   width: 100%;
 
-  padding-top: $section-padding-sm;
-  padding-bottom: $section-padding-sm;
+  padding-top: $section-padding-md;
+  padding-bottom: $section-padding-md;
 
   font-family: $font-stack-main;
   text-align: center;
@@ -648,7 +648,7 @@ textarea {
 }
 
 #copyright-footer {
-  margin-bottom: $section-padding-xs;
+  margin-bottom: $section-padding-sm;
 
   font-size: $font-size-xs;
 }
@@ -719,19 +719,19 @@ textarea {
     order: 1;
 
     height: auto;
-    margin-bottom: $section-padding-lg;
+    margin-bottom: $section-padding-xl;
   }
 
   #pro-thumb-2 {
     order: 0;
 
-    margin-bottom: $section-padding-sm;
+    margin-bottom: $section-padding-md;
   }
 
   #pro-thumb-3 {
     order: 3;
 
-    margin-bottom: $section-padding-sm;
+    margin-bottom: $section-padding-md;
   }
 
   #pro-thumb-4 {
