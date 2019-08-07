@@ -387,41 +387,19 @@ a {
 
 #archive-container-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.25rem;
+  grid-row-gap: 1.25rem;
   position: relative;
 }
 
 .archive-thumbnail {
-  height: 250px;
-  height: 7.5rem;
-  grid-column: span 3;
+  grid-column: span 1;
+  height: 12rem;
+  background-color: #1d1f21;
+  background-size: cover;
+  background-position: center;
   border: 1px solid #1d1f21;
-}
-
-#arc-thumb-1 {
-  background-color: #1d1f21;
-  background-size: cover;
-  background-position: center top;
-}
-
-#arc-thumb-2 {
-  background-color: #1d1f21;
-  background-size: cover;
-  background-position: center;
-}
-
-#arc-thumb-3 {
-  background-color: #1d1f21;
-  background-size: cover;
-  background-position: center top;
-}
-
-#arc-thumb-4 {
-  background-color: #1d1f21;
-  background-size: cover;
-  background-position: center;
 }
 
 /* --------------------------- CONTACT SECTION --------------------------- */
@@ -630,10 +608,6 @@ textarea {
 
   .pro-btn-container-right {
     justify-content: center;
-  }
-
-  #archive-container-grid {
-    grid-template-columns: repeat(4, 1fr);
   }
 
   .archive-thumbnail {

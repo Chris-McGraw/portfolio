@@ -457,48 +457,38 @@ a {
 
 #archive-container-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: $section-padding-sm;
+  grid-row-gap: $section-padding-sm;
 
   position: relative;
 }
 
 .archive-thumbnail {
-  height: 250px;
-  height: 7.5rem;
+  grid-column: span 1;
 
-  grid-column: span 3;
+  height: 12rem;
 
+  background-color: $black;
+  background-size: cover;
+  background-position: center;
   border: 1px solid $black;
 }
 
 #arc-thumb-1 {
-  background-color: $black;
-  //background-image: url("dg-game-snap.png");
-  background-size: cover;
-  background-position: center top;
+  //background-image: url("../images/dg-putting-snap.png");
 }
 
 #arc-thumb-2 {
-  background-color: $black;
-  //background-image: url("project-test.png");
-  background-size: cover;
-  background-position: center;
+  //background-image: url("../images/calc-snap.png");
 }
 
 #arc-thumb-3 {
-  background-color: $black;
-  //background-image: url("dg-putting-snap.png");
-  background-size: cover;
-  background-position: center top;
+  //background-image: url("../images/dg-putting-snap.png");
 }
 
 #arc-thumb-4 {
-  background-color: $black;
-  //background-image: url("calc-snap.png");
-  background-size: cover;
-  background-position: center;
+  //background-image: url("../images/calc-snap.png");
 }
 
 
@@ -762,10 +752,6 @@ textarea {
   }
 
 
-
-  #archive-container-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
 
   .archive-thumbnail {
     grid-column: span 2;
