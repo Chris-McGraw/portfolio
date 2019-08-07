@@ -172,12 +172,12 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  transform: scale(1.15);
   background-image: url("../images/computer.png");
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: 100px 0;
+  background-repeat: no-repeat;
   opacity: 0.15;
+  transform: scale(1.15);
 }
 
 #pseudo-ide-container {
@@ -387,41 +387,19 @@ a {
 
 #archive-container-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.25rem;
+  grid-row-gap: 1.25rem;
   position: relative;
 }
 
 .archive-thumbnail {
-  height: 250px;
-  height: 7.5rem;
-  grid-column: span 3;
+  grid-column: span 1;
+  height: 12rem;
+  background-color: #1d1f21;
+  background-size: cover;
+  background-position: center;
   border: 1px solid #1d1f21;
-}
-
-#arc-thumb-1 {
-  background-color: #1d1f21;
-  background-size: cover;
-  background-position: center top;
-}
-
-#arc-thumb-2 {
-  background-color: #1d1f21;
-  background-size: cover;
-  background-position: center;
-}
-
-#arc-thumb-3 {
-  background-color: #1d1f21;
-  background-size: cover;
-  background-position: center top;
-}
-
-#arc-thumb-4 {
-  background-color: #1d1f21;
-  background-size: cover;
-  background-position: center;
 }
 
 /* --------------------------- CONTACT SECTION --------------------------- */
@@ -439,20 +417,17 @@ a {
 #contact-container:after {
   content: "";
   z-index: -10;
-  background-image: url("../images/coffee.png");
-  /* background-repeat: no-repeat;
-  background-position: right top;
-  background-position: 50% 0px; */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: -180px 0;
-  transform: scale(1.15);
-  opacity: 0.15;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../images/coffee.png");
+  background-size: cover;
+  background-position: -180px 0;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  transform: scale(1.15);
 }
 
 #contact-header {
@@ -460,11 +435,50 @@ a {
   border-color: #e0e0e0;
 }
 
-#contact-container-grid {
+#contact-form {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-column-gap: 1.25rem;
+  grid-row-gap: 0.75rem;
   position: relative;
+}
+
+label, input, textarea {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  color: #1d1f21;
+}
+
+label {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: left;
+  color: #e0e0e0;
+}
+
+input {
+  width: 100%;
+  height: 2rem;
+  padding: 0.35rem 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #e0e0e0;
+  border: none;
+  border: 1px solid black;
+}
+
+textarea {
+  width: 100%;
+  height: 11.95rem;
+  padding: 0.35rem 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #e0e0e0;
+  border: none;
+  border: 1px solid black;
+  resize: none;
 }
 
 #contact-info-container {
@@ -472,52 +486,23 @@ a {
   height: auto;
 }
 
+#name-input {
+  margin-bottom: 0.75rem;
+}
+
 #contact-message-container {
   grid-column: span 3;
   height: auto;
+}
+
+#email-input {
+  margin-bottom: 0.75rem;
 }
 
 #contact-submit-container {
   grid-column: span 5;
   height: auto;
   margin-top: 2.5rem;
-}
-
-label, input, textarea {
-  display: block;
-}
-
-label {
-  font-size: 1.25rem;
-  text-align: left;
-  color: #e0e0e0;
-}
-
-input {
-  width: 100%;
-  height: 2.5rem;
-  margin-top: 0.75rem;
-  font-size: 1rem;
-  background-color: #e0e0e0;
-  border: none;
-}
-
-#name-input {
-  margin-bottom: 1.25rem;
-}
-
-#email-input {
-  margin-bottom: 1.25rem;
-}
-
-textarea {
-  width: 100%;
-  height: 14.95rem;
-  margin-top: 0.75rem;
-  font-size: 1rem;
-  background-color: #e0e0e0;
-  border: none;
-  resize: none;
 }
 
 #submit-button {
@@ -573,6 +558,10 @@ textarea {
 
   #ide-text-cursor {
     top: -0.1rem;
+  }
+
+  textarea {
+    height: 11.85rem;
   }
 }
 /* -------------------------- MEDIA QUERY <= 935 -------------------------- */
@@ -632,10 +621,6 @@ textarea {
     justify-content: center;
   }
 
-  #archive-container-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
   .archive-thumbnail {
     grid-column: span 2;
   }
@@ -646,10 +631,6 @@ textarea {
 
   #contact-message-container {
     grid-column: span 5;
-  }
-
-  #subject-input {
-    margin-bottom: 1.25rem;
   }
 }
 /* -------------------------- MEDIA QUERY <= 685 -------------------------- */
