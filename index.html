@@ -173,25 +173,25 @@
   <section id="contact-container">
     <h1 id="contact-header">Contact</h1>
 
-    <form id="contact-form">
+    <form id="contact-form" action="https://formspree.io/email@domain.tld" method="POST">
       <div id="contact-info-container">
         <label>Name</label>
-        <input id="name-input"></input>
+        <input type="text" name="name" id="name-input"></input>
 
         <label>Email</label>
-        <input id="email-input"></input>
+        <input type="text" name="email" id="email-input"></input>
 
         <label>Subject</label>
-        <input id="subject-input"></input>
+        <input type="text" name="subject" id="subject-input"></input>
       </div>
 
       <div id="contact-message-container">
         <label>Message</label>
-        <textarea id="message-input"></textarea>
+        <textarea type="text" name="message" id="message-input"></textarea>
       </div>
 
       <div id="contact-submit-container">
-        <button id="submit-button" type="submit">Submit</button>
+        <button type="submit" name="contact-submit" id="submit-button">Submit</button>
       </div>
     </form>
   </section>

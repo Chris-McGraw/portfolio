@@ -9,6 +9,8 @@ var $ideLnBlank2 = $("#ide-ln-blank-2");
 var $ideLnProfession = $("#ide-ln-profession");
 var $typedProfession = $("#typed-profession");
 
+var $submitButton = $("#submit-button");
+
 /* var makeArrayThing = "// My Portfolio";
 var makeArrayThing2 = "const";
 var makeArrayThing3 = "name";
@@ -360,6 +362,12 @@ $(document).ready(function() {
 
     ideTypingLoop();
   }, 500);
+
+
+
+  $submitButton.on("click", function(event) {
+    event.preventDefault();
+  });
 
 
 });
