@@ -572,6 +572,8 @@ input {
   background-color: $white;
   border: none;
   border: 1px solid black;
+
+  cursor: text;
 }
 
 textarea {
@@ -588,6 +590,8 @@ textarea {
   border: 1px solid black;
 
   resize: none;
+
+  cursor: text;
 }
 
 #contact-info-container {

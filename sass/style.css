@@ -466,6 +466,7 @@ input {
   background-color: #e0e0e0;
   border: none;
   border: 1px solid black;
+  cursor: text;
 }
 
 textarea {
@@ -479,6 +480,7 @@ textarea {
   border: none;
   border: 1px solid black;
   resize: none;
+  cursor: text;
 }
 
 #contact-info-container {
