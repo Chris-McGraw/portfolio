@@ -9,6 +9,8 @@ var $ideLnBlank2 = $("#ide-ln-blank-2");
 var $ideLnProfession = $("#ide-ln-profession");
 var $typedProfession = $("#typed-profession");
 
+var $submitButton = $("#submit-button");
+
 /* var makeArrayThing = "// My Portfolio";
 var makeArrayThing2 = "const";
 var makeArrayThing3 = "name";
@@ -87,8 +89,8 @@ function ideTypeByLetter(currentLine) {
       $pseudoVar.css("color", "#b294bb");
     }
     if(currentLine.class === "pseudoValue") {
-      $pseudoVar = $(".pseudo-value");
-      $pseudoVar.css("color", "#b5bd68");
+      $pseudoValue = $(".pseudo-value");
+      $pseudoValue.css("color", "#b5bd68");
     }
 
     if(currentLine === ideLineComment) {
@@ -360,6 +362,12 @@ $(document).ready(function() {
 
     ideTypingLoop();
   }, 500);
+
+
+
+  $submitButton.on("click", function(event) {
+    event.preventDefault();
+  });
 
 
 });

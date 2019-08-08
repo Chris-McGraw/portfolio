@@ -466,6 +466,7 @@ input {
   background-color: #e0e0e0;
   border: none;
   border: 1px solid black;
+  cursor: text;
 }
 
 textarea {
@@ -479,6 +480,7 @@ textarea {
   border: none;
   border: 1px solid black;
   resize: none;
+  cursor: text;
 }
 
 #contact-info-container {
@@ -550,8 +552,8 @@ textarea {
   display: inline-block;
 }
 
-/* ------------------------- MEDIA QUERY <= 1050 ------------------------- */
-@media screen and (max-width: 1050px) {
+/* ------------------------- MEDIA QUERY <= 1440 ------------------------- */
+@media screen and (max-width: 1440px) {
   :root {
     font-size: 16px;
   }
@@ -566,6 +568,10 @@ textarea {
 }
 /* -------------------------- MEDIA QUERY <= 935 -------------------------- */
 @media screen and (max-width: 935px) {
+  :root {
+    font-size: 14px;
+  }
+
   #nav-link-list {
     display: none;
   }
@@ -633,8 +639,8 @@ textarea {
     grid-column: span 5;
   }
 }
-/* -------------------------- MEDIA QUERY <= 685 -------------------------- */
-@media screen and (max-width: 685px) {
+/* -------------------------- MEDIA QUERY <= 600 -------------------------- */
+@media screen and (max-width: 600px) {
   #pseudo-ide-container {
     height: 15rem;
   }
@@ -643,8 +649,8 @@ textarea {
     display: block;
   }
 }
-/* -------------------------- MEDIA QUERY <= 492 -------------------------- */
-@media screen and (max-width: 492px) {
+/* -------------------------- MEDIA QUERY <= 431 -------------------------- */
+@media screen and (max-width: 431px) {
   #pseudo-ide-container {
     height: 17rem;
   }
@@ -653,8 +659,8 @@ textarea {
     display: block;
   }
 }
-/* -------------------------- MEDIA QUERY <= 432 -------------------------- */
-@media screen and (max-width: 432px) {
+/* -------------------------- MEDIA QUERY <= 379 -------------------------- */
+@media screen and (max-width: 379px) {
   #pseudo-ide-container {
     height: 19rem;
   }

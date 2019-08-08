@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Oxygen+Mono&display=swap">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="sass/style.css">
@@ -172,33 +173,25 @@
   <section id="contact-container">
     <h1 id="contact-header">Contact</h1>
 
-    <form id="contact-form">
+    <form id="contact-form" action="https://formspree.io/email@domain.tld" method="POST">
       <div id="contact-info-container">
-        <label>
-          Name
-          <input id="name-input"></input>
-        </label>
+        <label>Name</label>
+        <input type="text" name="name" id="name-input"></input>
 
-        <label>
-          Email
-          <input id="email-input"></input>
-        </label>
+        <label>Email</label>
+        <input type="text" name="email" id="email-input"></input>
 
-        <label>
-          Subject
-          <input id="subject-input"></input>
-        </label>
+        <label>Subject</label>
+        <input type="text" name="subject" id="subject-input"></input>
       </div>
 
       <div id="contact-message-container">
-        <label>
-          Message
-          <textarea id="message-input"></textarea>
-        </label>
+        <label>Message</label>
+        <textarea type="text" name="message" id="message-input"></textarea>
       </div>
 
       <div id="contact-submit-container">
-        <button id="submit-button" type="submit">Submit</button>
+        <button type="submit" name="contact-submit" id="submit-button">Submit</button>
       </div>
     </form>
   </section>
