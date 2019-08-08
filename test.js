@@ -87,8 +87,8 @@ function ideTypeByLetter(currentLine) {
       $pseudoVar.css("color", "#b294bb");
     }
     if(currentLine.class === "pseudoValue") {
-      $pseudoVar = $(".pseudo-value");
-      $pseudoVar.css("color", "#b5bd68");
+      $pseudoValue = $(".pseudo-value");
+      $pseudoValue.css("color", "#b5bd68");
     }
 
     if(currentLine === ideLineComment) {
