@@ -66,13 +66,15 @@ a {
 }
 
 #nav-icon-container {
+  display: flex;
+  align-items: center;
+
+  z-index: 30;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   left: $section-padding-lg;
 
   width: auto;
-  height: auto;
+  height: 100%;
 }
 
 .nav-icon {
@@ -85,17 +87,14 @@ a {
 .nav-icon-inner {
   display: inline-block;
 
-  margin-right: $section-padding-md;
+  margin-right: 1.5rem;
 }
 
 #nav-logo-container {
-  z-index: -10;
-  /* position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  right: 0; */
+  display: flex;
+  align-items: center;
 
+  z-index: 30;
   position: relative;
 
   width: 12rem;
@@ -105,16 +104,9 @@ a {
   text-align: center;
 
   //border: 1px dashed red;
-
-  display: flex;
-  //justify-content: center;
-  align-items: center;
 }
 
 #nav-logo {
-  // display: inline-block;
-
-  z-index: 10;
   position: absolute;
   right: 0;
 
@@ -125,13 +117,10 @@ a {
   font-size: $font-size-logo;
   text-align: left;
   color: $black;
-
-  //border: 1px dashed yellow;
-
-  // cursor: pointer;
 }
 
 #nav-link-list {
+  z-index: 30;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

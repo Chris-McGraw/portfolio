@@ -90,12 +90,13 @@ a {
 }
 
 #nav-icon-container {
+  display: flex;
+  align-items: center;
+  z-index: 30;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   left: 2.5rem;
   width: auto;
-  height: auto;
+  height: 100%;
 }
 
 .nav-icon {
@@ -106,27 +107,21 @@ a {
 
 .nav-icon-inner {
   display: inline-block;
-  margin-right: 1.25rem;
+  margin-right: 1.5rem;
 }
 
 #nav-logo-container {
-  z-index: -10;
-  /* position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  right: 0; */
+  display: flex;
+  align-items: center;
+  z-index: 30;
   position: relative;
   width: 12rem;
   height: 100%;
   margin: auto;
   text-align: center;
-  display: flex;
-  align-items: center;
 }
 
 #nav-logo {
-  z-index: 10;
   position: absolute;
   right: 0;
   width: auto;
@@ -138,6 +133,7 @@ a {
 }
 
 #nav-link-list {
+  z-index: 30;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

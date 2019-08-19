@@ -367,3 +367,33 @@
   background-color: #ffe0bd;
   border-radius: 0% 0% 100px 100px;
 }
+
+
+
+#eye-grid-left {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 50%;
+  height: 5rem;
+}
+
+#eye-grid-right {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 50%;
+  height: 5rem;
+}
+
+.move-iris-left {
+  transform: translate(-50%, 0%);
+}
+
+.move-iris-right {
+  transform: translate(50%, 0%);
+}
