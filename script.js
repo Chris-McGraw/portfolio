@@ -15,6 +15,14 @@ const typeTiming = 75;
 let typeLoopCount = -1;
 let blankLineDelay = false;
 
+var $eyeGridLeft = $("#eye-grid-left");
+var $eyeGridRight = $("#eye-grid-right");
+
+var $navIconContainer = $("#nav-icon-container");
+var $navLinkList = $("#nav-link-list");
+
+var $iris = $(".iris");
+
 var $submitButton = $("#submit-button");
 
 
@@ -172,6 +180,42 @@ $(document).ready(function() {
   setTimeout(function() {
     ideTypingLoop();
   }, 500);
+
+
+
+  $eyeGridLeft.on("mouseenter", function() {
+    $iris.addClass("move-iris-left");
+  });
+
+  $eyeGridLeft.on("mouseleave", function() {
+    $iris.removeClass("move-iris-left");
+  });
+
+  $navIconContainer.on("mouseenter", function() {
+    $iris.addClass("move-iris-left");
+  });
+
+  $navIconContainer.on("mouseleave", function() {
+    $iris.removeClass("move-iris-left");
+  });
+
+
+
+  $eyeGridRight.on("mouseenter", function() {
+    $iris.addClass("move-iris-right");
+  });
+
+  $eyeGridRight.on("mouseleave", function() {
+    $iris.removeClass("move-iris-right");
+  });
+
+  $navLinkList.on("mouseenter", function() {
+    $iris.addClass("move-iris-right");
+  });
+
+  $navLinkList.on("mouseleave", function() {
+    $iris.removeClass("move-iris-right");
+  });
 
 
 

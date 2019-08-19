@@ -6,7 +6,8 @@
   <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Oxygen+Mono&display=swap">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="sass/style.css">
+  <link rel="stylesheet" type="text/css" href="sass/css/style.css">
+  <link rel="stylesheet" type="text/css" href="sass/css/self-portrait.css">
   <title>Portfolio WIP</title>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -19,6 +20,9 @@
 <body>
 <!-- =============================== NAVBAR =============================== -->
   <nav id="navbar">
+    <div id="eye-grid-left"></div>
+    <div id="eye-grid-right"></div>
+
     <div id="nav-icon-container">
       <div class="nav-icon-inner">
         <a href="https://github.com/Chris-McGraw/" target="_blank">
@@ -43,7 +47,48 @@
     </div>
 
     <div id="nav-logo-container">
-      <div id="nav-logo">&lt; CRM &gt;</div>
+      <div id="self-portrait-container">
+        <div id="head">
+          <div id="hair-main">
+            <div id="hair-accent"></div>
+          </div>
+
+          <div id="ear-left"></div>
+          <div id="ear-right"></div>
+
+          <div id="eye-container">
+            <div class="lens" id="lens-left">
+              <div class="eye" id="eye-left">
+                <div class="iris">
+                  <div class="pupil"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glasses"></div>
+
+            <div class="lens" id="lens-right">
+              <div class="eye" id="eye-right">
+                <div class="iris">
+                  <div class="pupil"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="nose"></div>
+
+          <div id="stache"></div>
+
+          <div id="mouth">
+            <div id="teeth"></div>
+          </div>
+
+          <div id="beard"></div>
+        </div>
+      </div>
+
+      <div id="nav-logo">Chris<br>McGraw</div>
     </div>
 
     <ul id="nav-link-list">
