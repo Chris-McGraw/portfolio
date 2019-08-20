@@ -23,6 +23,7 @@ var $navbar = $("#navbar");
 var $navIconContainer = $("#nav-icon-container");
 var $navLinkList = $("#nav-link-list");
 
+var $eye = $(".eye");
 var $pupil = $(".pupil");
 
 var $submitButton = $("#submit-button");
@@ -174,6 +175,19 @@ function ideCursorBlinkLoop() {
 }
 
 
+function portraitEyeBlinkLoop() {
+  $eye.css("height", "1px");
+
+  setTimeout(function() {
+    $eye.css("height", "95%");
+  }, 200);
+
+  setTimeout(function() {
+    portraitEyeBlinkLoop();
+  }, 5000);
+}
+
+
 function clearPupilMovement() {
   $pupil.removeClass("move-pupil-left");
   $pupil.removeClass("move-pupil-right");
@@ -210,8 +224,12 @@ function detectBottomPupilMovement(event) {
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
 $(document).ready(function() {
   setTimeout(function() {
-    //ideTypingLoop();
+    ideTypingLoop();
   }, 500);
+
+  setTimeout(function() {
+    //portraitEyeBlinkLoop();
+  }, 2500);
 
 
 
@@ -252,14 +270,8 @@ $(document).ready(function() {
 
 
   $(document).mousemove(function(event) {
-    //console.log(event.pageX);
-
     detectBottomPupilMovement(event);
   });
-
-  /* console.log("nav height: " + ( $(window).scrollTop() + $navbar.height() ));
-  console.log("logo-left: " + $navLogoContainer.offset().left);
-  console.log("logo-right: " + ( $navLogoContainer.offset().left + $navLogoContainer.width() )); */
 
 
 
