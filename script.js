@@ -16,8 +16,10 @@ let typeLoopCount = -1;
 let blankLineDelay = false;
 
 var $eyeGridLeft = $("#eye-grid-left");
+var $navLogoContainer = $("#nav-logo-container");
 var $eyeGridRight = $("#eye-grid-right");
 
+var $navbar = $("#navbar");
 var $navIconContainer = $("#nav-icon-container");
 var $navLinkList = $("#nav-link-list");
 
@@ -172,6 +174,36 @@ function ideCursorBlinkLoop() {
 }
 
 
+function clearPupilMovement() {
+  $iris.removeClass("move-iris-left");
+  $iris.removeClass("move-iris-right");
+  $iris.removeClass("move-iris-bottom-left");
+  $iris.removeClass("move-iris-bottom-mid");
+  $iris.removeClass("move-iris-bottom-right");
+}
+
+
+function detectBottomPupilMovement(event) {
+  if(event.pageY > ( $(window).scrollTop() + $navbar.height() ) && event.pageX < $navLogoContainer.offset().left) {
+    clearPupilMovement();
+
+    $iris.addClass("move-iris-bottom-left");
+  }
+
+  else if(event.pageY > ( $(window).scrollTop() + $navbar.height() ) && event.pageX >= $navLogoContainer.offset().left && event.pageX <= ( $navLogoContainer.offset().left + $navLogoContainer.width() )) {
+    clearPupilMovement();
+
+    $iris.addClass("move-iris-bottom-mid");
+  }
+
+  else if(event.pageY > ( $(window).scrollTop() + $navbar.height() ) && event.pageX > ( $navLogoContainer.offset().left + $navLogoContainer.width() )) {
+    clearPupilMovement();
+
+    $iris.addClass("move-iris-bottom-right");
+  }
+}
+
+
 
 
 
@@ -184,38 +216,50 @@ $(document).ready(function() {
 
 
   $eyeGridLeft.on("mouseenter", function() {
-    $iris.addClass("move-iris-left");
-  });
+    clearPupilMovement();
 
-  $eyeGridLeft.on("mouseleave", function() {
-    $iris.removeClass("move-iris-left");
+    $iris.addClass("move-iris-left");
   });
 
   $navIconContainer.on("mouseenter", function() {
+    clearPupilMovement();
+
     $iris.addClass("move-iris-left");
   });
 
-  $navIconContainer.on("mouseleave", function() {
-    $iris.removeClass("move-iris-left");
+  $navLogoContainer.on("mouseenter", function() {
+    clearPupilMovement();
   });
-
-
 
   $eyeGridRight.on("mouseenter", function() {
-    $iris.addClass("move-iris-right");
-  });
+    clearPupilMovement();
 
-  $eyeGridRight.on("mouseleave", function() {
-    $iris.removeClass("move-iris-right");
+    $iris.addClass("move-iris-right");
   });
 
   $navLinkList.on("mouseenter", function() {
+    clearPupilMovement();
+
     $iris.addClass("move-iris-right");
   });
 
-  $navLinkList.on("mouseleave", function() {
-    $iris.removeClass("move-iris-right");
+
+
+  $(document).on("mouseleave", function() {
+    clearPupilMovement();
   });
+
+
+
+  $(document).mousemove(function(event) {
+    //console.log(event.pageX);
+
+    detectBottomPupilMovement(event);
+  });
+
+  /* console.log("nav height: " + ( $(window).scrollTop() + $navbar.height() ));
+  console.log("logo-left: " + $navLogoContainer.offset().left);
+  console.log("logo-right: " + ( $navLogoContainer.offset().left + $navLogoContainer.width() )); */
 
 
 

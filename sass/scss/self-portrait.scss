@@ -397,3 +397,15 @@
 .move-iris-right {
   transform: translate(50%, 0%);
 }
+
+.move-iris-bottom-left {
+  transform: translate(-50%, 50%);
+}
+
+.move-iris-bottom-mid {
+  transform: translate(0%, 50%);
+}
+
+.move-iris-bottom-right {
+  transform: translate(50%, 50%);
+}
