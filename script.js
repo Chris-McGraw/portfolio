@@ -23,7 +23,7 @@ var $navbar = $("#navbar");
 var $navIconContainer = $("#nav-icon-container");
 var $navLinkList = $("#nav-link-list");
 
-var $iris = $(".iris");
+var $pupil = $(".pupil");
 
 var $submitButton = $("#submit-button");
 
@@ -175,11 +175,11 @@ function ideCursorBlinkLoop() {
 
 
 function clearPupilMovement() {
-  $iris.removeClass("move-iris-left");
-  $iris.removeClass("move-iris-right");
-  $iris.removeClass("move-iris-bottom-left");
-  $iris.removeClass("move-iris-bottom-mid");
-  $iris.removeClass("move-iris-bottom-right");
+  $pupil.removeClass("move-pupil-left");
+  $pupil.removeClass("move-pupil-right");
+  $pupil.removeClass("move-pupil-bottom-left");
+  $pupil.removeClass("move-pupil-bottom-mid");
+  $pupil.removeClass("move-pupil-bottom-right");
 }
 
 
@@ -187,19 +187,19 @@ function detectBottomPupilMovement(event) {
   if(event.pageY > ( $(window).scrollTop() + $navbar.height() ) && event.pageX < $navLogoContainer.offset().left) {
     clearPupilMovement();
 
-    $iris.addClass("move-iris-bottom-left");
+    $pupil.addClass("move-pupil-bottom-left");
   }
 
   else if(event.pageY > ( $(window).scrollTop() + $navbar.height() ) && event.pageX >= $navLogoContainer.offset().left && event.pageX <= ( $navLogoContainer.offset().left + $navLogoContainer.width() )) {
     clearPupilMovement();
 
-    $iris.addClass("move-iris-bottom-mid");
+    $pupil.addClass("move-pupil-bottom-mid");
   }
 
   else if(event.pageY > ( $(window).scrollTop() + $navbar.height() ) && event.pageX > ( $navLogoContainer.offset().left + $navLogoContainer.width() )) {
     clearPupilMovement();
 
-    $iris.addClass("move-iris-bottom-right");
+    $pupil.addClass("move-pupil-bottom-right");
   }
 }
 
@@ -210,7 +210,7 @@ function detectBottomPupilMovement(event) {
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
 $(document).ready(function() {
   setTimeout(function() {
-    ideTypingLoop();
+    //ideTypingLoop();
   }, 500);
 
 
@@ -218,13 +218,13 @@ $(document).ready(function() {
   $eyeGridLeft.on("mouseenter", function() {
     clearPupilMovement();
 
-    $iris.addClass("move-iris-left");
+    $pupil.addClass("move-pupil-left");
   });
 
   $navIconContainer.on("mouseenter", function() {
     clearPupilMovement();
 
-    $iris.addClass("move-iris-left");
+    $pupil.addClass("move-pupil-left");
   });
 
   $navLogoContainer.on("mouseenter", function() {
@@ -234,13 +234,13 @@ $(document).ready(function() {
   $eyeGridRight.on("mouseenter", function() {
     clearPupilMovement();
 
-    $iris.addClass("move-iris-right");
+    $pupil.addClass("move-pupil-right");
   });
 
   $navLinkList.on("mouseenter", function() {
     clearPupilMovement();
 
-    $iris.addClass("move-iris-right");
+    $pupil.addClass("move-pupil-right");
   });
 
 

@@ -212,7 +212,7 @@
   border-radius: 50% 50% 0 0;
 }
 
-.iris {
+.pupil {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -228,18 +228,6 @@
   border-radius: 100%;
 
   transition: transform 200ms ease-in-out;
-}
-
-.pupil {
-  width: 40%;
-  height: 40%;
-
-  background-color: black;
-  border-radius: 100%;
-
-  transition: transform 200ms ease-in-out;
-
-  display: none;
 }
 
 #nose {
@@ -390,22 +378,22 @@
   height: 5rem;
 }
 
-.move-iris-left {
+.move-pupil-left {
   transform: translate(-50%, 0%);
 }
 
-.move-iris-right {
+.move-pupil-right {
   transform: translate(50%, 0%);
 }
 
-.move-iris-bottom-left {
+.move-pupil-bottom-left {
   transform: translate(-50%, 50%);
 }
 
-.move-iris-bottom-mid {
+.move-pupil-bottom-mid {
   transform: translate(0%, 50%);
 }
 
-.move-iris-bottom-right {
+.move-pupil-bottom-right {
   transform: translate(50%, 50%);
 }
