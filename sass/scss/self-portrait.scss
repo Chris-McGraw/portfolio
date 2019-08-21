@@ -177,7 +177,7 @@
   align-items: center;
 
   width: 85%;
-  height: 95%;
+  height: 100%;
 
   background-color: white;
   border: 1px solid black;
@@ -398,4 +398,99 @@
 
 .move-pupil-bottom-right {
   transform: translate(50%, 50%);
+}
+
+
+
+/* -------------------------- MEDIA QUERY <= 935 -------------------------- */
+@media screen and (max-width: 935px) {
+  .eye {
+    width: 90%;
+    height: 100%;
+
+    border-radius: 10rem;
+  }
+
+  #eye-left::before {
+    content: "";
+
+    position: absolute;
+    top: -3%;
+
+    width: 40%;
+    height: 10%;
+
+    background-color: #A56B46;
+    border-radius: 10rem 10rem 0 0;
+  }
+
+  #eye-right::before {
+    content: "";
+
+    position: absolute;
+    top: -3%;
+
+    width: 40%;
+    height: 10%;
+
+    background-color: #A56B46;
+    border-radius: 10rem 10rem 0 0;
+  }
+
+  .pupil {
+    width: 40%;
+    height: 40%;
+  }
+
+  #nose {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 64%;
+
+    width: 12%;
+    height: 5%;
+    margin: auto;
+
+    border-radius: 0 0 100% 100%;
+  }
+
+  #nose::before {
+    content: "";
+
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    bottom: 0;
+
+    width: 50%;
+    height: 120%;
+    margin: auto;
+
+    background-color: #ffe0bd;
+    border-left: 1px solid black;
+    border-radius: 10rem;
+
+    transform: rotate(-50deg);
+  }
+
+  #nose::after {
+    content: "";
+
+    position: absolute;
+    top: -50%;
+    left: 0;
+    right: -150%;
+    bottom: 0;
+
+    width: 50%;
+    height: 120%;
+    margin: auto;
+
+    background-color: #ffe0bd;
+    border-right: 1px solid black;
+    border-radius: 10rem;
+
+    transform: rotate(50deg);
+  }
 }
