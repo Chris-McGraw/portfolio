@@ -147,6 +147,79 @@ a {
   cursor: pointer;
 }
 
+#hamburger-menu {
+  display: none;
+
+  z-index: 30;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: $section-padding-lg;
+
+  width: 25px;
+
+  cursor: pointer;
+}
+
+.hamburger-bar {
+  position: relative;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: 2px;
+
+  color: black;
+
+  border-radius: 10px;
+  background-color: black;
+
+  cursor: pointer;
+
+  transition: transform 300ms ease-in-out, width 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+#hamburger-bar-middle {
+  margin: 8px 0px;
+}
+
+#dropdown-navbar {
+  display: none;
+}
+
+#dropdown-social-container {
+  display: none;
+}
+
+.dropdown-nav-icon {
+  grid-column: span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+
+  border: 1px dashed black;
+
+  cursor: pointer;
+}
+
+.dropdown-nav-link {
+  grid-column: span 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+
+  font-family: $font-stack-main;
+  font-size: $font-size-md;
+  font-weight: 400;
+  color: $black;
+
+  border: 1px dashed blue;
+}
+
 
 
 /* --------------------------- LANDING SECTION --------------------------- */
@@ -712,9 +785,31 @@ textarea {
     display: none;
   }
 
+  #hamburger-menu {
+    display: block;
+  }
+
+  #dropdown-navbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    position: fixed;
+    top: 5rem;
+
+    width: 100%;
+    height: 2.5rem;
+    //padding: 0 $section-padding-lg;
+
+    background-color: yellow;
+  }
+
+
+
   #pseudo-ide-container {
     grid-column: span 4;
   }
+
+
 
   #project-container-grid {
     //grid-column-gap: 0;
@@ -789,6 +884,42 @@ textarea {
 
 /* -------------------------- MEDIA QUERY <= 600 -------------------------- */
 @media screen and (max-width: 600px) {
+  #nav-icon-container {
+    display: none;
+  }
+
+  #nav-logo-container {
+    position: absolute;
+    left: $section-padding-lg;
+  }
+
+  #dropdown-navbar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    position: fixed;
+    top: 5rem;
+
+    width: 100%;
+    height: 2.5rem;
+
+    background-color: yellow;
+  }
+
+  #dropdown-social-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: span 2;
+
+    //border: 1px dashed red;
+  }
+
+  .dropdown-nav-link {
+    grid-column: span 1;
+  }
+
+
+
   #pseudo-ide-container {
     height: 15rem;
   }

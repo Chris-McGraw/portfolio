@@ -22,6 +22,7 @@ var $eyeGridRight = $("#eye-grid-right");
 var $navbar = $("#navbar");
 var $navIconContainer = $("#nav-icon-container");
 var $navLinkList = $("#nav-link-list");
+var $hamburgerMenu = $("#hamburger-menu");
 
 var $eye = $(".eye");
 var $pupil = $(".pupil");
@@ -271,6 +272,12 @@ $(document).ready(function() {
 
   $(document).mousemove(function(event) {
     detectBottomPupilMovement(event);
+  });
+
+
+
+  $hamburgerMenu.on("click", function() {
+    console.log("add dropdown functionality");
   });
 
 
