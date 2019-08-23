@@ -23,6 +23,7 @@ var $navbar = $("#navbar");
 var $navIconContainer = $("#nav-icon-container");
 var $navLinkList = $("#nav-link-list");
 var $hamburgerMenu = $("#hamburger-menu");
+var $dropdownNavbar = $("#dropdown-navbar");
 
 var $eye = $(".eye");
 var $pupil = $(".pupil");
@@ -277,7 +278,7 @@ $(document).ready(function() {
 
 
   $hamburgerMenu.on("click", function() {
-    console.log("add dropdown functionality");
+    $dropdownNavbar.toggleClass("nav-drop-open");
   });
 
 
