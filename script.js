@@ -15,13 +15,8 @@ const typeTiming = 75;
 let typeLoopCount = -1;
 let blankLineDelay = false;
 
-var $eyeGridLeft = $("#eye-grid-left");
-var $navLogoContainer = $("#nav-logo-container");
-var $eyeGridRight = $("#eye-grid-right");
-
 var $navbar = $("#navbar");
-var $navIconContainer = $("#nav-icon-container");
-var $navLinkList = $("#nav-link-list");
+var $navLogoContainer = $("#nav-logo-container");
 var $hamburgerMenu = $("#hamburger-menu");
 var $dropdownNavbar = $("#dropdown-navbar");
 
@@ -199,8 +194,20 @@ function clearPupilMovement() {
 }
 
 
-function detectBottomPupilMovement(event) {
-  if(event.pageY > ( $(window).scrollTop() + $navbar.height() ) && event.pageX < $navLogoContainer.offset().left) {
+function detectPupilMovement(event) {
+  if(event.pageY < ( $(window).scrollTop() + $navbar.height() ) && event.pageX < $navLogoContainer.offset().left) {
+    clearPupilMovement();
+
+    $pupil.addClass("move-pupil-left");
+  }
+
+  else if(event.pageY < ( $(window).scrollTop() + $navbar.height() ) && event.pageX > ( $navLogoContainer.offset().left + $navLogoContainer.width() )) {
+    clearPupilMovement();
+
+    $pupil.addClass("move-pupil-right");
+  }
+
+  else if(event.pageY > ( $(window).scrollTop() + $navbar.height() ) && event.pageX < $navLogoContainer.offset().left) {
     clearPupilMovement();
 
     $pupil.addClass("move-pupil-bottom-left");
@@ -235,44 +242,16 @@ $(document).ready(function() {
 
 
 
-  $eyeGridLeft.on("mouseenter", function() {
-    clearPupilMovement();
-
-    $pupil.addClass("move-pupil-left");
-  });
-
-  $navIconContainer.on("mouseenter", function() {
-    clearPupilMovement();
-
-    $pupil.addClass("move-pupil-left");
+  $(document).mousemove(function(event) {
+    detectPupilMovement(event);
   });
 
   $navLogoContainer.on("mouseenter", function() {
     clearPupilMovement();
   });
 
-  $eyeGridRight.on("mouseenter", function() {
-    clearPupilMovement();
-
-    $pupil.addClass("move-pupil-right");
-  });
-
-  $navLinkList.on("mouseenter", function() {
-    clearPupilMovement();
-
-    $pupil.addClass("move-pupil-right");
-  });
-
-
-
   $(document).on("mouseleave", function() {
     clearPupilMovement();
-  });
-
-
-
-  $(document).mousemove(function(event) {
-    detectBottomPupilMovement(event);
   });
 
 
