@@ -615,7 +615,22 @@ textarea {
   }
 
   #hamburger-bar-middle {
+    left: 50%;
+    transform: translateX(-50%);
     margin: 8px 0px;
+  }
+
+  .rotate-bar-top {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .hide-bar-middle {
+    width: 0px !important;
+    opacity: 0;
+  }
+
+  .rotate-bar-bottom {
+    transform: translateY(-10px) rotate(-45deg);
   }
 
   #dropdown-navbar {

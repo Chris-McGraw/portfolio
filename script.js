@@ -18,6 +18,9 @@ let blankLineDelay = false;
 var $navbar = $("#navbar");
 var $navLogoContainer = $("#nav-logo-container");
 var $hamburgerMenu = $("#hamburger-menu");
+var $hamburgerBarTop = $("#hamburger-bar-top");
+var $hamburgerBarMiddle = $("#hamburger-bar-middle");
+var $hamburgerBarBottom = $("#hamburger-bar-bottom");
 var $dropdownNavbar = $("#dropdown-navbar");
 
 var $eye = $(".eye");
@@ -258,6 +261,10 @@ $(document).ready(function() {
 
   $hamburgerMenu.on("click", function() {
     $dropdownNavbar.toggleClass("nav-drop-open");
+
+    $hamburgerBarTop.toggleClass("rotate-bar-top");
+    $hamburgerBarMiddle.toggleClass("hide-bar-middle");
+    $hamburgerBarBottom.toggleClass("rotate-bar-bottom");
   });
 
 
