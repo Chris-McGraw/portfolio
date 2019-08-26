@@ -180,7 +180,7 @@ function portraitEyeBlinkLoop() {
 
   setTimeout(function() {
     $eye.css("height", "100%");
-  }, 200);
+  }, 150);
 
   setTimeout(function() {
     portraitEyeBlinkLoop();
