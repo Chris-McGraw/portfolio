@@ -155,7 +155,7 @@ function ideTypingLoop() {
       setTimeout(function() {
         console.log("typing ended");
 
-        ideCursorBlinkLoop();
+        //ideCursorBlinkLoop();
       }, 500);
     }
   }
@@ -240,7 +240,7 @@ $(document).ready(function() {
   }, 500);
 
   setTimeout(function() {
-    portraitEyeBlinkLoop();
+    //portraitEyeBlinkLoop();
   }, 2500);
 
 
@@ -249,11 +249,22 @@ $(document).ready(function() {
     detectPupilMovement(event);
   });
 
-  $navLogoContainer.on("mouseenter", function() {
+  $(document).on("mouseleave", function() {
     clearPupilMovement();
   });
 
-  $(document).on("mouseleave", function() {
+
+
+/* ~~~~~~~~~~~~~ BODY ~~~~~~~~~~~~~ */
+  $("body *").on("touchstart", function() {
+    $(document).off("mousemove");
+
+    $navLogoContainer.off("mouseenter");
+  });
+
+
+
+  $navLogoContainer.on("mouseenter", function() {
     clearPupilMovement();
   });
 
