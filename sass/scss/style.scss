@@ -175,6 +175,8 @@ a {
   text-align: right;
 
   background-color: $background-gray;
+
+  overflow: hidden;
 }
 
 #landing-container:after {
@@ -521,6 +523,8 @@ a {
   text-align: center;
 
   background-color: $background-gray;
+
+  overflow: hidden;
 }
 
 #contact-container:after {

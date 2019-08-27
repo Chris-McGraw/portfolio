@@ -155,7 +155,7 @@ function ideTypingLoop() {
       setTimeout(function() {
         console.log("typing ended");
 
-        //ideCursorBlinkLoop();
+        ideCursorBlinkLoop();
       }, 500);
     }
   }
@@ -240,7 +240,7 @@ $(document).ready(function() {
   }, 500);
 
   setTimeout(function() {
-    //portraitEyeBlinkLoop();
+    portraitEyeBlinkLoop();
   }, 2500);
 
 

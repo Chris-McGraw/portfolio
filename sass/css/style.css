@@ -175,6 +175,7 @@ a {
   height: auto;
   text-align: right;
   background-color: #3b3b3b;
+  overflow: hidden;
 }
 
 #landing-container:after {
@@ -425,6 +426,7 @@ a {
   font-weight: 300;
   text-align: center;
   background-color: #3b3b3b;
+  overflow: hidden;
 }
 
 #contact-container:after {
