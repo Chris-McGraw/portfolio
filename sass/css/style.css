@@ -398,19 +398,25 @@ a {
 
 #archive-container-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1.25rem;
-  grid-row-gap: 1.25rem;
+  grid-row-gap: 2.5rem;
   position: relative;
 }
 
 .archive-thumbnail {
   grid-column: span 1;
-  height: 12rem;
-  background-color: #1d1f21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
   background-size: cover;
   background-position: center;
-  border: 1px solid #1d1f21;
+}
+
+.archive-image {
+  width: 100%;
+  height: auto;
 }
 
 /* --------------------------- CONTACT SECTION --------------------------- */
@@ -740,7 +746,12 @@ textarea {
   }
 
   .archive-thumbnail {
-    grid-column: span 2;
+    grid-column: span 3;
+  }
+
+  .archive-image {
+    width: auto;
+    height: 15rem;
   }
 
   #contact-info-container {
@@ -796,6 +807,17 @@ textarea {
   }
 
   .project-image {
+    width: 100%;
+    height: auto;
+  }
+
+  #archive-container {
+    padding: 5rem;
+  }
+}
+/* -------------------------- MEDIA QUERY <= 491 -------------------------- */
+@media screen and (max-width: 491px) {
+  .archive-image {
     width: 100%;
     height: auto;
   }
