@@ -309,41 +309,38 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 0.75rem;
-  grid-row-gap: 0.75rem;
+  grid-row-gap: 5rem;
   position: relative;
 }
 
 .project-thumbnail {
   grid-column: span 1;
-  height: 20rem;
+  display: flex;
+  align-items: center;
+  height: auto;
 }
 
 #pro-thumb-1 {
-  display: flex;
-  align-items: center;
   order: 0;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
 }
 
 #pro-thumb-2 {
   order: 1;
-  background-image: url("../../images/mockup-vert.jpg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  justify-content: center;
 }
 
 #pro-thumb-3 {
   order: 3;
-  background-image: url("../../images/mockup-recipe-book.jpg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  justify-content: center;
 }
 
 #pro-thumb-4 {
   order: 4;
-  display: flex;
-  align-items: center;
 }
 
 .inner-project-container {
@@ -721,6 +718,11 @@ textarea {
     height: auto;
   }
 
+  .project-image {
+    width: auto;
+    height: 20rem;
+  }
+
   .project-text-left {
     text-align: center;
   }
@@ -781,6 +783,21 @@ textarea {
 
   #gutter-no-6 {
     display: block;
+  }
+}
+/* -------------------------- MEDIA QUERY <= 569 -------------------------- */
+@media screen and (max-width: 569px) {
+  #pro-thumb-2 {
+    height: auto;
+  }
+
+  #pro-thumb-3 {
+    height: auto;
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
   }
 }
 /* -------------------------- MEDIA QUERY <= 431 -------------------------- */
