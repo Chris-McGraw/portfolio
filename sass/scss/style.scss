@@ -465,22 +465,28 @@ a {
 
 #archive-container-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: $section-padding-md;
-  grid-row-gap: $section-padding-md;
+  grid-row-gap: $section-padding-lg;
 
   position: relative;
 }
 
 .archive-thumbnail {
   grid-column: span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  height: 12rem;
+  height: auto;
 
-  background-color: $black;
   background-size: cover;
   background-position: center;
-  border: 1px solid $black;
+}
+
+.archive-image {
+  width: 100%;
+  height: auto;
 }
 
 #arc-thumb-1 {
@@ -488,11 +494,11 @@ a {
 }
 
 #arc-thumb-2 {
-  //background-image: url("../../images/calc-snap.png");
+  //background-image: url("../../images/dg-putting-snap.png");
 }
 
 #arc-thumb-3 {
-  //background-image: url("../../images/dg-putting-snap.png");
+  //background-image: url("../../images/calc-snap.png");
 }
 
 #arc-thumb-4 {
@@ -901,7 +907,12 @@ textarea {
 
 
   .archive-thumbnail {
-    grid-column: span 2;
+    grid-column: span 3;
+  }
+
+  .archive-image {
+    width: auto;
+    height: 15rem;
   }
 
 
@@ -967,6 +978,22 @@ textarea {
   }
 
   .project-image {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+  #archive-container {
+    padding: $section-padding-xl;
+  }
+}
+
+
+
+/* -------------------------- MEDIA QUERY <= 491 -------------------------- */
+@media screen and (max-width: 491px) {
+  .archive-image {
     width: 100%;
     height: auto;
   }
