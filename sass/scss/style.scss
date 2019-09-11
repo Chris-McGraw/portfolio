@@ -485,27 +485,25 @@ a {
 
   background-size: cover;
   background-position: center;
+
+  opacity: 1.0;
+
+  transition: opacity 300ms ease-in-out;
+}
+
+.archive-thumbnail-hovered {
+  opacity: 0.5;
+}
+
+.archive-link {
+  display: flex;
 }
 
 .archive-image {
   width: 100%;
   height: auto;
-}
 
-#arc-thumb-1 {
-  //background-image: url("../../images/dg-putting-snap.png");
-}
-
-#arc-thumb-2 {
-  //background-image: url("../../images/dg-putting-snap.png");
-}
-
-#arc-thumb-3 {
-  //background-image: url("../../images/calc-snap.png");
-}
-
-#arc-thumb-4 {
-  //background-image: url("../../images/calc-snap.png");
+  cursor: pointer;
 }
 
 

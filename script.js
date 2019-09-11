@@ -28,6 +28,8 @@ var $pupil = $(".pupil");
 
 var $projectButton = $(".project-button");
 
+var $archiveThumbnail = $(".archive-thumbnail");
+
 var $submitButton = $("#submit-button");
 
 
@@ -263,6 +265,8 @@ $(document).ready(function() {
 
     $navLogoContainer.off("mouseenter");
 
+    $archiveThumbnail.off("mouseenter");
+
     $projectButton.off("mouseenter");
   });
 
@@ -290,6 +294,16 @@ $(document).ready(function() {
 
   $projectButton.on("mouseleave", function() {
     $(this).removeClass("project-button-hovered");
+  });
+
+
+
+  $archiveThumbnail.on("mouseenter", function() {
+    $(this).addClass("archive-thumbnail-hovered");
+  });
+
+  $archiveThumbnail.on("mouseleave", function() {
+    $(this).removeClass("archive-thumbnail-hovered");
   });
 
 
