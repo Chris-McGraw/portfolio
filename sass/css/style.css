@@ -424,11 +424,22 @@ a {
   height: auto;
   background-size: cover;
   background-position: center;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.archive-thumbnail-hovered {
+  opacity: 0.5;
+}
+
+.archive-link {
+  display: flex;
 }
 
 .archive-image {
   width: 100%;
   height: auto;
+  cursor: pointer;
 }
 
 /* --------------------------- CONTACT SECTION --------------------------- */
@@ -670,17 +681,17 @@ textarea {
     justify-content: center;
     align-items: center;
     height: 100%;
-    border-top: 1px solid #1d1f21;
+    border-top: 1px solid rgba(29, 31, 33, 0.2);
     cursor: pointer;
   }
 
   #dropdown-nav-icon-middle {
-    border-left: 1px solid #1d1f21;
-    border-right: 1px solid #1d1f21;
+    border-left: 1px solid rgba(29, 31, 33, 0.2);
+    border-right: 1px solid rgba(29, 31, 33, 0.2);
   }
 
   #dropdown-nav-icon-right {
-    border-right: 1px solid #1d1f21;
+    border-right: 1px solid rgba(29, 31, 33, 0.2);
   }
 
   .dropdown-nav-link {
@@ -693,12 +704,12 @@ textarea {
     font-size: 1.1rem;
     font-weight: 400;
     color: #1d1f21;
-    border-top: 1px solid #1d1f21;
+    border-top: 1px solid rgba(29, 31, 33, 0.2);
   }
 
   #dropdown-nav-link-middle {
-    border-left: 1px solid #1d1f21;
-    border-right: 1px solid #1d1f21;
+    border-left: 1px solid rgba(29, 31, 33, 0.2);
+    border-right: 1px solid rgba(29, 31, 33, 0.2);
   }
 
   #pseudo-ide-container {

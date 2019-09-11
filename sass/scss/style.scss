@@ -485,27 +485,25 @@ a {
 
   background-size: cover;
   background-position: center;
+
+  opacity: 1.0;
+
+  transition: opacity 300ms ease-in-out;
+}
+
+.archive-thumbnail-hovered {
+  opacity: 0.5;
+}
+
+.archive-link {
+  display: flex;
 }
 
 .archive-image {
   width: 100%;
   height: auto;
-}
 
-#arc-thumb-1 {
-  //background-image: url("../../images/dg-putting-snap.png");
-}
-
-#arc-thumb-2 {
-  //background-image: url("../../images/dg-putting-snap.png");
-}
-
-#arc-thumb-3 {
-  //background-image: url("../../images/calc-snap.png");
-}
-
-#arc-thumb-4 {
-  //background-image: url("../../images/calc-snap.png");
+  cursor: pointer;
 }
 
 
@@ -807,18 +805,18 @@ textarea {
 
     height: 100%;
 
-    border-top: 1px solid $black;
+    border-top: 1px solid rgba(29, 31, 33, 0.2);
 
     cursor: pointer;
   }
 
   #dropdown-nav-icon-middle {
-    border-left: 1px solid $black;
-    border-right: 1px solid $black;
+    border-left: 1px solid rgba(29, 31, 33, 0.2);
+    border-right: 1px solid rgba(29, 31, 33, 0.2);
   }
 
   #dropdown-nav-icon-right {
-    border-right: 1px solid $black;
+    border-right: 1px solid rgba(29, 31, 33, 0.2);
   }
 
   .dropdown-nav-link {
@@ -834,12 +832,12 @@ textarea {
     font-weight: 400;
     color: $black;
 
-    border-top: 1px solid $black;
+    border-top: 1px solid rgba(29, 31, 33, 0.2);
   }
 
   #dropdown-nav-link-middle {
-    border-left: 1px solid $black;
-    border-right: 1px solid $black;
+    border-left: 1px solid rgba(29, 31, 33, 0.2);
+    border-right: 1px solid rgba(29, 31, 33, 0.2);
   }
 
 
