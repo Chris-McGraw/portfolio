@@ -26,6 +26,8 @@ var $dropdownNavbar = $("#dropdown-navbar");
 var $eye = $(".eye");
 var $pupil = $(".pupil");
 
+var $projectButton = $(".project-button");
+
 var $submitButton = $("#submit-button");
 
 
@@ -260,6 +262,8 @@ $(document).ready(function() {
     $(document).off("mousemove");
 
     $navLogoContainer.off("mouseenter");
+
+    $projectButton.off("mouseenter");
   });
 
 
@@ -276,6 +280,16 @@ $(document).ready(function() {
     $hamburgerBarTop.toggleClass("rotate-bar-top");
     $hamburgerBarMiddle.toggleClass("hide-bar-middle");
     $hamburgerBarBottom.toggleClass("rotate-bar-bottom");
+  });
+
+
+
+  $projectButton.on("mouseenter", function() {
+    $(this).addClass("project-button-hovered");
+  });
+
+  $projectButton.on("mouseleave", function() {
+    $(this).removeClass("project-button-hovered");
   });
 
 

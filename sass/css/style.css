@@ -378,12 +378,24 @@ a {
   justify-content: flex-end;
 }
 
-.pro-btn-left {
+.pro-btn-link-left {
+  display: inline-block;
   margin-right: 0.75rem;
+  border-radius: 0.4rem;
 }
 
-.pro-btn-right {
+.pro-btn-link-right {
+  display: inline-block;
   margin-left: 0.75rem;
+  border-radius: 0.4rem;
+}
+
+.project-button {
+  transition: background-color 300ms ease-in-out;
+}
+
+.project-button-hovered {
+  background-color: rgba(224, 224, 224, 0.5);
 }
 
 /* --------------------------- ARCHIVE SECTION --------------------------- */
