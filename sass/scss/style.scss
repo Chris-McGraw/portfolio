@@ -347,13 +347,10 @@ a {
 #project-container-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
   grid-column-gap: $section-padding-sm;
   grid-row-gap: $section-padding-xl;
 
   position: relative;
-
-  //border: 1px dashed red;
 }
 
 .project-thumbnail {
@@ -389,16 +386,12 @@ a {
 
 .inner-project-container{
   width: auto;
-
-  //border: 1px dashed yellow;
 }
 
 .project-name {
   font-family: $font-stack-ide;
   font-size: $font-size-lg;
   font-weight: 300;
-
-  //border: 1px dashed red;
 }
 
 .project-text-left {
@@ -420,27 +413,37 @@ a {
 .pro-btn-container-left {
   display: flex;
   justify-content: flex-start;
-
-  //border: 1px dashed red;
 }
 
 .pro-btn-container-right {
   display: flex;
   justify-content: flex-end;
+}
 
-  //border: 1px dashed red;
+.pro-btn-link-left {
+  display: inline-block;
+
+  margin-right: $section-padding-sm;
+
+  border-radius: 0.4rem;
+}
+
+.pro-btn-link-right {
+  display: inline-block;
+
+  margin-left: $section-padding-sm;
+
+  border-radius: 0.4rem;
 }
 
 .project-button {
   @extend %section-button;
+
+  transition: background-color 300ms ease-in-out;
 }
 
-.pro-btn-left {
-  margin-right: $section-padding-sm;
-}
-
-.pro-btn-right {
-  margin-left: $section-padding-sm;
+.project-button-hovered {
+  background-color: rgba(224, 224, 224, 0.5);
 }
 
 
