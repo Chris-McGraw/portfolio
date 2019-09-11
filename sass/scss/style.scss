@@ -807,18 +807,18 @@ textarea {
 
     height: 100%;
 
-    border-top: 1px solid $black;
+    border-top: 1px solid rgba(29, 31, 33, 0.2);
 
     cursor: pointer;
   }
 
   #dropdown-nav-icon-middle {
-    border-left: 1px solid $black;
-    border-right: 1px solid $black;
+    border-left: 1px solid rgba(29, 31, 33, 0.2);
+    border-right: 1px solid rgba(29, 31, 33, 0.2);
   }
 
   #dropdown-nav-icon-right {
-    border-right: 1px solid $black;
+    border-right: 1px solid rgba(29, 31, 33, 0.2);
   }
 
   .dropdown-nav-link {
@@ -834,12 +834,12 @@ textarea {
     font-weight: 400;
     color: $black;
 
-    border-top: 1px solid $black;
+    border-top: 1px solid rgba(29, 31, 33, 0.2);
   }
 
   #dropdown-nav-link-middle {
-    border-left: 1px solid $black;
-    border-right: 1px solid $black;
+    border-left: 1px solid rgba(29, 31, 33, 0.2);
+    border-right: 1px solid rgba(29, 31, 33, 0.2);
   }
 
 
