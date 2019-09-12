@@ -28,7 +28,7 @@ var $pupil = $(".pupil");
 
 var $projectButton = $(".project-button");
 
-var $archiveThumbnail = $(".archive-thumbnail");
+var $archiveLink = $(".archive-link");
 
 var $submitButton = $("#submit-button");
 
@@ -240,7 +240,7 @@ function detectPupilMovement(event) {
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
 $(document).ready(function() {
   setTimeout(function() {
-    //ideTypingLoop();
+    ideTypingLoop();
   }, 500);
 
   setTimeout(function() {
@@ -265,7 +265,7 @@ $(document).ready(function() {
 
     $navLogoContainer.off("mouseenter");
 
-    $archiveThumbnail.off("mouseenter");
+    $archiveLink.off("mouseenter");
 
     $projectButton.off("mouseenter");
   });
@@ -298,12 +298,12 @@ $(document).ready(function() {
 
 
 
-  $archiveThumbnail.on("mouseenter", function() {
-    $(this).addClass("archive-thumbnail-hovered");
+  $archiveLink.on("mouseenter", function() {
+    $(this).addClass("archive-link-hovered");
   });
 
-  $archiveThumbnail.on("mouseleave", function() {
-    $(this).removeClass("archive-thumbnail-hovered");
+  $archiveLink.on("mouseleave", function() {
+    $(this).removeClass("archive-link-hovered");
   });
 
 

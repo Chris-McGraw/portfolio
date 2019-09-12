@@ -471,8 +471,6 @@ a {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: $section-padding-md;
   grid-row-gap: $section-padding-lg;
-
-  position: relative;
 }
 
 .archive-thumbnail {
@@ -482,27 +480,24 @@ a {
   align-items: center;
 
   height: auto;
-
-  background-size: cover;
-  background-position: center;
-
-  opacity: 1.0;
-
-  transition: opacity 300ms ease-in-out;
-}
-
-.archive-thumbnail-hovered {
-  opacity: 0.5;
 }
 
 .archive-link {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  opacity: 1.0;
+
+  transition: opacity 300ms ease-in-out;
+}
+
+.archive-link-hovered {
+  opacity: 0.5;
 }
 
 .archive-image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 
   cursor: pointer;
@@ -997,7 +992,7 @@ textarea {
 /* -------------------------- MEDIA QUERY <= 491 -------------------------- */
 @media screen and (max-width: 491px) {
   .archive-image {
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
 }
