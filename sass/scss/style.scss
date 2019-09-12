@@ -500,7 +500,7 @@ a {
 }
 
 .archive-image {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 
   cursor: pointer;
@@ -911,10 +911,10 @@ textarea {
     grid-column: span 3;
   }
 
-  /* .archive-image {
+  .archive-image {
     width: auto;
     height: 15rem;
-  } */
+  }
 
 
 
@@ -994,10 +994,10 @@ textarea {
 
 /* -------------------------- MEDIA QUERY <= 491 -------------------------- */
 @media screen and (max-width: 491px) {
-  /* .archive-image {
-    width: 100%;
+  .archive-image {
+    max-width: 100%;
     height: auto;
-  } */
+  }
 }
 
 
