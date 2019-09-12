@@ -240,7 +240,7 @@ function detectPupilMovement(event) {
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
 $(document).ready(function() {
   setTimeout(function() {
-    //ideTypingLoop();
+    ideTypingLoop();
   }, 500);
 
   setTimeout(function() {
