@@ -438,6 +438,7 @@ a {
 
 .archive-image {
   max-width: 100%;
+  height: auto;
   cursor: pointer;
 }
 
@@ -773,7 +774,7 @@ textarea {
 
   .archive-image {
     width: auto;
-    max-height: 15rem;
+    height: 15rem;
   }
 
   #contact-info-container {
@@ -841,7 +842,7 @@ textarea {
 @media screen and (max-width: 491px) {
   .archive-image {
     max-width: 100%;
-    height: auto !important;
+    height: auto;
   }
 }
 /* -------------------------- MEDIA QUERY <= 431 -------------------------- */

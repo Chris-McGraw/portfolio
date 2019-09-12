@@ -501,7 +501,7 @@ a {
 
 .archive-image {
   max-width: 100%;
-  //height: auto;
+  height: auto;
 
   cursor: pointer;
 }
@@ -913,7 +913,7 @@ textarea {
 
   .archive-image {
     width: auto;
-    max-height: 15rem;
+    height: 15rem;
   }
 
 
@@ -996,7 +996,7 @@ textarea {
 @media screen and (max-width: 491px) {
   .archive-image {
     max-width: 100%;
-    height: auto !important;
+    height: auto;
   }
 }
 
