@@ -462,7 +462,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url("../../images/coffee.png");
+  background-image: url("../../images/coffee-blank.png");
   background-size: cover;
   background-position: -180px 0;
   background-repeat: no-repeat;
@@ -776,6 +776,14 @@ textarea {
     height: 15rem;
   }
 
+  #contact-container:after {
+    top: auto;
+    bottom: 0;
+    height: 50%;
+    background-position: -220px 0;
+    transform: scale(1.15);
+  }
+
   #contact-info-container {
     grid-column: span 5;
   }
@@ -846,6 +854,10 @@ textarea {
 }
 /* -------------------------- MEDIA QUERY <= 431 -------------------------- */
 @media screen and (max-width: 431px) {
+  #landing-container:after {
+    background-position: 50px 0;
+  }
+
   #pseudo-ide-container {
     height: 17rem;
   }
@@ -856,6 +868,10 @@ textarea {
 }
 /* -------------------------- MEDIA QUERY <= 379 -------------------------- */
 @media screen and (max-width: 379px) {
+  #landing-container:after {
+    background-position: 0 0;
+  }
+
   #pseudo-ide-container {
     height: 19rem;
   }
