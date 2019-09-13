@@ -296,6 +296,14 @@ $(document).ready(function() {
     $(this).removeClass("project-button-hovered");
   });
 
+  $projectButton.on("touchstart", function() {
+    $(this).addClass("project-button-hovered");
+  });
+
+  $projectButton.on("touchend", function() {
+    $(this).removeClass("project-button-hovered");
+  });
+
 
 
   $archiveLink.on("mouseenter", function() {
@@ -303,6 +311,14 @@ $(document).ready(function() {
   });
 
   $archiveLink.on("mouseleave", function() {
+    $(this).removeClass("archive-link-hovered");
+  });
+
+  $archiveLink.on("touchstart", function() {
+    $(this).addClass("archive-link-hovered");
+  });
+
+  $archiveLink.on("touchend", function() {
     $(this).removeClass("archive-link-hovered");
   });
 
