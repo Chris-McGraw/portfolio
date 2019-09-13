@@ -91,6 +91,10 @@ a {
   background-color: #1d1f21;
 }
 
+.nav-element-hovered {
+  opacity: 0.2 !important;
+}
+
 #nav-icon-container {
   display: flex;
   align-items: center;
@@ -105,11 +109,15 @@ a {
   font-size: 1.25rem;
   color: #1d1f21;
   cursor: pointer;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
 }
 
 .nav-icon-inner {
   display: inline-block;
   margin-right: 1.5rem;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
 }
 
 #nav-logo-container {
@@ -152,6 +160,8 @@ a {
   width: auto;
   margin-left: 1.25rem;
   cursor: pointer;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
 }
 
 #hamburger-menu {
@@ -164,6 +174,16 @@ a {
 
 #dropdown-social-container {
   display: none;
+}
+
+.dropdown-nav-link {
+  cursor: pointer;
+}
+
+.dropdown-nav-link > p {
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
 }
 
 /* --------------------------- LANDING SECTION --------------------------- */
