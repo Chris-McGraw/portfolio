@@ -18,11 +18,15 @@ let blankLineDelay = false;
 var $navbar = $("#navbar");
 var $navIconInner = $(".nav-icon-inner");
 var $navLogoContainer = $("#nav-logo-container");
+var $navLink = $(".nav-link");
+
 var $hamburgerMenu = $("#hamburger-menu");
 var $hamburgerBarTop = $("#hamburger-bar-top");
 var $hamburgerBarMiddle = $("#hamburger-bar-middle");
 var $hamburgerBarBottom = $("#hamburger-bar-bottom");
 var $dropdownNavbar = $("#dropdown-navbar");
+var $dropdownNavIcon = $(".dropdown-nav-icon");
+var $dropdownNavLink = $(".dropdown-nav-link");
 
 var $eye = $(".eye");
 var $pupil = $(".pupil");
@@ -266,6 +270,9 @@ $(document).ready(function() {
 
     $navIconInner.off("mouseenter");
     $navLogoContainer.off("mouseenter");
+    $navLink.off("mouseenter");
+    $dropdownNavIcon.off("mouseenter");
+    $dropdownNavLink.off("mouseenter");
 
     $archiveLink.off("mouseenter");
 
@@ -275,19 +282,19 @@ $(document).ready(function() {
 
 
   $navIconInner.on("mouseenter", function() {
-    $(this).addClass("nav-icon-hovered");
+    $(this).addClass("nav-element-hovered");
   });
 
   $navIconInner.on("mouseleave", function() {
-    $(this).removeClass("nav-icon-hovered");
+    $(this).removeClass("nav-element-hovered");
   });
 
   $navIconInner.on("touchstart", function() {
-    $(this).addClass("nav-icon-hovered");
+    $(this).addClass("nav-element-hovered");
   });
 
   $navIconInner.on("touchend", function() {
-    $(this).removeClass("nav-icon-hovered");
+    $(this).removeClass("nav-element-hovered");
   });
 
 
@@ -298,12 +305,66 @@ $(document).ready(function() {
 
 
 
+  $navLink.on("mouseenter", function() {
+    $(this).addClass("nav-element-hovered");
+  });
+
+  $navLink.on("mouseleave", function() {
+    $(this).removeClass("nav-element-hovered");
+  });
+
+  $navLink.on("touchstart", function() {
+    $(this).addClass("nav-element-hovered");
+  });
+
+  $navLink.on("touchend", function() {
+    $(this).removeClass("nav-element-hovered");
+  });
+
+
+
   $hamburgerMenu.on("click", function() {
     $dropdownNavbar.toggleClass("nav-drop-open");
 
     $hamburgerBarTop.toggleClass("rotate-bar-top");
     $hamburgerBarMiddle.toggleClass("hide-bar-middle");
     $hamburgerBarBottom.toggleClass("rotate-bar-bottom");
+  });
+
+
+
+  $dropdownNavIcon.on("mouseenter", function() {
+    $(this).children().addClass("nav-element-hovered");
+  });
+
+  $dropdownNavIcon.on("mouseleave", function() {
+    $(this).children().removeClass("nav-element-hovered");
+  });
+
+  $dropdownNavIcon.on("touchstart", function() {
+    $(this).children().addClass("nav-element-hovered");
+  });
+
+  $dropdownNavIcon.on("touchend", function() {
+    $(this).children().removeClass("nav-element-hovered");
+  });
+
+
+
+  $dropdownNavLink.on("mouseenter", function() {
+    $(this).children().addClass("nav-element-hovered");
+  });
+
+  $dropdownNavLink.on("mouseleave", function() {
+    $(this).children().removeClass("nav-element-hovered");
+  });
+
+  $dropdownNavLink.on("touchstart", function() {
+    $(this).children().addClass("nav-element-hovered");
+  });
+
+  $dropdownNavLink.on("touchend", function() {
+    $(this).children().removeClass("nav-element-hovered");
   });
 
 

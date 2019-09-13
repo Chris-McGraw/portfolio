@@ -68,6 +68,10 @@ a {
   background-color: $black;
 }
 
+.nav-element-hovered {
+  opacity: 0.2 !important;
+}
+
 #nav-icon-container {
   display: flex;
   align-items: center;
@@ -85,6 +89,10 @@ a {
   color: $black;
 
   cursor: pointer;
+
+  opacity: 1.0;
+
+  transition: opacity 300ms ease-in-out;
 }
 
 .nav-icon-inner {
@@ -95,10 +103,6 @@ a {
   opacity: 1.0;
 
   transition: opacity 300ms ease-in-out;
-}
-
-.nav-icon-hovered {
-  opacity: 0.2;
 }
 
 #nav-logo-container {
@@ -152,6 +156,10 @@ a {
   margin-left: $section-padding-md;
 
   cursor: pointer;
+
+  opacity: 1.0;
+
+  transition: opacity 300ms ease-in-out;
 }
 
 // --- DROPDOWN NAVBAR --- //
@@ -165,6 +173,18 @@ a {
 
 #dropdown-social-container {
   display: none;
+}
+
+.dropdown-nav-link {
+  cursor: pointer;
+}
+
+.dropdown-nav-link > p {
+  cursor: pointer;
+
+  opacity: 1.0;
+
+  transition: opacity 300ms ease-in-out;
 }
 
 
