@@ -16,6 +16,7 @@ let typeLoopCount = -1;
 let blankLineDelay = false;
 
 var $navbar = $("#navbar");
+var $navIconInner = $(".nav-icon-inner");
 var $navLogoContainer = $("#nav-logo-container");
 var $hamburgerMenu = $("#hamburger-menu");
 var $hamburgerBarTop = $("#hamburger-bar-top");
@@ -263,11 +264,30 @@ $(document).ready(function() {
   $("body *").on("touchstart", function() {
     $(document).off("mousemove");
 
+    $navIconInner.off("mouseenter");
     $navLogoContainer.off("mouseenter");
 
     $archiveLink.off("mouseenter");
 
     $projectButton.off("mouseenter");
+  });
+
+
+
+  $navIconInner.on("mouseenter", function() {
+    $(this).addClass("nav-icon-hovered");
+  });
+
+  $navIconInner.on("mouseleave", function() {
+    $(this).removeClass("nav-icon-hovered");
+  });
+
+  $navIconInner.on("touchstart", function() {
+    $(this).addClass("nav-icon-hovered");
+  });
+
+  $navIconInner.on("touchend", function() {
+    $(this).removeClass("nav-icon-hovered");
   });
 
 

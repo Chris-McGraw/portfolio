@@ -91,6 +91,14 @@ a {
   display: inline-block;
 
   margin-right: 1.5rem;
+
+  opacity: 1.0;
+
+  transition: opacity 300ms ease-in-out;
+}
+
+.nav-icon-hovered {
+  opacity: 0.2;
 }
 
 #nav-logo-container {
