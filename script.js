@@ -37,6 +37,8 @@ var $archiveLink = $(".archive-link");
 
 var $submitButton = $("#submit-button");
 
+var $footerIconInner = $(".footer-icon-inner");
+
 
 
 
@@ -277,6 +279,8 @@ $(document).ready(function() {
     $archiveLink.off("mouseenter");
 
     $projectButton.off("mouseenter");
+
+    $footerIconInner.off("mouseenter");
   });
 
 
@@ -401,6 +405,24 @@ $(document).ready(function() {
 
   $archiveLink.on("touchend", function() {
     $(this).removeClass("archive-link-hovered");
+  });
+
+
+
+  $footerIconInner.on("mouseenter", function() {
+    $(this).addClass("footer-icon-hovered");
+  });
+
+  $footerIconInner.on("mouseleave", function() {
+    $(this).removeClass("footer-icon-hovered");
+  });
+
+  $footerIconInner.on("touchstart", function() {
+    $(this).addClass("footer-icon-hovered");
+  });
+
+  $footerIconInner.on("touchend", function() {
+    $(this).removeClass("footer-icon-hovered");
   });
 
 

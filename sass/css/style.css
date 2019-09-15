@@ -602,14 +602,24 @@ textarea {
   margin: auto;
 }
 
-.footer-icon {
-  font-size: 1.25rem;
-  color: #969896;
-  cursor: pointer;
+#footer-icon-container > div:nth-child(1) {
+  margin-right: 0.2rem;
 }
 
 .footer-icon-inner {
   display: inline-block;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.footer-icon-hovered {
+  opacity: 0.5 !important;
+}
+
+.footer-icon {
+  font-size: 1.25rem;
+  color: #969896;
+  cursor: pointer;
 }
 
 /* ------------------------- MEDIA QUERY <= 1440 ------------------------- */
