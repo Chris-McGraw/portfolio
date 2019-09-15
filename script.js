@@ -276,9 +276,11 @@ $(document).ready(function() {
     $dropdownNavIcon.off("mouseenter");
     $dropdownNavLink.off("mouseenter");
 
+    $projectButton.off("mouseenter");
+
     $archiveLink.off("mouseenter");
 
-    $projectButton.off("mouseenter");
+    $submitButton.off("mouseenter");
 
     $footerIconInner.off("mouseenter");
   });
@@ -374,19 +376,19 @@ $(document).ready(function() {
 
 
   $projectButton.on("mouseenter", function() {
-    $(this).addClass("project-button-hovered");
+    $(this).addClass("button-hovered");
   });
 
   $projectButton.on("mouseleave", function() {
-    $(this).removeClass("project-button-hovered");
+    $(this).removeClass("button-hovered");
   });
 
   $projectButton.on("touchstart", function() {
-    $(this).addClass("project-button-hovered");
+    $(this).addClass("button-hovered");
   });
 
   $projectButton.on("touchend", function() {
-    $(this).removeClass("project-button-hovered");
+    $(this).removeClass("button-hovered");
   });
 
 
@@ -427,9 +429,25 @@ $(document).ready(function() {
 
 
 
-  $submitButton.on("click", function(event) {
-    event.preventDefault();
+  $submitButton.on("mouseenter", function() {
+    $(this).addClass("button-hovered");
   });
+
+  $submitButton.on("mouseleave", function() {
+    $(this).removeClass("button-hovered");
+  });
+
+  $submitButton.on("touchstart", function() {
+    $(this).addClass("button-hovered");
+  });
+
+  $submitButton.on("touchend", function() {
+    $(this).removeClass("button-hovered");
+  });
+
+  /* $submitButton.on("click", function(event) {
+    event.preventDefault();
+  }); */
 
 
 });
