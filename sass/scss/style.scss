@@ -39,6 +39,14 @@ a {
   text-decoration: none;
 }
 
+.nav-element-hovered {
+  opacity: 0.2 !important;
+}
+
+.button-hovered {
+  background-color: rgba(224, 224, 224, 0.5) !important;
+}
+
 
 
 /* -------------------------------- NAVBAR -------------------------------- */
@@ -66,10 +74,6 @@ a {
   height: 5rem;
 
   background-color: $black;
-}
-
-.nav-element-hovered {
-  opacity: 0.2 !important;
 }
 
 #nav-icon-container {
@@ -470,10 +474,6 @@ a {
   transition: background-color 300ms ease-in-out;
 }
 
-.project-button-hovered {
-  background-color: rgba(224, 224, 224, 0.5);
-}
-
 
 
 /* --------------------------- ARCHIVE SECTION --------------------------- */
@@ -671,6 +671,8 @@ textarea {
   @extend %section-button;
 
   margin: auto;
+
+  transition: background-color 300ms ease-in-out;
 }
 
 
@@ -709,15 +711,27 @@ textarea {
   margin: auto;
 }
 
+#footer-icon-container > div:nth-child(1) {
+  margin-right: 0.2rem;
+}
+
+.footer-icon-inner {
+  display: inline-block;
+
+  opacity: 1.0;
+
+  transition: opacity 300ms ease-in-out;
+}
+
+.footer-icon-hovered {
+  opacity: 0.5 !important;
+}
+
 .footer-icon {
   font-size: $font-size-lg;
   color: $gray;
 
   cursor: pointer;
-}
-
-.footer-icon-inner {
-  display: inline-block;
 }
 
 
