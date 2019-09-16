@@ -461,6 +461,13 @@ a {
   cursor: pointer;
 }
 
+.archive-vid {
+  display: none;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
 /* --------------------------- CONTACT SECTION --------------------------- */
 #contact-container {
   z-index: 10;
