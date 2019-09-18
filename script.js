@@ -400,8 +400,6 @@ $(document).ready(function() {
     selectedArchiveLink = $(this).children(".archive-vid").attr("id");
 
     if(selectedArchiveLink === "archive-vid-1") {
-      console.log("playing " + selectedArchiveLink);
-
       $(this).children(".archive-image").css("display", "none");
       $(this).children(".archive-vid").css("display", "block");
 
@@ -410,8 +408,6 @@ $(document).ready(function() {
     }
 
     else if(selectedArchiveLink === "archive-vid-2") {
-      console.log("playing " + selectedArchiveLink);
-
       $(this).children(".archive-image").css("display", "none");
       $(this).children(".archive-vid").css("display", "block");
 
@@ -420,8 +416,6 @@ $(document).ready(function() {
     }
 
     else if(selectedArchiveLink === "archive-vid-3") {
-      console.log("playing " + selectedArchiveLink);
-
       $(this).children(".archive-image").css("display", "none");
       $(this).children(".archive-vid").css("display", "block");
 
