@@ -428,8 +428,6 @@ $(document).ready(function() {
     $(this).removeClass("archive-link-hovered");
 
     if(selectedArchiveLink === "archive-vid-1") {
-      console.log("stopping " + selectedArchiveLink);
-
       $(this).children(".archive-vid").css("display", "none");
       $(this).children(".archive-image").css("display", "block");
 
@@ -438,8 +436,6 @@ $(document).ready(function() {
     }
 
     else if(selectedArchiveLink === "archive-vid-2") {
-      console.log("stopping " + selectedArchiveLink);
-
       $(this).children(".archive-vid").css("display", "none");
       $(this).children(".archive-image").css("display", "block");
 
@@ -448,8 +444,6 @@ $(document).ready(function() {
     }
 
     else if(selectedArchiveLink === "archive-vid-3") {
-      console.log("stopping " + selectedArchiveLink);
-
       $(this).children(".archive-vid").css("display", "none");
       $(this).children(".archive-image").css("display", "block");
 
