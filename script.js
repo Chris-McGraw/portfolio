@@ -9,6 +9,7 @@ var $eye = $(".eye");
 var $pupil = $(".pupil");
 
 var $navLink = $(".nav-link");
+let currentSection = "";
 
 var $hamburgerMenu = $("#hamburger-menu");
 var $hamburgerBarTop = $("#hamburger-bar-top");
@@ -42,7 +43,12 @@ let typeLoopCount = -1;
 let blankLineDelay = false;
 
 
+/* ~~~~~~~ ABOUT SECTION ~~~~~~~ */
+var $aboutContainer = $("#about-container");
+
+
 /* ~~~~~~ PROJECT SECTION ~~~~~~ */
+var $projectContainer = $("#project-container");
 var $projectButton = $(".project-button");
 
 
@@ -52,6 +58,7 @@ var selectedArchiveLink = "";
 
 
 /* ~~~~~~ CONTACT SECTION ~~~~~~ */
+var $contactContainer = $("#contact-container");
 var $submitButton = $("#submit-button");
 
 
@@ -63,6 +70,33 @@ var $footerIconInner = $(".footer-icon-inner");
 
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
+function scrollToSection(currentSection) {
+  let currentSectionText = currentSection.children().text();
+
+  if(currentSectionText === "About") {
+    let currentSectionPositionTop = $aboutContainer.position().top;
+    let currentSectionPadding = Number( $aboutContainer.css("padding-top").match(/\d+/)[0] );
+    let sectionScrollPosition = currentSectionPositionTop + currentSectionPadding;
+
+    window.scrollTo(0, sectionScrollPosition)
+  }
+  else if(currentSectionText === "Projects") {
+    let currentSectionPositionTop = $projectContainer.position().top;
+    let currentSectionPadding = Number( $projectContainer.css("padding-top").match(/\d+/)[0] );
+    let sectionScrollPosition = currentSectionPositionTop + currentSectionPadding;
+
+    window.scrollTo(0, sectionScrollPosition);
+  }
+  else if(currentSectionText === "Contact") {
+    let currentSectionPositionTop = $contactContainer.position().top;
+    let currentSectionPadding = Number( $contactContainer.css("padding-top").match(/\d+/)[0] );
+    let sectionScrollPosition = currentSectionPositionTop + currentSectionPadding;
+
+    window.scrollTo(0, sectionScrollPosition);
+  }
+}
+
+
 function ideTypeByLetter(currentLine) {
   if(blankLineDelay === false) {
     localTypeLoopTime = 0;
@@ -345,6 +379,11 @@ $(document).ready(function() {
     $(this).removeClass("nav-element-hovered");
   });
 
+  $navLink.on("click", function() {
+    let currentSection = $(this);
+    scrollToSection(currentSection);
+  });
+
 // ...
 
   $hamburgerMenu.on("click", function() {
@@ -391,6 +430,11 @@ $(document).ready(function() {
 
   $dropdownNavLink.on("touchend", function() {
     $(this).children().removeClass("nav-element-hovered");
+  });
+
+  $dropdownNavLink.on("click", function() {
+    let currentSection = $(this);
+    scrollToSection(currentSection);
   });
 
 

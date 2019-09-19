@@ -68,7 +68,6 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
 }
 
 .nav-element-hovered {
@@ -156,9 +155,12 @@ a {
   display: inline-block;
   width: auto;
   margin-left: 1.25rem;
-  cursor: pointer;
   opacity: 1;
   transition: opacity 300ms ease-in-out;
+}
+
+.nav-link > p {
+  cursor: pointer;
 }
 
 #hamburger-menu {
