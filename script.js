@@ -1,4 +1,30 @@
 /* ------------------------- VARIABLE DECLARATIONS ------------------------- */
+
+/* ~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~ */
+var $navbar = $("#navbar");
+var $navIconInner = $(".nav-icon-inner");
+
+var $navLogoContainer = $("#nav-logo-container");
+var $eye = $(".eye");
+var $pupil = $(".pupil");
+
+var $navLink = $(".nav-link");
+
+var $hamburgerMenu = $("#hamburger-menu");
+var $hamburgerBarTop = $("#hamburger-bar-top");
+var $hamburgerBarMiddle = $("#hamburger-bar-middle");
+var $hamburgerBarBottom = $("#hamburger-bar-bottom");
+
+var $dropdownNavbar = $("#dropdown-navbar");
+var $dropdownNavIcon = $(".dropdown-nav-icon");
+var $dropdownNavLink = $(".dropdown-nav-link");
+
+
+/* ~~~~ MAIN BODY CONTAINER ~~~~ */
+var $mainBodyContainer = $("#main-body-container");
+
+
+/* ~~~~~~ LANDING SECTION ~~~~~~ */
 var $ideTextCursor = $("#ide-text-cursor");
 var $ideLnComment = $("#ide-ln-comment");
 var $typedComment = $("#typed-comment");
@@ -15,31 +41,21 @@ const typeTiming = 75;
 let typeLoopCount = -1;
 let blankLineDelay = false;
 
-var $navbar = $("#navbar");
-var $navIconInner = $(".nav-icon-inner");
-var $navLogoContainer = $("#nav-logo-container");
-var $navLink = $(".nav-link");
 
-var $hamburgerMenu = $("#hamburger-menu");
-var $hamburgerBarTop = $("#hamburger-bar-top");
-var $hamburgerBarMiddle = $("#hamburger-bar-middle");
-var $hamburgerBarBottom = $("#hamburger-bar-bottom");
-var $dropdownNavbar = $("#dropdown-navbar");
-var $dropdownNavIcon = $(".dropdown-nav-icon");
-var $dropdownNavLink = $(".dropdown-nav-link");
-
-var $eye = $(".eye");
-var $pupil = $(".pupil");
-
-var $mainBodyContainer = $("#main-body-container");
-
+/* ~~~~~~ PROJECT SECTION ~~~~~~ */
 var $projectButton = $(".project-button");
 
+
+/* ~~~~~~ ARCHIVE SECTION ~~~~~~ */
 var $archiveLink = $(".archive-link");
 var selectedArchiveLink = "";
 
+
+/* ~~~~~~ CONTACT SECTION ~~~~~~ */
 var $submitButton = $("#submit-button");
 
+
+/* ~~~~~~~~~~~ FOOTER ~~~~~~~~~~~ */
 var $footerIconInner = $(".footer-icon-inner");
 
 
@@ -250,7 +266,7 @@ function detectPupilMovement(event) {
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
 $(document).ready(function() {
   setTimeout(function() {
-    //ideTypingLoop();
+    ideTypingLoop();
   }, 500);
 
   setTimeout(function() {
@@ -258,7 +274,7 @@ $(document).ready(function() {
   }, 2500);
 
 
-
+/* ~~~~~~~~~~ DOCUMENT ~~~~~~~~~~ */
   $(document).mousemove(function(event) {
     detectPupilMovement(event);
   });
@@ -268,8 +284,7 @@ $(document).ready(function() {
   });
 
 
-
-/* ~~~~~~~~~~~~~ BODY ~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~ BODY ~~~~~~~~~~~~ */
   $("body *").on("touchstart", function() {
     $(document).off("mousemove");
 
@@ -289,7 +304,7 @@ $(document).ready(function() {
   });
 
 
-
+/* ~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~ */
   $navIconInner.on("mouseenter", function() {
     $(this).addClass("nav-element-hovered");
   });
@@ -306,13 +321,13 @@ $(document).ready(function() {
     $(this).removeClass("nav-element-hovered");
   });
 
-
+// ...
 
   $navLogoContainer.on("mouseenter", function() {
     clearPupilMovement();
   });
 
-
+// ...
 
   $navLink.on("mouseenter", function() {
     $(this).addClass("nav-element-hovered");
@@ -330,7 +345,7 @@ $(document).ready(function() {
     $(this).removeClass("nav-element-hovered");
   });
 
-
+// ...
 
   $hamburgerMenu.on("click", function() {
     $dropdownNavbar.toggleClass("nav-drop-open");
@@ -342,7 +357,7 @@ $(document).ready(function() {
     $mainBodyContainer.toggleClass("nav-drop-open");
   });
 
-
+// ...
 
   $dropdownNavIcon.on("mouseenter", function() {
     $(this).children().addClass("nav-element-hovered");
@@ -360,7 +375,7 @@ $(document).ready(function() {
     $(this).children().removeClass("nav-element-hovered");
   });
 
-
+// ...
 
   $dropdownNavLink.on("mouseenter", function() {
     $(this).children().addClass("nav-element-hovered");
@@ -379,7 +394,7 @@ $(document).ready(function() {
   });
 
 
-
+/* ~~~~~~ PROJECT SECTION ~~~~~~ */
   $projectButton.on("mouseenter", function() {
     $(this).addClass("button-hovered");
   });
@@ -397,7 +412,7 @@ $(document).ready(function() {
   });
 
 
-
+/* ~~~~~~ ARCHIVE SECTION ~~~~~~ */
   $archiveLink.on("mouseenter", function() {
     $(this).addClass("archive-link-hovered");
 
@@ -428,6 +443,8 @@ $(document).ready(function() {
     }
   });
 
+// ...
+
   $archiveLink.on("mouseleave", function() {
     $(this).removeClass("archive-link-hovered");
 
@@ -456,6 +473,8 @@ $(document).ready(function() {
     }
   });
 
+// ...
+
   $archiveLink.on("touchstart", function() {
     $(this).addClass("archive-link-hovered");
   });
@@ -465,25 +484,7 @@ $(document).ready(function() {
   });
 
 
-
-  $footerIconInner.on("mouseenter", function() {
-    $(this).addClass("footer-icon-hovered");
-  });
-
-  $footerIconInner.on("mouseleave", function() {
-    $(this).removeClass("footer-icon-hovered");
-  });
-
-  $footerIconInner.on("touchstart", function() {
-    $(this).addClass("footer-icon-hovered");
-  });
-
-  $footerIconInner.on("touchend", function() {
-    $(this).removeClass("footer-icon-hovered");
-  });
-
-
-
+/* ~~~~~~ CONTACT SECTION ~~~~~~ */
   $submitButton.on("mouseenter", function() {
     $(this).addClass("button-hovered");
   });
@@ -503,6 +504,24 @@ $(document).ready(function() {
   /* $submitButton.on("click", function(event) {
     event.preventDefault();
   }); */
+
+
+/* ~~~~~~~~~~~ FOOTER ~~~~~~~~~~~ */
+  $footerIconInner.on("mouseenter", function() {
+    $(this).addClass("footer-icon-hovered");
+  });
+
+  $footerIconInner.on("mouseleave", function() {
+    $(this).removeClass("footer-icon-hovered");
+  });
+
+  $footerIconInner.on("touchstart", function() {
+    $(this).addClass("footer-icon-hovered");
+  });
+
+  $footerIconInner.on("touchend", function() {
+    $(this).removeClass("footer-icon-hovered");
+  });
 
 
 });
