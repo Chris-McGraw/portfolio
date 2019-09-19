@@ -31,6 +31,8 @@ var $dropdownNavLink = $(".dropdown-nav-link");
 var $eye = $(".eye");
 var $pupil = $(".pupil");
 
+var $mainBodyContainer = $("#main-body-container");
+
 var $projectButton = $(".project-button");
 
 var $archiveLink = $(".archive-link");
@@ -248,7 +250,7 @@ function detectPupilMovement(event) {
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
 $(document).ready(function() {
   setTimeout(function() {
-    ideTypingLoop();
+    //ideTypingLoop();
   }, 500);
 
   setTimeout(function() {
@@ -336,6 +338,8 @@ $(document).ready(function() {
     $hamburgerBarTop.toggleClass("rotate-bar-top");
     $hamburgerBarMiddle.toggleClass("hide-bar-middle");
     $hamburgerBarBottom.toggleClass("rotate-bar-bottom");
+
+    $mainBodyContainer.toggleClass("nav-drop-open");
   });
 
 
