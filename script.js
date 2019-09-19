@@ -248,7 +248,7 @@ function detectPupilMovement(event) {
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
 $(document).ready(function() {
   setTimeout(function() {
-    //ideTypingLoop();
+    ideTypingLoop();
   }, 500);
 
   setTimeout(function() {
@@ -454,60 +454,10 @@ $(document).ready(function() {
 
   $archiveLink.on("touchstart", function() {
     $(this).addClass("archive-link-hovered");
-
-    selectedArchiveLink = $(this).children(".archive-vid").attr("id");
-
-    if(selectedArchiveLink === "archive-vid-1") {
-      $(this).children(".archive-image").css("display", "none");
-      $(this).children(".archive-vid").css("display", "block");
-
-      document.getElementById("archive-vid-1").play();
-      document.getElementById("archive-vid-1").loop = true;
-    }
-
-    else if(selectedArchiveLink === "archive-vid-2") {
-      $(this).children(".archive-image").css("display", "none");
-      $(this).children(".archive-vid").css("display", "block");
-
-      document.getElementById("archive-vid-2").play();
-      document.getElementById("archive-vid-2").loop = true;
-    }
-
-    else if(selectedArchiveLink === "archive-vid-3") {
-      $(this).children(".archive-image").css("display", "none");
-      $(this).children(".archive-vid").css("display", "block");
-
-      document.getElementById("archive-vid-3").play();
-      document.getElementById("archive-vid-3").loop = true;
-    }
   });
 
   $archiveLink.on("touchend", function() {
     $(this).removeClass("archive-link-hovered");
-
-    if(selectedArchiveLink === "archive-vid-1") {
-      $(this).children(".archive-vid").css("display", "none");
-      $(this).children(".archive-image").css("display", "block");
-
-      document.getElementById("archive-vid-1").pause();
-      document.getElementById("archive-vid-1").currentTime = 0;
-    }
-
-    else if(selectedArchiveLink === "archive-vid-2") {
-      $(this).children(".archive-vid").css("display", "none");
-      $(this).children(".archive-image").css("display", "block");
-
-      document.getElementById("archive-vid-2").pause();
-      document.getElementById("archive-vid-2").currentTime = 0;
-    }
-
-    else if(selectedArchiveLink === "archive-vid-3") {
-      $(this).children(".archive-vid").css("display", "none");
-      $(this).children(".archive-image").css("display", "block");
-
-      document.getElementById("archive-vid-3").pause();
-      document.getElementById("archive-vid-3").currentTime = 0;
-    }
   });
 
 
