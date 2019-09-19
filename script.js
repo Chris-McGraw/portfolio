@@ -1,4 +1,31 @@
 /* ------------------------- VARIABLE DECLARATIONS ------------------------- */
+
+/* ~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~ */
+var $navbar = $("#navbar");
+var $navIconInner = $(".nav-icon-inner");
+
+var $navLogoContainer = $("#nav-logo-container");
+var $eye = $(".eye");
+var $pupil = $(".pupil");
+
+var $navLink = $(".nav-link");
+let currentSection = "";
+
+var $hamburgerMenu = $("#hamburger-menu");
+var $hamburgerBarTop = $("#hamburger-bar-top");
+var $hamburgerBarMiddle = $("#hamburger-bar-middle");
+var $hamburgerBarBottom = $("#hamburger-bar-bottom");
+
+var $dropdownNavbar = $("#dropdown-navbar");
+var $dropdownNavIcon = $(".dropdown-nav-icon");
+var $dropdownNavLink = $(".dropdown-nav-link");
+
+
+/* ~~~~ MAIN BODY CONTAINER ~~~~ */
+var $mainBodyContainer = $("#main-body-container");
+
+
+/* ~~~~~~ LANDING SECTION ~~~~~~ */
 var $ideTextCursor = $("#ide-text-cursor");
 var $ideLnComment = $("#ide-ln-comment");
 var $typedComment = $("#typed-comment");
@@ -15,29 +42,27 @@ const typeTiming = 75;
 let typeLoopCount = -1;
 let blankLineDelay = false;
 
-var $navbar = $("#navbar");
-var $navIconInner = $(".nav-icon-inner");
-var $navLogoContainer = $("#nav-logo-container");
-var $navLink = $(".nav-link");
 
-var $hamburgerMenu = $("#hamburger-menu");
-var $hamburgerBarTop = $("#hamburger-bar-top");
-var $hamburgerBarMiddle = $("#hamburger-bar-middle");
-var $hamburgerBarBottom = $("#hamburger-bar-bottom");
-var $dropdownNavbar = $("#dropdown-navbar");
-var $dropdownNavIcon = $(".dropdown-nav-icon");
-var $dropdownNavLink = $(".dropdown-nav-link");
+/* ~~~~~~~ ABOUT SECTION ~~~~~~~ */
+var $aboutContainer = $("#about-container");
 
-var $eye = $(".eye");
-var $pupil = $(".pupil");
 
+/* ~~~~~~ PROJECT SECTION ~~~~~~ */
+var $projectContainer = $("#project-container");
 var $projectButton = $(".project-button");
 
+
+/* ~~~~~~ ARCHIVE SECTION ~~~~~~ */
 var $archiveLink = $(".archive-link");
 var selectedArchiveLink = "";
 
+
+/* ~~~~~~ CONTACT SECTION ~~~~~~ */
+var $contactContainer = $("#contact-container");
 var $submitButton = $("#submit-button");
 
+
+/* ~~~~~~~~~~~ FOOTER ~~~~~~~~~~~ */
 var $footerIconInner = $(".footer-icon-inner");
 
 
@@ -45,6 +70,33 @@ var $footerIconInner = $(".footer-icon-inner");
 
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
+function scrollToSection(currentSection) {
+  let currentSectionText = currentSection.children().text();
+
+  if(currentSectionText === "About") {
+    let currentSectionPositionTop = $aboutContainer.position().top;
+    let currentSectionPadding = Number( $aboutContainer.css("padding-top").match(/\d+/)[0] );
+    let sectionScrollPosition = currentSectionPositionTop + currentSectionPadding;
+
+    window.scrollTo(0, sectionScrollPosition)
+  }
+  else if(currentSectionText === "Projects") {
+    let currentSectionPositionTop = $projectContainer.position().top;
+    let currentSectionPadding = Number( $projectContainer.css("padding-top").match(/\d+/)[0] );
+    let sectionScrollPosition = currentSectionPositionTop + currentSectionPadding;
+
+    window.scrollTo(0, sectionScrollPosition);
+  }
+  else if(currentSectionText === "Contact") {
+    let currentSectionPositionTop = $contactContainer.position().top;
+    let currentSectionPadding = Number( $contactContainer.css("padding-top").match(/\d+/)[0] );
+    let sectionScrollPosition = currentSectionPositionTop + currentSectionPadding;
+
+    window.scrollTo(0, sectionScrollPosition);
+  }
+}
+
+
 function ideTypeByLetter(currentLine) {
   if(blankLineDelay === false) {
     localTypeLoopTime = 0;
@@ -256,7 +308,7 @@ $(document).ready(function() {
   }, 2500);
 
 
-
+/* ~~~~~~~~~~ DOCUMENT ~~~~~~~~~~ */
   $(document).mousemove(function(event) {
     detectPupilMovement(event);
   });
@@ -266,8 +318,7 @@ $(document).ready(function() {
   });
 
 
-
-/* ~~~~~~~~~~~~~ BODY ~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~ BODY ~~~~~~~~~~~~ */
   $("body *").on("touchstart", function() {
     $(document).off("mousemove");
 
@@ -287,7 +338,7 @@ $(document).ready(function() {
   });
 
 
-
+/* ~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~ */
   $navIconInner.on("mouseenter", function() {
     $(this).addClass("nav-element-hovered");
   });
@@ -304,13 +355,13 @@ $(document).ready(function() {
     $(this).removeClass("nav-element-hovered");
   });
 
-
+// ...
 
   $navLogoContainer.on("mouseenter", function() {
     clearPupilMovement();
   });
 
-
+// ...
 
   $navLink.on("mouseenter", function() {
     $(this).addClass("nav-element-hovered");
@@ -328,7 +379,12 @@ $(document).ready(function() {
     $(this).removeClass("nav-element-hovered");
   });
 
+  $navLink.on("click", function() {
+    let currentSection = $(this);
+    scrollToSection(currentSection);
+  });
 
+// ...
 
   $hamburgerMenu.on("click", function() {
     $dropdownNavbar.toggleClass("nav-drop-open");
@@ -336,9 +392,11 @@ $(document).ready(function() {
     $hamburgerBarTop.toggleClass("rotate-bar-top");
     $hamburgerBarMiddle.toggleClass("hide-bar-middle");
     $hamburgerBarBottom.toggleClass("rotate-bar-bottom");
+
+    $mainBodyContainer.toggleClass("nav-drop-open");
   });
 
-
+// ...
 
   $dropdownNavIcon.on("mouseenter", function() {
     $(this).children().addClass("nav-element-hovered");
@@ -356,7 +414,7 @@ $(document).ready(function() {
     $(this).children().removeClass("nav-element-hovered");
   });
 
-
+// ...
 
   $dropdownNavLink.on("mouseenter", function() {
     $(this).children().addClass("nav-element-hovered");
@@ -374,8 +432,13 @@ $(document).ready(function() {
     $(this).children().removeClass("nav-element-hovered");
   });
 
+  $dropdownNavLink.on("click", function() {
+    let currentSection = $(this);
+    scrollToSection(currentSection);
+  });
 
 
+/* ~~~~~~ PROJECT SECTION ~~~~~~ */
   $projectButton.on("mouseenter", function() {
     $(this).addClass("button-hovered");
   });
@@ -393,7 +456,7 @@ $(document).ready(function() {
   });
 
 
-
+/* ~~~~~~ ARCHIVE SECTION ~~~~~~ */
   $archiveLink.on("mouseenter", function() {
     $(this).addClass("archive-link-hovered");
 
@@ -424,6 +487,8 @@ $(document).ready(function() {
     }
   });
 
+// ...
+
   $archiveLink.on("mouseleave", function() {
     $(this).removeClass("archive-link-hovered");
 
@@ -452,6 +517,8 @@ $(document).ready(function() {
     }
   });
 
+// ...
+
   $archiveLink.on("touchstart", function() {
     $(this).addClass("archive-link-hovered");
   });
@@ -461,25 +528,7 @@ $(document).ready(function() {
   });
 
 
-
-  $footerIconInner.on("mouseenter", function() {
-    $(this).addClass("footer-icon-hovered");
-  });
-
-  $footerIconInner.on("mouseleave", function() {
-    $(this).removeClass("footer-icon-hovered");
-  });
-
-  $footerIconInner.on("touchstart", function() {
-    $(this).addClass("footer-icon-hovered");
-  });
-
-  $footerIconInner.on("touchend", function() {
-    $(this).removeClass("footer-icon-hovered");
-  });
-
-
-
+/* ~~~~~~ CONTACT SECTION ~~~~~~ */
   $submitButton.on("mouseenter", function() {
     $(this).addClass("button-hovered");
   });
@@ -499,6 +548,24 @@ $(document).ready(function() {
   /* $submitButton.on("click", function(event) {
     event.preventDefault();
   }); */
+
+
+/* ~~~~~~~~~~~ FOOTER ~~~~~~~~~~~ */
+  $footerIconInner.on("mouseenter", function() {
+    $(this).addClass("footer-icon-hovered");
+  });
+
+  $footerIconInner.on("mouseleave", function() {
+    $(this).removeClass("footer-icon-hovered");
+  });
+
+  $footerIconInner.on("touchstart", function() {
+    $(this).addClass("footer-icon-hovered");
+  });
+
+  $footerIconInner.on("touchend", function() {
+    $(this).removeClass("footer-icon-hovered");
+  });
 
 
 });
