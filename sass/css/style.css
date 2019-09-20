@@ -353,6 +353,8 @@ a {
 .project-image {
   width: 100%;
   height: auto;
+  transition: filter 750ms ease-in-out;
+  filter: blur(0.5rem);
 }
 
 #pro-thumb-2 {

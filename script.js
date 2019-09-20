@@ -49,6 +49,8 @@ var $aboutContainer = $("#about-container");
 
 /* ~~~~~~ PROJECT SECTION ~~~~~~ */
 var $projectContainer = $("#project-container");
+var $projectImageVert = $("#project-image-vert");
+var $projectImageRecipeBook = $("#project-image-recipe-book");
 var $projectButton = $(".project-button");
 
 
@@ -70,6 +72,25 @@ var $footerIconInner = $(".footer-icon-inner");
 
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
+function progressiveLoadProjectSection() {
+  $("<img/>").attr("src", "images/mockup-vert.jpg").on("load", function() {
+    $(this).remove();
+
+    $projectImageVert.attr("src", "images/mockup-vert.jpg");
+
+    $projectImageVert.css("filter", "blur(0)");
+  });
+
+  $("<img/>").attr("src", "images/mockup-recipe-book.jpg").on("load", function() {
+    $(this).remove();
+
+    $projectImageRecipeBook.attr("src", "images/mockup-recipe-book.jpg");
+
+    $projectImageRecipeBook.css("filter", "blur(0)");
+  });
+}
+
+
 function scrollToSection(currentSection) {
   let currentSectionText = currentSection.children().text();
 
@@ -299,6 +320,10 @@ function detectPupilMovement(event) {
 
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
 $(document).ready(function() {
+  progressiveLoadProjectSection();
+
+// ...
+
   setTimeout(function() {
     ideTypingLoop();
   }, 500);
