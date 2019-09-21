@@ -315,6 +315,60 @@ function detectPupilMovement(event) {
 }
 
 
+function playArchivePreview(selectedArchiveLink) {
+  if(selectedArchiveLink.attr("id") === "archive-link-1") {
+    selectedArchiveLink.children(".archive-image").css("display", "none");
+    selectedArchiveLink.children(".archive-vid").css("display", "block");
+
+    document.getElementById("archive-vid-1").play();
+    document.getElementById("archive-vid-1").loop = true;
+  }
+
+  else if(selectedArchiveLink.attr("id") === "archive-link-2") {
+    selectedArchiveLink.children(".archive-image").css("display", "none");
+    selectedArchiveLink.children(".archive-vid").css("display", "block");
+
+    document.getElementById("archive-vid-2").play();
+    document.getElementById("archive-vid-2").loop = true;
+  }
+
+  else if(selectedArchiveLink.attr("id") === "archive-link-3") {
+    selectedArchiveLink.children(".archive-image").css("display", "none");
+    selectedArchiveLink.children(".archive-vid").css("display", "block");
+
+    document.getElementById("archive-vid-3").play();
+    document.getElementById("archive-vid-3").loop = true;
+  }
+}
+
+
+function pauseArchivePreview(selectedArchiveLink) {
+  if(selectedArchiveLink.attr("id") === "archive-link-1") {
+    selectedArchiveLink.children(".archive-vid").css("display", "none");
+    selectedArchiveLink.children(".archive-image").css("display", "block");
+
+    document.getElementById("archive-vid-1").pause();
+    document.getElementById("archive-vid-1").currentTime = 0;
+  }
+
+  else if(selectedArchiveLink.attr("id") === "archive-link-2") {
+    selectedArchiveLink.children(".archive-vid").css("display", "none");
+    selectedArchiveLink.children(".archive-image").css("display", "block");
+
+    document.getElementById("archive-vid-2").pause();
+    document.getElementById("archive-vid-2").currentTime = 0;
+  }
+
+  else if(selectedArchiveLink.attr("id") === "archive-link-3") {
+    selectedArchiveLink.children(".archive-vid").css("display", "none");
+    selectedArchiveLink.children(".archive-image").css("display", "block");
+
+    document.getElementById("archive-vid-3").pause();
+    document.getElementById("archive-vid-3").currentTime = 0;
+  }
+}
+
+
 
 
 
@@ -485,31 +539,8 @@ $(document).ready(function() {
   $archiveLink.on("mouseenter", function() {
     $(this).addClass("archive-link-hovered");
 
-    selectedArchiveLink = $(this).children(".archive-vid").attr("id");
-
-    if(selectedArchiveLink === "archive-vid-1") {
-      $(this).children(".archive-image").css("display", "none");
-      $(this).children(".archive-vid").css("display", "block");
-
-      document.getElementById("archive-vid-1").play();
-      document.getElementById("archive-vid-1").loop = true;
-    }
-
-    else if(selectedArchiveLink === "archive-vid-2") {
-      $(this).children(".archive-image").css("display", "none");
-      $(this).children(".archive-vid").css("display", "block");
-
-      document.getElementById("archive-vid-2").play();
-      document.getElementById("archive-vid-2").loop = true;
-    }
-
-    else if(selectedArchiveLink === "archive-vid-3") {
-      $(this).children(".archive-image").css("display", "none");
-      $(this).children(".archive-vid").css("display", "block");
-
-      document.getElementById("archive-vid-3").play();
-      document.getElementById("archive-vid-3").loop = true;
-    }
+    selectedArchiveLink = $(this);
+    playArchivePreview(selectedArchiveLink);
   });
 
 // ...
@@ -517,29 +548,8 @@ $(document).ready(function() {
   $archiveLink.on("mouseleave", function() {
     $(this).removeClass("archive-link-hovered");
 
-    if(selectedArchiveLink === "archive-vid-1") {
-      $(this).children(".archive-vid").css("display", "none");
-      $(this).children(".archive-image").css("display", "block");
-
-      document.getElementById("archive-vid-1").pause();
-      document.getElementById("archive-vid-1").currentTime = 0;
-    }
-
-    else if(selectedArchiveLink === "archive-vid-2") {
-      $(this).children(".archive-vid").css("display", "none");
-      $(this).children(".archive-image").css("display", "block");
-
-      document.getElementById("archive-vid-2").pause();
-      document.getElementById("archive-vid-2").currentTime = 0;
-    }
-
-    else if(selectedArchiveLink === "archive-vid-3") {
-      $(this).children(".archive-vid").css("display", "none");
-      $(this).children(".archive-image").css("display", "block");
-
-      document.getElementById("archive-vid-3").pause();
-      document.getElementById("archive-vid-3").currentTime = 0;
-    }
+    selectedArchiveLink = $(this);
+    pauseArchivePreview(selectedArchiveLink);
   });
 
 // ...
