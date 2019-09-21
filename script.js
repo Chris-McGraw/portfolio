@@ -73,18 +73,18 @@ var $footerIconInner = $(".footer-icon-inner");
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
 function progressiveLoadProjectSection() {
-  $("<img/>").attr("src", "images/mockup-vert.jpg").on("load", function() {
+  $("<img/>").attr("src", "images/projects/mockup-vert.jpg").on("load", function() {
     $(this).remove();
 
-    $projectImageVert.attr("src", "images/mockup-vert.jpg");
+    $projectImageVert.attr("src", "images/projects/mockup-vert.jpg");
 
     $projectImageVert.css("filter", "blur(0)");
   });
 
-  $("<img/>").attr("src", "images/mockup-recipe-book.jpg").on("load", function() {
+  $("<img/>").attr("src", "images/projects/mockup-recipe-book.jpg").on("load", function() {
     $(this).remove();
 
-    $projectImageRecipeBook.attr("src", "images/mockup-recipe-book.jpg");
+    $projectImageRecipeBook.attr("src", "images/projects/mockup-recipe-book.jpg");
 
     $projectImageRecipeBook.css("filter", "blur(0)");
   });
@@ -543,16 +543,12 @@ $(document).ready(function() {
     playArchivePreview(selectedArchiveLink);
   });
 
-// ...
-
   $archiveLink.on("mouseleave", function() {
     $(this).removeClass("archive-link-hovered");
 
     selectedArchiveLink = $(this);
     pauseArchivePreview(selectedArchiveLink);
   });
-
-// ...
 
   $archiveLink.on("touchstart", function() {
     $(this).addClass("archive-link-hovered");
