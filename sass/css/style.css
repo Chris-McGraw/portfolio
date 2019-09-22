@@ -451,6 +451,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   opacity: 1;
   transition: opacity 300ms ease-in-out;
 }
@@ -463,6 +464,8 @@ a {
   width: 100%;
   height: auto;
   cursor: pointer;
+  transition: filter 750ms ease-in-out;
+  filter: blur(0.5rem);
 }
 
 .archive-vid {
@@ -813,6 +816,10 @@ textarea {
     grid-column: span 3;
   }
 
+  .archive-link {
+    width: auto;
+  }
+
   .archive-image, .archive-vid {
     width: auto;
     height: 15rem;
@@ -889,6 +896,10 @@ textarea {
 }
 /* -------------------------- MEDIA QUERY <= 491 -------------------------- */
 @media screen and (max-width: 491px) {
+  .archive-link {
+    width: 100%;
+  }
+
   .archive-image, .archive-vid {
     width: 100%;
     height: auto;
