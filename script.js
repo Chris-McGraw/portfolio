@@ -363,51 +363,17 @@ function videoLoadLoop(selectedArchiveLink, selectedArchiveVideo) {
 }
 
 
-function playArchivePreview(selectedArchiveLink) {
-  if(selectedArchiveLink.attr("id") === "archive-link-1") {
-    selectedArchiveVideo = document.getElementById( selectedArchiveLink.children(".archive-vid").attr("id") );
-
-    videoLoadLoop(selectedArchiveLink, selectedArchiveVideo);
-  }
-
-  else if(selectedArchiveLink.attr("id") === "archive-link-2") {
-    selectedArchiveVideo = document.getElementById( selectedArchiveLink.children(".archive-vid").attr("id") );
-
-    videoLoadLoop(selectedArchiveLink, selectedArchiveVideo);
-  }
-
-  else if(selectedArchiveLink.attr("id") === "archive-link-3") {
-    selectedArchiveVideo = document.getElementById( selectedArchiveLink.children(".archive-vid").attr("id") );
-
-    videoLoadLoop(selectedArchiveLink, selectedArchiveVideo);
-  }
+function playArchivePreview(selectedArchiveLink, selectedArchiveVideo) {
+  videoLoadLoop(selectedArchiveLink, selectedArchiveVideo);
 }
 
 
-function pauseArchivePreview(selectedArchiveLink) {
-  if(selectedArchiveLink.attr("id") === "archive-link-1") {
-    selectedArchiveLink.children(".archive-vid").css("display", "none");
-    selectedArchiveLink.children(".archive-image").css("display", "block");
+function pauseArchivePreview(selectedArchiveLink, selectedArchiveVideo) {
+  selectedArchiveLink.children(".archive-vid").css("display", "none");
+  selectedArchiveLink.children(".archive-image").css("display", "block");
 
-    document.getElementById("archive-vid-1").pause();
-    document.getElementById("archive-vid-1").currentTime = 0;
-  }
-
-  else if(selectedArchiveLink.attr("id") === "archive-link-2") {
-    selectedArchiveLink.children(".archive-vid").css("display", "none");
-    selectedArchiveLink.children(".archive-image").css("display", "block");
-
-    document.getElementById("archive-vid-2").pause();
-    document.getElementById("archive-vid-2").currentTime = 0;
-  }
-
-  else if(selectedArchiveLink.attr("id") === "archive-link-3") {
-    selectedArchiveLink.children(".archive-vid").css("display", "none");
-    selectedArchiveLink.children(".archive-image").css("display", "block");
-
-    document.getElementById("archive-vid-3").pause();
-    document.getElementById("archive-vid-3").currentTime = 0;
-  }
+  selectedArchiveVideo.pause();
+  selectedArchiveVideo.currentTime = 0;
 }
 
 
@@ -422,7 +388,7 @@ $(document).ready(function() {
 // ...
 
   setTimeout(function() {
-    //ideTypingLoop();
+    ideTypingLoop();
   }, 500);
 
   setTimeout(function() {
@@ -583,7 +549,9 @@ $(document).ready(function() {
     $(this).addClass("archive-link-hovered");
 
     selectedArchiveLink = $(this);
-    playArchivePreview(selectedArchiveLink);
+    selectedArchiveVideo = document.getElementById( selectedArchiveLink.children(".archive-vid").attr("id") );
+
+    playArchivePreview(selectedArchiveLink, selectedArchiveVideo);
   });
 
   $archiveLink.on("mouseleave", function() {
@@ -592,7 +560,9 @@ $(document).ready(function() {
     $(this).removeClass("archive-link-hovered");
 
     selectedArchiveLink = $(this);
-    pauseArchivePreview(selectedArchiveLink);
+    selectedArchiveVideo = document.getElementById( selectedArchiveLink.children(".archive-vid").attr("id") );
+
+    pauseArchivePreview(selectedArchiveLink, selectedArchiveVideo);
   });
 
   $archiveLink.on("touchstart", function() {
