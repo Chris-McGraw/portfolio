@@ -58,6 +58,10 @@ var $projectButton = $(".project-button");
 var $archiveLink = $(".archive-link");
 var selectedArchiveLink = "";
 
+var $archiveImageWeather = $("#archive-image-weather");
+var $archiveImagePutting = $("#archive-image-putting");
+var $archiveImageCalc = $("#archive-image-calc");
+
 
 /* ~~~~~~ CONTACT SECTION ~~~~~~ */
 var $contactContainer = $("#contact-container");
@@ -73,20 +77,42 @@ var $footerIconInner = $(".footer-icon-inner");
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
 function progressiveLoadProjectSection() {
-  $("<img/>").attr("src", "images/mockup-vert.jpg").on("load", function() {
+  $("<img/>").attr("src", "images/projects/mockup-vert.jpg").on("load", function() {
     $(this).remove();
 
-    $projectImageVert.attr("src", "images/mockup-vert.jpg");
-
+    $projectImageVert.attr("src", "images/projects/mockup-vert.jpg");
     $projectImageVert.css("filter", "blur(0)");
   });
 
-  $("<img/>").attr("src", "images/mockup-recipe-book.jpg").on("load", function() {
+  $("<img/>").attr("src", "images/projects/mockup-recipe-book.jpg").on("load", function() {
     $(this).remove();
 
-    $projectImageRecipeBook.attr("src", "images/mockup-recipe-book.jpg");
-
+    $projectImageRecipeBook.attr("src", "images/projects/mockup-recipe-book.jpg");
     $projectImageRecipeBook.css("filter", "blur(0)");
+  });
+}
+
+
+function progressiveLoadArchiveSection() {
+  $("<img/>").attr("src", "images/archive/weather-snap.jpg").on("load", function() {
+    $(this).remove();
+
+    $archiveImageWeather.attr("src", "images/archive/weather-snap.jpg");
+    $archiveImageWeather.css("filter", "blur(0)");
+  });
+
+  $("<img/>").attr("src", "images/archive/dg-putting-snap.jpg").on("load", function() {
+    $(this).remove();
+
+    $archiveImagePutting.attr("src", "images/archive/dg-putting-snap.jpg");
+    $archiveImagePutting.css("filter", "blur(0)");
+  });
+
+  $("<img/>").attr("src", "images/archive/calc-snap.jpg").on("load", function() {
+    $(this).remove();
+
+    $archiveImageCalc.attr("src", "images/archive/calc-snap.jpg");
+    $archiveImageCalc.css("filter", "blur(0)");
   });
 }
 
@@ -315,12 +341,67 @@ function detectPupilMovement(event) {
 }
 
 
+function playArchivePreview(selectedArchiveLink) {
+  if(selectedArchiveLink.attr("id") === "archive-link-1") {
+    selectedArchiveLink.children(".archive-image").css("display", "none");
+    selectedArchiveLink.children(".archive-vid").css("display", "block");
+
+    document.getElementById("archive-vid-1").play();
+    document.getElementById("archive-vid-1").loop = true;
+  }
+
+  else if(selectedArchiveLink.attr("id") === "archive-link-2") {
+    selectedArchiveLink.children(".archive-image").css("display", "none");
+    selectedArchiveLink.children(".archive-vid").css("display", "block");
+
+    document.getElementById("archive-vid-2").play();
+    document.getElementById("archive-vid-2").loop = true;
+  }
+
+  else if(selectedArchiveLink.attr("id") === "archive-link-3") {
+    selectedArchiveLink.children(".archive-image").css("display", "none");
+    selectedArchiveLink.children(".archive-vid").css("display", "block");
+
+    document.getElementById("archive-vid-3").play();
+    document.getElementById("archive-vid-3").loop = true;
+  }
+}
+
+
+function pauseArchivePreview(selectedArchiveLink) {
+  if(selectedArchiveLink.attr("id") === "archive-link-1") {
+    selectedArchiveLink.children(".archive-vid").css("display", "none");
+    selectedArchiveLink.children(".archive-image").css("display", "block");
+
+    document.getElementById("archive-vid-1").pause();
+    document.getElementById("archive-vid-1").currentTime = 0;
+  }
+
+  else if(selectedArchiveLink.attr("id") === "archive-link-2") {
+    selectedArchiveLink.children(".archive-vid").css("display", "none");
+    selectedArchiveLink.children(".archive-image").css("display", "block");
+
+    document.getElementById("archive-vid-2").pause();
+    document.getElementById("archive-vid-2").currentTime = 0;
+  }
+
+  else if(selectedArchiveLink.attr("id") === "archive-link-3") {
+    selectedArchiveLink.children(".archive-vid").css("display", "none");
+    selectedArchiveLink.children(".archive-image").css("display", "block");
+
+    document.getElementById("archive-vid-3").pause();
+    document.getElementById("archive-vid-3").currentTime = 0;
+  }
+}
+
+
 
 
 
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
 $(document).ready(function() {
   progressiveLoadProjectSection();
+  progressiveLoadArchiveSection();
 
 // ...
 
@@ -485,64 +566,16 @@ $(document).ready(function() {
   $archiveLink.on("mouseenter", function() {
     $(this).addClass("archive-link-hovered");
 
-    selectedArchiveLink = $(this).children(".archive-vid").attr("id");
-
-    if(selectedArchiveLink === "archive-vid-1") {
-      $(this).children(".archive-image").css("display", "none");
-      $(this).children(".archive-vid").css("display", "block");
-
-      document.getElementById("archive-vid-1").play();
-      document.getElementById("archive-vid-1").loop = true;
-    }
-
-    else if(selectedArchiveLink === "archive-vid-2") {
-      $(this).children(".archive-image").css("display", "none");
-      $(this).children(".archive-vid").css("display", "block");
-
-      document.getElementById("archive-vid-2").play();
-      document.getElementById("archive-vid-2").loop = true;
-    }
-
-    else if(selectedArchiveLink === "archive-vid-3") {
-      $(this).children(".archive-image").css("display", "none");
-      $(this).children(".archive-vid").css("display", "block");
-
-      document.getElementById("archive-vid-3").play();
-      document.getElementById("archive-vid-3").loop = true;
-    }
+    selectedArchiveLink = $(this);
+    playArchivePreview(selectedArchiveLink);
   });
-
-// ...
 
   $archiveLink.on("mouseleave", function() {
     $(this).removeClass("archive-link-hovered");
 
-    if(selectedArchiveLink === "archive-vid-1") {
-      $(this).children(".archive-vid").css("display", "none");
-      $(this).children(".archive-image").css("display", "block");
-
-      document.getElementById("archive-vid-1").pause();
-      document.getElementById("archive-vid-1").currentTime = 0;
-    }
-
-    else if(selectedArchiveLink === "archive-vid-2") {
-      $(this).children(".archive-vid").css("display", "none");
-      $(this).children(".archive-image").css("display", "block");
-
-      document.getElementById("archive-vid-2").pause();
-      document.getElementById("archive-vid-2").currentTime = 0;
-    }
-
-    else if(selectedArchiveLink === "archive-vid-3") {
-      $(this).children(".archive-vid").css("display", "none");
-      $(this).children(".archive-image").css("display", "block");
-
-      document.getElementById("archive-vid-3").pause();
-      document.getElementById("archive-vid-3").currentTime = 0;
-    }
+    selectedArchiveLink = $(this);
+    pauseArchivePreview(selectedArchiveLink);
   });
-
-// ...
 
   $archiveLink.on("touchstart", function() {
     $(this).addClass("archive-link-hovered");
