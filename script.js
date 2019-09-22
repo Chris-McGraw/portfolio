@@ -56,11 +56,16 @@ var $projectButton = $(".project-button");
 
 /* ~~~~~~ ARCHIVE SECTION ~~~~~~ */
 var $archiveLink = $(".archive-link");
+var $archiveLink1 = $("#archive-link-1");
+var $archiveLink2 = $("#archive-link-2");
+var $archiveLink3 = $("#archive-link-3");
 var selectedArchiveLink = "";
 
 var $archiveImageWeather = $("#archive-image-weather");
 var $archiveImagePutting = $("#archive-image-putting");
 var $archiveImageCalc = $("#archive-image-calc");
+
+var videoLoadLoopTimeout = "";
 
 
 /* ~~~~~~ CONTACT SECTION ~~~~~~ */
@@ -98,21 +103,21 @@ function progressiveLoadArchiveSection() {
     $(this).remove();
 
     $archiveImageWeather.attr("src", "images/archive/weather-snap.jpg");
-    $archiveImageWeather.css("filter", "blur(0)");
+    $archiveLink1.css("filter", "blur(0)");
   });
 
   $("<img/>").attr("src", "images/archive/dg-putting-snap.jpg").on("load", function() {
     $(this).remove();
 
     $archiveImagePutting.attr("src", "images/archive/dg-putting-snap.jpg");
-    $archiveImagePutting.css("filter", "blur(0)");
+    $archiveLink2.css("filter", "blur(0)");
   });
 
   $("<img/>").attr("src", "images/archive/calc-snap.jpg").on("load", function() {
     $(this).remove();
 
     $archiveImageCalc.attr("src", "images/archive/calc-snap.jpg");
-    $archiveImageCalc.css("filter", "blur(0)");
+    $archiveLink3.css("filter", "blur(0)");
   });
 }
 
@@ -341,29 +346,40 @@ function detectPupilMovement(event) {
 }
 
 
-function playArchivePreview(selectedArchiveLink) {
-  if(selectedArchiveLink.attr("id") === "archive-link-1") {
+function videoLoadLoop(selectedArchiveLink, selectedArchiveVideo) {
+  if(selectedArchiveVideo.readyState === 4) {
     selectedArchiveLink.children(".archive-image").css("display", "none");
     selectedArchiveLink.children(".archive-vid").css("display", "block");
 
-    document.getElementById("archive-vid-1").play();
-    document.getElementById("archive-vid-1").loop = true;
+    selectedArchiveVideo.play();
+    selectedArchiveVideo.loop = true;
+  }
+
+  else if(selectedArchiveVideo.readyState < 4) {
+    videoLoadLoopTimeout = setTimeout(function() {
+      videoLoadLoop(selectedArchiveLink, selectedArchiveVideo);
+    }, 500);
+  }
+}
+
+
+function playArchivePreview(selectedArchiveLink) {
+  if(selectedArchiveLink.attr("id") === "archive-link-1") {
+    selectedArchiveVideo = document.getElementById( selectedArchiveLink.children(".archive-vid").attr("id") );
+
+    videoLoadLoop(selectedArchiveLink, selectedArchiveVideo);
   }
 
   else if(selectedArchiveLink.attr("id") === "archive-link-2") {
-    selectedArchiveLink.children(".archive-image").css("display", "none");
-    selectedArchiveLink.children(".archive-vid").css("display", "block");
+    selectedArchiveVideo = document.getElementById( selectedArchiveLink.children(".archive-vid").attr("id") );
 
-    document.getElementById("archive-vid-2").play();
-    document.getElementById("archive-vid-2").loop = true;
+    videoLoadLoop(selectedArchiveLink, selectedArchiveVideo);
   }
 
   else if(selectedArchiveLink.attr("id") === "archive-link-3") {
-    selectedArchiveLink.children(".archive-image").css("display", "none");
-    selectedArchiveLink.children(".archive-vid").css("display", "block");
+    selectedArchiveVideo = document.getElementById( selectedArchiveLink.children(".archive-vid").attr("id") );
 
-    document.getElementById("archive-vid-3").play();
-    document.getElementById("archive-vid-3").loop = true;
+    videoLoadLoop(selectedArchiveLink, selectedArchiveVideo);
   }
 }
 
@@ -406,7 +422,7 @@ $(document).ready(function() {
 // ...
 
   setTimeout(function() {
-    ideTypingLoop();
+    //ideTypingLoop();
   }, 500);
 
   setTimeout(function() {
@@ -571,6 +587,8 @@ $(document).ready(function() {
   });
 
   $archiveLink.on("mouseleave", function() {
+    clearTimeout(videoLoadLoopTimeout);
+
     $(this).removeClass("archive-link-hovered");
 
     selectedArchiveLink = $(this);
