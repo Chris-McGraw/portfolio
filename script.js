@@ -1,4 +1,5 @@
 /* ------------------------- VARIABLE DECLARATIONS ------------------------- */
+var windowTop = 0;
 
 /* ~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~ */
 var $navbar = $("#navbar");
@@ -48,6 +49,10 @@ var $aboutContainer = $("#about-container");
 
 
 /* ~~~~~~ PROJECT SECTION ~~~~~~ */
+var projectImageVertLoaded = false;
+var projectImageRecipeBookLoaded = false;
+var archiveImageCalcLoaded = false;
+
 var $projectContainer = $("#project-container");
 var $projectImageVert = $("#project-image-vert");
 var $projectImageRecipeBook = $("#project-image-recipe-book");
@@ -55,6 +60,9 @@ var $projectButton = $(".project-button");
 
 
 /* ~~~~~~ ARCHIVE SECTION ~~~~~~ */
+var archiveImageWeatherLoaded = false;
+var archiveImageDgPuttingLoaded = false;
+
 var $archiveLink = $(".archive-link");
 var $archiveLink1 = $("#archive-link-1");
 var $archiveLink2 = $("#archive-link-2");
@@ -62,7 +70,7 @@ var $archiveLink3 = $("#archive-link-3");
 var selectedArchiveLink = "";
 
 var $archiveImageWeather = $("#archive-image-weather");
-var $archiveImagePutting = $("#archive-image-putting");
+var $archiveImageDgPutting = $("#archive-image-dg-putting");
 var $archiveImageCalc = $("#archive-image-calc");
 
 var videoLoadLoopTimeout = "";
@@ -81,14 +89,17 @@ var $footerIconInner = $(".footer-icon-inner");
 
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
-function progressiveLoadProjectSection() {
+function progressiveLoadProjectImageVert() {
   $("<img/>").attr("src", "images/projects/mockup-vert.jpg").on("load", function() {
     $(this).remove();
 
     $projectImageVert.attr("src", "images/projects/mockup-vert.jpg");
     $projectImageVert.css("filter", "blur(0)");
   });
+}
 
+
+function progressiveLoadProjectImageRecipeBook() {
   $("<img/>").attr("src", "images/projects/mockup-recipe-book.jpg").on("load", function() {
     $(this).remove();
 
@@ -98,27 +109,66 @@ function progressiveLoadProjectSection() {
 }
 
 
-function progressiveLoadArchiveSection() {
+function progressiveLoadArchiveImageWeather() {
   $("<img/>").attr("src", "images/archive/weather-snap.jpg").on("load", function() {
     $(this).remove();
 
     $archiveImageWeather.attr("src", "images/archive/weather-snap.jpg");
     $archiveLink1.css("filter", "blur(0)");
   });
+}
 
+
+function progressiveLoadArchiveImageDgPutting() {
   $("<img/>").attr("src", "images/archive/dg-putting-snap.jpg").on("load", function() {
     $(this).remove();
 
-    $archiveImagePutting.attr("src", "images/archive/dg-putting-snap.jpg");
+    $archiveImageDgPutting.attr("src", "images/archive/dg-putting-snap.jpg");
     $archiveLink2.css("filter", "blur(0)");
   });
+}
 
+
+function progressiveLoadArchiveImageCalc() {
   $("<img/>").attr("src", "images/archive/calc-snap.jpg").on("load", function() {
     $(this).remove();
 
     $archiveImageCalc.attr("src", "images/archive/calc-snap.jpg");
     $archiveLink3.css("filter", "blur(0)");
   });
+}
+
+
+function lazyLoadSection(sec) {
+  var sectionId = sec.attr("id");
+  var rect = document.getElementById(sectionId).getBoundingClientRect();
+
+  if(rect.top <= $(window).height() && rect.bottom >= windowTop) {
+    if(sec === $projectImageVert) {
+      progressiveLoadProjectImageVert();
+      projectImageVertLoaded = true;
+    }
+
+    else if(sec === $projectImageRecipeBook) {
+      progressiveLoadProjectImageRecipeBook();
+      projectImageRecipeBookLoaded = true;
+    }
+
+    else if(sec === $archiveLink1) {
+      progressiveLoadArchiveImageWeather();
+      archiveImageWeatherLoaded = true;
+    }
+
+    else if(sec === $archiveLink2) {
+      progressiveLoadArchiveImageDgPutting();
+      archiveImageDgPuttingLoaded = true;
+    }
+
+    else if(sec === $archiveLink3) {
+      progressiveLoadArchiveImageCalc();
+      archiveImageCalcLoaded = true;
+    }
+  }
 }
 
 
@@ -382,11 +432,6 @@ function pauseArchivePreview(selectedArchiveLink, selectedArchiveVideo) {
 
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
 $(document).ready(function() {
-  progressiveLoadProjectSection();
-  progressiveLoadArchiveSection();
-
-// ...
-
   setTimeout(function() {
     ideTypingLoop();
   }, 500);
@@ -394,6 +439,36 @@ $(document).ready(function() {
   setTimeout(function() {
     //portraitEyeBlinkLoop();
   }, 2500);
+
+
+/* ~~~~~~~~~~~ WINDOW ~~~~~~~~~~~ */
+  $(window).on("DOMContentLoaded load resize scroll", function() {
+    if(projectImageVertLoaded === false || projectImageRecipeBookLoaded === false ||
+    archiveImageWeatherLoaded === false || archiveImageDgPuttingLoaded === false ||
+    archiveImageCalcLoaded === false) {
+      windowTop = $navbar.height();
+    }
+
+    if(projectImageVertLoaded === false) {
+      lazyLoadSection($projectImageVert);
+    }
+
+    if(projectImageRecipeBookLoaded === false) {
+      lazyLoadSection($projectImageRecipeBook);
+    }
+
+    if(archiveImageWeatherLoaded === false) {
+      lazyLoadSection($archiveLink1);
+    }
+
+    if(archiveImageDgPuttingLoaded === false) {
+      lazyLoadSection($archiveLink2);
+    }
+
+    if(archiveImageCalcLoaded === false) {
+      lazyLoadSection($archiveLink3);
+    }
+  });
 
 
 /* ~~~~~~~~~~ DOCUMENT ~~~~~~~~~~ */
