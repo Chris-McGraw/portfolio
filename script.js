@@ -66,6 +66,10 @@ var archiveImageWeatherLoaded = false;
 var archiveImageDgPuttingLoaded = false;
 var archiveImageCalcLoaded = false;
 
+var $archiveThumb1 = $("#archive-thumb-1");
+var $archiveThumb2 = $("#archive-thumb-2");
+var $archiveThumb3 = $("#archive-thumb-3");
+
 var $archiveLink = $(".archive-link");
 var $archiveLink1 = $("#archive-link-1");
 var $archiveLink2 = $("#archive-link-2");
@@ -117,7 +121,7 @@ function progressiveLoadArchiveImageWeather() {
     $(this).remove();
 
     $archiveImageWeather.attr("src", "images/archive/weather-snap.jpg");
-    $archiveLink1.css("filter", "blur(0)");
+    $archiveThumb1.css("filter", "blur(0)");
   });
 }
 
@@ -127,7 +131,7 @@ function progressiveLoadArchiveImageDgPutting() {
     $(this).remove();
 
     $archiveImageDgPutting.attr("src", "images/archive/dg-putting-snap.jpg");
-    $archiveLink2.css("filter", "blur(0)");
+    $archiveThumb2.css("filter", "blur(0)");
   });
 }
 
@@ -137,7 +141,7 @@ function progressiveLoadArchiveImageCalc() {
     $(this).remove();
 
     $archiveImageCalc.attr("src", "images/archive/calc-snap.jpg");
-    $archiveLink3.css("filter", "blur(0)");
+    $archiveThumb3.css("filter", "blur(0)");
   });
 }
 
@@ -157,17 +161,17 @@ function lazyLoadSection(sec) {
       projectImageRecipeBookLoaded = true;
     }
 
-    else if(sec === $archiveLink1) {
+    else if(sec === $archiveThumb1) {
       progressiveLoadArchiveImageWeather();
       archiveImageWeatherLoaded = true;
     }
 
-    else if(sec === $archiveLink2) {
+    else if(sec === $archiveThumb2) {
       progressiveLoadArchiveImageDgPutting();
       archiveImageDgPuttingLoaded = true;
     }
 
-    else if(sec === $archiveLink3) {
+    else if(sec === $archiveThumb3) {
       progressiveLoadArchiveImageCalc();
       archiveImageCalcLoaded = true;
     }
@@ -436,7 +440,7 @@ function pauseArchivePreview(selectedArchiveLink, selectedArchiveVideo) {
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
 $(document).ready(function() {
   setTimeout(function() {
-    ideTypingLoop();
+    //ideTypingLoop();
   }, 500);
 
   setTimeout(function() {
@@ -460,17 +464,17 @@ $(document).ready(function() {
       lazyLoadSection($proThumb3);
     }
 
-    /* if(archiveImageWeatherLoaded === false) {
-      lazyLoadSection($archiveLink1);
+    if(archiveImageWeatherLoaded === false) {
+      lazyLoadSection($archiveThumb1);
     }
 
     if(archiveImageDgPuttingLoaded === false) {
-      lazyLoadSection($archiveLink2);
+      lazyLoadSection($archiveThumb2);
     }
 
     if(archiveImageCalcLoaded === false) {
-      lazyLoadSection($archiveLink3);
-    } */
+      lazyLoadSection($archiveThumb3);
+    }
   });
 
 
