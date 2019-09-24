@@ -402,17 +402,9 @@ a {
 .project-image {
   width: 100%;
   height: auto;
-}
 
-#project-image-vert {
   transition: filter 750ms ease-in-out;
 
-  filter: blur(0.5rem);
-}
-
-#project-image-recipe-book {
-  transition: filter 750ms ease-in-out;
-  
   filter: blur(0.5rem);
 }
 

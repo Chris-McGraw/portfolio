@@ -51,7 +51,10 @@ var $aboutContainer = $("#about-container");
 /* ~~~~~~ PROJECT SECTION ~~~~~~ */
 var projectImageVertLoaded = false;
 var projectImageRecipeBookLoaded = false;
-var archiveImageCalcLoaded = false;
+
+var $proThumb2 = $("#pro-thumb-2");
+var $proThumb3 = $("#pro-thumb-3");
+
 
 var $projectContainer = $("#project-container");
 var $projectImageVert = $("#project-image-vert");
@@ -62,6 +65,7 @@ var $projectButton = $(".project-button");
 /* ~~~~~~ ARCHIVE SECTION ~~~~~~ */
 var archiveImageWeatherLoaded = false;
 var archiveImageDgPuttingLoaded = false;
+var archiveImageCalcLoaded = false;
 
 var $archiveLink = $(".archive-link");
 var $archiveLink1 = $("#archive-link-1");
@@ -144,17 +148,17 @@ function lazyLoadSection(sec) {
   var rect = document.getElementById(sectionId).getBoundingClientRect();
 
   if(rect.top <= $(window).height() && rect.bottom >= windowTop) {
-    if(sec === $projectImageVert) {
+    if(sec === $proThumb2) {
       progressiveLoadProjectImageVert();
       projectImageVertLoaded = true;
     }
 
-    else if(sec === $projectImageRecipeBook) {
+    else if(sec === $proThumb3) {
       progressiveLoadProjectImageRecipeBook();
       projectImageRecipeBookLoaded = true;
     }
 
-    /* else if(sec === $archiveLink1) {
+    else if(sec === $archiveLink1) {
       progressiveLoadArchiveImageWeather();
       archiveImageWeatherLoaded = true;
     }
@@ -167,7 +171,7 @@ function lazyLoadSection(sec) {
     else if(sec === $archiveLink3) {
       progressiveLoadArchiveImageCalc();
       archiveImageCalcLoaded = true;
-    } */
+    }
   }
 }
 
@@ -450,14 +454,14 @@ $(document).ready(function() {
     }
 
     if(projectImageVertLoaded === false) {
-      lazyLoadSection($projectImageVert);
+      lazyLoadSection($proThumb2);
     }
 
     if(projectImageRecipeBookLoaded === false) {
-      lazyLoadSection($projectImageRecipeBook);
+      lazyLoadSection($proThumb3);
     }
 
-    if(archiveImageWeatherLoaded === false) {
+    /* if(archiveImageWeatherLoaded === false) {
       lazyLoadSection($archiveLink1);
     }
 
@@ -467,7 +471,7 @@ $(document).ready(function() {
 
     if(archiveImageCalcLoaded === false) {
       lazyLoadSection($archiveLink3);
-    }
+    } */
   });
 
 
