@@ -440,7 +440,7 @@ function pauseArchivePreview(selectedArchiveLink, selectedArchiveVideo) {
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
 $(document).ready(function() {
   setTimeout(function() {
-    ideTypingLoop();
+    //ideTypingLoop();
   }, 500);
 
   setTimeout(function() {
@@ -633,7 +633,7 @@ $(document).ready(function() {
     selectedArchiveLink = $(this);
     selectedArchiveVideo = document.getElementById( selectedArchiveLink.children(".archive-vid").attr("id") );
 
-    //playArchivePreview(selectedArchiveLink, selectedArchiveVideo);
+    playArchivePreview(selectedArchiveLink, selectedArchiveVideo);
   });
 
   $archiveLink.on("mouseleave", function() {
@@ -644,7 +644,7 @@ $(document).ready(function() {
     selectedArchiveLink = $(this);
     selectedArchiveVideo = document.getElementById( selectedArchiveLink.children(".archive-vid").attr("id") );
 
-    //pauseArchivePreview(selectedArchiveLink, selectedArchiveVideo);
+    pauseArchivePreview(selectedArchiveLink, selectedArchiveVideo);
   });
 
   $archiveLink.on("touchstart", function() {
