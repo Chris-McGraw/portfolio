@@ -154,7 +154,7 @@ function lazyLoadSection(sec) {
       projectImageRecipeBookLoaded = true;
     }
 
-    else if(sec === $archiveLink1) {
+    /* else if(sec === $archiveLink1) {
       progressiveLoadArchiveImageWeather();
       archiveImageWeatherLoaded = true;
     }
@@ -167,7 +167,7 @@ function lazyLoadSection(sec) {
     else if(sec === $archiveLink3) {
       progressiveLoadArchiveImageCalc();
       archiveImageCalcLoaded = true;
-    }
+    } */
   }
 }
 
@@ -433,7 +433,7 @@ function pauseArchivePreview(selectedArchiveLink, selectedArchiveVideo) {
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
 $(document).ready(function() {
   setTimeout(function() {
-    ideTypingLoop();
+    //ideTypingLoop();
   }, 500);
 
   setTimeout(function() {
