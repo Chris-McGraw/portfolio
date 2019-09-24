@@ -443,7 +443,6 @@ a {
   grid-column: span 1;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: auto;
 }
 
@@ -451,8 +450,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
   opacity: 1;
   transition: opacity 300ms ease-in-out, filter 750ms ease-in-out;
   filter: blur(0.5rem);
@@ -463,14 +461,14 @@ a {
 }
 
 .archive-image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   cursor: pointer;
 }
 
 .archive-vid {
   display: none;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   cursor: pointer;
 }
@@ -812,18 +810,17 @@ textarea {
     justify-content: center;
   }
 
-  .archive-thumbnail {
-    grid-column: span 3;
+  #archive-container-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .archive-link {
     width: auto;
-    height: 15rem;
   }
 
   .archive-image, .archive-vid {
     width: auto;
-    max-height: 100%;
+    height: 15rem;
   }
 
   #contact-container:after {
@@ -898,12 +895,11 @@ textarea {
 /* -------------------------- MEDIA QUERY <= 491 -------------------------- */
 @media screen and (max-width: 491px) {
   .archive-link {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
   }
 
   .archive-image, .archive-vid {
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
 }
