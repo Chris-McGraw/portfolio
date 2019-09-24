@@ -535,11 +535,8 @@ a {
 }
 
 .archive-image {
-  /* width: 100%;
-  height: auto; */
-
-  width: 20rem;
-  height: 10rem;
+  width: 100%;
+  height: auto;
 
   cursor: pointer;
 }
@@ -976,10 +973,10 @@ textarea {
     width: auto;
   }
 
-  /* .archive-image, .archive-vid {
+  .archive-image, .archive-vid {
     width: auto;
     height: 15rem;
-  } */
+  }
 
 
 
@@ -1074,10 +1071,10 @@ textarea {
     width: 100%;
   }
 
-  /* .archive-image, .archive-vid {
+  .archive-image, .archive-vid {
     width: 100%;
     height: auto;
-  } */
+  }
 }
 
 
