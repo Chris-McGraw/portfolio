@@ -55,6 +55,7 @@ var projectImageRecipeBookLoaded = false;
 var $proThumb2 = $("#pro-thumb-2");
 var $proThumb3 = $("#pro-thumb-3");
 
+
 var $projectContainer = $("#project-container");
 var $projectImageVert = $("#project-image-vert");
 var $projectImageRecipeBook = $("#project-image-recipe-book");
@@ -97,7 +98,7 @@ function progressiveLoadProjectImageVert() {
     $(this).remove();
 
     $projectImageVert.attr("src", "images/projects/mockup-vert.jpg");
-    $proThumb2.css("filter", "blur(0)");
+    $projectImageVert.css("filter", "blur(0)");
   });
 }
 
@@ -107,7 +108,7 @@ function progressiveLoadProjectImageRecipeBook() {
     $(this).remove();
 
     $projectImageRecipeBook.attr("src", "images/projects/mockup-recipe-book.jpg");
-    $proThumb3.css("filter", "blur(0)");
+    $projectImageRecipeBook.css("filter", "blur(0)");
   });
 }
 
