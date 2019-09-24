@@ -451,7 +451,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   opacity: 1;
   transition: opacity 300ms ease-in-out, filter 750ms ease-in-out;
   filter: blur(0.5rem);
@@ -462,14 +463,14 @@ a {
 }
 
 .archive-image {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   cursor: pointer;
 }
 
 .archive-vid {
   display: none;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   cursor: pointer;
 }
@@ -817,11 +818,12 @@ textarea {
 
   .archive-link {
     width: auto;
+    height: 15rem;
   }
 
   .archive-image, .archive-vid {
     width: auto;
-    height: 15rem;
+    max-height: 100%;
   }
 
   #contact-container:after {
@@ -896,11 +898,12 @@ textarea {
 /* -------------------------- MEDIA QUERY <= 491 -------------------------- */
 @media screen and (max-width: 491px) {
   .archive-link {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 
   .archive-image, .archive-vid {
-    width: 100%;
+    max-width: 100%;
     height: auto;
   }
 }
