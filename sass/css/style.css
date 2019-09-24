@@ -445,16 +445,18 @@ a {
   justify-content: center;
   align-items: center;
   height: auto;
+  border: 1px dashed red;
 }
 
 .archive-link {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   width: 100%;
   opacity: 1;
   transition: opacity 300ms ease-in-out, filter 750ms ease-in-out;
   filter: blur(0.5rem);
+  border: 1px dashed blue;
 }
 
 .archive-link-hovered {

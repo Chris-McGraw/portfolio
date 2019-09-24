@@ -442,7 +442,7 @@ $(document).ready(function() {
 
 
 /* ~~~~~~~~~~~ WINDOW ~~~~~~~~~~~ */
-  $(window).on("DOMContentLoaded load resize scroll", function() {
+  /* $(window).on("DOMContentLoaded load resize scroll", function() {
     if(projectImageVertLoaded === false || projectImageRecipeBookLoaded === false ||
     archiveImageWeatherLoaded === false || archiveImageDgPuttingLoaded === false ||
     archiveImageCalcLoaded === false) {
@@ -468,7 +468,7 @@ $(document).ready(function() {
     if(archiveImageCalcLoaded === false) {
       lazyLoadSection($archiveLink3);
     }
-  });
+  }); */
 
 
 /* ~~~~~~~~~~ DOCUMENT ~~~~~~~~~~ */
