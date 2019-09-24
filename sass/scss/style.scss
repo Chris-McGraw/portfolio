@@ -514,6 +514,10 @@ a {
   align-items: center;
 
   height: auto;
+
+  transition: opacity 300ms ease-in-out, filter 750ms ease-in-out;
+
+  filter: blur(0.5rem);
 }
 
 .archive-link {
@@ -525,9 +529,7 @@ a {
 
   opacity: 1.0;
 
-  /* transition: opacity 300ms ease-in-out, filter 750ms ease-in-out;
-
-  filter: blur(0.5rem); */
+  transition: opacity 300ms ease-in-out;
 }
 
 .archive-link-hovered {

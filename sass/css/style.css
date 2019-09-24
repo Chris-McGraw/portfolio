@@ -446,6 +446,8 @@ a {
   justify-content: center;
   align-items: center;
   height: auto;
+  transition: opacity 300ms ease-in-out, filter 750ms ease-in-out;
+  filter: blur(0.5rem);
 }
 
 .archive-link {
@@ -454,9 +456,7 @@ a {
   align-items: center;
   width: 100%;
   opacity: 1;
-  /* transition: opacity 300ms ease-in-out, filter 750ms ease-in-out;
-
-  filter: blur(0.5rem); */
+  transition: opacity 300ms ease-in-out;
 }
 
 .archive-link-hovered {
