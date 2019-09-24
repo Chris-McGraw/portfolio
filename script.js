@@ -51,7 +51,6 @@ var $aboutContainer = $("#about-container");
 /* ~~~~~~ PROJECT SECTION ~~~~~~ */
 var projectImageVertLoaded = false;
 var projectImageRecipeBookLoaded = false;
-var archiveImageCalcLoaded = false;
 
 var $projectContainer = $("#project-container");
 var $projectImageVert = $("#project-image-vert");
@@ -62,6 +61,7 @@ var $projectButton = $(".project-button");
 /* ~~~~~~ ARCHIVE SECTION ~~~~~~ */
 var archiveImageWeatherLoaded = false;
 var archiveImageDgPuttingLoaded = false;
+var archiveImageCalcLoaded = false;
 
 var $archiveLink = $(".archive-link");
 var $archiveLink1 = $("#archive-link-1");
@@ -95,6 +95,10 @@ function progressiveLoadProjectImageVert() {
 
     $projectImageVert.attr("src", "images/projects/mockup-vert.jpg");
     $projectImageVert.css("filter", "blur(0)");
+
+    setTimeout(function() {
+      $projectImageVert.css("overflow", "hidden");
+    }, 750);
   });
 }
 
@@ -105,6 +109,10 @@ function progressiveLoadProjectImageRecipeBook() {
 
     $projectImageRecipeBook.attr("src", "images/projects/mockup-recipe-book.jpg");
     $projectImageRecipeBook.css("filter", "blur(0)");
+
+    setTimeout(function() {
+      $projectImageRecipeBook.css("overflow", "hidden");
+    }, 750);
   });
 }
 
@@ -115,6 +123,10 @@ function progressiveLoadArchiveImageWeather() {
 
     $archiveImageWeather.attr("src", "images/archive/weather-snap.jpg");
     $archiveLink1.css("filter", "blur(0)");
+
+    setTimeout(function() {
+      $archiveLink1.css("overflow", "hidden");
+    }, 750);
   });
 }
 
@@ -125,6 +137,10 @@ function progressiveLoadArchiveImageDgPutting() {
 
     $archiveImageDgPutting.attr("src", "images/archive/dg-putting-snap.jpg");
     $archiveLink2.css("filter", "blur(0)");
+
+    setTimeout(function() {
+      $archiveLink2.css("overflow", "hidden");
+    }, 750);
   });
 }
 
@@ -135,6 +151,10 @@ function progressiveLoadArchiveImageCalc() {
 
     $archiveImageCalc.attr("src", "images/archive/calc-snap.jpg");
     $archiveLink3.css("filter", "blur(0)");
+
+    setTimeout(function() {
+      $archiveLink3.css("overflow", "hidden");
+    }, 750);
   });
 }
 

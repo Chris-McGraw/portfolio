@@ -511,7 +511,6 @@ a {
   grid-column: span 1;
   display: flex;
   justify-content: center;
-  align-items: center;
 
   height: auto;
 }
@@ -965,8 +964,8 @@ textarea {
 
 
 
-  .archive-thumbnail {
-    grid-column: span 3;
+  #archive-container-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .archive-link {
