@@ -623,21 +623,21 @@ $(document).ready(function() {
   $archiveLink.on("mouseenter", function() {
     $(this).addClass("archive-link-hovered");
 
-    // selectedArchiveLink = $(this);
-    // selectedArchiveVideo = document.getElementById( selectedArchiveLink.children(".archive-vid").attr("id") );
-    //
-    // playArchivePreview(selectedArchiveLink, selectedArchiveVideo);
+    selectedArchiveLink = $(this);
+    selectedArchiveVideo = document.getElementById( selectedArchiveLink.children(".archive-vid").attr("id") );
+
+    playArchivePreview(selectedArchiveLink, selectedArchiveVideo);
   });
 
   $archiveLink.on("mouseleave", function() {
-    //clearTimeout(videoLoadLoopTimeout);
+    clearTimeout(videoLoadLoopTimeout);
 
     $(this).removeClass("archive-link-hovered");
 
-    // selectedArchiveLink = $(this);
-    // selectedArchiveVideo = document.getElementById( selectedArchiveLink.children(".archive-vid").attr("id") );
-    //
-    // pauseArchivePreview(selectedArchiveLink, selectedArchiveVideo);
+    selectedArchiveLink = $(this);
+    selectedArchiveVideo = document.getElementById( selectedArchiveLink.children(".archive-vid").attr("id") );
+
+    pauseArchivePreview(selectedArchiveLink, selectedArchiveVideo);
   });
 
   $archiveLink.on("touchstart", function() {
