@@ -329,6 +329,7 @@ a {
   position: relative;
   text-align: center;
   background-color: #beb8af;
+  overflow: hidden;
 }
 
 #project-container-grid {
@@ -360,7 +361,6 @@ a {
   justify-content: center;
   transition: filter 750ms ease-in-out;
   filter: blur(0.5rem);
-  overflow: hidden;
 }
 
 #pro-thumb-3 {
@@ -368,7 +368,6 @@ a {
   justify-content: center;
   transition: filter 750ms ease-in-out;
   filter: blur(0.5rem);
-  overflow: hidden;
 }
 
 #pro-thumb-4 {
@@ -434,6 +433,7 @@ a {
   width: 100%;
   text-align: center;
   background-color: #e0e0e0;
+  overflow: hidden;
 }
 
 #archive-container-grid {
@@ -454,19 +454,16 @@ a {
 #archive-thumb-1 {
   transition: filter 750ms ease-in-out;
   filter: blur(0.5rem);
-  overflow: hidden;
 }
 
 #archive-thumb-2 {
   transition: filter 750ms ease-in-out;
   filter: blur(0.5rem);
-  overflow: hidden;
 }
 
 #archive-thumb-3 {
   transition: filter 750ms ease-in-out;
   filter: blur(0.5rem);
-  overflow: hidden;
 }
 
 .archive-link {
