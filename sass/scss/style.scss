@@ -411,6 +411,8 @@ a {
   transition: filter 750ms ease-in-out;
 
   filter: blur(0.5rem);
+
+  overflow: hidden;
 }
 
 #pro-thumb-3 {
@@ -420,6 +422,8 @@ a {
   transition: filter 750ms ease-in-out;
 
   filter: blur(0.5rem);
+
+  overflow: hidden;
 }
 
 #pro-thumb-4 {
@@ -524,18 +528,24 @@ a {
   transition: filter 750ms ease-in-out;
 
   filter: blur(0.5rem);
+
+  overflow: hidden;
 }
 
 #archive-thumb-2 {
   transition: filter 750ms ease-in-out;
 
   filter: blur(0.5rem);
+
+  overflow: hidden;
 }
 
 #archive-thumb-3 {
   transition: filter 750ms ease-in-out;
 
   filter: blur(0.5rem);
+
+  overflow: hidden;
 }
 
 .archive-link {
