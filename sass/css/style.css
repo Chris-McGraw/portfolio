@@ -360,6 +360,7 @@ a {
   justify-content: center;
   transition: filter 750ms ease-in-out;
   filter: blur(0.5rem);
+  overflow: hidden;
 }
 
 #pro-thumb-3 {
@@ -367,6 +368,7 @@ a {
   justify-content: center;
   transition: filter 750ms ease-in-out;
   filter: blur(0.5rem);
+  overflow: hidden;
 }
 
 #pro-thumb-4 {
@@ -449,28 +451,14 @@ a {
   height: auto;
 }
 
-#archive-thumb-1 {
-  transition: filter 750ms ease-in-out;
-  filter: blur(0.5rem);
-}
-
-#archive-thumb-2 {
-  transition: filter 750ms ease-in-out;
-  filter: blur(0.5rem);
-}
-
-#archive-thumb-3 {
-  transition: filter 750ms ease-in-out;
-  filter: blur(0.5rem);
-}
-
 .archive-link {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   opacity: 1;
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out, filter 750ms ease-in-out;
+  filter: blur(0.5rem);
 }
 
 .archive-link-hovered {
