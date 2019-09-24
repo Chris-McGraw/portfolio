@@ -462,15 +462,17 @@ a {
 }
 
 .archive-image {
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  min-height: 50px;
   cursor: pointer;
 }
 
 .archive-vid {
   display: none;
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  min-height: 50px;
   cursor: pointer;
 }
 
@@ -821,7 +823,8 @@ textarea {
 
   .archive-image, .archive-vid {
     width: auto;
-    height: 15rem;
+    min-width: 100px;
+    max-height: 15rem;
   }
 
   #contact-container:after {
@@ -900,8 +903,9 @@ textarea {
   }
 
   .archive-image, .archive-vid {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    min-height: 50px;
   }
 }
 /* -------------------------- MEDIA QUERY <= 431 -------------------------- */

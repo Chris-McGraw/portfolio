@@ -535,8 +535,9 @@ a {
 }
 
 .archive-image {
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  min-height: 50px;
 
   cursor: pointer;
 }
@@ -544,8 +545,9 @@ a {
 .archive-vid {
   display: none;
 
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  min-height: 50px;
 
   cursor: pointer;
 }
@@ -975,7 +977,8 @@ textarea {
 
   .archive-image, .archive-vid {
     width: auto;
-    height: 15rem;
+    min-width: 100px;
+    max-height: 15rem;
   }
 
 
@@ -1072,8 +1075,9 @@ textarea {
   }
 
   .archive-image, .archive-vid {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    min-height: 50px;
   }
 }
 
