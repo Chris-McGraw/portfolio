@@ -51,7 +51,6 @@ var $aboutContainer = $("#about-container");
 /* ~~~~~~ PROJECT SECTION ~~~~~~ */
 var projectImageVertLoaded = false;
 var projectImageRecipeBookLoaded = false;
-var archiveImageCalcLoaded = false;
 
 var $projectContainer = $("#project-container");
 var $projectImageVert = $("#project-image-vert");
@@ -62,6 +61,7 @@ var $projectButton = $(".project-button");
 /* ~~~~~~ ARCHIVE SECTION ~~~~~~ */
 var archiveImageWeatherLoaded = false;
 var archiveImageDgPuttingLoaded = false;
+var archiveImageCalcLoaded = false;
 
 var $archiveLink = $(".archive-link");
 var $archiveLink1 = $("#archive-link-1");
@@ -433,7 +433,7 @@ function pauseArchivePreview(selectedArchiveLink, selectedArchiveVideo) {
 /* ---------------------------- EVENT HANDLERS ---------------------------- */
 $(document).ready(function() {
   setTimeout(function() {
-    ideTypingLoop();
+    //ideTypingLoop();
   }, 500);
 
   setTimeout(function() {
@@ -442,7 +442,7 @@ $(document).ready(function() {
 
 
 /* ~~~~~~~~~~~ WINDOW ~~~~~~~~~~~ */
-  $(window).on("DOMContentLoaded load resize scroll", function() {
+  /* $(window).on("DOMContentLoaded load resize scroll", function() {
     if(projectImageVertLoaded === false || projectImageRecipeBookLoaded === false ||
     archiveImageWeatherLoaded === false || archiveImageDgPuttingLoaded === false ||
     archiveImageCalcLoaded === false) {
@@ -468,7 +468,7 @@ $(document).ready(function() {
     if(archiveImageCalcLoaded === false) {
       lazyLoadSection($archiveLink3);
     }
-  });
+  }); */
 
 
 /* ~~~~~~~~~~ DOCUMENT ~~~~~~~~~~ */
