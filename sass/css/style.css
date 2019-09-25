@@ -329,7 +329,6 @@ a {
   position: relative;
   text-align: center;
   background-color: #beb8af;
-  overflow: hidden;
 }
 
 #project-container-grid {
@@ -360,14 +359,16 @@ a {
   order: 1;
   justify-content: center;
   transition: filter 750ms ease-in-out;
-  filter: blur(10px);
+  filter: blur(0.5rem);
+  overflow: hidden;
 }
 
 #pro-thumb-3 {
   order: 3;
   justify-content: center;
   transition: filter 750ms ease-in-out;
-  filter: blur(10px);
+  filter: blur(0.5rem);
+  overflow: hidden;
 }
 
 #pro-thumb-4 {

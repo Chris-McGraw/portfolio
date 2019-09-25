@@ -372,8 +372,6 @@ a {
   text-align: center;
 
   background-color: $background-tan;
-
-  overflow: hidden;
 }
 
 #project-header {
@@ -412,7 +410,9 @@ a {
 
   transition: filter 750ms ease-in-out;
 
-  filter: blur(10px);
+  filter: blur(0.5rem);
+
+  overflow: hidden;
 }
 
 #pro-thumb-3 {
@@ -421,7 +421,9 @@ a {
 
   transition: filter 750ms ease-in-out;
 
-  filter: blur(10px);
+  filter: blur(0.5rem);
+
+  overflow: hidden;
 }
 
 #pro-thumb-4 {
