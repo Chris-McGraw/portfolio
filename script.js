@@ -51,9 +51,7 @@ var $aboutContainer = $("#about-container");
 /* ~~~~~~ PROJECT SECTION ~~~~~~ */
 var projectImageVertLoaded = false;
 var projectImageRecipeBookLoaded = false;
-
-var $proThumb2 = $("#pro-thumb-2");
-var $proThumb3 = $("#pro-thumb-3");
+var archiveImageCalcLoaded = false;
 
 var $projectContainer = $("#project-container");
 var $projectImageVert = $("#project-image-vert");
@@ -64,7 +62,6 @@ var $projectButton = $(".project-button");
 /* ~~~~~~ ARCHIVE SECTION ~~~~~~ */
 var archiveImageWeatherLoaded = false;
 var archiveImageDgPuttingLoaded = false;
-var archiveImageCalcLoaded = false;
 
 var $archiveLink = $(".archive-link");
 var $archiveLink1 = $("#archive-link-1");
@@ -97,7 +94,7 @@ function progressiveLoadProjectImageVert() {
     $(this).remove();
 
     $projectImageVert.attr("src", "images/projects/mockup-vert.jpg");
-    $proThumb2.css("filter", "blur(0)");
+    //$projectImageVert.css("filter", "blur(0)");
   });
 }
 
@@ -107,7 +104,7 @@ function progressiveLoadProjectImageRecipeBook() {
     $(this).remove();
 
     $projectImageRecipeBook.attr("src", "images/projects/mockup-recipe-book.jpg");
-    $proThumb3.css("filter", "blur(0)");
+    //$projectImageRecipeBook.css("filter", "blur(0)");
   });
 }
 
