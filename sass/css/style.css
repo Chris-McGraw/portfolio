@@ -329,6 +329,7 @@ a {
   position: relative;
   text-align: center;
   background-color: #beb8af;
+  overflow: hidden;
 }
 
 #project-container-grid {
@@ -430,6 +431,7 @@ a {
   width: 100%;
   text-align: center;
   background-color: #e0e0e0;
+  overflow: hidden;
 }
 
 #archive-container-grid {

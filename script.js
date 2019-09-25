@@ -94,7 +94,11 @@ function progressiveLoadProjectImageVert() {
     $(this).remove();
 
     $projectImageVert.attr("src", "images/projects/mockup-vert.jpg");
-    $projectImageVert.css("filter", "none");
+    $projectImageVert.css("filter", "blur(0)");
+
+    setTimeout(function() {
+      $projectImageVert.css("filter", "none");
+    }, 750);
   });
 }
 
@@ -104,7 +108,11 @@ function progressiveLoadProjectImageRecipeBook() {
     $(this).remove();
 
     $projectImageRecipeBook.attr("src", "images/projects/mockup-recipe-book.jpg");
-    $projectImageRecipeBook.css("filter", "none");
+    $projectImageRecipeBook.css("filter", "blur(0)");
+
+    setTimeout(function() {
+      $projectImageRecipeBook.css("filter", "none");
+    }, 750);
   });
 }
 
@@ -114,7 +122,11 @@ function progressiveLoadArchiveImageWeather() {
     $(this).remove();
 
     $archiveImageWeather.attr("src", "images/archive/weather-snap.jpg");
-    $archiveLink1.css("filter", "none");
+    $archiveLink1.css("filter", "blur(0)");
+
+    setTimeout(function() {
+      $archiveLink1.css("filter", "none");
+    }, 750);
   });
 }
 
@@ -124,7 +136,11 @@ function progressiveLoadArchiveImageDgPutting() {
     $(this).remove();
 
     $archiveImageDgPutting.attr("src", "images/archive/dg-putting-snap.jpg");
-    $archiveLink2.css("filter", "none");
+    $archiveLink2.css("filter", "blur(0)");
+
+    setTimeout(function() {
+      $archiveLink2.css("filter", "none");
+    }, 750);
   });
 }
 
@@ -134,7 +150,11 @@ function progressiveLoadArchiveImageCalc() {
     $(this).remove();
 
     $archiveImageCalc.attr("src", "images/archive/calc-snap.jpg");
-    $archiveLink3.css("filter", "none");
+    $archiveLink3.css("filter", "blur(0)");
+
+    setTimeout(function() {
+      $archiveLink3.css("filter", "none");
+    }, 750);
   });
 }
 
