@@ -403,9 +403,15 @@ a {
   width: 100%;
   height: auto;
 
-  /* transition: filter 750ms ease-in-out;
+  transition: filter 750ms ease-in-out;
+}
 
-  filter: blur(0.5rem); */
+#project-image-vert {
+  filter: blur(0.5rem);
+}
+
+#project-image-recipe-book {
+  filter: blur(0.5rem);
 }
 
 #pro-thumb-2 {
