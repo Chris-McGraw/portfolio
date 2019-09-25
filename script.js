@@ -49,7 +49,8 @@ var $aboutContainer = $("#about-container");
 
 
 /* ~~~~~~ PROJECT SECTION ~~~~~~ */
-var projectSectionLoaded = false;
+var projectImageVertLoaded = false;
+var projectImageRecipeBookLoaded = false;
 
 var $projectContainer = $("#project-container");
 var $projectImageVert = $("#project-image-vert");
@@ -88,19 +89,22 @@ var $footerIconInner = $(".footer-icon-inner");
 
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
-function progressiveLoadProjectSection() {
+function progressiveLoadProjectImageVert() {
   $("<img/>").attr("src", "images/projects/mockup-vert.jpg").on("load", function() {
     $(this).remove();
 
     $projectImageVert.attr("src", "images/projects/mockup-vert.jpg");
-    $projectImageVert.css("filter", "blur(0)");
+    $projectImageVert.css("filter", "none");
   });
+}
 
+
+function progressiveLoadProjectImageRecipeBook() {
   $("<img/>").attr("src", "images/projects/mockup-recipe-book.jpg").on("load", function() {
     $(this).remove();
 
     $projectImageRecipeBook.attr("src", "images/projects/mockup-recipe-book.jpg");
-    $projectImageRecipeBook.css("filter", "blur(0)");
+    $projectImageRecipeBook.css("filter", "none");
   });
 }
 
@@ -110,7 +114,7 @@ function progressiveLoadArchiveImageWeather() {
     $(this).remove();
 
     $archiveImageWeather.attr("src", "images/archive/weather-snap.jpg");
-    //$archiveLink1.css("filter", "blur(0)");
+    $archiveLink1.css("filter", "none");
   });
 }
 
@@ -120,7 +124,7 @@ function progressiveLoadArchiveImageDgPutting() {
     $(this).remove();
 
     $archiveImageDgPutting.attr("src", "images/archive/dg-putting-snap.jpg");
-    //$archiveLink2.css("filter", "blur(0)");
+    $archiveLink2.css("filter", "none");
   });
 }
 
@@ -130,7 +134,7 @@ function progressiveLoadArchiveImageCalc() {
     $(this).remove();
 
     $archiveImageCalc.attr("src", "images/archive/calc-snap.jpg");
-    //$archiveLink3.css("filter", "blur(0)");
+    $archiveLink3.css("filter", "none");
   });
 }
 
@@ -140,10 +144,14 @@ function lazyLoadSection(sec) {
   var rect = document.getElementById(sectionId).getBoundingClientRect();
 
   if(rect.top <= $(window).height() && rect.bottom >= windowTop) {
-    if(sec === $projectContainer) {
-      progressiveLoadProjectSection();
+    if(sec === $projectImageVert) {
+      progressiveLoadProjectImageVert();
+      projectImageVertLoaded = true;
+    }
 
-      projectSectionLoaded = true;
+    else if(sec === $projectImageRecipeBook) {
+      progressiveLoadProjectImageRecipeBook();
+      projectImageRecipeBookLoaded = true;
     }
 
     else if(sec === $archiveLink1) {
@@ -435,13 +443,18 @@ $(document).ready(function() {
 
 /* ~~~~~~~~~~~ WINDOW ~~~~~~~~~~~ */
   $(window).on("DOMContentLoaded load resize scroll", function() {
-    if(projectSectionLoaded === false || archiveImageWeatherLoaded === false ||
-    archiveImageDgPuttingLoaded === false || archiveImageCalcLoaded === false) {
+    if(projectImageVertLoaded === false || projectImageRecipeBookLoaded === false ||
+    archiveImageWeatherLoaded === false || archiveImageDgPuttingLoaded === false ||
+    archiveImageCalcLoaded === false) {
       windowTop = $navbar.height();
     }
 
-    if(projectSectionLoaded === false) {
-      lazyLoadSection($projectContainer);
+    if(projectImageVertLoaded === false) {
+      lazyLoadSection($projectImageVert);
+    }
+
+    if(projectImageRecipeBookLoaded === false) {
+      lazyLoadSection($projectImageRecipeBook);
     }
 
     if(archiveImageWeatherLoaded === false) {

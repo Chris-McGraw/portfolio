@@ -404,13 +404,7 @@ a {
   height: auto;
 
   transition: filter 750ms ease-in-out;
-}
 
-#project-image-vert {
-  filter: blur(0.5rem);
-}
-
-#project-image-recipe-book {
   filter: blur(0.5rem);
 }
 
@@ -531,9 +525,9 @@ a {
 
   opacity: 1.0;
 
-  /* transition: opacity 300ms ease-in-out, filter 750ms ease-in-out;
+  transition: opacity 300ms ease-in-out, filter 750ms ease-in-out;
 
-  filter: blur(0.5rem); */
+  filter: blur(0.5rem);
 }
 
 .archive-link-hovered {
