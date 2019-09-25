@@ -147,12 +147,12 @@ function lazyLoadSection(sec) {
   var rect = document.getElementById(sectionId).getBoundingClientRect();
 
   if(rect.top <= $(window).height() && rect.bottom >= windowTop) {
-    if(sec === $projectImageVert) {
+    if(sec === $proThumb2) {
       progressiveLoadProjectImageVert();
       projectImageVertLoaded = true;
     }
 
-    else if(sec === $projectImageRecipeBook) {
+    else if(sec === $proThumb3) {
       progressiveLoadProjectImageRecipeBook();
       projectImageRecipeBookLoaded = true;
     }
@@ -453,11 +453,11 @@ $(document).ready(function() {
     }
 
     if(projectImageVertLoaded === false) {
-      lazyLoadSection($projectImageVert);
+      lazyLoadSection($proThumb2);
     }
 
     if(projectImageRecipeBookLoaded === false) {
-      lazyLoadSection($projectImageRecipeBook);
+      lazyLoadSection($proThumb3);
     }
 
     if(archiveImageWeatherLoaded === false) {
