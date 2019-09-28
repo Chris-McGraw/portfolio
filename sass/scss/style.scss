@@ -61,6 +61,10 @@ a {
 
   text-align: right;
   background-color: rgba(233, 236, 231, 1.0);
+
+  border-bottom: 1px solid rgba(29, 31, 33, 0.2);
+
+  box-sizing: content-box;
 }
 
 #nav-icon-container {
@@ -882,7 +886,7 @@ textarea {
 
     height: 100%;
 
-    border-top: 1px solid rgba(29, 31, 33, 0.2);
+    border-bottom: 1px solid rgba(29, 31, 33, 0.2);
 
     cursor: pointer;
   }
@@ -909,7 +913,7 @@ textarea {
     font-weight: 400;
     color: $black;
 
-    border-top: 1px solid rgba(29, 31, 33, 0.2);
+    border-bottom: 1px solid rgba(29, 31, 33, 0.2);
   }
 
   #dropdown-nav-link-middle {
