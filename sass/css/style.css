@@ -87,8 +87,6 @@ a {
   height: 5rem;
   text-align: right;
   background-color: #e9ece7;
-  -webkit-user-select: none;
-  user-select: none;
 }
 
 #nav-icon-container {
@@ -264,6 +262,8 @@ a {
   position: absolute;
   left: 1.25rem;
   color: #4f5256;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #gutter-no-6 {
@@ -293,6 +293,8 @@ a {
   top: -0.05rem;
   left: -0.5rem;
   color: #e0e0e0;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #ide-ln-comment {
@@ -301,10 +303,14 @@ a {
 
 #ide-ln-blank-1 {
   color: #1d1f21;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #ide-ln-blank-2 {
   color: #1d1f21;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* ---------------------------- ABOUT SECTION ---------------------------- */
@@ -356,6 +362,8 @@ a {
   height: auto;
   transition: filter 750ms ease-in-out;
   filter: blur(0.5rem);
+  -webkit-user-select: none !important;
+  user-select: none !important;
 }
 
 #pro-thumb-2 {
@@ -457,6 +465,8 @@ a {
   opacity: 1;
   transition: opacity 300ms ease-in-out, filter 750ms ease-in-out;
   filter: blur(0.5rem);
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .archive-link-hovered {

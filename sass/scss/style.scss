@@ -61,9 +61,6 @@ a {
 
   text-align: right;
   background-color: rgba(233, 236, 231, 1.0);
-
-  -webkit-user-select: none;
-  user-select: none;
 }
 
 #nav-icon-container {
@@ -288,6 +285,9 @@ a {
   left: 1.25rem;
 
   color: $mixed-gray;
+
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #gutter-no-6 {
@@ -320,6 +320,9 @@ a {
   left: -$section-padding-xs;
 
   color: $white;
+
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #ide-ln-comment {
@@ -328,10 +331,16 @@ a {
 
 #ide-ln-blank-1 {
   color: $black;
+
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #ide-ln-blank-2 {
   color: $black;
+
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 
@@ -408,6 +417,9 @@ a {
   transition: filter 750ms ease-in-out;
 
   filter: blur(0.5rem);
+
+  -webkit-user-select: none !important;
+  user-select: none !important;
 }
 
 #pro-thumb-2 {
@@ -532,6 +544,9 @@ a {
   transition: opacity 300ms ease-in-out, filter 750ms ease-in-out;
 
   filter: blur(0.5rem);
+
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .archive-link-hovered {
