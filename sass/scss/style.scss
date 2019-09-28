@@ -62,8 +62,9 @@ a {
   text-align: right;
   background-color: rgba(233, 236, 231, 1.0);
 
-  -webkit-user-select: none;
-  user-select: none;
+  border-bottom: 1px solid rgba(29, 31, 33, 0.2);
+
+  box-sizing: content-box;
 }
 
 #nav-icon-container {
@@ -288,6 +289,9 @@ a {
   left: 1.25rem;
 
   color: $mixed-gray;
+
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #gutter-no-6 {
@@ -320,6 +324,9 @@ a {
   left: -$section-padding-xs;
 
   color: $white;
+
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #ide-ln-comment {
@@ -328,10 +335,16 @@ a {
 
 #ide-ln-blank-1 {
   color: $black;
+
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #ide-ln-blank-2 {
   color: $black;
+
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 
@@ -408,6 +421,9 @@ a {
   transition: filter 750ms ease-in-out;
 
   filter: blur(0.5rem);
+
+  -webkit-user-select: none !important;
+  user-select: none !important;
 }
 
 #pro-thumb-2 {
@@ -532,6 +548,9 @@ a {
   transition: opacity 300ms ease-in-out, filter 750ms ease-in-out;
 
   filter: blur(0.5rem);
+
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .archive-link-hovered {
@@ -867,7 +886,7 @@ textarea {
 
     height: 100%;
 
-    border-top: 1px solid rgba(29, 31, 33, 0.2);
+    border-bottom: 1px solid rgba(29, 31, 33, 0.2);
 
     cursor: pointer;
   }
@@ -894,7 +913,7 @@ textarea {
     font-weight: 400;
     color: $black;
 
-    border-top: 1px solid rgba(29, 31, 33, 0.2);
+    border-bottom: 1px solid rgba(29, 31, 33, 0.2);
   }
 
   #dropdown-nav-link-middle {
