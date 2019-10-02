@@ -331,38 +331,6 @@ a {
   font-weight: 300;
 }
 
-#about-icon-container {
-  width: 100%;
-  height: auto;
-  margin-top: 2.5rem;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-.about-icon {
-  display: inline-block;
-  font-size: 3.5rem;
-  color: #1d1f21;
-  opacity: 0.2;
-}
-
-#css3-icon {
-  margin-left: 10rem;
-  margin-right: 10rem;
-}
-
-#jquery-icon {
-  position: relative;
-  top: 0.5rem;
-  height: 3.645rem;
-  width: auto;
-  margin-right: 10rem;
-}
-
-#sass-icon {
-  margin-top: 2.5rem;
-}
-
 /* --------------------------- PROJECT SECTION --------------------------- */
 #project-container {
   z-index: 20;
@@ -918,19 +886,6 @@ textarea {
 
   #gutter-no-6 {
     display: block;
-  }
-
-  #css3-icon {
-    margin-left: 5rem;
-    margin-right: 5rem;
-  }
-
-  #jquery-icon {
-    margin-right: 5rem;
-  }
-
-  #sass-icon {
-    margin-top: 1.25rem;
   }
 }
 /* -------------------------- MEDIA QUERY <= 569 -------------------------- */
