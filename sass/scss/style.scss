@@ -356,7 +356,7 @@ a {
 
   height: auto;
   width: 100%;
-  @extend %section-container-padding;
+  padding: $section-padding-xl ($section-padding-xl * 2);
 
   text-align: center;
 
@@ -367,47 +367,42 @@ a {
   @extend %section-header;
 }
 
-#about-text {
+#about-text-top {
+  font-family: $font-stack-main;
+  font-size: $font-size-sm;
+  font-weight: 300;
+
+  margin-bottom: $section-padding-md;
+}
+
+#about-text-bottom {
   font-family: $font-stack-main;
   font-size: $font-size-sm;
   font-weight: 300;
 }
 
 #about-icon-container {
-  width: 100%;
-  height: auto;
-  margin-top: $section-padding-lg;
+  display: flex;
+  justify-content: center;
 
-  -webkit-user-select: none;
-  user-select: none;
+  width: auto;
+  margin-top: $section-padding-lg;
 }
 
 .about-icon {
-  display: inline-block;
-
-  font-size: 3.5rem;
-  color: $black;
-
-  opacity: 0.2;
-}
-
-#css3-icon {
-  margin-left: $section-padding-xl * 2;
-  margin-right: $section-padding-xl * 2;
-}
-
-#jquery-icon {
-  position: relative;
-  top: 0.5rem;
-
-  height: 3.645rem;
+  height: 3.25rem;
   width: auto;
-  margin-right: $section-padding-xl * 2;
+  margin-right: $section-padding-xl;
 }
 
 #sass-icon {
-  margin-top: $section-padding-lg;
+  margin-right: 0;
 }
+
+#about-icon-container-bottom {
+  display: none;
+}
+
 
 
 /* --------------------------- PROJECT SECTION --------------------------- */
@@ -964,6 +959,16 @@ textarea {
 
 
 
+  #about-container {
+    padding: $section-padding-xl $section-padding-xl;
+  }
+
+  .about-icon {
+    margin-right: $section-padding-lg;
+  }
+
+
+
   #project-container-grid {
     //grid-column-gap: 0;
     grid-row-gap: 0;
@@ -1011,6 +1016,11 @@ textarea {
 
   .project-text-right {
     text-align: center;
+  }
+
+  .project-description {
+    margin-left: $section-padding-lg;
+    margin-right: $section-padding-lg;
   }
 
   .pro-btn-container-left {
@@ -1098,17 +1108,43 @@ textarea {
 
 
 
-  #css3-icon {
-    margin-left: $section-padding-xl;
-    margin-right: $section-padding-xl;
+  #about-container {
+    padding: $section-padding-xl $section-padding-lg;
+  }
+
+  .about-icon {
+    margin-right: $section-padding-lg;
+  }
+
+  #javascript-icon {
+    margin-right: 0;
   }
 
   #jquery-icon {
-    margin-right: $section-padding-xl;
+    display: none;
   }
 
   #sass-icon {
+    display: none;
+  }
+
+  #about-icon-container-bottom {
+    display: flex;
+    justify-content: center;
+
+    width: auto;
     margin-top: $section-padding-md;
+  }
+
+  #sass-icon-bottom {
+    margin-right: 0;
+  }
+
+
+
+  .project-description {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 

@@ -5,12 +5,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Oxygen+Mono&display=swap">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="sass/css/style.css">
   <link rel="stylesheet" type="text/css" href="sass/css/self-portrait.css">
-  <title>Chris McGraw | Front End Developer</title>
-  <script src="https://kit.fontawesome.com/3055003239.js"
-    crossorigin="anonymous">
-  </script>
+  <title>Portfolio WIP</title>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous">
@@ -25,19 +23,22 @@
     <div id="nav-icon-container">
       <div class="nav-icon-inner">
         <a href="https://github.com/Chris-McGraw/" target="_blank">
-          <i class="nav-icon fab fa-github-square"></i>
+          <i class="nav-icon fa fa-github-square fa-2x">
+          </i>
         </a>
       </div>
 
       <div class="nav-icon-inner">
         <a href="https://codepen.io/cmcgraw/" target="_blank">
-          <i class="nav-icon fab fa-codepen"></i>
+          <i class="nav-icon fa fa-codepen fa-2x">
+          </i>
         </a>
       </div>
 
       <div class="nav-icon-inner">
         <a href="#" target="_blank">
-          <i class="nav-icon fas fa-envelope"></i>
+          <i class="nav-icon fa fa-envelope fa-2x">
+          </i>
         </a>
       </div>
     </div>
@@ -101,21 +102,21 @@
     <div id="dropdown-social-container">
       <a href="https://github.com/Chris-McGraw/" target="_blank">
         <div class="dropdown-nav-icon">
-          <i class="nav-icon fab fa-github-square">
+          <i class="nav-icon fa fa-github-square fa-2x">
           </i>
         </div>
       </a>
 
       <a href="https://codepen.io/cmcgraw/" target="_blank">
         <div class="dropdown-nav-icon" id="dropdown-nav-icon-middle">
-          <i class="nav-icon fab fa-codepen">
+          <i class="nav-icon fa fa-codepen fa-2x">
           </i>
         </div>
       </a>
 
       <a href="mailto:chris.mcgraw.portfolio@gmail.com">
         <div class="dropdown-nav-icon" id="dropdown-nav-icon-right">
-          <i class="nav-icon fas fa-envelope">
+          <i class="nav-icon fa fa-envelope fa-2x">
           </i>
         </div>
       </a>
@@ -173,11 +174,11 @@
 <!-- =========================== ABOUT SECTION =========================== -->
   <section id="about-container">
     <h1 id="about-header">About Me</h1>
-    <p id="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <p id="about-text-top">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Ut vitae interdum dolor, at rutrum metus. Etiam vestibulum eros in facilisis imperdiet.
       Nulla tempor ultricies nisi egestas mollis. Vivamus a tellus quam. Nulla non vulputate sem.
-      <br>
-      <br>
+    </p>
+    <p id="about-text-bottom">
       Quisque aliquam purus in hendrerit malesuada.
       Donec laoreet risus elementum, sollicitudin turpis non, mollis nisl.
       Vivamus a tellus quam. Nulla non vulputate sem.
@@ -186,14 +187,16 @@
     </p>
 
     <div id="about-icon-container">
-      <i id="html5-icon" class="about-icon fab fa-html5"></i>
-      <i id="css3-icon" class="about-icon fab fa-css3-alt"></i>
-      <i id="javascript-icon" class="about-icon fab fa-js-square"></i>
+      <object id="html-icon" class="about-icon" type="image/svg+xml" data="images/html-icon.svg"></object>
+      <object id="css-icon" class="about-icon" type="image/svg+xml" data="images/css-icon.svg"></object>
+      <object id="javascript-icon" class="about-icon" type="image/svg+xml" data="images/javascript-icon.svg"></object>
+      <object id="jquery-icon" class="about-icon" type="image/svg+xml" data="images/jquery-icon.svg"></object>
+      <object id="sass-icon" class="about-icon" type="image/svg+xml" data="images/sass-icon.svg"></object>
+    </div>
 
-      <br>
-
-      <object id="jquery-icon" type="image/svg+xml" data="images/jquery-icon.svg"></object>
-      <i id="sass-icon" class="about-icon fab fa-sass"></i>
+    <div id="about-icon-container-bottom">
+      <object id="jquery-icon-bottom" class="about-icon" type="image/svg+xml" data="images/jquery-icon.svg"></object>
+      <object id="sass-icon-bottom" class="about-icon" type="image/svg+xml" data="images/sass-icon.svg"></object>
     </div>
   </section>
 
@@ -336,14 +339,14 @@
     <div id="footer-icon-container">
       <div class="footer-icon-inner">
         <a href="https://github.com/Chris-McGraw/" target="_blank">
-          <i class="footer-icon fab fa-github-square">
+          <i class="footer-icon fa fa-github-square fa-2x">
           </i>
         </a>
       </div>
 
       <div class="footer-icon-inner">
         <a href="https://codepen.io/cmcgraw/" target="_blank">
-          <i class="footer-icon fab fa-codepen">
+          <i class="footer-icon fa fa-codepen fa-2x">
           </i>
         </a>
       </div>
