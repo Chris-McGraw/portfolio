@@ -373,6 +373,41 @@ a {
   font-weight: 300;
 }
 
+#about-icon-container {
+  width: 100%;
+  height: auto;
+  margin-top: $section-padding-lg;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.about-icon {
+  display: inline-block;
+
+  font-size: 3.5rem;
+  color: $black;
+
+  opacity: 0.2;
+}
+
+#css3-icon {
+  margin-left: $section-padding-xl * 2;
+  margin-right: $section-padding-xl * 2;
+}
+
+#jquery-icon {
+  position: relative;
+  top: 0.5rem;
+
+  height: 3.645rem;
+  width: auto;
+  margin-right: $section-padding-xl * 2;
+}
+
+#sass-icon {
+  margin-top: $section-padding-lg;
+}
 
 
 /* --------------------------- PROJECT SECTION --------------------------- */
@@ -1059,6 +1094,21 @@ textarea {
 
   #gutter-no-6 {
     display: block;
+  }
+
+
+
+  #css3-icon {
+    margin-left: $section-padding-xl;
+    margin-right: $section-padding-xl;
+  }
+
+  #jquery-icon {
+    margin-right: $section-padding-xl;
+  }
+
+  #sass-icon {
+    margin-top: $section-padding-md;
   }
 }
 
