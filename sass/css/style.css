@@ -4,7 +4,7 @@
   text-align: left;
 }
 
-#contact-container, #archive-container, #project-container, #about-container, #landing-container {
+#contact-container, #archive-container, #project-container, #landing-container {
   padding: 5rem 2.5rem;
 }
 
@@ -321,14 +321,43 @@ a {
   position: relative;
   height: auto;
   width: 100%;
+  padding: 5rem 10rem;
   text-align: center;
   background-color: #e0e0e0;
 }
 
-#about-text {
+#about-text-top {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-weight: 300;
+  margin-bottom: 1.25rem;
+}
+
+#about-text-bottom {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+#about-icon-container {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin-top: 2.5rem;
+}
+
+.about-icon {
+  height: 3.25rem;
+  width: auto;
+  margin-right: 5rem;
+}
+
+#sass-icon {
+  margin-right: 0;
+}
+
+#about-icon-container-bottom {
+  display: none;
 }
 
 /* --------------------------- PROJECT SECTION --------------------------- */
@@ -773,6 +802,14 @@ textarea {
     grid-column: span 4;
   }
 
+  #about-container {
+    padding: 5rem 5rem;
+  }
+
+  .about-icon {
+    margin-right: 2.5rem;
+  }
+
   #project-container-grid {
     grid-row-gap: 0;
   }
@@ -815,6 +852,11 @@ textarea {
 
   .project-text-right {
     text-align: center;
+  }
+
+  .project-description {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
   }
 
   .pro-btn-container-left {
@@ -886,6 +928,42 @@ textarea {
 
   #gutter-no-6 {
     display: block;
+  }
+
+  #about-container {
+    padding: 5rem 2.5rem;
+  }
+
+  .about-icon {
+    margin-right: 2.5rem;
+  }
+
+  #javascript-icon {
+    margin-right: 0;
+  }
+
+  #jquery-icon {
+    display: none;
+  }
+
+  #sass-icon {
+    display: none;
+  }
+
+  #about-icon-container-bottom {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin-top: 1.25rem;
+  }
+
+  #sass-icon-bottom {
+    margin-right: 0;
+  }
+
+  .project-description {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 /* -------------------------- MEDIA QUERY <= 569 -------------------------- */
