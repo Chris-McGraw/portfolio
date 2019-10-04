@@ -40,6 +40,14 @@ a {
   color: inherit;
 }
 
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
 .nav-element-hovered {
   opacity: 0.2 !important;
 }

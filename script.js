@@ -569,6 +569,11 @@ $(document).ready(function() {
 
 // ...
 
+  $hamburgerMenu.on("mouseleave", function() {
+    $(this).blur();
+    $(this).css("outline-width", "initial");
+  });
+
   $hamburgerMenu.on("click", function() {
     $dropdownNavbar.toggleClass("nav-drop-open");
 
@@ -577,6 +582,15 @@ $(document).ready(function() {
     $hamburgerBarBottom.toggleClass("rotate-bar-bottom");
 
     $mainBodyContainer.toggleClass("nav-drop-open");
+  });
+
+  $hamburgerMenu.on("mousedown", function() {
+    $(this).css("outline-width", "0");
+  });
+
+  $hamburgerMenu.on("mouseup", function() {
+    $(this).blur();
+    $(this).css("outline-width", "initial");
   });
 
 // ...
