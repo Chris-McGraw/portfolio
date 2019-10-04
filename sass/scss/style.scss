@@ -387,6 +387,9 @@ a {
 
   width: auto;
   margin-top: $section-padding-lg;
+
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .about-icon {
@@ -526,6 +529,8 @@ a {
   @extend %section-button;
 
   transition: background-color 300ms ease-in-out;
+
+  outline: none;
 }
 
 

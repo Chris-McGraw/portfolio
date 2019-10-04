@@ -676,6 +676,9 @@ $(document).ready(function() {
 
   $submitButton.on("mouseleave", function() {
     $(this).removeClass("button-hovered");
+
+    $(this).blur();
+    $(this).css("outline-width", "initial");
   });
 
   $submitButton.on("touchstart", function() {
@@ -689,6 +692,15 @@ $(document).ready(function() {
   /* $submitButton.on("click", function(event) {
     event.preventDefault();
   }); */
+
+  $submitButton.on("mousedown", function() {
+    $(this).css("outline-width", "0");
+  });
+
+  $submitButton.on("mouseup", function() {
+    $(this).blur();
+    $(this).css("outline-width", "initial");
+  });
 
 
 /* ~~~~~~~~~~~ FOOTER ~~~~~~~~~~~ */
