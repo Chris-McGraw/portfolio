@@ -3,14 +3,14 @@ var windowTop = 0;
 
 /* ~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~ */
 var $navbar = $("#navbar");
-var $navIconInner = $(".nav-icon-inner");
+
+var $socialIcon = $(".social-icon");
 
 var $navLogoContainer = $("#nav-logo-container");
 var $eye = $(".eye");
 var $pupil = $(".pupil");
 
-var $navLink = $(".nav-link");
-var $navLinkInner = $(".nav-link-inner");
+var $pageJumpLink = $(".page-jump-link");
 let currentSection = "";
 
 var $hamburgerMenu = $("#hamburger-menu");
@@ -194,7 +194,7 @@ function lazyLoadSection(sec) {
 
 
 function scrollToSection(currentSection) {
-  let currentSectionText = currentSection.children().text();
+  let currentSectionText = currentSection.text();
 
   if(currentSectionText === "About") {
     let currentSectionPositionTop = $aboutContainer.position().top;
@@ -506,9 +506,9 @@ $(document).ready(function() {
   $("body *").on("touchstart", function() {
     $(document).off("mousemove");
 
-    $navIconInner.off("mouseenter");
+    $socialIcon.off("mouseenter");
     $navLogoContainer.off("mouseenter");
-    $navLink.off("mouseenter");
+    $pageJumpLink.off("mouseenter");
     $dropdownNavIcon.off("mouseenter");
     $dropdownNavLink.off("mouseenter");
 
@@ -523,19 +523,19 @@ $(document).ready(function() {
 
 
 /* ~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~ */
-  $navIconInner.on("mouseenter", function() {
+  $socialIcon.on("mouseenter", function() {
     $(this).addClass("nav-element-hovered");
   });
 
-  $navIconInner.on("mouseleave", function() {
+  $socialIcon.on("mouseleave", function() {
     $(this).removeClass("nav-element-hovered");
   });
 
-  $navIconInner.on("touchstart", function() {
+  $socialIcon.on("touchstart", function() {
     $(this).addClass("nav-element-hovered");
   });
 
-  $navIconInner.on("touchend", function() {
+  $socialIcon.on("touchend", function() {
     $(this).removeClass("nav-element-hovered");
   });
 
@@ -547,29 +547,27 @@ $(document).ready(function() {
 
 // ...
 
-  $navLink.on("mouseenter", function() {
+  $pageJumpLink.on("mouseenter", function() {
     $(this).addClass("nav-element-hovered");
   });
 
-  $navLink.on("mouseleave", function() {
+  $pageJumpLink.on("mouseleave", function() {
     $(this).removeClass("nav-element-hovered");
   });
 
-  $navLink.on("touchstart", function() {
+  $pageJumpLink.on("touchstart", function() {
     $(this).addClass("nav-element-hovered");
   });
 
-  $navLink.on("touchend", function() {
+  $pageJumpLink.on("touchend", function() {
     $(this).removeClass("nav-element-hovered");
   });
 
-  $navLink.on("click", function() {
+  $pageJumpLink.on("click", function(event) {
+    event.preventDefault();
+
     let currentSection = $(this);
     scrollToSection(currentSection);
-  });
-
-  $navLinkInner.on("click", function(event) {
-    event.preventDefault();
   });
 
 // ...
