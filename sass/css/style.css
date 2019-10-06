@@ -4,7 +4,7 @@
   text-align: left;
 }
 
-#contact-container, #archive-container, #project-container, #landing-container {
+#contact, #archive-container, #project, #landing-container {
   padding: 5rem 2.5rem;
 }
 
@@ -166,7 +166,7 @@ button {
   transition: opacity 300ms ease-in-out;
 }
 
-.nav-link > p {
+.nav-link-inner > p {
   cursor: pointer;
 }
 
@@ -323,7 +323,7 @@ button {
 }
 
 /* ---------------------------- ABOUT SECTION ---------------------------- */
-#about-container {
+#about {
   z-index: 10;
   position: relative;
   height: auto;
@@ -355,6 +355,14 @@ button {
   user-select: none;
 }
 
+#about-icon-container-bottom {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .about-icon {
   height: 3.25rem;
   width: auto;
@@ -370,7 +378,7 @@ button {
 }
 
 /* --------------------------- PROJECT SECTION --------------------------- */
-#project-container {
+#project {
   z-index: 20;
   position: relative;
   text-align: center;
@@ -528,7 +536,7 @@ button {
 }
 
 /* --------------------------- CONTACT SECTION --------------------------- */
-#contact-container {
+#contact {
   z-index: 10;
   position: relative;
   width: 100%;
@@ -540,7 +548,7 @@ button {
   overflow: hidden;
 }
 
-#contact-container:after {
+#contact:after {
   content: "";
   z-index: -10;
   position: absolute;
@@ -812,7 +820,7 @@ textarea {
     grid-column: span 4;
   }
 
-  #about-container {
+  #about {
     padding: 5rem 5rem;
   }
 
@@ -890,7 +898,7 @@ textarea {
     height: 15rem;
   }
 
-  #contact-container:after {
+  #contact:after {
     top: auto;
     bottom: 0;
     height: 50%;
@@ -940,7 +948,7 @@ textarea {
     display: block;
   }
 
-  #about-container {
+  #about {
     padding: 5rem 2.5rem;
   }
 

@@ -163,7 +163,7 @@ button {
   transition: opacity 300ms ease-in-out;
 }
 
-.nav-link > p {
+.nav-link-inner > p {
   cursor: pointer;
 }
 
@@ -358,7 +358,7 @@ button {
 
 
 /* ---------------------------- ABOUT SECTION ---------------------------- */
-#about-container {
+#about {
   z-index: 10;
   position: relative;
 
@@ -400,6 +400,16 @@ button {
   user-select: none;
 }
 
+#about-icon-container-bottom {
+  display: flex;
+  justify-content: center;
+
+  width: auto;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .about-icon {
   height: 3.25rem;
   width: auto;
@@ -417,7 +427,7 @@ button {
 
 
 /* --------------------------- PROJECT SECTION --------------------------- */
-#project-container {
+#project {
   z-index: 20;
   position: relative;
 
@@ -619,7 +629,7 @@ button {
 
 
 /* --------------------------- CONTACT SECTION --------------------------- */
-#contact-container {
+#contact {
   z-index: 10;
   position: relative;
 
@@ -637,7 +647,7 @@ button {
   overflow: hidden;
 }
 
-#contact-container:after {
+#contact:after {
   content: "";
 
   z-index: -10;
@@ -972,7 +982,7 @@ textarea {
 
 
 
-  #about-container {
+  #about {
     padding: $section-padding-xl $section-padding-xl;
   }
 
@@ -1061,7 +1071,7 @@ textarea {
 
 
 
-  #contact-container:after {
+  #contact:after {
     top: auto;
     bottom: 0;
 
@@ -1121,7 +1131,7 @@ textarea {
 
 
 
-  #about-container {
+  #about {
     padding: $section-padding-xl $section-padding-lg;
   }
 

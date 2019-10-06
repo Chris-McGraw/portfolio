@@ -10,6 +10,7 @@ var $eye = $(".eye");
 var $pupil = $(".pupil");
 
 var $navLink = $(".nav-link");
+var $navLinkInner = $(".nav-link-inner");
 let currentSection = "";
 
 var $hamburgerMenu = $("#hamburger-menu");
@@ -45,14 +46,14 @@ let blankLineDelay = false;
 
 
 /* ~~~~~~~ ABOUT SECTION ~~~~~~~ */
-var $aboutContainer = $("#about-container");
+var $aboutContainer = $("#about");
 
 
 /* ~~~~~~ PROJECT SECTION ~~~~~~ */
 var projectImageVertLoaded = false;
 var projectImageRecipeBookLoaded = false;
 
-var $projectContainer = $("#project-container");
+var $projectContainer = $("#project");
 var $projectImageVert = $("#project-image-vert");
 var $projectImageRecipeBook = $("#project-image-recipe-book");
 var $projectButton = $(".project-button");
@@ -77,7 +78,7 @@ var videoLoadLoopTimeout = "";
 
 
 /* ~~~~~~ CONTACT SECTION ~~~~~~ */
-var $contactContainer = $("#contact-container");
+var $contactContainer = $("#contact");
 var $submitButton = $("#submit-button");
 
 
@@ -200,7 +201,7 @@ function scrollToSection(currentSection) {
     let currentSectionPadding = Number( $aboutContainer.css("padding-top").match(/\d+/)[0] );
     let sectionScrollPosition = currentSectionPositionTop + currentSectionPadding;
 
-    window.scrollTo(0, sectionScrollPosition)
+    window.scrollTo(0, sectionScrollPosition);
   }
   else if(currentSectionText === "Projects") {
     let currentSectionPositionTop = $projectContainer.position().top;
@@ -567,6 +568,10 @@ $(document).ready(function() {
     scrollToSection(currentSection);
   });
 
+  $navLinkInner.on("click", function(event) {
+    event.preventDefault();
+  });
+
 // ...
 
   $hamburgerMenu.on("mouseleave", function() {
@@ -576,6 +581,17 @@ $(document).ready(function() {
 
   $hamburgerMenu.on("click", function() {
     $dropdownNavbar.toggleClass("nav-drop-open");
+
+    /* if($dropdownNavbar.hasClass("nav-drop-open") === true) {
+      $dropdownNavIcon.parent().attr("tabindex", 0);
+
+      $dropdownNavLink.attr("tabindex", 0);
+    }
+    else if($dropdownNavbar.hasClass("nav-drop-open") === false) {
+      $dropdownNavIcon.parent().attr("tabindex", -1);
+
+      $dropdownNavLink.attr("tabindex", -1);
+    } */
 
     $hamburgerBarTop.toggleClass("rotate-bar-top");
     $hamburgerBarMiddle.toggleClass("hide-bar-middle");
