@@ -86,15 +86,21 @@
 
     <ul id="page-jump-link-list">
       <li>
-        <a class="page-jump-link" href="#about">About</a>
+        <a class="page-jump-link" href="#about">
+          <p>About</p>
+        </a>
       </li>
 
       <li>
-        <a class="page-jump-link" href="#project">Projects</a>
+        <a class="page-jump-link" href="#project">
+          <p>Projects</p>
+        </a>
       </li>
 
       <li>
-        <a class="page-jump-link" href="#contact">Contact</a>
+        <a class="page-jump-link" href="#contact">
+          <p>Contact</p>
+        </a>
       </li>
     </ul>
 
@@ -108,32 +114,42 @@
 
 <!-- DROPDOWN NAVBAR -->
   <div id="dropdown-navbar">
-    <div id="dropdown-social-container">
+    <ul id="dropdown-social-link-list">
       <a href="https://github.com/Chris-McGraw/" target="_blank" tabindex="-1">
-        <div class="dropdown-nav-icon">
-          <i class="nav-icon fa fa-github-square fa-2x">
+        <li class="dropdown-social-icon">
+          <i class="fa fa-github-square">
           </i>
-        </div>
+        </li>
       </a>
 
       <a href="https://codepen.io/cmcgraw/" target="_blank" tabindex="-1">
-        <div class="dropdown-nav-icon" id="dropdown-nav-icon-middle">
-          <i class="nav-icon fa fa-codepen fa-2x">
+        <li class="dropdown-social-icon" id="dropdown-social-icon-middle">
+          <i class="fa fa-codepen">
           </i>
-        </div>
+        </li>
       </a>
 
       <a href="mailto:chris.mcgraw.portfolio@gmail.com" tabindex="-1">
-        <div class="dropdown-nav-icon" id="dropdown-nav-icon-right">
-          <i class="nav-icon fa fa-envelope fa-2x">
+        <li class="dropdown-social-icon" id="dropdown-social-icon-right">
+          <i class="fa fa-envelope">
           </i>
-        </div>
+        </li>
       </a>
-    </div>
+    </ul>
 
-    <div class="dropdown-nav-link" tabindex="-1"><p>About</p></div>
-    <div class="dropdown-nav-link" id="dropdown-nav-link-middle" tabindex="-1"><p>Projects</p></div>
-    <div class="dropdown-nav-link" tabindex="-1"><p>Contact</p></div>
+    <ul id="dropdown-page-jump-link-list">
+      <a class="dropdown-page-jump-link" href="#about" tabindex="-1">
+        <li>About</li>
+      </a>
+
+      <a class="dropdown-page-jump-link" id="dropdown-page-jump-link-middle" href="#project" tabindex="-1">
+        <li>Projects</li>
+      </a>
+
+      <a class="dropdown-page-jump-link" href="#contact" tabindex="-1">
+        <li>Contact</li>
+      </a>
+    </ul>
   </div>
 
 

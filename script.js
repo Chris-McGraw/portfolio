@@ -19,8 +19,8 @@ var $hamburgerBarMiddle = $("#hamburger-bar-middle");
 var $hamburgerBarBottom = $("#hamburger-bar-bottom");
 
 var $dropdownNavbar = $("#dropdown-navbar");
-var $dropdownNavIcon = $(".dropdown-nav-icon");
-var $dropdownNavLink = $(".dropdown-nav-link");
+var $dropdownSocialIcon = $(".dropdown-social-icon");
+var $dropdownPageJumpLink = $(".dropdown-page-jump-link");
 
 
 /* ~~~~ MAIN BODY CONTAINER ~~~~ */
@@ -194,7 +194,7 @@ function lazyLoadSection(sec) {
 
 
 function scrollToSection(currentSection) {
-  let currentSectionText = currentSection.text();
+  let currentSectionText = currentSection.children().text();
 
   if(currentSectionText === "About") {
     let currentSectionPositionTop = $aboutContainer.position().top;
@@ -509,8 +509,8 @@ $(document).ready(function() {
     $socialIcon.off("mouseenter");
     $navLogoContainer.off("mouseenter");
     $pageJumpLink.off("mouseenter");
-    $dropdownNavIcon.off("mouseenter");
-    $dropdownNavLink.off("mouseenter");
+    $dropdownSocialIcon.off("mouseenter");
+    $dropdownPageJumpLink.off("mouseenter");
 
     $projectButton.off("mouseenter");
 
@@ -580,16 +580,16 @@ $(document).ready(function() {
   $hamburgerMenu.on("click", function() {
     $dropdownNavbar.toggleClass("nav-drop-open");
 
-    /* if($dropdownNavbar.hasClass("nav-drop-open") === true) {
-      $dropdownNavIcon.parent().attr("tabindex", 0);
+    if($dropdownNavbar.hasClass("nav-drop-open") === true) {
+      $dropdownSocialIcon.parent().attr("tabindex", 0);
 
-      $dropdownNavLink.attr("tabindex", 0);
+      $dropdownPageJumpLink.attr("tabindex", 0);
     }
     else if($dropdownNavbar.hasClass("nav-drop-open") === false) {
-      $dropdownNavIcon.parent().attr("tabindex", -1);
+      $dropdownSocialIcon.parent().attr("tabindex", -1);
 
-      $dropdownNavLink.attr("tabindex", -1);
-    } */
+      $dropdownPageJumpLink.attr("tabindex", -1);
+    }
 
     $hamburgerBarTop.toggleClass("rotate-bar-top");
     $hamburgerBarMiddle.toggleClass("hide-bar-middle");
@@ -609,41 +609,43 @@ $(document).ready(function() {
 
 // ...
 
-  $dropdownNavIcon.on("mouseenter", function() {
+  $dropdownSocialIcon.on("mouseenter", function() {
     $(this).children().addClass("nav-element-hovered");
   });
 
-  $dropdownNavIcon.on("mouseleave", function() {
+  $dropdownSocialIcon.on("mouseleave", function() {
     $(this).children().removeClass("nav-element-hovered");
   });
 
-  $dropdownNavIcon.on("touchstart", function() {
+  $dropdownSocialIcon.on("touchstart", function() {
     $(this).children().addClass("nav-element-hovered");
   });
 
-  $dropdownNavIcon.on("touchend", function() {
+  $dropdownSocialIcon.on("touchend", function() {
     $(this).children().removeClass("nav-element-hovered");
   });
 
 // ...
 
-  $dropdownNavLink.on("mouseenter", function() {
+  $dropdownPageJumpLink.on("mouseenter", function() {
     $(this).children().addClass("nav-element-hovered");
   });
 
-  $dropdownNavLink.on("mouseleave", function() {
+  $dropdownPageJumpLink.on("mouseleave", function() {
     $(this).children().removeClass("nav-element-hovered");
   });
 
-  $dropdownNavLink.on("touchstart", function() {
+  $dropdownPageJumpLink.on("touchstart", function() {
     $(this).children().addClass("nav-element-hovered");
   });
 
-  $dropdownNavLink.on("touchend", function() {
+  $dropdownPageJumpLink.on("touchend", function() {
     $(this).children().removeClass("nav-element-hovered");
   });
 
-  $dropdownNavLink.on("click", function() {
+  $dropdownPageJumpLink.on("click", function() {
+    event.preventDefault();
+
     let currentSection = $(this);
     scrollToSection(currentSection);
   });

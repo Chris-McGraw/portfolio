@@ -170,6 +170,10 @@ button {
   cursor: pointer;
 }
 
+.page-jump-link > p {
+  cursor: pointer;
+}
+
 #hamburger-menu {
   display: none;
 }
@@ -178,26 +182,8 @@ button {
   display: none;
 }
 
-#dropdown-social-container {
+#dropdown-social-link-list {
   display: none;
-}
-
-.nav-icon {
-  font-size: 1.25rem;
-  color: #1d1f21;
-  opacity: 1;
-  transition: opacity 300ms ease-in-out;
-  cursor: pointer;
-}
-
-.dropdown-nav-link {
-  cursor: pointer;
-}
-
-.dropdown-nav-link > p {
-  opacity: 1;
-  transition: opacity 300ms ease-in-out;
-  cursor: pointer;
 }
 
 /* ------------------------- MAIN BODY CONTAINER ------------------------- */
@@ -773,7 +759,7 @@ textarea {
 
   #dropdown-navbar {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     z-index: 30;
     position: fixed;
     top: 2.5rem;
@@ -787,26 +773,14 @@ textarea {
     transform: translateY(2.5rem);
   }
 
-  .dropdown-nav-icon {
+  #dropdown-page-jump-link-list {
     grid-column: span 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     height: 100%;
-    border-bottom: 1px solid rgba(29, 31, 33, 0.2);
-    cursor: pointer;
   }
 
-  #dropdown-nav-icon-middle {
-    border-left: 1px solid rgba(29, 31, 33, 0.2);
-    border-right: 1px solid rgba(29, 31, 33, 0.2);
-  }
-
-  #dropdown-nav-icon-right {
-    border-right: 1px solid rgba(29, 31, 33, 0.2);
-  }
-
-  .dropdown-nav-link {
+  .dropdown-page-jump-link {
     grid-column: span 1;
     display: inline-flex;
     justify-content: center;
@@ -817,9 +791,16 @@ textarea {
     font-weight: 400;
     color: #1d1f21;
     border-bottom: 1px solid rgba(29, 31, 33, 0.2);
+    cursor: pointer;
   }
 
-  #dropdown-nav-link-middle {
+  .dropdown-page-jump-link > li {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+    cursor: pointer;
+  }
+
+  #dropdown-page-jump-link-middle {
     border-left: 1px solid rgba(29, 31, 33, 0.2);
     border-right: 1px solid rgba(29, 31, 33, 0.2);
   }
@@ -938,14 +919,41 @@ textarea {
     grid-template-columns: repeat(5, 1fr);
   }
 
-  #dropdown-social-container {
+  #dropdown-social-link-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column: span 2;
   }
 
-  .dropdown-nav-link {
+  .dropdown-social-icon {
     grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-bottom: 1px solid rgba(29, 31, 33, 0.2);
+    cursor: pointer;
+  }
+
+  .dropdown-social-icon > i {
+    font-size: 1.25rem;
+    color: #1d1f21;
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+    cursor: pointer;
+  }
+
+  #dropdown-social-icon-middle {
+    border-left: 1px solid rgba(29, 31, 33, 0.2);
+    border-right: 1px solid rgba(29, 31, 33, 0.2);
+  }
+
+  #dropdown-social-icon-right {
+    border-right: 1px solid rgba(29, 31, 33, 0.2);
+  }
+
+  #dropdown-page-jump-link-list {
+    grid-column: span 3;
   }
 
   #pseudo-ide-container {
