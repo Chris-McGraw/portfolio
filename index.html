@@ -20,28 +20,28 @@
 <body>
 <!-- =============================== NAVBAR =============================== -->
   <nav id="navbar">
-    <div id="nav-icon-container">
-      <div class="nav-icon-inner">
+    <ul id="social-link-list">
+      <li class="social-link">
         <a href="https://github.com/Chris-McGraw/" target="_blank">
-          <i class="nav-icon fa fa-github-square fa-2x">
+          <i class="fa fa-github-square">
           </i>
         </a>
-      </div>
+      </li>
 
-      <div class="nav-icon-inner">
+      <li class="social-link">
         <a href="https://codepen.io/cmcgraw/" target="_blank">
-          <i class="nav-icon fa fa-codepen fa-2x">
+          <i class="fa fa-codepen">
           </i>
         </a>
-      </div>
+      </li>
 
-      <div class="nav-icon-inner">
-        <a href="#" target="_blank">
-          <i class="nav-icon fa fa-envelope fa-2x">
+      <li class="social-link">
+        <a href="mailto:chris.mcgraw.portfolio@gmail.com">
+          <i class="fa fa-envelope">
           </i>
         </a>
-      </div>
-    </div>
+      </li>
+    </ul>
 
     <div id="nav-logo-container">
       <div id="self-portrait-container">
@@ -84,47 +84,75 @@
       <div id="nav-logo">Chris<br>McGraw</div>
     </div>
 
-    <ul id="nav-link-list">
-      <li class="nav-link"><p>About</p></li>
-      <li class="nav-link"><p>Projects</p></li>
-      <li class="nav-link"><p>Contact</p></li>
+    <ul id="page-jump-link-list">
+      <li>
+        <a class="page-jump-link" href="#about">
+          <p>About</p>
+        </a>
+      </li>
+
+      <li>
+        <a class="page-jump-link" href="#project">
+          <p>Projects</p>
+        </a>
+      </li>
+
+      <li>
+        <a class="page-jump-link" href="#contact">
+          <p>Contact</p>
+        </a>
+      </li>
     </ul>
 
-    <div id="hamburger-menu">
+<!-- HAMBURGER MENU -->
+    <button id="hamburger-menu">
       <div class="hamburger-bar" id="hamburger-bar-top"></div>
       <div class="hamburger-bar" id="hamburger-bar-middle"></div>
       <div class="hamburger-bar" id="hamburger-bar-bottom"></div>
-    </div>
+    </button>
   </nav>
 
 <!-- DROPDOWN NAVBAR -->
   <div id="dropdown-navbar">
-    <div id="dropdown-social-container">
-      <a href="https://github.com/Chris-McGraw/" target="_blank">
-        <div class="dropdown-nav-icon">
-          <i class="nav-icon fa fa-github-square fa-2x">
+    <ul id="dropdown-social-link-list">
+      <a class="dropdown-social-link" href="https://github.com/Chris-McGraw/"
+      target="_blank" tabindex="-1">
+        <li>
+          <i class="fa fa-github-square">
           </i>
-        </div>
+        </li>
       </a>
 
-      <a href="https://codepen.io/cmcgraw/" target="_blank">
-        <div class="dropdown-nav-icon" id="dropdown-nav-icon-middle">
-          <i class="nav-icon fa fa-codepen fa-2x">
+      <a class="dropdown-social-link" id="dropdown-social-link-middle" href="https://codepen.io/cmcgraw/"
+      target="_blank" tabindex="-1">
+        <li>
+          <i class="fa fa-codepen">
           </i>
-        </div>
+        </li>
       </a>
 
-      <a href="mailto:chris.mcgraw.portfolio@gmail.com">
-        <div class="dropdown-nav-icon" id="dropdown-nav-icon-right">
-          <i class="nav-icon fa fa-envelope fa-2x">
+      <a class="dropdown-social-link" id="dropdown-social-link-right" href="mailto:chris.mcgraw.portfolio@gmail.com"
+      tabindex="-1">
+        <li>
+          <i class="fa fa-envelope">
           </i>
-        </div>
+        </li>
       </a>
-    </div>
+    </ul>
 
-    <div class="dropdown-nav-link"><p>About</p></div>
-    <div class="dropdown-nav-link" id="dropdown-nav-link-middle"><p>Projects</p></div>
-    <div class="dropdown-nav-link"><p>Contact</p></div>
+    <ul id="dropdown-page-jump-link-list">
+      <a class="dropdown-page-jump-link" href="#about" tabindex="-1">
+        <li>About</li>
+      </a>
+
+      <a class="dropdown-page-jump-link" id="dropdown-page-jump-link-middle" href="#project" tabindex="-1">
+        <li>Projects</li>
+      </a>
+
+      <a class="dropdown-page-jump-link" href="#contact" tabindex="-1">
+        <li>Contact</li>
+      </a>
+    </ul>
   </div>
 
 
@@ -172,7 +200,7 @@
 
 
 <!-- =========================== ABOUT SECTION =========================== -->
-  <section id="about-container">
+  <section id="about">
     <h1 id="about-header">About Me</h1>
     <p id="about-text-top">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Ut vitae interdum dolor, at rutrum metus. Etiam vestibulum eros in facilisis imperdiet.
@@ -187,23 +215,23 @@
     </p>
 
     <div id="about-icon-container">
-      <object id="html-icon" class="about-icon" type="image/svg+xml" data="images/html-icon.svg"></object>
-      <object id="css-icon" class="about-icon" type="image/svg+xml" data="images/css-icon.svg"></object>
-      <object id="javascript-icon" class="about-icon" type="image/svg+xml" data="images/javascript-icon.svg"></object>
-      <object id="jquery-icon" class="about-icon" type="image/svg+xml" data="images/jquery-icon.svg"></object>
-      <object id="sass-icon" class="about-icon" type="image/svg+xml" data="images/sass-icon.svg"></object>
+      <object id="html-icon" class="about-icon" type="image/svg+xml" data="images/html-icon.svg" tabindex="-1"></object>
+      <object id="css-icon" class="about-icon" type="image/svg+xml" data="images/css-icon.svg" tabindex="-1"></object>
+      <object id="javascript-icon" class="about-icon" type="image/svg+xml" data="images/javascript-icon.svg" tabindex="-1"></object>
+      <object id="jquery-icon" class="about-icon" type="image/svg+xml" data="images/jquery-icon.svg" tabindex="-1"></object>
+      <object id="sass-icon" class="about-icon" type="image/svg+xml" data="images/sass-icon.svg" tabindex="-1"></object>
     </div>
 
     <div id="about-icon-container-bottom">
-      <object id="jquery-icon-bottom" class="about-icon" type="image/svg+xml" data="images/jquery-icon.svg"></object>
-      <object id="sass-icon-bottom" class="about-icon" type="image/svg+xml" data="images/sass-icon.svg"></object>
+      <object id="jquery-icon-bottom" class="about-icon" type="image/svg+xml" data="images/jquery-icon.svg" tabindex="-1"></object>
+      <object id="sass-icon-bottom" class="about-icon" type="image/svg+xml" data="images/sass-icon.svg" tabindex="-1"></object>
     </div>
   </section>
 
 
 
 <!-- ========================== PROJECT SECTION ========================== -->
-  <section id="project-container">
+  <section id="project">
     <h1 id="project-header">Latest Projects</h1>
 
     <div id="project-container-grid">
@@ -217,11 +245,11 @@
 
           <div class="pro-btn-container-left">
             <a class="pro-btn-link-left" href="https://chris-mcgraw.github.io/e-commerce" target="_blank">
-              <button class="project-button">Live Page</button>
+              <button class="project-button" tabindex="-1">Live Page</button>
             </a>
 
             <a class="pro-btn-link-left" href="https://github.com/Chris-McGraw/e-commerce" target="_blank">
-              <button class="project-button">Source Code</button>
+              <button class="project-button" tabindex="-1">Source Code</button>
             </a>
           </div>
         </div>
@@ -247,11 +275,11 @@
 
           <div class="pro-btn-container-right">
             <a class="pro-btn-link-right" href="https://chris-mcgraw.github.io/recipe-book" target="_blank">
-              <button class="project-button">Live Page</button>
+              <button class="project-button" tabindex="-1">Live Page</button>
             </a>
 
             <a class="pro-btn-link-right" href="https://github.com/Chris-McGraw/recipe-book" target="_blank">
-              <button class="project-button">Source Code</button>
+              <button class="project-button" tabindex="-1">Source Code</button>
             </a>
           </div>
         </div>
@@ -304,7 +332,7 @@
 
 
 <!-- ========================== CONTACT SECTION ========================== -->
-  <section id="contact-container">
+  <section id="contact">
     <h1 id="contact-header">Contact</h1>
 
     <form id="contact-form" action="https://formspree.io/chris.mcgraw.portfolio@gmail.com" method="POST">

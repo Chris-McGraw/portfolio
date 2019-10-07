@@ -3,13 +3,14 @@ var windowTop = 0;
 
 /* ~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~ */
 var $navbar = $("#navbar");
-var $navIconInner = $(".nav-icon-inner");
+
+var $socialLink = $(".social-link");
 
 var $navLogoContainer = $("#nav-logo-container");
 var $eye = $(".eye");
 var $pupil = $(".pupil");
 
-var $navLink = $(".nav-link");
+var $pageJumpLink = $(".page-jump-link");
 let currentSection = "";
 
 var $hamburgerMenu = $("#hamburger-menu");
@@ -18,8 +19,8 @@ var $hamburgerBarMiddle = $("#hamburger-bar-middle");
 var $hamburgerBarBottom = $("#hamburger-bar-bottom");
 
 var $dropdownNavbar = $("#dropdown-navbar");
-var $dropdownNavIcon = $(".dropdown-nav-icon");
-var $dropdownNavLink = $(".dropdown-nav-link");
+var $dropdownSocialLink = $(".dropdown-social-link");
+var $dropdownPageJumpLink = $(".dropdown-page-jump-link");
 
 
 /* ~~~~ MAIN BODY CONTAINER ~~~~ */
@@ -45,14 +46,14 @@ let blankLineDelay = false;
 
 
 /* ~~~~~~~ ABOUT SECTION ~~~~~~~ */
-var $aboutContainer = $("#about-container");
+var $aboutContainer = $("#about");
 
 
 /* ~~~~~~ PROJECT SECTION ~~~~~~ */
 var projectImageVertLoaded = false;
 var projectImageRecipeBookLoaded = false;
 
-var $projectContainer = $("#project-container");
+var $projectContainer = $("#project");
 var $projectImageVert = $("#project-image-vert");
 var $projectImageRecipeBook = $("#project-image-recipe-book");
 var $projectButton = $(".project-button");
@@ -77,7 +78,7 @@ var videoLoadLoopTimeout = "";
 
 
 /* ~~~~~~ CONTACT SECTION ~~~~~~ */
-var $contactContainer = $("#contact-container");
+var $contactContainer = $("#contact");
 var $submitButton = $("#submit-button");
 
 
@@ -200,7 +201,7 @@ function scrollToSection(currentSection) {
     let currentSectionPadding = Number( $aboutContainer.css("padding-top").match(/\d+/)[0] );
     let sectionScrollPosition = currentSectionPositionTop + currentSectionPadding;
 
-    window.scrollTo(0, sectionScrollPosition)
+    window.scrollTo(0, sectionScrollPosition);
   }
   else if(currentSectionText === "Projects") {
     let currentSectionPositionTop = $projectContainer.position().top;
@@ -505,11 +506,11 @@ $(document).ready(function() {
   $("body *").on("touchstart", function() {
     $(document).off("mousemove");
 
-    $navIconInner.off("mouseenter");
+    $socialLink.off("mouseenter");
     $navLogoContainer.off("mouseenter");
-    $navLink.off("mouseenter");
-    $dropdownNavIcon.off("mouseenter");
-    $dropdownNavLink.off("mouseenter");
+    $pageJumpLink.off("mouseenter");
+    $dropdownSocialLink.off("mouseenter");
+    $dropdownPageJumpLink.off("mouseenter");
 
     $projectButton.off("mouseenter");
 
@@ -522,19 +523,19 @@ $(document).ready(function() {
 
 
 /* ~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~ */
-  $navIconInner.on("mouseenter", function() {
+  $socialLink.on("mouseenter", function() {
     $(this).addClass("nav-element-hovered");
   });
 
-  $navIconInner.on("mouseleave", function() {
+  $socialLink.on("mouseleave", function() {
     $(this).removeClass("nav-element-hovered");
   });
 
-  $navIconInner.on("touchstart", function() {
+  $socialLink.on("touchstart", function() {
     $(this).addClass("nav-element-hovered");
   });
 
-  $navIconInner.on("touchend", function() {
+  $socialLink.on("touchend", function() {
     $(this).removeClass("nav-element-hovered");
   });
 
@@ -546,31 +547,49 @@ $(document).ready(function() {
 
 // ...
 
-  $navLink.on("mouseenter", function() {
+  $pageJumpLink.on("mouseenter", function() {
     $(this).addClass("nav-element-hovered");
   });
 
-  $navLink.on("mouseleave", function() {
+  $pageJumpLink.on("mouseleave", function() {
     $(this).removeClass("nav-element-hovered");
   });
 
-  $navLink.on("touchstart", function() {
+  $pageJumpLink.on("touchstart", function() {
     $(this).addClass("nav-element-hovered");
   });
 
-  $navLink.on("touchend", function() {
+  $pageJumpLink.on("touchend", function() {
     $(this).removeClass("nav-element-hovered");
   });
 
-  $navLink.on("click", function() {
+  $pageJumpLink.on("click", function(event) {
+    event.preventDefault();
+
     let currentSection = $(this);
     scrollToSection(currentSection);
   });
 
 // ...
 
+  $hamburgerMenu.on("mouseleave", function() {
+    $(this).blur();
+    $(this).css("outline-width", "initial");
+  });
+
   $hamburgerMenu.on("click", function() {
     $dropdownNavbar.toggleClass("nav-drop-open");
+
+    if($dropdownNavbar.hasClass("nav-drop-open") === true) {
+      $dropdownSocialLink.attr("tabindex", 0);
+
+      $dropdownPageJumpLink.attr("tabindex", 0);
+    }
+    else if($dropdownNavbar.hasClass("nav-drop-open") === false) {
+      $dropdownSocialLink.attr("tabindex", -1);
+
+      $dropdownPageJumpLink.attr("tabindex", -1);
+    }
 
     $hamburgerBarTop.toggleClass("rotate-bar-top");
     $hamburgerBarMiddle.toggleClass("hide-bar-middle");
@@ -579,45 +598,80 @@ $(document).ready(function() {
     $mainBodyContainer.toggleClass("nav-drop-open");
   });
 
-// ...
-
-  $dropdownNavIcon.on("mouseenter", function() {
-    $(this).children().addClass("nav-element-hovered");
+  $hamburgerMenu.on("mousedown", function() {
+    $(this).css("outline-width", "0");
   });
 
-  $dropdownNavIcon.on("mouseleave", function() {
-    $(this).children().removeClass("nav-element-hovered");
-  });
-
-  $dropdownNavIcon.on("touchstart", function() {
-    $(this).children().addClass("nav-element-hovered");
-  });
-
-  $dropdownNavIcon.on("touchend", function() {
-    $(this).children().removeClass("nav-element-hovered");
+  $hamburgerMenu.on("mouseup", function() {
+    $(this).blur();
+    $(this).css("outline-width", "initial");
   });
 
 // ...
 
-  $dropdownNavLink.on("mouseenter", function() {
+  $dropdownSocialLink.on("mouseenter", function() {
     $(this).children().addClass("nav-element-hovered");
   });
 
-  $dropdownNavLink.on("mouseleave", function() {
+  $dropdownSocialLink.on("mouseleave", function() {
     $(this).children().removeClass("nav-element-hovered");
+
+    $(this).blur();
+    $(this).css("outline-width", "initial");
   });
 
-  $dropdownNavLink.on("touchstart", function() {
+  $dropdownSocialLink.on("touchstart", function() {
     $(this).children().addClass("nav-element-hovered");
   });
 
-  $dropdownNavLink.on("touchend", function() {
+  $dropdownSocialLink.on("touchend", function() {
     $(this).children().removeClass("nav-element-hovered");
   });
 
-  $dropdownNavLink.on("click", function() {
+  $dropdownSocialLink.on("mousedown", function() {
+    $(this).css("outline-width", "0");
+  });
+
+  $dropdownSocialLink.on("mouseup", function() {
+    $(this).blur();
+    $(this).css("outline-width", "initial");
+  });
+
+// ...
+
+  $dropdownPageJumpLink.on("mouseenter", function() {
+    $(this).children().addClass("nav-element-hovered");
+  });
+
+  $dropdownPageJumpLink.on("mouseleave", function() {
+    $(this).children().removeClass("nav-element-hovered");
+
+    $(this).blur();
+    $(this).css("outline-width", "initial");
+  });
+
+  $dropdownPageJumpLink.on("touchstart", function() {
+    $(this).children().addClass("nav-element-hovered");
+  });
+
+  $dropdownPageJumpLink.on("touchend", function() {
+    $(this).children().removeClass("nav-element-hovered");
+  });
+
+  $dropdownPageJumpLink.on("click", function() {
+    event.preventDefault();
+
     let currentSection = $(this);
     scrollToSection(currentSection);
+  });
+
+  $dropdownPageJumpLink.on("mousedown", function() {
+    $(this).css("outline-width", "0");
+  });
+
+  $dropdownPageJumpLink.on("mouseup", function() {
+    $(this).blur();
+    $(this).css("outline-width", "initial");
   });
 
 
@@ -676,6 +730,9 @@ $(document).ready(function() {
 
   $submitButton.on("mouseleave", function() {
     $(this).removeClass("button-hovered");
+
+    $(this).blur();
+    $(this).css("outline-width", "initial");
   });
 
   $submitButton.on("touchstart", function() {
@@ -689,6 +746,15 @@ $(document).ready(function() {
   /* $submitButton.on("click", function(event) {
     event.preventDefault();
   }); */
+
+  $submitButton.on("mousedown", function() {
+    $(this).css("outline-width", "0");
+  });
+
+  $submitButton.on("mouseup", function() {
+    $(this).blur();
+    $(this).css("outline-width", "initial");
+  });
 
 
 /* ~~~~~~~~~~~ FOOTER ~~~~~~~~~~~ */
