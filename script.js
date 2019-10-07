@@ -633,6 +633,9 @@ $(document).ready(function() {
 
   $dropdownPageJumpLink.on("mouseleave", function() {
     $(this).children().removeClass("nav-element-hovered");
+
+    $(this).blur();
+    $(this).css("outline-width", "initial");
   });
 
   $dropdownPageJumpLink.on("touchstart", function() {
@@ -641,6 +644,15 @@ $(document).ready(function() {
 
   $dropdownPageJumpLink.on("touchend", function() {
     $(this).children().removeClass("nav-element-hovered");
+  });
+
+  $dropdownPageJumpLink.on("mousedown", function() {
+    $(this).css("outline-width", "0");
+  });
+
+  $dropdownPageJumpLink.on("mouseup", function() {
+    $(this).blur();
+    $(this).css("outline-width", "initial");
   });
 
   $dropdownPageJumpLink.on("click", function() {
