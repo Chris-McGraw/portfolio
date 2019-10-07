@@ -581,12 +581,12 @@ $(document).ready(function() {
     $dropdownNavbar.toggleClass("nav-drop-open");
 
     if($dropdownNavbar.hasClass("nav-drop-open") === true) {
-      $dropdownSocialLink.parent().attr("tabindex", 0);
+      $dropdownSocialLink.attr("tabindex", 0);
 
       $dropdownPageJumpLink.attr("tabindex", 0);
     }
     else if($dropdownNavbar.hasClass("nav-drop-open") === false) {
-      $dropdownSocialLink.parent().attr("tabindex", -1);
+      $dropdownSocialLink.attr("tabindex", -1);
 
       $dropdownPageJumpLink.attr("tabindex", -1);
     }
@@ -615,6 +615,9 @@ $(document).ready(function() {
 
   $dropdownSocialLink.on("mouseleave", function() {
     $(this).children().removeClass("nav-element-hovered");
+
+    $(this).blur();
+    $(this).css("outline-width", "initial");
   });
 
   $dropdownSocialLink.on("touchstart", function() {
@@ -623,6 +626,15 @@ $(document).ready(function() {
 
   $dropdownSocialLink.on("touchend", function() {
     $(this).children().removeClass("nav-element-hovered");
+  });
+
+  $dropdownSocialLink.on("mousedown", function() {
+    $(this).css("outline-width", "0");
+  });
+
+  $dropdownSocialLink.on("mouseup", function() {
+    $(this).blur();
+    $(this).css("outline-width", "initial");
   });
 
 // ...
@@ -646,6 +658,13 @@ $(document).ready(function() {
     $(this).children().removeClass("nav-element-hovered");
   });
 
+  $dropdownPageJumpLink.on("click", function() {
+    event.preventDefault();
+
+    let currentSection = $(this);
+    scrollToSection(currentSection);
+  });
+
   $dropdownPageJumpLink.on("mousedown", function() {
     $(this).css("outline-width", "0");
   });
@@ -653,13 +672,6 @@ $(document).ready(function() {
   $dropdownPageJumpLink.on("mouseup", function() {
     $(this).blur();
     $(this).css("outline-width", "initial");
-  });
-
-  $dropdownPageJumpLink.on("click", function() {
-    event.preventDefault();
-
-    let currentSection = $(this);
-    scrollToSection(currentSection);
   });
 
 

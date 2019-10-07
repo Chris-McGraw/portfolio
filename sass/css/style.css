@@ -935,11 +935,14 @@ textarea {
     cursor: pointer;
   }
 
-  .dropdown-social-link > i {
+  .dropdown-social-link > li {
     font-size: 1.25rem;
     color: #1d1f21;
     opacity: 1;
     transition: opacity 300ms ease-in-out;
+  }
+
+  .dropdown-social-link > li > i {
     cursor: pointer;
   }
 
