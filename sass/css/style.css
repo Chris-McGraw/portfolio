@@ -108,18 +108,18 @@ button {
   height: 100%;
 }
 
-.social-icon {
+.social-link {
   display: inline-block;
   margin-right: 1.5rem;
   opacity: 1;
   transition: opacity 300ms ease-in-out;
 }
 
-.social-icon > a {
+.social-link > a {
   cursor: pointer;
 }
 
-.social-icon > a > i {
+.social-link > a > i {
   font-size: 1.25rem;
   color: #1d1f21;
   cursor: pointer;
@@ -925,7 +925,7 @@ textarea {
     grid-column: span 2;
   }
 
-  .dropdown-social-icon {
+  .dropdown-social-link {
     grid-column: span 1;
     display: flex;
     justify-content: center;
@@ -935,7 +935,7 @@ textarea {
     cursor: pointer;
   }
 
-  .dropdown-social-icon > i {
+  .dropdown-social-link > i {
     font-size: 1.25rem;
     color: #1d1f21;
     opacity: 1;
@@ -943,12 +943,12 @@ textarea {
     cursor: pointer;
   }
 
-  #dropdown-social-icon-middle {
+  #dropdown-social-link-middle {
     border-left: 1px solid rgba(29, 31, 33, 0.2);
     border-right: 1px solid rgba(29, 31, 33, 0.2);
   }
 
-  #dropdown-social-icon-right {
+  #dropdown-social-link-right {
     border-right: 1px solid rgba(29, 31, 33, 0.2);
   }
 

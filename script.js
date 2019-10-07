@@ -4,7 +4,7 @@ var windowTop = 0;
 /* ~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~ */
 var $navbar = $("#navbar");
 
-var $socialIcon = $(".social-icon");
+var $socialLink = $(".social-link");
 
 var $navLogoContainer = $("#nav-logo-container");
 var $eye = $(".eye");
@@ -19,7 +19,7 @@ var $hamburgerBarMiddle = $("#hamburger-bar-middle");
 var $hamburgerBarBottom = $("#hamburger-bar-bottom");
 
 var $dropdownNavbar = $("#dropdown-navbar");
-var $dropdownSocialIcon = $(".dropdown-social-icon");
+var $dropdownSocialLink = $(".dropdown-social-link");
 var $dropdownPageJumpLink = $(".dropdown-page-jump-link");
 
 
@@ -506,10 +506,10 @@ $(document).ready(function() {
   $("body *").on("touchstart", function() {
     $(document).off("mousemove");
 
-    $socialIcon.off("mouseenter");
+    $socialLink.off("mouseenter");
     $navLogoContainer.off("mouseenter");
     $pageJumpLink.off("mouseenter");
-    $dropdownSocialIcon.off("mouseenter");
+    $dropdownSocialLink.off("mouseenter");
     $dropdownPageJumpLink.off("mouseenter");
 
     $projectButton.off("mouseenter");
@@ -523,19 +523,19 @@ $(document).ready(function() {
 
 
 /* ~~~~~~~~~~~ NAVBAR ~~~~~~~~~~~ */
-  $socialIcon.on("mouseenter", function() {
+  $socialLink.on("mouseenter", function() {
     $(this).addClass("nav-element-hovered");
   });
 
-  $socialIcon.on("mouseleave", function() {
+  $socialLink.on("mouseleave", function() {
     $(this).removeClass("nav-element-hovered");
   });
 
-  $socialIcon.on("touchstart", function() {
+  $socialLink.on("touchstart", function() {
     $(this).addClass("nav-element-hovered");
   });
 
-  $socialIcon.on("touchend", function() {
+  $socialLink.on("touchend", function() {
     $(this).removeClass("nav-element-hovered");
   });
 
@@ -581,12 +581,12 @@ $(document).ready(function() {
     $dropdownNavbar.toggleClass("nav-drop-open");
 
     if($dropdownNavbar.hasClass("nav-drop-open") === true) {
-      $dropdownSocialIcon.parent().attr("tabindex", 0);
+      $dropdownSocialLink.parent().attr("tabindex", 0);
 
       $dropdownPageJumpLink.attr("tabindex", 0);
     }
     else if($dropdownNavbar.hasClass("nav-drop-open") === false) {
-      $dropdownSocialIcon.parent().attr("tabindex", -1);
+      $dropdownSocialLink.parent().attr("tabindex", -1);
 
       $dropdownPageJumpLink.attr("tabindex", -1);
     }
@@ -609,19 +609,19 @@ $(document).ready(function() {
 
 // ...
 
-  $dropdownSocialIcon.on("mouseenter", function() {
+  $dropdownSocialLink.on("mouseenter", function() {
     $(this).children().addClass("nav-element-hovered");
   });
 
-  $dropdownSocialIcon.on("mouseleave", function() {
+  $dropdownSocialLink.on("mouseleave", function() {
     $(this).children().removeClass("nav-element-hovered");
   });
 
-  $dropdownSocialIcon.on("touchstart", function() {
+  $dropdownSocialLink.on("touchstart", function() {
     $(this).children().addClass("nav-element-hovered");
   });
 
-  $dropdownSocialIcon.on("touchend", function() {
+  $dropdownSocialLink.on("touchend", function() {
     $(this).children().removeClass("nav-element-hovered");
   });
 
