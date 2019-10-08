@@ -507,17 +507,17 @@ button {
   font-weight: 300;
 }
 
-.pro-btn-container-left {
+.project-link-list-left {
   display: flex;
   justify-content: flex-start;
 }
 
-.pro-btn-container-right {
+.project-link-list-right {
   display: flex;
   justify-content: flex-end;
 }
 
-.pro-btn-link-left {
+.project-link-left {
   display: inline-block;
 
   margin-right: $section-padding-sm;
@@ -525,7 +525,7 @@ button {
   border-radius: 0.4rem;
 }
 
-.pro-btn-link-right {
+.project-link-right {
   display: inline-block;
 
   margin-left: $section-padding-sm;
@@ -533,7 +533,7 @@ button {
   border-radius: 0.4rem;
 }
 
-.project-button {
+.project-link {
   @extend %section-button;
 
   transition: background-color 300ms ease-in-out;
@@ -563,7 +563,7 @@ button {
   @extend %section-header;
 }
 
-#archive-container-grid {
+#archive-link-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: $section-padding-md;
@@ -763,7 +763,7 @@ textarea {
 
 
 /* -------------------------------- FOOTER -------------------------------- */
-#footer-container {
+#footer {
   z-index: 10;
   position: relative;
 
@@ -780,13 +780,13 @@ textarea {
   background-color: $black;
 }
 
-#copyright-footer {
+#footer-copyright {
   margin-bottom: $section-padding-sm;
 
   font-size: $font-size-xs;
 }
 
-#footer-icon-container {
+#footer-link-list {
   position: relative;
   left: 0;
   right: 0;
@@ -796,11 +796,11 @@ textarea {
   margin: auto;
 }
 
-#footer-icon-container > div:nth-child(1) {
+#footer-link-list > li:nth-child(1) {
   margin-right: 0.2rem;
 }
 
-.footer-icon-inner {
+.footer-link {
   display: inline-block;
 
   opacity: 1.0;
@@ -808,11 +808,11 @@ textarea {
   transition: opacity 300ms ease-in-out;
 }
 
-.footer-icon-hovered {
+.footer-link-hovered {
   opacity: 0.5 !important;
 }
 
-.footer-icon {
+.footer-link > a > i {
   font-size: $font-size-lg;
   color: $gray;
 
@@ -1031,11 +1031,11 @@ textarea {
     margin-right: $section-padding-lg;
   }
 
-  .pro-btn-container-left {
+  .project-link-list-left {
     justify-content: center;
   }
 
-  .pro-btn-container-right {
+  .project-link-list-right {
     justify-content: center;
   }
 

@@ -56,7 +56,7 @@ var projectImageRecipeBookLoaded = false;
 var $projectContainer = $("#project");
 var $projectImageVert = $("#project-image-vert");
 var $projectImageRecipeBook = $("#project-image-recipe-book");
-var $projectButton = $(".project-button");
+var $projectLink = $(".project-link");
 
 
 /* ~~~~~~ ARCHIVE SECTION ~~~~~~ */
@@ -83,7 +83,7 @@ var $submitButton = $("#submit-button");
 
 
 /* ~~~~~~~~~~~ FOOTER ~~~~~~~~~~~ */
-var $footerIconInner = $(".footer-icon-inner");
+var $footerLink = $(".footer-link");
 
 
 
@@ -512,13 +512,13 @@ $(document).ready(function() {
     $dropdownSocialLink.off("mouseenter");
     $dropdownPageJumpLink.off("mouseenter");
 
-    $projectButton.off("mouseenter");
+    $projectLink.off("mouseenter");
 
     $archiveLink.off("mouseenter");
 
     $submitButton.off("mouseenter");
 
-    $footerIconInner.off("mouseenter");
+    $footerLink.off("mouseenter");
   });
 
 
@@ -676,19 +676,19 @@ $(document).ready(function() {
 
 
 /* ~~~~~~ PROJECT SECTION ~~~~~~ */
-  $projectButton.on("mouseenter", function() {
+  $projectLink.on("mouseenter", function() {
     $(this).addClass("button-hovered");
   });
 
-  $projectButton.on("mouseleave", function() {
+  $projectLink.on("mouseleave", function() {
     $(this).removeClass("button-hovered");
   });
 
-  $projectButton.on("touchstart", function() {
+  $projectLink.on("touchstart", function() {
     $(this).addClass("button-hovered");
   });
 
-  $projectButton.on("touchend", function() {
+  $projectLink.on("touchend", function() {
     $(this).removeClass("button-hovered");
   });
 
@@ -758,20 +758,20 @@ $(document).ready(function() {
 
 
 /* ~~~~~~~~~~~ FOOTER ~~~~~~~~~~~ */
-  $footerIconInner.on("mouseenter", function() {
-    $(this).addClass("footer-icon-hovered");
+  $footerLink.on("mouseenter", function() {
+    $(this).addClass("footer-link-hovered");
   });
 
-  $footerIconInner.on("mouseleave", function() {
-    $(this).removeClass("footer-icon-hovered");
+  $footerLink.on("mouseleave", function() {
+    $(this).removeClass("footer-link-hovered");
   });
 
-  $footerIconInner.on("touchstart", function() {
-    $(this).addClass("footer-icon-hovered");
+  $footerLink.on("touchstart", function() {
+    $(this).addClass("footer-link-hovered");
   });
 
-  $footerIconInner.on("touchend", function() {
-    $(this).removeClass("footer-icon-hovered");
+  $footerLink.on("touchend", function() {
+    $(this).removeClass("footer-link-hovered");
   });
 
 
