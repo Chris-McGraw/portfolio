@@ -19,7 +19,7 @@
   border-bottom: 2px solid #1d1f21;
 }
 
-#submit-button, .project-button {
+#submit-button, .project-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -448,29 +448,29 @@ button {
   font-weight: 300;
 }
 
-.pro-btn-container-left {
+.project-link-list-left {
   display: flex;
   justify-content: flex-start;
 }
 
-.pro-btn-container-right {
+.project-link-list-right {
   display: flex;
   justify-content: flex-end;
 }
 
-.pro-btn-link-left {
+.project-link-left {
   display: inline-block;
   margin-right: 0.75rem;
   border-radius: 0.4rem;
 }
 
-.pro-btn-link-right {
+.project-link-right {
   display: inline-block;
   margin-left: 0.75rem;
   border-radius: 0.4rem;
 }
 
-.project-button {
+.project-link {
   transition: background-color 300ms ease-in-out;
   outline: none;
 }
@@ -486,7 +486,7 @@ button {
   overflow: hidden;
 }
 
-#archive-container-grid {
+#archive-link-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1.25rem;
@@ -645,7 +645,7 @@ textarea {
 }
 
 /* -------------------------------- FOOTER -------------------------------- */
-#footer-container {
+#footer {
   z-index: 10;
   position: relative;
   height: auto;
@@ -658,12 +658,12 @@ textarea {
   background-color: #1d1f21;
 }
 
-#copyright-footer {
+#footer-copyright {
   margin-bottom: 0.75rem;
   font-size: 0.75rem;
 }
 
-#footer-icon-container {
+#footer-link-list {
   position: relative;
   left: 0;
   right: 0;
@@ -672,21 +672,21 @@ textarea {
   margin: auto;
 }
 
-#footer-icon-container > div:nth-child(1) {
+#footer-link-list > li:nth-child(1) {
   margin-right: 0.2rem;
 }
 
-.footer-icon-inner {
+.footer-link {
   display: inline-block;
   opacity: 1;
   transition: opacity 300ms ease-in-out;
 }
 
-.footer-icon-hovered {
+.footer-link-hovered {
   opacity: 0.5 !important;
 }
 
-.footer-icon {
+.footer-link > a > i {
   font-size: 1.25rem;
   color: #969896;
   cursor: pointer;
@@ -867,11 +867,11 @@ textarea {
     margin-right: 2.5rem;
   }
 
-  .pro-btn-container-left {
+  .project-link-list-left {
     justify-content: center;
   }
 
-  .pro-btn-container-right {
+  .project-link-list-right {
     justify-content: center;
   }
 
