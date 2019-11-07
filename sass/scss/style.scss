@@ -370,7 +370,7 @@ button {
   @extend %section-header;
 }
 
-#about-text-top {
+.about-text {
   font-family: $font-stack-main;
   font-size: $font-size-sm;
   font-weight: 300;
@@ -379,9 +379,7 @@ button {
 }
 
 #about-text-bottom {
-  font-family: $font-stack-main;
-  font-size: $font-size-sm;
-  font-weight: 300;
+  margin-bottom: 0;
 }
 
 #about-icon-container {

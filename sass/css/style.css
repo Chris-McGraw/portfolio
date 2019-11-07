@@ -336,7 +336,7 @@ button {
   background-color: #e0e0e0;
 }
 
-#about-text-top {
+.about-text {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -344,9 +344,7 @@ button {
 }
 
 #about-text-bottom {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
+  margin-bottom: 0;
 }
 
 #about-icon-container {
