@@ -271,7 +271,7 @@ function ideTypeByLetter(currentLine) {
   });
 
   setTimeout(function() {
-    console.log(totalTypeLoopTime);
+    // console.log(totalTypeLoopTime);
 
     if(currentLine.class === "pseudoVar") {
       $pseudoVar = $(".pseudo-var");
@@ -340,38 +340,12 @@ function ideTypingLoop() {
     }
     else {
       setTimeout(function() {
-        console.log("typing ended");
+        // console.log("typing ended");
 
-        //ideCursorBlinkLoop();
+        $ideTextCursor.css("animation", "cursor-blink-loop 1s infinite");
       }, 500);
     }
   }
-}
-
-
-function ideCursorBlinkLoop() {
-  $ideTextCursor.css("opacity", "0");
-
-  setTimeout(function() {
-    $ideTextCursor.css("opacity", "1");
-  }, 500);
-
-  setTimeout(function() {
-    ideCursorBlinkLoop();
-  }, (500 * 2));
-}
-
-
-function portraitEyeBlinkLoop() {
-  $eye.css("height", "1px");
-
-  setTimeout(function() {
-    $eye.css("height", "100%");
-  }, 150);
-
-  setTimeout(function() {
-    portraitEyeBlinkLoop();
-  }, 5000);
 }
 
 
@@ -456,10 +430,6 @@ $(document).ready(function() {
   setTimeout(function() {
     ideTypingLoop();
   }, 500);
-
-  setTimeout(function() {
-    //portraitEyeBlinkLoop();
-  }, 2500);
 
 
 /* ~~~~~~~~~~~ WINDOW ~~~~~~~~~~~ */

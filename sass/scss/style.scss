@@ -327,6 +327,11 @@ button {
   user-select: none;
 }
 
+@keyframes cursor-blink-loop {
+  0%, 49%   { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
 #ide-ln-comment {
   color: $gray;
 }
