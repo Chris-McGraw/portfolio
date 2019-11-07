@@ -301,6 +301,14 @@ button {
   user-select: none;
 }
 
+@keyframes cursor-blink-loop {
+  0%, 49% {
+    opacity: 0;
+  }
+  50%, 100% {
+    opacity: 1;
+  }
+}
 #ide-ln-comment {
   color: #969896;
 }
@@ -328,7 +336,7 @@ button {
   background-color: #e0e0e0;
 }
 
-#about-text-top {
+.about-text {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -336,9 +344,7 @@ button {
 }
 
 #about-text-bottom {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
+  margin-bottom: 0;
 }
 
 #about-icon-container {
