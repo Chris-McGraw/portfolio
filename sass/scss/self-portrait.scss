@@ -182,7 +182,7 @@
 
   overflow: hidden;
 
-  // animation: eye-blink-loop 5s infinite;
+  animation: eye-blink-loop 5s infinite;
 }
 
 @keyframes eye-blink-loop {
@@ -289,6 +289,21 @@
 
   border-bottom-left-radius: 100%;
   border-bottom-right-radius: 100%;
+}
+
+#tongue {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  width: 55%;
+  height: 30%;
+  margin: auto;
+
+  background-color: #E79EA9;
+
+  border-radius: 8rem;
 }
 
 #beard {
