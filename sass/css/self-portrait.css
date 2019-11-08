@@ -82,7 +82,7 @@
   transform: translateY(-50%);
   left: 0;
   right: 0;
-  width: 90%;
+  width: 95%;
   height: 35%;
   margin: auto;
 }
@@ -131,18 +131,18 @@
 }
 
 #lens-left {
-  margin-right: 5%;
+  margin-right: 4%;
 }
 
 #lens-right {
-  margin-left: 5%;
+  margin-left: 4%;
 }
 
 .eye {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 85%;
+  width: 80%;
   height: 100%;
   background-color: white;
   border: 1px solid #1d1f21;
@@ -180,9 +180,6 @@
 }
 
 .pupil {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 0;
   width: 40%;
   height: 40%;
@@ -246,7 +243,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  width: 55%;
+  width: 50%;
   height: 30%;
   margin: auto;
   background-color: #E79EA9;
@@ -276,24 +273,6 @@
   margin: auto;
   background-color: #ffe0bd;
   border-radius: 0% 0% 100px 100px;
-}
-
-#eye-grid-left {
-  z-index: 20;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 5rem;
-}
-
-#eye-grid-right {
-  z-index: 20;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 5rem;
 }
 
 .move-pupil-left {
