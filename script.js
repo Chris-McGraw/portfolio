@@ -50,10 +50,12 @@ var $aboutContainer = $("#about");
 
 
 /* ~~~~~~ PROJECT SECTION ~~~~~~ */
+var projectImageDropDateLoaded = false;
 var projectImageVertLoaded = false;
 var projectImageRecipeBookLoaded = false;
 
 var $projectContainer = $("#project");
+var $projectImageDropDate = $("#project-image-drop-date");
 var $projectImageVert = $("#project-image-vert");
 var $projectImageRecipeBook = $("#project-image-recipe-book");
 var $projectLink = $(".project-link");
@@ -90,6 +92,20 @@ var $footerLink = $(".footer-link");
 
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
+function progressiveLoadProjectImageDropDate() {
+  $("<img/>").attr("src", "images/projects/mockup-drop-date.jpg").on("load", function() {
+    $(this).remove();
+
+    $projectImageDropDate.attr("src", "images/projects/mockup-drop-date.jpg");
+    $projectImageDropDate.css("filter", "blur(0)");
+
+    setTimeout(function() {
+      $projectImageDropDate.css("filter", "none");
+    }, 750);
+  });
+}
+
+
 function progressiveLoadProjectImageVert() {
   $("<img/>").attr("src", "images/projects/mockup-vert.jpg").on("load", function() {
     $(this).remove();
@@ -165,7 +181,12 @@ function lazyLoadSection(sec) {
   var rect = document.getElementById(sectionId).getBoundingClientRect();
 
   if(rect.top <= $(window).height() && rect.bottom >= windowTop) {
-    if(sec === $projectImageVert) {
+    if(sec === $projectImageDropDate) {
+      progressiveLoadProjectImageDropDate();
+      projectImageDropDateLoaded = true;
+    }
+
+    else if(sec === $projectImageVert) {
       progressiveLoadProjectImageVert();
       projectImageVertLoaded = true;
     }
@@ -434,10 +455,14 @@ $(document).ready(function() {
 
 /* ~~~~~~~~~~~ WINDOW ~~~~~~~~~~~ */
   $(window).on("DOMContentLoaded load resize scroll", function() {
-    if(projectImageVertLoaded === false || projectImageRecipeBookLoaded === false ||
+    if(projectImageDropDateLoaded === false || projectImageVertLoaded === false || projectImageRecipeBookLoaded === false ||
     archiveImageWeatherLoaded === false || archiveImageDgPuttingLoaded === false ||
     archiveImageCalcLoaded === false) {
       windowTop = $navbar.height();
+    }
+
+    if(projectImageDropDateLoaded === false) {
+      lazyLoadSection($projectImageDropDate);
     }
 
     if(projectImageVertLoaded === false) {
