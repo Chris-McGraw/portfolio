@@ -357,8 +357,7 @@ button {
 }
 
 #about-icon-container-bottom {
-  display: flex;
-  justify-content: center;
+  display: none;
   width: auto;
   -webkit-user-select: none;
   user-select: none;
@@ -367,15 +366,11 @@ button {
 .about-icon {
   height: 3.25rem;
   width: auto;
-  margin-right: 5rem;
+  margin-right: 2.5rem;
 }
 
 #sass-icon {
   margin-right: 0;
-}
-
-#about-icon-container-bottom {
-  display: none;
 }
 
 /* --------------------------- PROJECT SECTION --------------------------- */
@@ -829,10 +824,6 @@ textarea {
     padding: 5rem 5rem;
   }
 
-  .about-icon {
-    margin-right: 2.5rem;
-  }
-
   #project-container-grid {
     grid-row-gap: 0;
   }
@@ -999,15 +990,15 @@ textarea {
     padding: 5rem 2.5rem;
   }
 
-  .about-icon {
-    margin-right: 2.5rem;
-  }
-
   #javascript-icon {
     margin-right: 0;
   }
 
   #jquery-icon {
+    display: none;
+  }
+
+  #angular-icon {
     display: none;
   }
 

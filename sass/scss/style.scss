@@ -394,8 +394,7 @@ button {
 }
 
 #about-icon-container-bottom {
-  display: flex;
-  justify-content: center;
+  display: none;
 
   width: auto;
 
@@ -406,15 +405,11 @@ button {
 .about-icon {
   height: 3.25rem;
   width: auto;
-  margin-right: $section-padding-xl;
+  margin-right: $section-padding-lg;
 }
 
 #sass-icon {
   margin-right: 0;
-}
-
-#about-icon-container-bottom {
-  display: none;
 }
 
 
@@ -984,10 +979,6 @@ textarea {
     padding: $section-padding-xl $section-padding-xl;
   }
 
-  .about-icon {
-    margin-right: $section-padding-lg;
-  }
-
 
 
   #project-container-grid {
@@ -1181,15 +1172,15 @@ textarea {
     padding: $section-padding-xl $section-padding-lg;
   }
 
-  .about-icon {
-    margin-right: $section-padding-lg;
-  }
-
   #javascript-icon {
     margin-right: 0;
   }
 
   #jquery-icon {
+    display: none;
+  }
+
+  #angular-icon {
     display: none;
   }
 
