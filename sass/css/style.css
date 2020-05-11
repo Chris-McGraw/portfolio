@@ -4,7 +4,7 @@
   text-align: left;
 }
 
-#contact, #archive-container, #project, #landing-container {
+#contact-inner, #archive-inner, #project-inner, #landing-inner {
   padding: 5rem 2.5rem;
 }
 
@@ -86,11 +86,25 @@ button {
 }
 
 /* -------------------------------- NAVBAR -------------------------------- */
+#navbar-section {
+  z-index: 50;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  background-color: #e9ece7;
+  box-sizing: content-box;
+  border-bottom: 1px solid rgba(29, 31, 33, 0.2);
+}
+
 #navbar {
   z-index: 50;
   position: fixed;
   top: 0;
   width: 100%;
+  max-width: 1440px;
   height: 5rem;
   text-align: right;
   background-color: #e9ece7;
@@ -195,18 +209,17 @@ button {
 }
 
 /* --------------------------- LANDING SECTION --------------------------- */
-#landing-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+#landing-section {
   z-index: 10;
   position: relative;
-  height: auto;
-  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #3b3b3b;
   overflow: hidden;
 }
 
-#landing-container:after {
+#landing-section:after {
   content: "";
   z-index: -1;
   position: absolute;
@@ -220,6 +233,15 @@ button {
   background-repeat: no-repeat;
   opacity: 0.15;
   transform: scale(1.15);
+}
+
+#landing-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  text-align: right;
 }
 
 #pseudo-ide-container {
@@ -326,14 +348,21 @@ button {
 }
 
 /* ---------------------------- ABOUT SECTION ---------------------------- */
-#about {
+#about-section {
   z-index: 10;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0;
+}
+
+#about-inner {
   height: auto;
   width: 100%;
+  max-width: 1440px;
   padding: 5rem 10rem;
   text-align: center;
-  background-color: #e0e0e0;
 }
 
 .about-text {
@@ -374,12 +403,20 @@ button {
 }
 
 /* --------------------------- PROJECT SECTION --------------------------- */
-#project {
+#project-section {
   z-index: 20;
   position: relative;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #beb8af;
   overflow: hidden;
+}
+
+#project-inner {
+  width: 100%;
+  max-width: 1440px;
+  text-align: center;
 }
 
 #project-container-grid {
@@ -486,14 +523,21 @@ button {
 }
 
 /* --------------------------- ARCHIVE SECTION --------------------------- */
-#archive-container {
+#archive-section {
   z-index: 20;
   position: relative;
-  height: auto;
-  width: 100%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #e0e0e0;
   overflow: hidden;
+}
+
+#archive-inner {
+  height: auto;
+  width: 100%;
+  max-width: 1440px;
+  text-align: center;
 }
 
 #archive-link-list {
@@ -541,19 +585,17 @@ button {
 }
 
 /* --------------------------- CONTACT SECTION --------------------------- */
-#contact {
+#contact-section {
   z-index: 10;
   position: relative;
-  width: 100%;
-  height: auto;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #3b3b3b;
   overflow: hidden;
 }
 
-#contact:after {
+#contact-section:after {
   content: "";
   z-index: -10;
   position: absolute;
@@ -567,6 +609,15 @@ button {
   background-repeat: no-repeat;
   opacity: 0.15;
   transform: scale(1.15);
+}
+
+#contact-inner {
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  text-align: center;
 }
 
 #contact-header {
@@ -820,7 +871,7 @@ textarea {
     grid-column: span 4;
   }
 
-  #about {
+  #about-inner {
     padding: 5rem 5rem;
   }
 
@@ -906,7 +957,7 @@ textarea {
     height: 15rem;
   }
 
-  #contact:after {
+  #contact-section:after {
     top: auto;
     bottom: 0;
     height: 50%;
@@ -986,7 +1037,7 @@ textarea {
     display: block;
   }
 
-  #about {
+  #about-inner {
     padding: 5rem 2.5rem;
   }
 
@@ -1037,7 +1088,7 @@ textarea {
     height: auto;
   }
 
-  #archive-container {
+  #archive-inner {
     padding: 5rem;
   }
 }
@@ -1054,7 +1105,7 @@ textarea {
 }
 /* -------------------------- MEDIA QUERY <= 431 -------------------------- */
 @media screen and (max-width: 431px) {
-  #landing-container:after {
+  #landing-section:after {
     background-position: 50px 0;
   }
 
@@ -1068,7 +1119,7 @@ textarea {
 }
 /* -------------------------- MEDIA QUERY <= 379 -------------------------- */
 @media screen and (max-width: 379px) {
-  #landing-container:after {
+  #landing-section:after {
     background-position: 0 0;
   }
 

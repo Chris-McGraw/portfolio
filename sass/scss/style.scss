@@ -59,12 +59,29 @@ button {
 
 
 /* -------------------------------- NAVBAR -------------------------------- */
+#navbar-section {
+  z-index: 50;
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 5rem;
+
+  background-color: rgba(233, 236, 231, 1.0);
+  box-sizing: content-box;
+  border-bottom: 1px solid rgba(29, 31, 33, 0.2);
+}
+
 #navbar {
   z-index: 50;
   position: fixed;
   top: 0;
 
   width: 100%;
+  max-width: 1440px;
   height: 5rem;
 
   text-align: right;
@@ -195,24 +212,20 @@ button {
 
 
 /* --------------------------- LANDING SECTION --------------------------- */
-#landing-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
+#landing-section {
   z-index: 10;
   position: relative;
 
-  height: auto;
-  @extend %section-container-padding;
-
-  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   background-color: $background-gray;
 
   overflow: hidden;
 }
 
-#landing-container:after {
+#landing-section:after {
   content: "";
 
   z-index: -1;
@@ -229,6 +242,18 @@ button {
 
   opacity: 0.15;
   transform: scale(1.15);
+}
+
+#landing-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  @extend %section-container-padding;
+
+  text-align: right;
 }
 
 #pseudo-ide-container {
@@ -353,17 +378,24 @@ button {
 
 
 /* ---------------------------- ABOUT SECTION ---------------------------- */
-#about {
+#about-section {
   z-index: 10;
   position: relative;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $white;
+}
+
+#about-inner {
   height: auto;
   width: 100%;
+  max-width: 1440px;
   padding: $section-padding-xl ($section-padding-xl * 2);
 
   text-align: center;
-
-  background-color: $white;
 }
 
 #about-header {
@@ -415,17 +447,26 @@ button {
 
 
 /* --------------------------- PROJECT SECTION --------------------------- */
-#project {
+#project-section {
   z-index: 20;
   position: relative;
 
-  @extend %section-container-padding;
-
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   background-color: $background-tan;
 
   overflow: hidden;
+}
+
+#project-inner {
+  @extend %section-container-padding;
+
+  width: 100%;
+  max-width: 1440px;
+
+  text-align: center;
 }
 
 #project-header {
@@ -551,19 +592,26 @@ button {
 
 
 /* --------------------------- ARCHIVE SECTION --------------------------- */
-#archive-container {
+#archive-section {
   z-index: 20;
   position: relative;
 
-  height: auto;
-  width: 100%;
-  @extend %section-container-padding;
-
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   background-color: $white;
 
   overflow: hidden;
+}
+
+#archive-inner {
+  height: auto;
+  width: 100%;
+  max-width: 1440px;
+  @extend %section-container-padding;
+
+  text-align: center;
 }
 
 #archive-header {
@@ -626,25 +674,20 @@ button {
 
 
 /* --------------------------- CONTACT SECTION --------------------------- */
-#contact {
+#contact-section {
   z-index: 10;
   position: relative;
 
-  width: 100%;
-  height: auto;
-
-  @extend %section-container-padding;
-
-  font-family: $font-stack-main;
-  font-weight: 300;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   background-color: $background-gray;
 
   overflow: hidden;
 }
 
-#contact:after {
+#contact-section:after {
   content: "";
 
   z-index: -10;
@@ -661,6 +704,18 @@ button {
 
   opacity: 0.15;
   transform: scale(1.15);
+}
+
+#contact-inner {
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+
+  @extend %section-container-padding;
+
+  font-family: $font-stack-main;
+  font-weight: 300;
+  text-align: center;
 }
 
 #contact-header {
@@ -975,7 +1030,7 @@ textarea {
 
 
 
-  #about {
+  #about-inner {
     padding: $section-padding-xl $section-padding-xl;
   }
 
@@ -1073,7 +1128,7 @@ textarea {
 
 
 
-  #contact:after {
+  #contact-section:after {
     top: auto;
     bottom: 0;
 
@@ -1168,7 +1223,7 @@ textarea {
 
 
 
-  #about {
+  #about-inner {
     padding: $section-padding-xl $section-padding-lg;
   }
 
@@ -1227,7 +1282,7 @@ textarea {
 
 
 
-  #archive-container {
+  #archive-inner {
     padding: $section-padding-xl;
   }
 }
@@ -1250,7 +1305,7 @@ textarea {
 
 /* -------------------------- MEDIA QUERY <= 431 -------------------------- */
 @media screen and (max-width: 431px) {
-  #landing-container:after {
+  #landing-section:after {
     background-position: 50px 0;
   }
 
@@ -1267,7 +1322,7 @@ textarea {
 
 /* -------------------------- MEDIA QUERY <= 379 -------------------------- */
 @media screen and (max-width: 379px) {
-  #landing-container:after {
+  #landing-section:after {
     background-position: 0 0;
   }
 
