@@ -46,7 +46,7 @@ let blankLineDelay = false;
 
 
 /* ~~~~~~~ ABOUT SECTION ~~~~~~~ */
-var $aboutContainer = $("#about");
+var $aboutSection = $("#about-section");
 
 
 /* ~~~~~~ PROJECT SECTION ~~~~~~ */
@@ -54,7 +54,7 @@ var projectImageDropDateLoaded = false;
 var projectImageVertLoaded = false;
 var projectImageRecipeBookLoaded = false;
 
-var $projectContainer = $("#project");
+var $projectSection = $("#project-section");
 var $projectImageDropDate = $("#project-image-drop-date");
 var $projectImageVert = $("#project-image-vert");
 var $projectImageRecipeBook = $("#project-image-recipe-book");
@@ -80,7 +80,7 @@ var videoLoadLoopTimeout = "";
 
 
 /* ~~~~~~ CONTACT SECTION ~~~~~~ */
-var $contactContainer = $("#contact");
+var $contactSection = $("#contact-section");
 var $submitButton = $("#submit-button");
 
 
@@ -218,22 +218,22 @@ function scrollToSection(currentSection) {
   let currentSectionText = currentSection.children().text();
 
   if(currentSectionText === "About") {
-    let currentSectionPositionTop = $aboutContainer.position().top;
-    let currentSectionPadding = Number( $aboutContainer.css("padding-top").match(/\d+/)[0] );
+    let currentSectionPositionTop = $aboutSection.position().top;
+    let currentSectionPadding = Number( $aboutSection.css("padding-top").match(/\d+/)[0] );
     let sectionScrollPosition = currentSectionPositionTop + currentSectionPadding;
 
     window.scrollTo(0, sectionScrollPosition);
   }
   else if(currentSectionText === "Projects") {
-    let currentSectionPositionTop = $projectContainer.position().top;
-    let currentSectionPadding = Number( $projectContainer.css("padding-top").match(/\d+/)[0] );
+    let currentSectionPositionTop = $projectSection.position().top;
+    let currentSectionPadding = Number( $projectSection.css("padding-top").match(/\d+/)[0] );
     let sectionScrollPosition = currentSectionPositionTop + currentSectionPadding;
 
     window.scrollTo(0, sectionScrollPosition);
   }
   else if(currentSectionText === "Contact") {
-    let currentSectionPositionTop = $contactContainer.position().top;
-    let currentSectionPadding = Number( $contactContainer.css("padding-top").match(/\d+/)[0] );
+    let currentSectionPositionTop = $contactSection.position().top;
+    let currentSectionPadding = Number( $contactSection.css("padding-top").match(/\d+/)[0] );
     let sectionScrollPosition = currentSectionPositionTop + currentSectionPadding;
 
     window.scrollTo(0, sectionScrollPosition);
