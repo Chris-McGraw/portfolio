@@ -454,35 +454,39 @@ $(document).ready(function() {
 
 
 /* ~~~~~~~~~~~ WINDOW ~~~~~~~~~~~ */
+  var debounceTimeout;
+
   $(window).on("DOMContentLoaded load resize scroll", function() {
     if(projectImageDropDateLoaded === false || projectImageVertLoaded === false || projectImageRecipeBookLoaded === false ||
     archiveImageWeatherLoaded === false || archiveImageDgPuttingLoaded === false ||
     archiveImageCalcLoaded === false) {
-      windowTop = $navbar.height();
-    }
+      clearTimeout(debounceTimeout);
 
-    if(projectImageDropDateLoaded === false) {
-      lazyLoadSection($projectImageDropDate);
-    }
+      debounceTimeout = setTimeout(function() {
+        windowTop = $navbar.height();
 
-    if(projectImageVertLoaded === false) {
-      lazyLoadSection($projectImageVert);
-    }
+        console.log(windowTop);
 
-    if(projectImageRecipeBookLoaded === false) {
-      lazyLoadSection($projectImageRecipeBook);
-    }
+        if(projectImageDropDateLoaded === false) {
+          lazyLoadSection($projectImageDropDate);
+        }
+        if(projectImageRecipeBookLoaded === false) {
+          lazyLoadSection($projectImageRecipeBook);
+        }
+        if(projectImageVertLoaded === false) {
+          lazyLoadSection($projectImageVert);
+        }
 
-    if(archiveImageWeatherLoaded === false) {
-      lazyLoadSection($archiveLink1);
-    }
-
-    if(archiveImageDgPuttingLoaded === false) {
-      lazyLoadSection($archiveLink2);
-    }
-
-    if(archiveImageCalcLoaded === false) {
-      lazyLoadSection($archiveLink3);
+        if(archiveImageWeatherLoaded === false) {
+          lazyLoadSection($archiveLink1);
+        }
+        if(archiveImageDgPuttingLoaded === false) {
+          lazyLoadSection($archiveLink2);
+        }
+        if(archiveImageCalcLoaded === false) {
+          lazyLoadSection($archiveLink3);
+        }
+      }, 100);
     }
   });
 
