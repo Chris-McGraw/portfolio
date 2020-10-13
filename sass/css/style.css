@@ -55,6 +55,10 @@
   cursor: default;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #1d1f21;
   overflow-x: hidden;
