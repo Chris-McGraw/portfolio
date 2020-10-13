@@ -465,8 +465,6 @@ $(document).ready(function() {
       debounceTimeout = setTimeout(function() {
         windowTop = $navbar.height();
 
-        console.log(windowTop);
-
         if(projectImageDropDateLoaded === false) {
           lazyLoadSection($projectImageDropDate);
         }
