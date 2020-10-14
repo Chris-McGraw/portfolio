@@ -419,10 +419,11 @@ button {
 }
 
 #about-icon-container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
 
-  width: auto;
+  width: 100%;
   margin-top: $section-padding-lg;
 
   -webkit-user-select: none;
@@ -430,22 +431,30 @@ button {
 }
 
 #about-icon-container-bottom {
-  display: none;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
 
-  width: auto;
+  width: 100%;
+  margin-top: $section-padding-lg;
 
   -webkit-user-select: none;
   user-select: none;
 }
 
-.about-icon {
+.icon-inner-container {
+  display: grid;
+  justify-content: center;
+  grid-column: span 1;
+
   height: 3.25rem;
-  width: auto;
-  margin-right: $section-padding-lg;
 }
 
-#sass-icon {
-  margin-right: 0;
+.about-icon {
+  height: 3.25rem;
+
+  font-size: 3.25rem;
+  color: #b3b3b3;
 }
 
 
@@ -893,6 +902,8 @@ textarea {
     font-size: 16px;
   }
 
+// ---
+
   #ide-text-cursor {
     top: -0.1rem;
   }
@@ -910,7 +921,7 @@ textarea {
     font-size: 14px;
   }
 
-
+// ---
 
   #page-jump-link-list {
     display: none;
@@ -1026,19 +1037,23 @@ textarea {
     border-right: 1px solid rgba(29, 31, 33, 0.2);
   }
 
-
+// ---
 
   #pseudo-ide-container {
     grid-column: span 4;
   }
 
-
+// ---
 
   #about-inner {
     padding: $section-padding-xl $section-padding-xl;
   }
 
+  #about-icon-container-bottom {
+    margin-top: $section-padding-md;
+  }
 
+// ---
 
   #project-container-grid {
     grid-row-gap: 0;
@@ -1115,7 +1130,7 @@ textarea {
     justify-content: center;
   }
 
-
+// ---
 
   .archive-thumbnail {
     grid-column: span 3;
@@ -1130,7 +1145,7 @@ textarea {
     height: 15rem;
   }
 
-
+// ---
 
   #contact-section:after {
     top: auto;
@@ -1215,7 +1230,7 @@ textarea {
     grid-column: span 3;
   }
 
-
+// ---
 
   #pseudo-ide-container {
     height: 15rem;
@@ -1225,41 +1240,13 @@ textarea {
     display: block;
   }
 
-
+// ---
 
   #about-inner {
     padding: $section-padding-xl $section-padding-lg;
   }
 
-  #javascript-icon {
-    margin-right: 0;
-  }
-
-  #jquery-icon {
-    display: none;
-  }
-
-  #angular-icon {
-    display: none;
-  }
-
-  #sass-icon {
-    display: none;
-  }
-
-  #about-icon-container-bottom {
-    display: flex;
-    justify-content: center;
-
-    width: auto;
-    margin-top: $section-padding-md;
-  }
-
-  #sass-icon-bottom {
-    margin-right: 0;
-  }
-
-
+// ---
 
   .project-description {
     margin-left: 0;
@@ -1284,7 +1271,7 @@ textarea {
     height: auto;
   }
 
-
+// ---
 
   #archive-inner {
     padding: $section-padding-xl;
