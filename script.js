@@ -65,16 +65,19 @@ var $projectLink = $(".project-link");
 var archiveImageWeatherLoaded = false;
 var archiveImageDgPuttingLoaded = false;
 var archiveImageCalcLoaded = false;
+var archiveImageSVGLineLoaded = false;
 
 var $archiveLink = $(".archive-link");
 var $archiveLink1 = $("#archive-link-1");
 var $archiveLink2 = $("#archive-link-2");
 var $archiveLink3 = $("#archive-link-3");
+var $archiveLink4 = $("#archive-link-4");
 var selectedArchiveLink = "";
 
 var $archiveImageWeather = $("#archive-image-weather");
 var $archiveImageDgPutting = $("#archive-image-dg-putting");
 var $archiveImageCalc = $("#archive-image-calc");
+var $archiveImageSVGLine = $("#archive-image-svg-line");
 
 var videoLoadLoopTimeout = "";
 
@@ -176,6 +179,20 @@ function progressiveLoadArchiveImageCalc() {
 }
 
 
+function progressiveLoadArchiveImageSVGLine() {
+  $("<img/>").attr("src", "images/archive/svg-line-anim-snap.jpg").on("load", function() {
+    $(this).remove();
+
+    $archiveImageSVGLine.attr("src", "images/archive/svg-line-anim-snap.jpg");
+    $archiveLink4.css("filter", "blur(0)");
+
+    setTimeout(function() {
+      $archiveLink4.css("filter", "none");
+    }, 750);
+  });
+}
+
+
 function lazyLoadSection(sec) {
   var sectionId = sec.attr("id");
   var rect = document.getElementById(sectionId).getBoundingClientRect();
@@ -209,6 +226,11 @@ function lazyLoadSection(sec) {
     else if(sec === $archiveLink3) {
       progressiveLoadArchiveImageCalc();
       archiveImageCalcLoaded = true;
+    }
+
+    else if(sec === $archiveLink4) {
+      progressiveLoadArchiveImageSVGLine();
+      archiveImageSVGLineLoaded = true;
     }
   }
 }
@@ -459,11 +481,12 @@ $(document).ready(function() {
   $(window).on("DOMContentLoaded load resize scroll", function() {
     if(projectImageDropDateLoaded === false || projectImageVertLoaded === false || projectImageRecipeBookLoaded === false ||
     archiveImageWeatherLoaded === false || archiveImageDgPuttingLoaded === false ||
-    archiveImageCalcLoaded === false) {
+    archiveImageCalcLoaded === false || archiveImageSVGLineLoaded === false) {
       clearTimeout(debounceTimeout);
 
       debounceTimeout = setTimeout(function() {
         windowTop = $navbar.height();
+        console.log(windowTop);
 
         if(projectImageDropDateLoaded === false) {
           lazyLoadSection($projectImageDropDate);
@@ -483,6 +506,9 @@ $(document).ready(function() {
         }
         if(archiveImageCalcLoaded === false) {
           lazyLoadSection($archiveLink3);
+        }
+        if(archiveImageSVGLineLoaded === false) {
+          lazyLoadSection($archiveLink4);
         }
       }, 100);
     }
