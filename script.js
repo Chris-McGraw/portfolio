@@ -50,34 +50,13 @@ var $aboutSection = $("#about-section");
 
 
 /* ~~~~~~ PROJECT SECTION ~~~~~~ */
-var projectImageDropDateLoaded = false;
-var projectImageVertLoaded = false;
-var projectImageRecipeBookLoaded = false;
-
 var $projectSection = $("#project-section");
-var $projectImageDropDate = $("#project-image-drop-date");
-var $projectImageVert = $("#project-image-vert");
-var $projectImageRecipeBook = $("#project-image-recipe-book");
 var $projectLink = $(".project-link");
 
 
 /* ~~~~~~ ARCHIVE SECTION ~~~~~~ */
-var archiveImageWeatherLoaded = false;
-var archiveImageDgPuttingLoaded = false;
-var archiveImageCalcLoaded = false;
-var archiveImageSVGLineLoaded = false;
-
 var $archiveLink = $(".archive-link");
-var $archiveLink1 = $("#archive-link-1");
-var $archiveLink2 = $("#archive-link-2");
-var $archiveLink3 = $("#archive-link-3");
-var $archiveLink4 = $("#archive-link-4");
 var selectedArchiveLink = "";
-
-var $archiveImageWeather = $("#archive-image-weather");
-var $archiveImageDgPutting = $("#archive-image-dg-putting");
-var $archiveImageCalc = $("#archive-image-calc");
-var $archiveImageSVGLine = $("#archive-image-svg-line");
 
 var videoLoadLoopTimeout = "";
 
@@ -95,143 +74,48 @@ var $footerLink = $(".footer-link");
 
 
 /* ------------------------- FUNCTION DECLARATIONS ------------------------- */
-function progressiveLoadProjectImageDropDate() {
-  $("<img/>").attr("src", "images/projects/mockup-drop-date.jpg").on("load", function() {
-    $(this).remove();
+function progressiveLoadImg(imgID) {
+  for (const property in masterImgList) {
+    if(imgID === masterImgList[property].id) {
+      // console.log(imgID + " loaded");
 
-    $projectImageDropDate.attr("src", "images/projects/mockup-drop-date.jpg");
-    $projectImageDropDate.css("filter", "blur(0)");
+      if(masterImgList[property].type === "project") {
+        $("<img/>").attr("src", masterImgList[property].main).on("load", function() {
+          $(this).remove();
 
-    setTimeout(function() {
-      $projectImageDropDate.css("filter", "none");
-    }, 750);
-  });
+          document.getElementById(imgID).src = masterImgList[property].main;
+          document.getElementById(imgID).style.filter = "blur(0)";
+
+          setTimeout(function() {
+            document.getElementById(imgID).style.filter = "none";
+          }, 750);
+        });
+      }
+      else if(masterImgList[property].type === "archive") {
+        $("<img/>").attr("src", masterImgList[property].main).on("load", function() {
+          $(this).remove();
+
+          document.getElementById(imgID).src = masterImgList[property].main;
+          document.getElementById(imgID).parentElement.style.filter = "blur(0)";
+
+          setTimeout(function() {
+            document.getElementById(imgID).parentElement.style.filter = "none";
+          }, 750);
+        });
+      }
+
+      masterImgList[property].loaded = true;
+      updateImgLoadedArray();
+    }
+  }
 }
 
 
-function progressiveLoadProjectImageVert() {
-  $("<img/>").attr("src", "images/projects/mockup-vert.jpg").on("load", function() {
-    $(this).remove();
-
-    $projectImageVert.attr("src", "images/projects/mockup-vert.jpg");
-    $projectImageVert.css("filter", "blur(0)");
-
-    setTimeout(function() {
-      $projectImageVert.css("filter", "none");
-    }, 750);
-  });
-}
-
-
-function progressiveLoadProjectImageRecipeBook() {
-  $("<img/>").attr("src", "images/projects/mockup-recipe-book.jpg").on("load", function() {
-    $(this).remove();
-
-    $projectImageRecipeBook.attr("src", "images/projects/mockup-recipe-book.jpg");
-    $projectImageRecipeBook.css("filter", "blur(0)");
-
-    setTimeout(function() {
-      $projectImageRecipeBook.css("filter", "none");
-    }, 750);
-  });
-}
-
-
-function progressiveLoadArchiveImageWeather() {
-  $("<img/>").attr("src", "images/archive/weather-snap.jpg").on("load", function() {
-    $(this).remove();
-
-    $archiveImageWeather.attr("src", "images/archive/weather-snap.jpg");
-    $archiveLink1.css("filter", "blur(0)");
-
-    setTimeout(function() {
-      $archiveLink1.css("filter", "none");
-    }, 750);
-  });
-}
-
-
-function progressiveLoadArchiveImageDgPutting() {
-  $("<img/>").attr("src", "images/archive/dg-putting-snap.jpg").on("load", function() {
-    $(this).remove();
-
-    $archiveImageDgPutting.attr("src", "images/archive/dg-putting-snap.jpg");
-    $archiveLink2.css("filter", "blur(0)");
-
-    setTimeout(function() {
-      $archiveLink2.css("filter", "none");
-    }, 750);
-  });
-}
-
-
-function progressiveLoadArchiveImageCalc() {
-  $("<img/>").attr("src", "images/archive/calc-snap.jpg").on("load", function() {
-    $(this).remove();
-
-    $archiveImageCalc.attr("src", "images/archive/calc-snap.jpg");
-    $archiveLink3.css("filter", "blur(0)");
-
-    setTimeout(function() {
-      $archiveLink3.css("filter", "none");
-    }, 750);
-  });
-}
-
-
-function progressiveLoadArchiveImageSVGLine() {
-  $("<img/>").attr("src", "images/archive/svg-line-anim-snap.jpg").on("load", function() {
-    $(this).remove();
-
-    $archiveImageSVGLine.attr("src", "images/archive/svg-line-anim-snap.jpg");
-    $archiveLink4.css("filter", "blur(0)");
-
-    setTimeout(function() {
-      $archiveLink4.css("filter", "none");
-    }, 750);
-  });
-}
-
-
-function lazyLoadSection(sec) {
-  var sectionId = sec.attr("id");
-  var rect = document.getElementById(sectionId).getBoundingClientRect();
+function lazyLoadImg(imgID) {
+  var rect = document.getElementById(imgID).getBoundingClientRect();
 
   if(rect.top <= $(window).height() && rect.bottom >= windowTop) {
-    if(sec === $projectImageDropDate) {
-      progressiveLoadProjectImageDropDate();
-      projectImageDropDateLoaded = true;
-    }
-
-    else if(sec === $projectImageVert) {
-      progressiveLoadProjectImageVert();
-      projectImageVertLoaded = true;
-    }
-
-    else if(sec === $projectImageRecipeBook) {
-      progressiveLoadProjectImageRecipeBook();
-      projectImageRecipeBookLoaded = true;
-    }
-
-    else if(sec === $archiveLink1) {
-      progressiveLoadArchiveImageWeather();
-      archiveImageWeatherLoaded = true;
-    }
-
-    else if(sec === $archiveLink2) {
-      progressiveLoadArchiveImageDgPutting();
-      archiveImageDgPuttingLoaded = true;
-    }
-
-    else if(sec === $archiveLink3) {
-      progressiveLoadArchiveImageCalc();
-      archiveImageCalcLoaded = true;
-    }
-
-    else if(sec === $archiveLink4) {
-      progressiveLoadArchiveImageSVGLine();
-      archiveImageSVGLineLoaded = true;
-    }
+    progressiveLoadImg(imgID);
   }
 }
 
@@ -479,36 +363,21 @@ $(document).ready(function() {
   var debounceTimeout;
 
   $(window).on("DOMContentLoaded load resize scroll", function() {
-    if(projectImageDropDateLoaded === false || projectImageVertLoaded === false || projectImageRecipeBookLoaded === false ||
-    archiveImageWeatherLoaded === false || archiveImageDgPuttingLoaded === false ||
-    archiveImageCalcLoaded === false || archiveImageSVGLineLoaded === false) {
+    function imgIsLoaded(status) {
+      return status === true;
+    }
+
+    if(imgLoadedArray.every(imgIsLoaded) === false) {
       clearTimeout(debounceTimeout);
 
       debounceTimeout = setTimeout(function() {
         windowTop = $navbar.height();
-        console.log(windowTop);
+        // console.log(windowTop);
 
-        if(projectImageDropDateLoaded === false) {
-          lazyLoadSection($projectImageDropDate);
-        }
-        if(projectImageRecipeBookLoaded === false) {
-          lazyLoadSection($projectImageRecipeBook);
-        }
-        if(projectImageVertLoaded === false) {
-          lazyLoadSection($projectImageVert);
-        }
-
-        if(archiveImageWeatherLoaded === false) {
-          lazyLoadSection($archiveLink1);
-        }
-        if(archiveImageDgPuttingLoaded === false) {
-          lazyLoadSection($archiveLink2);
-        }
-        if(archiveImageCalcLoaded === false) {
-          lazyLoadSection($archiveLink3);
-        }
-        if(archiveImageSVGLineLoaded === false) {
-          lazyLoadSection($archiveLink4);
+        for (const property in masterImgList) {
+          if(masterImgList[property].loaded === false) {
+            lazyLoadImg(masterImgList[property].id);
+          }
         }
       }, 100);
     }
