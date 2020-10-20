@@ -47,6 +47,13 @@ const masterImgList = {
     tiny: "images/archive/svg-line-anim-snap-tiny.jpg",
     main: "images/archive/svg-line-anim-snap.jpg",
     loaded: false
+  },
+  dgGameProtoArchive: {
+    id: "archive-image-dg-game-proto",
+    type: "archive",
+    tiny: "images/archive/dg-game-proto-snap-tiny.jpg",
+    main: "images/archive/dg-game-proto-snap.jpg",
+    loaded: false
   }
 }
 
