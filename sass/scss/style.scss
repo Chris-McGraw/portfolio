@@ -489,7 +489,7 @@ button {
 #project-container-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: $section-padding-sm;
+  grid-column-gap: 0;
   grid-row-gap: $section-padding-xl;
 
   position: relative;
@@ -553,10 +553,14 @@ button {
 }
 
 .project-text-left {
+  padding-right: $section-padding-lg;
+
   text-align: left;
 }
 
 .project-text-right {
+  padding-left: $section-padding-lg;
+
   text-align: right;
 }
 
@@ -634,7 +638,7 @@ button {
 #archive-link-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: $section-padding-md;
+  grid-column-gap: $section-padding-lg;
   grid-row-gap: $section-padding-lg;
 }
 
@@ -915,6 +919,26 @@ textarea {
 
 
 
+/* ------------------------- MEDIA QUERY <= 1200 ------------------------- */
+@media screen and (max-width: 1200px) {
+  .project-text-left {
+    padding-right: $section-padding-md;
+  }
+
+  .project-text-right {
+    padding-left: $section-padding-md;
+  }
+
+// ---
+
+  #archive-link-list {
+    grid-column-gap: $section-padding-md;
+    grid-row-gap: $section-padding-md;
+  }
+}
+
+
+
 /* -------------------------- MEDIA QUERY <= 935 -------------------------- */
 @media screen and (max-width: 935px) {
   :root {
@@ -1106,14 +1130,18 @@ textarea {
 
   .project-image {
     width: auto;
-    height: 20rem;
+    height: 25rem;
   }
 
   .project-text-left {
+    padding-right: 0;
+
     text-align: center;
   }
 
   .project-text-right {
+    padding-left: 0;
+
     text-align: center;
   }
 
@@ -1132,17 +1160,10 @@ textarea {
 
 // ---
 
-  .archive-thumbnail {
-    grid-column: span 3;
-  }
-
-  .archive-link {
-    width: auto;
-  }
-
-  .archive-image, .archive-vid {
-    width: auto;
-    height: 15rem;
+  #archive-link-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: $section-padding-lg;
+    grid-row-gap: $section-padding-lg;
   }
 
 // ---
@@ -1167,6 +1188,14 @@ textarea {
   }
 }
 
+
+
+/* -------------------------- MEDIA QUERY <= 700 -------------------------- */
+@media screen and (max-width: 700px) {
+  .project-image {
+    height: 20rem;
+  }
+}
 
 
 /* -------------------------- MEDIA QUERY <= 600 -------------------------- */
@@ -1252,6 +1281,13 @@ textarea {
     margin-left: 0;
     margin-right: 0;
   }
+
+// ---
+
+  #archive-link-list {
+    grid-column-gap: $section-padding-md;
+    grid-row-gap: $section-padding-md;
+  }
 }
 
 
@@ -1270,25 +1306,28 @@ textarea {
     width: 100%;
     height: auto;
   }
-
-// ---
-
-  #archive-inner {
-    padding: $section-padding-xl;
-  }
 }
 
 
 
-/* -------------------------- MEDIA QUERY <= 491 -------------------------- */
-@media screen and (max-width: 491px) {
+/* -------------------------- MEDIA QUERY <= 450 -------------------------- */
+@media screen and (max-width: 450px) {
+  #archive-link-list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: $section-padding-lg;
+  }
+
+  .archive-thumbnail {
+    grid-column: span 1;
+  }
+
   .archive-link {
-    width: 100%;
+    width: auto;
   }
 
   .archive-image, .archive-vid {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 10rem;
   }
 }
 

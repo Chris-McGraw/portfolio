@@ -433,7 +433,7 @@ button {
 #project-container-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 0.75rem;
+  grid-column-gap: 0;
   grid-row-gap: 5rem;
   position: relative;
 }
@@ -492,10 +492,12 @@ button {
 }
 
 .project-text-left {
+  padding-right: 2.5rem;
   text-align: left;
 }
 
 .project-text-right {
+  padding-left: 2.5rem;
   text-align: right;
 }
 
@@ -554,7 +556,7 @@ button {
 #archive-link-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 1.25rem;
+  grid-column-gap: 2.5rem;
   grid-row-gap: 2.5rem;
 }
 
@@ -778,6 +780,21 @@ textarea {
     height: 11.85rem;
   }
 }
+/* ------------------------- MEDIA QUERY <= 1200 ------------------------- */
+@media screen and (max-width: 1200px) {
+  .project-text-left {
+    padding-right: 1.25rem;
+  }
+
+  .project-text-right {
+    padding-left: 1.25rem;
+  }
+
+  #archive-link-list {
+    grid-column-gap: 1.25rem;
+    grid-row-gap: 1.25rem;
+  }
+}
 /* -------------------------- MEDIA QUERY <= 935 -------------------------- */
 @media screen and (max-width: 935px) {
   :root {
@@ -935,14 +952,16 @@ textarea {
 
   .project-image {
     width: auto;
-    height: 20rem;
+    height: 25rem;
   }
 
   .project-text-left {
+    padding-right: 0;
     text-align: center;
   }
 
   .project-text-right {
+    padding-left: 0;
     text-align: center;
   }
 
@@ -959,17 +978,10 @@ textarea {
     justify-content: center;
   }
 
-  .archive-thumbnail {
-    grid-column: span 3;
-  }
-
-  .archive-link {
-    width: auto;
-  }
-
-  .archive-image, .archive-vid {
-    width: auto;
-    height: 15rem;
+  #archive-link-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2.5rem;
+    grid-row-gap: 2.5rem;
   }
 
   #contact-section:after {
@@ -986,6 +998,12 @@ textarea {
 
   #contact-message-container {
     grid-column: span 5;
+  }
+}
+/* -------------------------- MEDIA QUERY <= 700 -------------------------- */
+@media screen and (max-width: 700px) {
+  .project-image {
+    height: 20rem;
   }
 }
 /* -------------------------- MEDIA QUERY <= 600 -------------------------- */
@@ -1060,6 +1078,11 @@ textarea {
     margin-left: 0;
     margin-right: 0;
   }
+
+  #archive-link-list {
+    grid-column-gap: 1.25rem;
+    grid-row-gap: 1.25rem;
+  }
 }
 /* -------------------------- MEDIA QUERY <= 569 -------------------------- */
 @media screen and (max-width: 569px) {
@@ -1075,20 +1098,25 @@ textarea {
     width: 100%;
     height: auto;
   }
-
-  #archive-inner {
-    padding: 5rem;
-  }
 }
-/* -------------------------- MEDIA QUERY <= 491 -------------------------- */
-@media screen and (max-width: 491px) {
+/* -------------------------- MEDIA QUERY <= 450 -------------------------- */
+@media screen and (max-width: 450px) {
+  #archive-link-list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 2.5rem;
+  }
+
+  .archive-thumbnail {
+    grid-column: span 1;
+  }
+
   .archive-link {
-    width: 100%;
+    width: auto;
   }
 
   .archive-image, .archive-vid {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 10rem;
   }
 }
 /* -------------------------- MEDIA QUERY <= 431 -------------------------- */
