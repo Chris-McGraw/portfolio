@@ -41,6 +41,13 @@ const masterImgList = {
     main: "images/archive/calc-snap.jpg",
     loaded: false
   },
+  TicTacToeArchive: {
+    id: "archive-image-tic-tac-toe",
+    type: "archive",
+    tiny: "images/archive/tic-tac-toe-snap-tiny.jpg",
+    main: "images/archive/tic-tac-toe-snap.jpg",
+    loaded: false
+  },
   svgLineArchive: {
     id: "archive-image-svg-line",
     type: "archive",
