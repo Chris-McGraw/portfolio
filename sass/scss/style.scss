@@ -634,7 +634,7 @@ button {
 #archive-link-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: $section-padding-md;
+  grid-column-gap: $section-padding-lg;
   grid-row-gap: $section-padding-lg;
 }
 
@@ -915,6 +915,16 @@ textarea {
 
 
 
+/* ------------------------- MEDIA QUERY <= 1200 ------------------------- */
+@media screen and (max-width: 1200px) {
+  #archive-link-list {
+    grid-column-gap: $section-padding-md;
+    grid-row-gap: $section-padding-md;
+  }
+}
+
+
+
 /* -------------------------- MEDIA QUERY <= 935 -------------------------- */
 @media screen and (max-width: 935px) {
   :root {
@@ -1132,17 +1142,10 @@ textarea {
 
 // ---
 
-  .archive-thumbnail {
-    grid-column: span 3;
-  }
-
-  .archive-link {
-    width: auto;
-  }
-
-  .archive-image, .archive-vid {
-    width: auto;
-    height: 15rem;
+  #archive-link-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: $section-padding-lg;
+    grid-row-gap: $section-padding-lg;
   }
 
 // ---
@@ -1252,6 +1255,13 @@ textarea {
     margin-left: 0;
     margin-right: 0;
   }
+
+// ---
+
+  #archive-link-list {
+    grid-column-gap: $section-padding-md;
+    grid-row-gap: $section-padding-md;
+  }
 }
 
 
@@ -1270,25 +1280,28 @@ textarea {
     width: 100%;
     height: auto;
   }
-
-// ---
-
-  #archive-inner {
-    padding: $section-padding-xl;
-  }
 }
 
 
 
-/* -------------------------- MEDIA QUERY <= 491 -------------------------- */
-@media screen and (max-width: 491px) {
+/* -------------------------- MEDIA QUERY <= 450 -------------------------- */
+@media screen and (max-width: 450px) {
+  #archive-link-list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: $section-padding-lg;
+  }
+
+  .archive-thumbnail {
+    grid-column: span 1;
+  }
+
   .archive-link {
-    width: 100%;
+    width: auto;
   }
 
   .archive-image, .archive-vid {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 10rem;
   }
 }
 

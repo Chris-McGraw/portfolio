@@ -554,7 +554,7 @@ button {
 #archive-link-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 1.25rem;
+  grid-column-gap: 2.5rem;
   grid-row-gap: 2.5rem;
 }
 
@@ -778,6 +778,13 @@ textarea {
     height: 11.85rem;
   }
 }
+/* ------------------------- MEDIA QUERY <= 1200 ------------------------- */
+@media screen and (max-width: 1200px) {
+  #archive-link-list {
+    grid-column-gap: 1.25rem;
+    grid-row-gap: 1.25rem;
+  }
+}
 /* -------------------------- MEDIA QUERY <= 935 -------------------------- */
 @media screen and (max-width: 935px) {
   :root {
@@ -959,17 +966,10 @@ textarea {
     justify-content: center;
   }
 
-  .archive-thumbnail {
-    grid-column: span 3;
-  }
-
-  .archive-link {
-    width: auto;
-  }
-
-  .archive-image, .archive-vid {
-    width: auto;
-    height: 15rem;
+  #archive-link-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2.5rem;
+    grid-row-gap: 2.5rem;
   }
 
   #contact-section:after {
@@ -1060,6 +1060,11 @@ textarea {
     margin-left: 0;
     margin-right: 0;
   }
+
+  #archive-link-list {
+    grid-column-gap: 1.25rem;
+    grid-row-gap: 1.25rem;
+  }
 }
 /* -------------------------- MEDIA QUERY <= 569 -------------------------- */
 @media screen and (max-width: 569px) {
@@ -1075,20 +1080,25 @@ textarea {
     width: 100%;
     height: auto;
   }
-
-  #archive-inner {
-    padding: 5rem;
-  }
 }
-/* -------------------------- MEDIA QUERY <= 491 -------------------------- */
-@media screen and (max-width: 491px) {
+/* -------------------------- MEDIA QUERY <= 450 -------------------------- */
+@media screen and (max-width: 450px) {
+  #archive-link-list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 2.5rem;
+  }
+
+  .archive-thumbnail {
+    grid-column: span 1;
+  }
+
   .archive-link {
-    width: 100%;
+    width: auto;
   }
 
   .archive-image, .archive-vid {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 10rem;
   }
 }
 /* -------------------------- MEDIA QUERY <= 431 -------------------------- */
