@@ -489,7 +489,7 @@ button {
 #project-container-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: $section-padding-sm;
+  grid-column-gap: 0;
   grid-row-gap: $section-padding-xl;
 
   position: relative;
@@ -553,10 +553,14 @@ button {
 }
 
 .project-text-left {
+  padding-right: $section-padding-lg;
+
   text-align: left;
 }
 
 .project-text-right {
+  padding-left: $section-padding-lg;
+
   text-align: right;
 }
 
@@ -917,6 +921,16 @@ textarea {
 
 /* ------------------------- MEDIA QUERY <= 1200 ------------------------- */
 @media screen and (max-width: 1200px) {
+  .project-text-left {
+    padding-right: $section-padding-md;
+  }
+
+  .project-text-right {
+    padding-left: $section-padding-md;
+  }
+
+// ---
+
   #archive-link-list {
     grid-column-gap: $section-padding-md;
     grid-row-gap: $section-padding-md;
@@ -1116,14 +1130,18 @@ textarea {
 
   .project-image {
     width: auto;
-    height: 20rem;
+    height: 25rem;
   }
 
   .project-text-left {
+    padding-right: 0;
+
     text-align: center;
   }
 
   .project-text-right {
+    padding-left: 0;
+
     text-align: center;
   }
 
@@ -1170,6 +1188,14 @@ textarea {
   }
 }
 
+
+
+/* -------------------------- MEDIA QUERY <= 700 -------------------------- */
+@media screen and (max-width: 700px) {
+  .project-image {
+    height: 20rem;
+  }
+}
 
 
 /* -------------------------- MEDIA QUERY <= 600 -------------------------- */

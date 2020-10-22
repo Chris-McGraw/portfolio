@@ -433,7 +433,7 @@ button {
 #project-container-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 0.75rem;
+  grid-column-gap: 0;
   grid-row-gap: 5rem;
   position: relative;
 }
@@ -492,10 +492,12 @@ button {
 }
 
 .project-text-left {
+  padding-right: 2.5rem;
   text-align: left;
 }
 
 .project-text-right {
+  padding-left: 2.5rem;
   text-align: right;
 }
 
@@ -780,6 +782,14 @@ textarea {
 }
 /* ------------------------- MEDIA QUERY <= 1200 ------------------------- */
 @media screen and (max-width: 1200px) {
+  .project-text-left {
+    padding-right: 1.25rem;
+  }
+
+  .project-text-right {
+    padding-left: 1.25rem;
+  }
+
   #archive-link-list {
     grid-column-gap: 1.25rem;
     grid-row-gap: 1.25rem;
@@ -942,14 +952,16 @@ textarea {
 
   .project-image {
     width: auto;
-    height: 20rem;
+    height: 25rem;
   }
 
   .project-text-left {
+    padding-right: 0;
     text-align: center;
   }
 
   .project-text-right {
+    padding-left: 0;
     text-align: center;
   }
 
@@ -986,6 +998,12 @@ textarea {
 
   #contact-message-container {
     grid-column: span 5;
+  }
+}
+/* -------------------------- MEDIA QUERY <= 700 -------------------------- */
+@media screen and (max-width: 700px) {
+  .project-image {
+    height: 20rem;
   }
 }
 /* -------------------------- MEDIA QUERY <= 600 -------------------------- */
