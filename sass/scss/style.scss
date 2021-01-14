@@ -515,31 +515,40 @@ button {
   user-select: none !important;
 }
 
-#drop-date-info-thumb {
+#drum-machine-info-thumb {
   order: 0;
 }
 
-#drop-date-image-thumb {
+#drum-machine-image-thumb {
   order: 1;
-  justify-content: center
-}
-
-#vert-info-thumb {
-  order: 4;
-}
-
-#vert-image-thumb {
-  order: 5;
   justify-content: center;
 }
 
-#recipe-book-image-thumb {
+#drop-date-image-thumb {
   order: 2;
   justify-content: center;
 }
 
-#recipe-book-info-thumb {
+#drop-date-info-thumb {
   order: 3;
+}
+
+#recipe-book-info-thumb {
+  order: 4;
+}
+
+#recipe-book-image-thumb {
+  order: 5;
+  justify-content: center;
+}
+
+#vert-image-thumb {
+  order: 6;
+  justify-content: center;
+}
+
+#vert-info-thumb {
+  order: 7;
 }
 
 .inner-project-container{
@@ -1087,7 +1096,13 @@ textarea {
     grid-column: span 2;
   }
 
-  #drop-date-info-thumb {
+  #drum-machine-image-thumb {
+    order: 0;
+
+    margin-bottom: $section-padding-md;
+  }
+
+  #drum-machine-info-thumb {
     align-items: flex-start;
     order: 1;
 
@@ -1096,36 +1111,44 @@ textarea {
   }
 
   #drop-date-image-thumb {
-    order: 0;
+    order: 2;
 
     margin-bottom: $section-padding-md;
   }
 
-  #vert-info-thumb {
+  #drop-date-info-thumb {
     align-items: flex-start;
-    order: 5;
+    order: 3;
 
     height: auto;
-  }
-
-  #vert-image-thumb {
-    order: 4;
-
-    margin-bottom: $section-padding-md;
+    margin-bottom: $section-padding-xl;
   }
 
   #recipe-book-image-thumb {
-    order: 2;
+    order: 4;
 
     margin-bottom: $section-padding-md;
   }
 
   #recipe-book-info-thumb {
     align-items: flex-start;
-    order: 3;
+    order: 5;
 
     height: auto;
     margin-bottom: $section-padding-xl;
+  }
+
+  #vert-image-thumb {
+    order: 6;
+
+    margin-bottom: $section-padding-md;
+  }
+
+  #vert-info-thumb {
+    align-items: flex-start;
+    order: 7;
+
+    height: auto;
   }
 
   .project-image {

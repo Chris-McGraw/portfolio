@@ -1,4 +1,11 @@
 const masterImgList = {
+  drumMachineProject: {
+    id: "project-image-drum-machine",
+    type: "project",
+    tiny: "images/projects/mockup-drum-machine-tiny.jpg",
+    main: "images/projects/mockup-drum-machine.jpg",
+    loaded: false
+  },
   dropDateProject: {
     id: "project-image-drop-date",
     type: "project",
