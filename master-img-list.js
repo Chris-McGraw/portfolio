@@ -20,11 +20,11 @@ const masterImgList = {
     main: "images/projects/mockup-recipe-book.jpg",
     loaded: false
   },
-  vertProject: {
-    id: "project-image-vert",
+  ShortlyProject: {
+    id: "project-image-shortly",
     type: "project",
-    tiny: "images/projects/mockup-vert-tiny.jpg",
-    main: "images/projects/mockup-vert.jpg",
+    tiny: "images/projects/mockup-shortly-tiny.jpg",
+    main: "images/projects/mockup-shortly.jpg",
     loaded: false
   },
   weatherArchive: {

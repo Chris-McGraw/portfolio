@@ -542,12 +542,12 @@ button {
   justify-content: center;
 }
 
-#vert-image-thumb {
+#shortly-image-thumb {
   order: 6;
   justify-content: center;
 }
 
-#vert-info-thumb {
+#shortly-info-thumb {
   order: 7;
 }
 
@@ -1138,13 +1138,13 @@ textarea {
     margin-bottom: $section-padding-xl;
   }
 
-  #vert-image-thumb {
+  #shortly-image-thumb {
     order: 6;
 
     margin-bottom: $section-padding-md;
   }
 
-  #vert-info-thumb {
+  #shortly-info-thumb {
     align-items: flex-start;
     order: 7;
 
@@ -1317,7 +1317,7 @@ textarea {
 
 /* -------------------------- MEDIA QUERY <= 569 -------------------------- */
 @media screen and (max-width: 569px) {
-  #vert-image-thumb {
+  #shortly-image-thumb {
     height: auto;
   }
 
