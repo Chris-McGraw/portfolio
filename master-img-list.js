@@ -27,6 +27,13 @@ const masterImgList = {
     main: "images/projects/mockup-shortly.jpg",
     loaded: false
   },
+  vertArchive: {
+    id: "archive-image-vert",
+    type: "archive",
+    tiny: "images/archive/vert-snap-tiny.jpg",
+    main: "images/archive/vert-snap.jpg",
+    loaded: false
+  },
   weatherArchive: {
     id: "archive-image-weather",
     type: "archive",
@@ -46,13 +53,6 @@ const masterImgList = {
     type: "archive",
     tiny: "images/archive/calc-snap-tiny.jpg",
     main: "images/archive/calc-snap.jpg",
-    loaded: false
-  },
-  TicTacToeArchive: {
-    id: "archive-image-tic-tac-toe",
-    type: "archive",
-    tiny: "images/archive/tic-tac-toe-snap-tiny.jpg",
-    main: "images/archive/tic-tac-toe-snap.jpg",
     loaded: false
   },
   svgLineArchive: {
