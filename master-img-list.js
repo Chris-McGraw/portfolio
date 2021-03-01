@@ -1,4 +1,11 @@
 const masterImgList = {
+  drumMachineProject: {
+    id: "project-image-drum-machine",
+    type: "project",
+    tiny: "images/projects/mockup-drum-machine-tiny.jpg",
+    main: "images/projects/mockup-drum-machine.jpg",
+    loaded: false
+  },
   dropDateProject: {
     id: "project-image-drop-date",
     type: "project",
@@ -13,11 +20,18 @@ const masterImgList = {
     main: "images/projects/mockup-recipe-book.jpg",
     loaded: false
   },
-  vertProject: {
-    id: "project-image-vert",
+  ShortlyProject: {
+    id: "project-image-shortly",
     type: "project",
-    tiny: "images/projects/mockup-vert-tiny.jpg",
-    main: "images/projects/mockup-vert.jpg",
+    tiny: "images/projects/mockup-shortly-tiny.jpg",
+    main: "images/projects/mockup-shortly.jpg",
+    loaded: false
+  },
+  vertArchive: {
+    id: "archive-image-vert",
+    type: "archive",
+    tiny: "images/archive/vert-snap-tiny.jpg",
+    main: "images/archive/vert-snap.jpg",
     loaded: false
   },
   weatherArchive: {
@@ -39,13 +53,6 @@ const masterImgList = {
     type: "archive",
     tiny: "images/archive/calc-snap-tiny.jpg",
     main: "images/archive/calc-snap.jpg",
-    loaded: false
-  },
-  TicTacToeArchive: {
-    id: "archive-image-tic-tac-toe",
-    type: "archive",
-    tiny: "images/archive/tic-tac-toe-snap-tiny.jpg",
-    main: "images/archive/tic-tac-toe-snap.jpg",
     loaded: false
   },
   svgLineArchive: {

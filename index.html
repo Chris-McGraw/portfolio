@@ -264,36 +264,107 @@
       <h2 id="project-header">Latest Projects</h2>
 
       <div id="project-container-grid">
-        <!-- DROP DATE -->
-          <div id="drop-date-info-thumb" class="project-thumbnail project-text-left">
-            <div class="inner-project-container">
-              <h3 class="project-name">Drop Date</h3>
-              <p class="project-description">
-                A single page application that allows users to discover and search
-                for upcoming/recently released video games, movies, and/or television.
-                Made with AngularJS utilizing various built-in features including two-way data binding,
-                multiple view routing, and custom services/directives.
-              </p>
+      <!-- DROP DATE -->
+        <div id="drop-date-info-thumb" class="project-thumbnail project-text-left">
+          <div class="inner-project-container">
+            <h3 class="project-name">Drop Date</h3>
+            <p class="project-description">
+              A single page application that provides users with a convenient way to
+              discover and search for upcoming/recently released video games, movies,
+              and/or television. Developed with AngularJS utilizing various built-in
+              features and data pulled from
+              <a class="project-description-link" href="https://developers.themoviedb.org/"
+              aria-label="The Movie Database API link" target="_blank">The Movie Database</a>
+              and <a class="project-description-link" href="https://www.giantbomb.com/api/"
+              aria-label="Giant Bomb API link" target="_blank">Giant Bomb APIs</a>.
+            </p>
 
-              <ul class="project-link-list-left">
-                <a class="project-link-left" href="https://chris-mcgraw.github.io/drop-date"
-                aria-label="Drop Date page link" target="_blank">
-                  <li class="project-link">Live Page</li>
-                </a>
+            <ul class="project-link-list-left">
+              <a class="project-link-left" href="https://chris-mcgraw.github.io/drop-date"
+              aria-label="Drop Date page link" target="_blank">
+                <li class="project-link">Live Page</li>
+              </a>
 
-                <a class="project-link-left" href="https://github.com/Chris-McGraw/drop-date"
-                aria-label="Drop Date code link" target="_blank">
-                  <li class="project-link">Source Code</li>
-                </a>
-              </ul>
-            </div>
+              <a class="project-link-left" href="https://github.com/Chris-McGraw/drop-date"
+              aria-label="Drop Date code link" target="_blank">
+                <li class="project-link">Source Code</li>
+              </a>
+            </ul>
           </div>
+        </div>
 
-          <div id="drop-date-image-thumb" class="project-thumbnail">
-            <img id="project-image-drop-date" class="project-image"
-            src="images/projects/mockup-drop-date-tiny.jpg" draggable="false"
-            alt="Drop Date laptop and mobile mockup images"></img>
+        <div id="drop-date-image-thumb" class="project-thumbnail">
+          <img id="project-image-drop-date" class="project-image"
+          src="images/projects/mockup-drop-date-tiny.jpg" draggable="false"
+          alt="Drop Date laptop and mobile mockup images"></img>
+        </div>
+
+      <!-- DRUM MACHINE -->
+        <div id="drum-machine-image-thumb" class="project-thumbnail">
+          <img id="project-image-drum-machine" class="project-image"
+          src="images/projects/mockup-drum-machine-tiny.jpg" draggable="false"
+          alt="React Drum Machine laptop and mobile mockup images"></img>
+        </div>
+
+        <div id="drum-machine-info-thumb" class="project-thumbnail project-text-right">
+          <div class="inner-project-container">
+            <h3 class="project-name">React Drum Machine</h3>
+            <p class="project-description">
+              An interactive drum machine built from the ground up with ReactJS.
+              Users can create, save, edit, and playback custom audio loops using
+              different collections of samples and controllable effect levels.
+              Connected to the native Javascript Web Audio API for audio processing
+              with high precision/low latency timing control.
+            </p>
+
+            <ul class="project-link-list-right">
+              <a class="project-link-right" href="https://chris-mcgraw.github.io/react-drum-machine/"
+              aria-label="React Drum Machine page link" target="_blank">
+                <li class="project-link">Live Page</li>
+              </a>
+
+              <a class="project-link-right" href="https://github.com/Chris-McGraw/react-drum-machine"
+              aria-label="React Drum Machine code link" target="_blank">
+                <li class="project-link">Source Code</li>
+              </a>
+            </ul>
           </div>
+        </div>
+
+      <!-- Shortly -->
+        <div id="shortly-info-thumb" class="project-thumbnail project-text-left">
+          <div class="inner-project-container">
+            <h3 class="project-name">Shortly</h3>
+            <p class="project-description">
+              A fully responsive landing page, integrated with the
+              <a class="project-description-link" href="https://app.shrtco.de/"
+              aria-label="Shrtcode API link" target="_blank">Shrtcode API</a>,
+              which allows users to create, save, and copy shortened URL links from
+              valid web addresses. Features custom URL validation and error handling methods.
+              Created from design files and image assets provided by
+              <a class="project-description-link" href="https://www.frontendmentor.io/"
+              aria-label="Frontend Mentor link" target="_blank">frontendmentor.io</a>.
+            </p>
+
+            <ul class="project-link-list-left">
+              <a class="project-link-left" href="https://chris-mcgraw.github.io/shortly"
+              aria-label="Shortly page link" target="_blank">
+                <li class="project-link">Live Page</li>
+              </a>
+
+              <a class="project-link-left" href="https://github.com/Chris-McGraw/shortly"
+              aria-label="Shortly code link" target="_blank">
+                <li class="project-link">Source Code</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+
+        <div id="shortly-image-thumb" class="project-thumbnail">
+          <img id="project-image-shortly" class="project-image"
+          src="images/projects/mockup-shortly-tiny.jpg" draggable="false"
+          alt="Shortly laptop and mobile mockup images"></img>
+        </div>
 
       <!-- RECIPE BOOK -->
         <div id="recipe-book-image-thumb" class="project-thumbnail">
@@ -304,12 +375,14 @@
 
         <div id="recipe-book-info-thumb" class="project-thumbnail project-text-right">
           <div class="inner-project-container">
-            <h3 class="project-name">Recipe Book Progressive Web App</h3>
+            <h3 class="project-name">Recipe Book</h3>
             <p class="project-description">
-              A progressive web application built for client-side recipe storage, organization,
-              and browsing/viewing. Users can add or delete saved recipes through the
-              use of the JavaScript localStorage property and search for new recipes using
-              Edamam, an external third-party API.
+              A progressive web application built with JavaScript/jQuery for client-side
+              recipe storage, organization, and browsing/viewing. Users can add or
+              delete recipes through the use of the JS localStorage property and
+              search for new recipes by accessing the connected
+              <a class="project-description-link" href="https://developer.edamam.com/"
+              aria-label="Edamam API link" target="_blank">Edamam API</a> database.
             </p>
 
             <ul class="project-link-list-right">
@@ -325,37 +398,6 @@
             </ul>
           </div>
         </div>
-
-      <!-- VERT -->
-        <div id="vert-info-thumb" class="project-thumbnail project-text-left">
-          <div class="inner-project-container">
-            <h3 class="project-name">Vert E-commerce Landing Page</h3>
-            <p class="project-description">
-              A mock E-commerce landing page showcasing a modern, fully responsive
-              layout combined with carefully crafted page components including progressive,
-              lazy loaded images, a scrollable item carousel built with jQuery UI/Touch Punch,
-              and a custom designed SVG logo.
-            </p>
-
-            <ul class="project-link-list-left">
-              <a class="project-link-left" href="https://chris-mcgraw.github.io/e-commerce"
-              aria-label="Vert E-commerce page link" target="_blank">
-                <li class="project-link">Live Page</li>
-              </a>
-
-              <a class="project-link-left" href="https://github.com/Chris-McGraw/e-commerce"
-              aria-label="Vert E-commerce code link" target="_blank">
-                <li class="project-link">Source Code</li>
-              </a>
-            </ul>
-          </div>
-        </div>
-
-        <div id="vert-image-thumb" class="project-thumbnail">
-          <img id="project-image-vert" class="project-image"
-          src="images/projects/mockup-vert-tiny.jpg" draggable="false"
-          alt="Vert E-commerce laptop and mobile mockup images"></img>
-        </div>
       </div>
     </div>
   </section>
@@ -369,14 +411,14 @@
 
       <ul id="archive-link-list">
         <li class="archive-thumbnail">
-          <a class="archive-link" href="https://github.com/Chris-McGraw/weather-app-v2"
-          aria-label="Weather App GitHub link" target="_blank">
-            <img id="archive-image-weather" class="archive-image"
-            src="images/archive/weather-snap-tiny.jpg" draggable="false"
-            alt="Weather App archive image"></img>
+          <a class="archive-link" href="https://github.com/Chris-McGraw/e-commerce"
+          aria-label="Vert GitHub link" target="_blank">
+            <img id="archive-image-vert" class="archive-image"
+            src="images/archive/vert-snap-tiny.jpg" draggable="false"
+            alt="Vert archive image"></img>
 
             <video id="archive-vid-1" class="archive-vid" muted="muted" draggable="false">
-              <source src="videos/weather-preview.mp4" type="video/mp4">
+              <source src="videos/vert-preview.mp4" type="video/mp4">
             </video>
           </a>
         </li>
@@ -395,27 +437,27 @@
         </li>
 
         <li class="archive-thumbnail">
+          <a class="archive-link" href="https://github.com/Chris-McGraw/weather-app-v2"
+          aria-label="Weather App GitHub link" target="_blank">
+            <img id="archive-image-weather" class="archive-image"
+            src="images/archive/weather-snap-tiny.jpg" draggable="false"
+            alt="Weather App archive image"></img>
+
+            <video id="archive-vid-3" class="archive-vid" muted="muted" draggable="false">
+              <source src="videos/weather-preview.mp4" type="video/mp4">
+            </video>
+          </a>
+        </li>
+
+        <li class="archive-thumbnail">
           <a class="archive-link" href="https://github.com/Chris-McGraw/basic-javascript-calculator"
           aria-label="Javascript Calculator GitHub link" target="_blank">
             <img id="archive-image-calc" class="archive-image"
             src="images/archive/calc-snap-tiny.jpg" draggable="false"
             alt="Javascript Calculator archive image"></img>
 
-            <video id="archive-vid-3" class="archive-vid" muted="muted" draggable="false">
-              <source src="videos/calc-preview.mp4" type="video/mp4">
-            </video>
-          </a>
-        </li>
-
-        <li class="archive-thumbnail">
-          <a class="archive-link" href="https://github.com/Chris-McGraw/tic-tac-toe"
-          aria-label="Tic-Tac-Toe Game GitHub link" target="_blank">
-            <img id="archive-image-tic-tac-toe" class="archive-image"
-            src="images/archive/tic-tac-toe-snap-tiny.jpg" draggable="false"
-            alt="Tic-Tac-Toe Game archive image"></img>
-
             <video id="archive-vid-4" class="archive-vid" muted="muted" draggable="false">
-              <source src="videos/tic-tac-toe-preview.mp4" type="video/mp4">
+              <source src="videos/calc-preview.mp4" type="video/mp4">
             </video>
           </a>
         </li>
@@ -485,7 +527,7 @@
 
 <!-- =============================== FOOTER =============================== -->
   <footer id="footer">
-    <p id="footer-copyright">© 2020 Chris McGraw. All rights reserved.</p>
+    <p id="footer-copyright">© 2021 Chris McGraw. All rights reserved.</p>
 
     <ul id="footer-link-list">
       <li class="footer-link">

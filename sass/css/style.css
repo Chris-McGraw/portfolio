@@ -463,22 +463,31 @@ button {
   justify-content: center;
 }
 
-#vert-info-thumb {
+#drum-machine-image-thumb {
+  order: 2;
+  justify-content: center;
+}
+
+#drum-machine-info-thumb {
+  order: 3;
+}
+
+#shortly-info-thumb {
   order: 4;
 }
 
-#vert-image-thumb {
+#shortly-image-thumb {
   order: 5;
   justify-content: center;
 }
 
 #recipe-book-image-thumb {
-  order: 2;
+  order: 6;
   justify-content: center;
 }
 
 #recipe-book-info-thumb {
-  order: 3;
+  order: 7;
 }
 
 .inner-project-container {
@@ -506,6 +515,11 @@ button {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   font-weight: 300;
+}
+
+.project-description-link {
+  color: #2779F6 !important;
+  cursor: pointer;
 }
 
 .project-link-list-left {
@@ -766,6 +780,12 @@ textarea {
   cursor: pointer;
 }
 
+/* -------------------------- MEDIA QUERY : HOVER -------------------------- */
+@media (hover: hover) {
+  .project-description-link:hover {
+    text-decoration: underline !important;
+  }
+}
 /* ------------------------- MEDIA QUERY <= 1440 ------------------------- */
 @media screen and (max-width: 1440px) {
   :root {
@@ -915,6 +935,11 @@ textarea {
     grid-column: span 2;
   }
 
+  #drop-date-image-thumb {
+    order: 0;
+    margin-bottom: 1.25rem;
+  }
+
   #drop-date-info-thumb {
     align-items: flex-start;
     order: 1;
@@ -922,32 +947,39 @@ textarea {
     margin-bottom: 5rem;
   }
 
-  #drop-date-image-thumb {
-    order: 0;
+  #drum-machine-image-thumb {
+    order: 2;
     margin-bottom: 1.25rem;
   }
 
-  #vert-info-thumb {
+  #drum-machine-info-thumb {
     align-items: flex-start;
-    order: 5;
+    order: 3;
     height: auto;
+    margin-bottom: 5rem;
   }
 
-  #vert-image-thumb {
+  #shortly-image-thumb {
     order: 4;
     margin-bottom: 1.25rem;
   }
 
+  #shortly-info-thumb {
+    align-items: flex-start;
+    order: 5;
+    height: auto;
+    margin-bottom: 5rem;
+  }
+
   #recipe-book-image-thumb {
-    order: 2;
+    order: 6;
     margin-bottom: 1.25rem;
   }
 
   #recipe-book-info-thumb {
     align-items: flex-start;
-    order: 3;
+    order: 7;
     height: auto;
-    margin-bottom: 5rem;
   }
 
   .project-image {
@@ -1086,7 +1118,7 @@ textarea {
 }
 /* -------------------------- MEDIA QUERY <= 569 -------------------------- */
 @media screen and (max-width: 569px) {
-  #vert-image-thumb {
+  #shortly-image-thumb {
     height: auto;
   }
 
