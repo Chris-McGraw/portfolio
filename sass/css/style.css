@@ -517,6 +517,11 @@ button {
   font-weight: 300;
 }
 
+.project-description-link {
+  color: #2779F6 !important;
+  cursor: pointer;
+}
+
 .project-link-list-left {
   display: flex;
   justify-content: flex-start;
@@ -775,6 +780,12 @@ textarea {
   cursor: pointer;
 }
 
+/* -------------------------- MEDIA QUERY : HOVER -------------------------- */
+@media (hover: hover) {
+  .project-description-link:hover {
+    text-decoration: underline !important;
+  }
+}
 /* ------------------------- MEDIA QUERY <= 1440 ------------------------- */
 @media screen and (max-width: 1440px) {
   :root {

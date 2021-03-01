@@ -581,6 +581,12 @@ button {
   font-weight: 300;
 }
 
+.project-description-link {
+  color: #2779F6 !important;
+
+  cursor: pointer;
+}
+
 .project-link-list-left {
   display: flex;
   justify-content: flex-start;
@@ -905,6 +911,15 @@ textarea {
   color: $gray;
 
   cursor: pointer;
+}
+
+
+
+/* -------------------------- MEDIA QUERY : HOVER -------------------------- */
+@media (hover: hover) {
+  .project-description-link:hover {
+    text-decoration: underline !important;
+  }
 }
 
 
