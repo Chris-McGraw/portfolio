@@ -64,18 +64,6 @@ const masterImgList = {
     linkAria: "Weather App GitHub link",
     imgAlt: "Weather App archive image"
   },
-  calcArchive: {
-    id: "archive-image-calc",
-    type: "archive",
-    tiny: "images/archive/calc-snap-tiny.jpg",
-    main: "images/archive/calc-snap.jpg",
-    loaded: false,
-    vidID: "archive-vid-calc",
-    vidSrc: "videos/calc-preview.mp4",
-    href: "https://github.com/Chris-McGraw/basic-javascript-calculator",
-    linkAria: "Javascript Calculator GitHub link",
-    imgAlt: "Javascript Calculator archive image"
-  },
   svgLineArchive: {
     id: "archive-image-svg-line",
     type: "archive",
@@ -88,26 +76,43 @@ const masterImgList = {
     linkAria: "SVG Line Animation GitHub link",
     imgAlt: "SVG Line Animation archive image"
   },
-  dgGameProtoArchive: {
-    id: "archive-image-dg-game-proto",
+  ipcArchive: {
+    id: "archive-image-ipc",
     type: "archive",
-    tiny: "images/archive/dg-game-proto-snap-tiny.jpg",
-    main: "images/archive/dg-game-proto-snap.jpg",
+    tiny: "images/archive/ipc-snap-tiny.jpg",
+    main: "images/archive/ipc-snap.jpg",
     loaded: false,
-    vidID: "archive-vid-dg-game-proto",
-    vidSrc: "videos/dg-game-proto-preview.mp4",
-    href: "https://github.com/Chris-McGraw/dg-game-proto",
-    linkAria: "Disc Golf Game Prototype GitHub link",
-    imgAlt: "Disc Golf Game Prototype archive image"
+    vidSrc: "videos/ipc-preview.mp4",
+    vidID: "archive-vid-ipc",
+    vidSrc: "videos/ipc-preview.mp4",
+    href: "https://github.com/Chris-McGraw/interactive-pricing-component",
+    linkAria: "Interactive Pricing Component GitHub link",
+    imgAlt: "Interactive Pricing Component archive image"
   },
-  // ipcArchive: {
-  //   id: "archive-image-ipc",
+  calcArchive: {
+    id: "archive-image-calc",
+    type: "archive",
+    tiny: "images/archive/calc-snap-tiny.jpg",
+    main: "images/archive/calc-snap.jpg",
+    loaded: false,
+    vidID: "archive-vid-calc",
+    vidSrc: "videos/calc-preview.mp4",
+    href: "https://github.com/Chris-McGraw/basic-javascript-calculator",
+    linkAria: "Javascript Calculator GitHub link",
+    imgAlt: "Javascript Calculator archive image"
+  },
+  // dgGameProtoArchive: {
+  //   id: "archive-image-dg-game-proto",
   //   type: "archive",
-  //   tiny: "images/archive/ipc-snap-tiny.jpg",
-  //   main: "images/archive/ipc-snap.jpg",
+  //   tiny: "images/archive/dg-game-proto-snap-tiny.jpg",
+  //   main: "images/archive/dg-game-proto-snap.jpg",
   //   loaded: false,
-  //   vidSrc: "videos/ipc-preview.mp4"
-  // }
+  //   vidID: "archive-vid-dg-game-proto",
+  //   vidSrc: "videos/dg-game-proto-preview.mp4",
+  //   href: "https://github.com/Chris-McGraw/dg-game-proto",
+  //   linkAria: "Disc Golf Game Prototype GitHub link",
+  //   imgAlt: "Disc Golf Game Prototype archive image"
+  // },
 }
 
 let imgLoadedArray = [];
