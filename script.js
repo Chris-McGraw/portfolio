@@ -323,6 +323,7 @@ function videoLoadLoop(selectedArchiveLink, selectedArchiveVideo) {
     selectedArchiveLink.children(".archive-image").css("display", "none");
     selectedArchiveLink.children(".archive-vid").css("display", "block");
 
+    selectedArchiveVideo.muted = true;
     selectedArchiveVideo.play();
     selectedArchiveVideo.loop = true;
   }
